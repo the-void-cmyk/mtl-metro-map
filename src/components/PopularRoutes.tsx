@@ -10,7 +10,12 @@ interface PopularRoutesProps {
 }
 
 export default async function PopularRoutes({ stationSlug, locale }: PopularRoutesProps) {
-  const popular = await getPopularRoutes(stationSlug)
+  let popular: Array<{ toSlug: string; toName: string; views: number }> = []
+  try {
+    popular = await getPopularRoutes(stationSlug)
+  } catch {
+    // DB not available during build - fall through to suggestions
+  }
 
   if (!popular || popular.length === 0) {
     // Fallback: show a few nearby/important stations as suggestions
