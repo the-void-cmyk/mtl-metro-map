@@ -1,4 +1,6 @@
 import Link from "next/link"
+import type { Locale } from "@/lib/i18n"
+import { getTranslations } from "@/lib/i18n"
 
 interface BreadcrumbItem {
   name: string
@@ -7,15 +9,18 @@ interface BreadcrumbItem {
 
 interface BreadcrumbsProps {
   items: BreadcrumbItem[]
+  locale?: Locale
 }
 
-export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+export default function Breadcrumbs({ items, locale = 'en' }: BreadcrumbsProps) {
+  const t = getTranslations(locale)
+
   return (
     <nav aria-label="Breadcrumb" className="text-[13px] text-[var(--text-muted)]">
       <ol className="flex flex-wrap items-center gap-1.5">
         <li>
-          <Link href="/" className="hover:text-[var(--text-primary)] transition-colors">
-            Home
+          <Link href={`/${locale}`} className="hover:text-[var(--text-primary)] transition-colors">
+            {t.home}
           </Link>
         </li>
         {items.map((item, i) => (

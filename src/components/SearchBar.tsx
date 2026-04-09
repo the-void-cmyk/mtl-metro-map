@@ -3,13 +3,15 @@
 import { useState, useRef, useEffect, useCallback } from "react"
 import { useRouter } from "next/navigation"
 import type { Station } from "@/lib/types"
+import type { Locale } from "@/lib/i18n"
 
 interface SearchBarProps {
   stations: Station[]
   compact?: boolean
+  locale?: Locale
 }
 
-export default function SearchBar({ stations, compact = false }: SearchBarProps) {
+export default function SearchBar({ stations, compact = false, locale = 'en' }: SearchBarProps) {
   const router = useRouter()
   const [fromQuery, setFromQuery] = useState("")
   const [toQuery, setToQuery] = useState("")
@@ -70,7 +72,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
 
   const handleSubmit = () => {
     if (fromStation && toStation && fromStation.id !== toStation.id) {
-      router.push(`/route/${fromStation.slug}-to-${toStation.slug}`)
+      router.push(`/${locale}/route/${fromStation.slug}-to-${toStation.slug}`)
     }
   }
 
@@ -131,6 +133,10 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
       <span key={lineId} className={`line-dot line-dot-${lineId}`} />
     ))
 
+  const labels = locale === 'fr'
+    ? { from: 'De', to: 'A', dep: 'Station de depart...', arr: "Station d'arrivee...", find: 'Trouver un trajet', swap: 'Inverser' }
+    : { from: 'From', to: 'To', dep: 'Departure station...', arr: 'Arrival station...', find: 'Find Route', swap: 'Swap stations' }
+
   const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-white
     focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
     placeholder:text-[var(--text-muted)] transition-all`
@@ -140,7 +146,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
       <div className={`flex ${compact ? "flex-col gap-2" : "flex-col sm:flex-row gap-3"} items-stretch`}>
         {/* From */}
         <div className="relative flex-1">
-          <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">From</label>
+          <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">{labels.from}</label>
           <input
             ref={fromRef}
             type="text"
@@ -148,7 +154,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
             onChange={handleFromChange}
             onFocus={() => setActiveField("from")}
             onKeyDown={(e) => handleKeyDown(e, "from")}
-            placeholder="Departure station..."
+            placeholder={labels.dep}
             className={inputClass}
             autoComplete="off"
           />
@@ -175,7 +181,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
             <button
               onClick={swapStations}
               className="p-2.5 text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors"
-              title="Swap stations"
+              title={labels.swap}
               type="button"
             >
               <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -190,7 +196,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
 
         {/* To */}
         <div className="relative flex-1">
-          <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">To</label>
+          <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">{labels.to}</label>
           <input
             ref={toRef}
             type="text"
@@ -198,7 +204,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
             onChange={handleToChange}
             onFocus={() => setActiveField("to")}
             onKeyDown={(e) => handleKeyDown(e, "to")}
-            placeholder="Arrival station..."
+            placeholder={labels.arr}
             className={inputClass}
             autoComplete="off"
           />
@@ -228,7 +234,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
               hover:bg-[#0055AA] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
               transition-all`}
           >
-            Find Route
+            {labels.find}
           </button>
         </div>
       </div>
