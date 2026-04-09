@@ -131,11 +131,31 @@ export default async function MapPage({ params }: MapPageProps) {
       <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight mt-5 mb-2">
         {locale === 'fr' ? 'Carte du reseau' : 'Network Map'}
       </h1>
-      <p className="text-[var(--text-secondary)] text-[15px] mb-10">
+      <p className="text-[var(--text-secondary)] text-[15px] mb-6">
         {locale === 'fr'
           ? `${allStations.length} stations sur 3 reseaux de transport en commun.`
           : `${allStations.length} stations across 3 transit networks.`}
       </p>
+
+      {/* Sticky sub-nav */}
+      <nav className="sticky top-16 z-40 -mx-5 px-5 py-3 bg-[var(--surface)]/95 backdrop-blur-sm border-b border-[var(--border)] mb-8">
+        <div className="flex gap-2 overflow-x-auto">
+          <a href="#metro" className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap">
+            <span className="flex gap-0.5">
+              {metroLines.map(l => <span key={l.id} className="w-2 h-2 rounded-full" style={{ backgroundColor: l.color }} />)}
+            </span>
+            {locale === 'fr' ? 'Metro' : 'Metro'}
+          </a>
+          <a href="#rem" className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap">
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--rem-line)' }} />
+            REM
+          </a>
+          <a href="#exo" className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap">
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--exo-line)' }} />
+            Exo
+          </a>
+        </div>
+      </nav>
 
       {/* Quick stats */}
       <div className="grid grid-cols-3 gap-4 mb-10">
@@ -157,7 +177,7 @@ export default async function MapPage({ params }: MapPageProps) {
 
       {/* Metro */}
       <div className="space-y-8">
-        <h2 className="font-heading text-xl font-bold tracking-tight">
+        <h2 id="metro" className="font-heading text-xl font-bold tracking-tight scroll-mt-32">
           {locale === 'fr' ? 'Metro STM' : 'STM Metro'}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -169,13 +189,13 @@ export default async function MapPage({ params }: MapPageProps) {
         {/* REM */}
         {remLine && (
           <>
-            <h2 className="font-heading text-xl font-bold tracking-tight mt-12">REM</h2>
+            <h2 id="rem" className="font-heading text-xl font-bold tracking-tight mt-12 scroll-mt-32">REM</h2>
             <LineMap line={remLine} locale={locale} allLines={allLines} allStations={allStations} />
           </>
         )}
 
         {/* Exo */}
-        <h2 className="font-heading text-xl font-bold tracking-tight mt-12">
+        <h2 id="exo" className="font-heading text-xl font-bold tracking-tight mt-12 scroll-mt-32">
           {locale === 'fr' ? 'Trains de banlieue Exo' : 'Exo Commuter Trains'}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
