@@ -12,6 +12,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import SchemaMarkup from "@/components/SchemaMarkup"
 import SearchBar from "@/components/SearchBar"
 import ViewTracker from "@/components/ViewTracker"
+import PopularRoutes from "@/components/PopularRoutes"
 import stations from "../../../../../data/stations.json"
 import type { Station } from "@/lib/types"
 
@@ -181,6 +182,8 @@ export default async function RoutePage({ params }: RoutePageProps) {
                 </dl>
               </div>
             </div>
+
+            <PopularRoutes stationSlug={route.from.slug} locale={locale as Locale} />
 
             <Link href={`/${locale}/route/${route.to.slug}-to-${route.from.slug}`} className="info-card block hover:border-[#bbb] transition-colors group">
               <div className="p-4 text-center">

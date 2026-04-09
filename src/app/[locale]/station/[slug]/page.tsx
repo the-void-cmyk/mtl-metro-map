@@ -7,6 +7,7 @@ import { getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import SearchBar from "@/components/SearchBar"
+import PopularRoutes from "@/components/PopularRoutes"
 import type { Station } from "@/lib/types"
 import stations from "../../../../../data/stations.json"
 
@@ -140,6 +141,7 @@ export default async function StationPage({ params }: StationPageProps) {
             <div className="info-card-header">{t.findRouteFromHere}</div>
             <div className="info-card-body"><SearchBar stations={allStations} compact locale={locale as Locale} /></div>
           </div>
+          <PopularRoutes stationSlug={station.slug} locale={locale as Locale} />
           <div className="info-card">
             <div className="info-card-header">{t.location}</div>
             <div className="info-card-body text-[13px] text-[var(--text-secondary)] font-heading tabular-nums">
