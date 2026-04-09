@@ -32,7 +32,7 @@ function LineMap({ line, locale, allLines, allStations }: {
   const lineStations = line.stations.map(id => allStations.find(s => s.id === id)).filter(Boolean)
 
   return (
-    <div className="info-card">
+    <div id={line.id} className="info-card scroll-mt-32">
       <div className="flex items-center gap-2.5 px-5 py-4 border-b border-[var(--border)]">
         <span className="w-4 h-4 rounded-full flex-shrink-0" style={{ backgroundColor: line.color }} />
         <Link href={`/${locale}/line/${line.id}`} className="font-heading font-semibold text-[15px] tracking-tight hover:underline">
@@ -138,22 +138,52 @@ export default async function MapPage({ params }: MapPageProps) {
       </p>
 
       {/* Sticky sub-nav */}
-      <nav className="sticky top-16 z-40 -mx-5 px-5 py-3 bg-[var(--surface)]/95 backdrop-blur-sm border-b border-[var(--border)] mb-8">
-        <div className="flex gap-2 overflow-x-auto">
-          <a href="#metro" className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap">
-            <span className="flex gap-0.5">
-              {metroLines.map(l => <span key={l.id} className="w-2 h-2 rounded-full" style={{ backgroundColor: l.color }} />)}
+      <nav className="sticky top-16 z-40 -mx-5 px-5 py-3 border-b border-[var(--border)] mb-8" style={{ background: "rgba(247,247,245,0.92)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}>
+        <div className="flex gap-4 overflow-x-auto pb-0.5">
+          {/* Metro group */}
+          <div className="flex items-center gap-1.5 flex-shrink-0">
+            <span className="text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mr-1">
+              {locale === 'fr' ? 'Metro' : 'Metro'}
             </span>
-            {locale === 'fr' ? 'Metro' : 'Metro'}
-          </a>
-          <a href="#rem" className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap">
+            {metroLines.map(l => (
+              <a
+                key={l.id}
+                href={`#${l.id}`}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap"
+              >
+                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: l.color }} />
+                {locale === 'fr' ? l.nameFr.replace('Ligne ', '') : l.name.replace(' Line', '')}
+              </a>
+            ))}
+          </div>
+
+          <div className="w-px bg-[var(--border)] flex-shrink-0" />
+
+          {/* REM */}
+          <a
+            href="#rem-a"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap flex-shrink-0"
+          >
             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--rem-line)' }} />
             REM
           </a>
-          <a href="#exo" className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-[13px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap">
-            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--exo-line)' }} />
-            Exo
-          </a>
+
+          <div className="w-px bg-[var(--border)] flex-shrink-0" />
+
+          {/* Exo group */}
+          <div className="flex items-center gap-1.5 flex-shrink-0">
+            <span className="text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mr-1">Exo</span>
+            {exoLines.map(l => (
+              <a
+                key={l.id}
+                href={`#${l.id}`}
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap"
+              >
+                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: l.color }} />
+                {l.id.replace('exo', '')}
+              </a>
+            ))}
+          </div>
         </div>
       </nav>
 
@@ -177,7 +207,7 @@ export default async function MapPage({ params }: MapPageProps) {
 
       {/* Metro */}
       <div className="space-y-8">
-        <h2 id="metro" className="font-heading text-xl font-bold tracking-tight scroll-mt-32">
+        <h2 className="font-heading text-xl font-bold tracking-tight">
           {locale === 'fr' ? 'Metro STM' : 'STM Metro'}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -189,13 +219,13 @@ export default async function MapPage({ params }: MapPageProps) {
         {/* REM */}
         {remLine && (
           <>
-            <h2 id="rem" className="font-heading text-xl font-bold tracking-tight mt-12 scroll-mt-32">REM</h2>
+            <h2 className="font-heading text-xl font-bold tracking-tight mt-12">REM</h2>
             <LineMap line={remLine} locale={locale} allLines={allLines} allStations={allStations} />
           </>
         )}
 
         {/* Exo */}
-        <h2 id="exo" className="font-heading text-xl font-bold tracking-tight mt-12 scroll-mt-32">
+        <h2 className="font-heading text-xl font-bold tracking-tight mt-12">
           {locale === 'fr' ? 'Trains de banlieue Exo' : 'Exo Commuter Trains'}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
