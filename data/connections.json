@@ -820,9 +820,16 @@
   },
   {
     "from": "chabanel",
+    "to": "bois-de-boulogne",
+    "lineId": "exo2",
+    "travelTime": 4,
+    "type": "rail"
+  },
+  {
+    "from": "bois-de-boulogne",
     "to": "de-la-concorde-exo",
     "lineId": "exo2",
-    "travelTime": 10,
+    "travelTime": 6,
     "type": "rail"
   },
   {
@@ -932,9 +939,16 @@
   },
   {
     "from": "cote-de-liesse-exo",
+    "to": "sauve-exo",
+    "lineId": "exo5",
+    "travelTime": 8,
+    "type": "rail"
+  },
+  {
+    "from": "sauve-exo",
     "to": "saint-michel-mtl-nord",
     "lineId": "exo5",
-    "travelTime": 15,
+    "travelTime": 7,
     "type": "rail"
   },
   {
@@ -1094,5 +1108,13 @@
     "travelTime": 8,
     "type": "walk",
     "distance": 500
+  },
+  {
+    "from": "sauve",
+    "to": "sauve-exo",
+    "lineId": "walk-transfer",
+    "travelTime": 6,
+    "type": "walk",
+    "distance": 300
   }
 ]

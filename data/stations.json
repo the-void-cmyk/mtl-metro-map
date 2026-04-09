@@ -2313,5 +2313,37 @@
     "accessible": true,
     "firstTrain": "06:00",
     "lastTrain": "23:30"
+  },
+  {
+    "id": "bois-de-boulogne",
+    "name": "Bois-de-Boulogne",
+    "nameFr": "Bois-de-Boulogne",
+    "slug": "bois-de-boulogne",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.534,
+    "lng": -73.671,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "sauve-exo",
+    "name": "Sauve (Exo)",
+    "nameFr": "Sauve (Exo)",
+    "slug": "sauve-exo",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.551,
+    "lng": -73.6465,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
   }
 ]

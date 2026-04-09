@@ -189,6 +189,7 @@
       "montreal-ouest",
       "parc-exo",
       "chabanel",
+      "bois-de-boulogne",
       "de-la-concorde-exo",
       "vimont",
       "sainte-rose",
@@ -244,6 +245,7 @@
     "network": "exo",
     "stations": [
       "cote-de-liesse-exo",
+      "sauve-exo",
       "saint-michel-mtl-nord",
       "saint-leonard-mtl-nord",
       "anjou",
