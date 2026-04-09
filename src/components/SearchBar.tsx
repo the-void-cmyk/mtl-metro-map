@@ -83,6 +83,20 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
     setToQuery(tempQuery)
   }
 
+  const handleFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFromQuery(e.target.value)
+    setFromStation(null)
+    setActiveField("from")
+    setActiveIndex(-1)
+  }
+
+  const handleToChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setToQuery(e.target.value)
+    setToStation(null)
+    setActiveField("to")
+    setActiveIndex(-1)
+  }
+
   const handleKeyDown = (e: React.KeyboardEvent, field: "from" | "to") => {
     if (e.key === "ArrowDown") {
       e.preventDefault()
@@ -102,7 +116,6 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
     }
   }
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
@@ -113,36 +126,21 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
     return () => document.removeEventListener("mousedown", handler)
   }, [])
 
-  // Reset active index when query changes
-  const handleFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFromQuery(e.target.value)
-    setFromStation(null)
-    setActiveField("from")
-    setActiveIndex(-1)
-  }
-
-  const handleToChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setToQuery(e.target.value)
-    setToStation(null)
-    setActiveField("to")
-    setActiveIndex(-1)
-  }
-
   const getLineDots = (station: Station) =>
     station.lineIds.map((lineId) => (
-      <span
-        key={lineId}
-        className={`inline-block w-2.5 h-2.5 rounded-full line-dot-${lineId}`}
-        title={lineId}
-      />
+      <span key={lineId} className={`line-dot line-dot-${lineId}`} />
     ))
 
+  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-white
+    focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
+    placeholder:text-[var(--text-muted)] transition-all`
+
   return (
-    <div ref={dropdownRef} className={compact ? "" : "max-w-xl mx-auto"}>
-      <div className={`flex ${compact ? "flex-row gap-2" : "flex-col sm:flex-row gap-3"} items-stretch`}>
-        {/* From Field */}
+    <div ref={dropdownRef}>
+      <div className={`flex ${compact ? "flex-col gap-2" : "flex-col sm:flex-row gap-3"} items-stretch`}>
+        {/* From */}
         <div className="relative flex-1">
-          <label className="block text-xs font-medium text-gray-500 mb-1">From</label>
+          <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">From</label>
           <input
             ref={fromRef}
             type="text"
@@ -151,7 +149,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
             onFocus={() => setActiveField("from")}
             onKeyDown={(e) => handleKeyDown(e, "from")}
             placeholder="Departure station..."
-            className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+            className={inputClass}
             autoComplete="off"
           />
           {activeField === "from" && results.length > 0 && (
@@ -162,35 +160,37 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
                   className={`search-item ${i === activeIndex ? "active" : ""}`}
                   onClick={() => selectStation(station, "from")}
                 >
-                  <div className="flex items-center gap-1.5">{getLineDots(station)}</div>
-                  <span className="text-sm">{station.name}</span>
-                  <span className="text-xs text-gray-400 ml-auto capitalize">{station.network}</span>
+                  <div className="flex items-center gap-1">{getLineDots(station)}</div>
+                  <span className="text-[14px] font-medium">{station.name}</span>
+                  <span className="text-[11px] text-[var(--text-muted)] ml-auto uppercase tracking-wide">{station.network}</span>
                 </div>
               ))}
             </div>
           )}
         </div>
 
-        {/* Swap Button */}
-        <div className={`flex items-end ${compact ? "pb-0.5" : "pb-0.5 sm:pb-0"}`}>
-          <button
-            onClick={swapStations}
-            className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition"
-            title="Swap stations"
-            type="button"
-          >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M7 3L3 7L7 11" />
-              <path d="M3 7H17" />
-              <path d="M13 9L17 13L13 17" />
-              <path d="M17 13H3" />
-            </svg>
-          </button>
-        </div>
+        {/* Swap */}
+        {!compact && (
+          <div className="flex items-end pb-0.5">
+            <button
+              onClick={swapStations}
+              className="p-2.5 text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors"
+              title="Swap stations"
+              type="button"
+            >
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M7 3L3 7L7 11" />
+                <path d="M3 7H17" />
+                <path d="M13 9L17 13L13 17" />
+                <path d="M17 13H3" />
+              </svg>
+            </button>
+          </div>
+        )}
 
-        {/* To Field */}
+        {/* To */}
         <div className="relative flex-1">
-          <label className="block text-xs font-medium text-gray-500 mb-1">To</label>
+          <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">To</label>
           <input
             ref={toRef}
             type="text"
@@ -199,7 +199,7 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
             onFocus={() => setActiveField("to")}
             onKeyDown={(e) => handleKeyDown(e, "to")}
             placeholder="Arrival station..."
-            className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+            className={inputClass}
             autoComplete="off"
           />
           {activeField === "to" && results.length > 0 && (
@@ -210,9 +210,9 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
                   className={`search-item ${i === activeIndex ? "active" : ""}`}
                   onClick={() => selectStation(station, "to")}
                 >
-                  <div className="flex items-center gap-1.5">{getLineDots(station)}</div>
-                  <span className="text-sm">{station.name}</span>
-                  <span className="text-xs text-gray-400 ml-auto capitalize">{station.network}</span>
+                  <div className="flex items-center gap-1">{getLineDots(station)}</div>
+                  <span className="text-[14px] font-medium">{station.name}</span>
+                  <span className="text-[11px] text-[var(--text-muted)] ml-auto uppercase tracking-wide">{station.network}</span>
                 </div>
               ))}
             </div>
@@ -224,7 +224,9 @@ export default function SearchBar({ stations, compact = false }: SearchBarProps)
           <button
             onClick={handleSubmit}
             disabled={!fromStation || !toStation || fromStation.id === toStation.id}
-            className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed transition"
+            className={`${compact ? "w-full" : "w-full sm:w-auto"} px-6 py-2.5 bg-[var(--accent)] text-white text-[14px] font-medium rounded-lg
+              hover:bg-[#0055AA] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
+              transition-all`}
           >
             Find Route
           </button>

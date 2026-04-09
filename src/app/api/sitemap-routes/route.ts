@@ -9,7 +9,7 @@ const BASE_URL = "https://mtlmetro.com"
  * Consumed by Google Search Console alongside the static sitemap.
  */
 export async function GET() {
-  const entries = getSitemapEntries()
+  const entries = await getSitemapEntries()
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

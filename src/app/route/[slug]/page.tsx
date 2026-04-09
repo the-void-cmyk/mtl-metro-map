@@ -69,8 +69,7 @@ export default async function RoutePage({ params }: RoutePageProps) {
       <SchemaMarkup data={schemas} />
       <ViewTracker fromSlug={route.from.slug} toSlug={route.to.slug} />
 
-      <div className="max-w-5xl mx-auto px-4 py-6">
-        {/* Breadcrumbs */}
+      <div className="max-w-6xl mx-auto px-5 py-6 sm:py-8">
         <Breadcrumbs
           items={[
             { name: route.from.name, url: `/station/${route.from.slug}` },
@@ -78,111 +77,125 @@ export default async function RoutePage({ params }: RoutePageProps) {
           ]}
         />
 
-        {/* Title */}
-        <h1 className="text-2xl sm:text-3xl font-bold mt-4 mb-2">
-          {route.from.name} to {route.to.name}
-        </h1>
-        <p className="text-gray-600 text-sm mb-6">
-          Montreal transit route from {route.from.name} to {route.to.name}. {route.totalTime} minutes,{" "}
-          {route.stops} stops{route.transfers.length > 0 ? `, ${route.transfers.length} transfer(s)` : ", direct route"}.
-          Fare: {formatPrice(route.fare.price)}.
-        </p>
+        {/* ─── Title ─── */}
+        <div className="mt-5 mb-8">
+          <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight leading-tight">
+            {route.from.name}
+            <span className="text-[var(--text-muted)] mx-2 font-normal">&rarr;</span>
+            {route.to.name}
+          </h1>
+          <p className="text-[var(--text-secondary)] text-[15px] mt-2 leading-relaxed">
+            Montreal transit route. {route.totalTime} minutes,{" "}
+            {route.stops} stops{route.transfers.length > 0 ? `, ${route.transfers.length} transfer(s)` : ", direct"}.
+            Fare: {formatPrice(route.fare.price)}.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Main Column */}
-          <div className="lg:col-span-2 space-y-6">
-            {/* Summary Cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="bg-white rounded-lg border border-gray-200 p-4 text-center">
-                <div className="text-2xl font-bold text-blue-600">{route.totalTime}</div>
-                <div className="text-xs text-gray-500 mt-1">minutes</div>
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6">
+          {/* ─── Main Column ─── */}
+          <div className="space-y-6">
+            {/* Stat Strip */}
+            <div className="grid grid-cols-4 gap-3">
+              <div className="stat-card stat-card-blue">
+                <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{route.totalTime}</div>
+                <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">Minutes</div>
               </div>
-              <div className="bg-white rounded-lg border border-gray-200 p-4 text-center">
-                <div className="text-2xl font-bold text-gray-900">{route.stops}</div>
-                <div className="text-xs text-gray-500 mt-1">stops</div>
+              <div className="stat-card stat-card-neutral">
+                <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{route.stops}</div>
+                <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">Stops</div>
               </div>
-              <div className="bg-white rounded-lg border border-gray-200 p-4 text-center">
-                <div className="text-2xl font-bold text-gray-900">{route.transfers.length}</div>
-                <div className="text-xs text-gray-500 mt-1">transfer{route.transfers.length !== 1 ? "s" : ""}</div>
+              <div className="stat-card stat-card-neutral">
+                <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{route.transfers.length}</div>
+                <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">Transfer{route.transfers.length !== 1 ? "s" : ""}</div>
               </div>
-              <div className="bg-white rounded-lg border border-gray-200 p-4 text-center">
-                <div className="text-2xl font-bold text-green-600">{formatPrice(route.fare.price)}</div>
-                <div className="text-xs text-gray-500 mt-1">fare</div>
+              <div className="stat-card stat-card-green">
+                <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{formatPrice(route.fare.price)}</div>
+                <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">Fare</div>
               </div>
             </div>
 
             {/* Route Diagram */}
-            <div className="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
-              <h2 className="text-lg font-bold mb-4">Step-by-Step Route</h2>
-              <RouteDiagram route={route} />
+            <div className="info-card">
+              <div className="info-card-header">Step-by-Step Route</div>
+              <div className="info-card-body">
+                <RouteDiagram route={route} />
+              </div>
             </div>
 
             {/* FAQ */}
             <FAQ route={route} />
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
+          {/* ─── Sidebar ─── */}
+          <div className="space-y-5">
             {/* Route Info */}
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
-              <h3 className="font-semibold mb-3">Route Information</h3>
-              <dl className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Distance</dt>
-                  <dd className="font-medium">{route.distance} km</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Lines</dt>
-                  <dd className="flex gap-1">
-                    {route.segments.map((seg) => (
-                      <span
-                        key={seg.line.id}
-                        className="px-1.5 py-0.5 rounded text-xs font-medium"
-                        style={{ backgroundColor: seg.line.color, color: seg.line.textColor }}
-                      >
-                        {seg.line.name.replace(" Line", "")}
-                      </span>
-                    ))}
-                  </dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Fare Zone</dt>
-                  <dd className="font-medium">{route.fare.zones.join("")}</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Ticket Valid</dt>
-                  <dd className="font-medium">{route.fare.validityMinutes} min</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">First Train</dt>
-                  <dd className="font-medium">{route.firstTrain}</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Last Train</dt>
-                  <dd className="font-medium">{route.lastTrain}</dd>
-                </div>
-                <div className="flex justify-between">
-                  <dt className="text-gray-500">Accessible</dt>
-                  <dd className="font-medium">{route.from.accessible && route.to.accessible ? "Yes" : "Partial"}</dd>
-                </div>
-              </dl>
+            <div className="info-card">
+              <div className="info-card-header">Route Details</div>
+              <div className="info-card-body">
+                <dl className="space-y-3 text-[14px]">
+                  <div className="flex justify-between items-center">
+                    <dt className="text-[var(--text-muted)]">Distance</dt>
+                    <dd className="font-medium">{route.distance} km</dd>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <dt className="text-[var(--text-muted)]">Lines</dt>
+                    <dd className="flex gap-1.5">
+                      {route.segments.map((seg) => (
+                        <span
+                          key={seg.line.id}
+                          className="line-badge"
+                          style={{ backgroundColor: seg.line.color, color: seg.line.textColor }}
+                        >
+                          {seg.line.name.replace(" Line", "")}
+                        </span>
+                      ))}
+                    </dd>
+                  </div>
+                  <div className="h-px bg-[var(--border)]" />
+                  <div className="flex justify-between items-center">
+                    <dt className="text-[var(--text-muted)]">Fare Zone</dt>
+                    <dd className="font-medium">Zone {route.fare.zones.join("")}</dd>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <dt className="text-[var(--text-muted)]">Ticket Valid</dt>
+                    <dd className="font-medium">{route.fare.validityMinutes} min</dd>
+                  </div>
+                  <div className="h-px bg-[var(--border)]" />
+                  <div className="flex justify-between items-center">
+                    <dt className="text-[var(--text-muted)]">First Train</dt>
+                    <dd className="font-medium font-heading tabular-nums">{route.firstTrain}</dd>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <dt className="text-[var(--text-muted)]">Last Train</dt>
+                    <dd className="font-medium font-heading tabular-nums">{route.lastTrain}</dd>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <dt className="text-[var(--text-muted)]">Accessible</dt>
+                    <dd className="font-medium">{route.from.accessible && route.to.accessible ? "Yes" : "Partial"}</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
 
             {/* Reverse Route */}
             <Link
               href={`/route/${route.to.slug}-to-${route.from.slug}`}
-              className="block bg-white rounded-lg border border-gray-200 p-4 hover:bg-gray-50 transition text-center"
+              className="info-card block hover:border-[#bbb] transition-colors group"
             >
-              <span className="text-sm font-medium text-blue-600">
-                {route.to.name} to {route.from.name}
-              </span>
-              <span className="block text-xs text-gray-500 mt-1">View reverse route</span>
+              <div className="p-4 text-center">
+                <span className="text-[14px] font-medium text-[var(--accent)] group-hover:underline">
+                  {route.to.name} &rarr; {route.from.name}
+                </span>
+                <span className="block text-[12px] text-[var(--text-muted)] mt-0.5">View reverse route</span>
+              </div>
             </Link>
 
-            {/* Search Another Route */}
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
-              <h3 className="font-semibold mb-3 text-sm">Find Another Route</h3>
-              <SearchBar stations={allStations} compact />
+            {/* Search Another */}
+            <div className="info-card">
+              <div className="info-card-header">Find Another Route</div>
+              <div className="info-card-body">
+                <SearchBar stations={allStations} compact />
+              </div>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     const cleanFrom = fromSlug.replace(/[^a-z0-9-]/g, "").slice(0, 100)
     const cleanTo = toSlug.replace(/[^a-z0-9-]/g, "").slice(0, 100)
 
-    incrementView(cleanFrom, cleanTo)
+    await incrementView(cleanFrom, cleanTo)
 
     return NextResponse.json({ ok: true })
   } catch {

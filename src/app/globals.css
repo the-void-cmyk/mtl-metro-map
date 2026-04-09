@@ -1,16 +1,35 @@
 @import "tailwindcss";
 
 :root {
+  /* Metro line colors - the brand */
   --green-line: #00A651;
   --orange-line: #F58220;
   --blue-line: #0072BC;
   --yellow-line: #FFD200;
   --rem-line: #00B2A9;
-  --exo-line: #965F26;
+  --exo-line: #7B5B3A;
+
+  /* Design system */
+  --surface: #F7F7F5;
+  --surface-elevated: #FFFFFF;
+  --surface-inset: #EFEFEB;
+  --border: #E4E4DF;
+  --border-subtle: #EEEEEA;
+  --text-primary: #141413;
+  --text-secondary: #5C5C57;
+  --text-muted: #9A9A93;
+  --hero-bg: #0C1220;
+  --hero-surface: rgba(255, 255, 255, 0.06);
+  --hero-border: rgba(255, 255, 255, 0.1);
+  --accent: #0066CC;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-lg: 16px;
 }
 
 @theme inline {
-  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-dm-sans);
   --color-green-line: var(--green-line);
   --color-orange-line: var(--orange-line);
   --color-blue-line: var(--blue-line);
@@ -19,20 +38,44 @@
   --color-exo-line: var(--exo-line);
 }
 
-body {
-  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Line color utilities */
+body {
+  font-family: var(--font-body, system-ui, -apple-system, sans-serif);
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading, var(--font-body, system-ui));
+  letter-spacing: -0.02em;
+}
+
+/* ─── Line Color System ─── */
+.line-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .line-green { background-color: var(--green-line); color: white; }
 .line-orange { background-color: var(--orange-line); color: white; }
 .line-blue { background-color: var(--blue-line); color: white; }
-.line-yellow { background-color: var(--yellow-line); color: black; }
+.line-yellow { background-color: var(--yellow-line); color: #1a1a1a; }
 .line-rem-a { background-color: var(--rem-line); color: white; }
 .line-exo1, .line-exo2, .line-exo3, .line-exo4, .line-exo5 {
   background-color: var(--exo-line); color: white;
 }
 
+.line-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 .line-dot-green { background-color: var(--green-line); }
 .line-dot-orange { background-color: var(--orange-line); }
 .line-dot-blue { background-color: var(--blue-line); }
@@ -42,31 +85,191 @@ body {
   background-color: var(--exo-line);
 }
 
-/* Search autocomplete */
+/* ─── Search Autocomplete ─── */
 .search-dropdown {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 4px);
   left: 0;
   right: 0;
   z-index: 40;
   background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  max-height: 280px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 20px -5px rgba(0, 0, 0, 0.08);
+  max-height: 300px;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .search-item {
-  padding: 0.625rem 0.75rem;
+  padding: 10px 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: background 0.1s;
+  gap: 10px;
+  transition: background 0.1s ease;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
+.search-item:last-child { border-bottom: none; }
 .search-item:hover,
-.search-item.active {
-  background-color: #f3f4f6;
+.search-item.active { background-color: var(--surface-inset); }
+
+/* ─── Stat Card ─── */
+.stat-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.stat-card-blue::before { background: var(--blue-line); }
+.stat-card-neutral::before { background: var(--text-primary); }
+.stat-card-green::before { background: var(--green-line); }
+
+/* ─── Info Card ─── */
+.info-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.info-card-header {
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-heading);
+}
+
+.info-card-body {
+  padding: 16px 20px;
+}
+
+/* ─── Route Diagram ─── */
+.route-line {
+  width: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.route-station-dot {
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.route-station-dot-terminal {
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--text-primary);
+  background: white;
+}
+
+.route-station-dot-transfer {
+  width: 12px;
+  height: 12px;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+.route-station-dot-intermediate {
+  width: 8px;
+  height: 8px;
+  border: 2px solid white;
+}
+
+/* ─── Network Card ─── */
+.network-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.network-card:hover {
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ─── Hero ─── */
+.hero {
+  background: var(--hero-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 102, 204, 0.12), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 100%, rgba(0, 166, 81, 0.06), transparent),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(245, 130, 32, 0.04), transparent);
+  pointer-events: none;
+}
+
+.hero-search {
+  background: var(--hero-surface);
+  border: 1px solid var(--hero-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 24px;
+}
+
+/* ─── FAQ ─── */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-elevated);
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.faq-item:hover { border-color: #ccc; }
+
+.faq-item summary {
+  padding: 14px 18px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  list-style: none;
+  user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item[open] summary { border-bottom: 1px solid var(--border); }
+
+.faq-item .faq-answer {
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }

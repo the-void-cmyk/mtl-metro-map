@@ -14,136 +14,176 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-600 to-blue-700 text-white py-16 sm:py-24">
-        <div className="max-w-5xl mx-auto px-4">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-3">
-            Montreal Metro Route Finder
-          </h1>
-          <p className="text-blue-100 text-center mb-10 max-w-2xl mx-auto">
-            Find the fastest route across Montreal&apos;s transit network. {allStations.length} stations
-            covering Metro, REM, and Exo commuter trains.
-          </p>
-          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg text-gray-900">
+      {/* ─── Hero ─── */}
+      <section
+        className="relative overflow-hidden py-20 sm:py-28"
+        style={{ background: "#0C1220" }}
+      >
+        {/* Gradient overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,102,204,0.12), transparent), radial-gradient(ellipse 60% 50% at 80% 100%, rgba(0,166,81,0.06), transparent)"
+          }}
+        />
+        <div className="relative max-w-6xl mx-auto px-5">
+          <div className="text-center mb-10">
+            <div
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-6 tracking-wide"
+              style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.6)" }}
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              {allStations.length} stations across 3 networks
+            </div>
+            <h1
+              className="text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.1] mb-4"
+              style={{ color: "#FFFFFF", fontFamily: "var(--font-space-grotesk), system-ui" }}
+            >
+              Montreal Metro
+              <br />
+              <span style={{ color: "rgba(255,255,255,0.45)" }}>Route Finder</span>
+            </h1>
+            <p className="text-[15px] max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.4)" }}>
+              Plan your trip across the STM Metro, REM light rail,
+              and Exo commuter train network.
+            </p>
+          </div>
+
+          <div
+            className="max-w-2xl mx-auto rounded-2xl p-6"
+            style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)" }}
+          >
             <SearchBar stations={allStations} />
           </div>
         </div>
       </section>
 
-      {/* Network Overview */}
-      <section className="py-12 sm:py-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">
-            Montreal Transit Network
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg p-6 border border-gray-200 text-center">
-              <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
-                <span className="text-blue-600 font-bold text-lg">M</span>
+      {/* ─── Network Cards ─── */}
+      <section className="py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="text-center mb-10">
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">The Network</h2>
+            <p className="text-[var(--text-muted)] text-[15px] mt-2">
+              Three interconnected transit systems, one fare.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {/* Metro */}
+            <div className="network-card">
+              <div className="flex justify-center gap-1.5 mb-5">
+                {allLines.filter(l => l.network === "metro").map(line => (
+                  <div key={line.id} className="w-3 h-3 rounded-full" style={{ backgroundColor: line.color }} />
+                ))}
               </div>
-              <h3 className="font-semibold text-lg mb-1">STM Metro</h3>
-              <p className="text-gray-500 text-sm mb-3">
-                {metroCount} stations across 4 lines
+              <h3 className="font-heading font-semibold text-xl tracking-tight">STM Metro</h3>
+              <p className="text-[var(--text-muted)] text-sm mt-1.5 mb-5">
+                {metroCount} stations, 4 lines
               </p>
               <div className="flex justify-center gap-2">
-                {allLines
-                  .filter((l) => l.network === "metro")
-                  .map((line) => (
-                    <Link
-                      key={line.id}
-                      href={`/line/${line.id}`}
-                      className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"
-                      style={{ backgroundColor: line.color, color: line.textColor }}
-                      title={line.name}
-                    >
-                      {line.name[0]}
-                    </Link>
-                  ))}
+                {allLines.filter(l => l.network === "metro").map(line => (
+                  <Link
+                    key={line.id}
+                    href={`/line/${line.id}`}
+                    className="line-badge"
+                    style={{ backgroundColor: line.color, color: line.textColor }}
+                  >
+                    {line.name.replace(" Line", "")}
+                  </Link>
+                ))}
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-gray-200 text-center">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: "#e6f9f7" }}>
-                <span className="font-bold text-lg" style={{ color: "#00B2A9" }}>R</span>
+            {/* REM */}
+            <div className="network-card">
+              <div className="flex justify-center mb-5">
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "var(--rem-line)" }} />
               </div>
-              <h3 className="font-semibold text-lg mb-1">REM</h3>
-              <p className="text-gray-500 text-sm mb-3">
+              <h3 className="font-heading font-semibold text-xl tracking-tight">REM</h3>
+              <p className="text-[var(--text-muted)] text-sm mt-1.5 mb-5">
                 {remCount} stations, automated light rail
               </p>
               <Link
                 href="/line/rem-a"
-                className="inline-block px-3 py-1 rounded-full text-xs font-medium text-white"
-                style={{ backgroundColor: "#00B2A9" }}
+                className="line-badge"
+                style={{ backgroundColor: "var(--rem-line)" }}
               >
-                REM Line
+                REM
               </Link>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-gray-200 text-center">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: "#f5efe8" }}>
-                <span className="font-bold text-lg" style={{ color: "#965F26" }}>E</span>
+            {/* Exo */}
+            <div className="network-card">
+              <div className="flex justify-center gap-1 mb-5">
+                {[1,2,3,4,5].map(n => (
+                  <div key={n} className="w-3 h-3 rounded-full" style={{ backgroundColor: "var(--exo-line)" }} />
+                ))}
               </div>
-              <h3 className="font-semibold text-lg mb-1">Exo Commuter</h3>
-              <p className="text-gray-500 text-sm mb-3">
-                {exoCount} stations across 5 train lines
+              <h3 className="font-heading font-semibold text-xl tracking-tight">Exo Commuter</h3>
+              <p className="text-[var(--text-muted)] text-sm mt-1.5 mb-5">
+                {exoCount} stations, 5 train lines
               </p>
-              <div className="flex justify-center gap-1.5 flex-wrap">
-                {allLines
-                  .filter((l) => l.network === "exo")
-                  .map((line) => (
-                    <Link
-                      key={line.id}
-                      href={`/line/${line.id}`}
-                      className="px-2 py-0.5 rounded text-xs font-medium text-white"
-                      style={{ backgroundColor: "#965F26" }}
-                      title={line.name}
-                    >
-                      {line.id.replace("exo", "")}
-                    </Link>
-                  ))}
+              <div className="flex justify-center gap-2 flex-wrap">
+                {allLines.filter(l => l.network === "exo").map(line => (
+                  <Link
+                    key={line.id}
+                    href={`/line/${line.id}`}
+                    className="line-badge"
+                    style={{ backgroundColor: "var(--exo-line)" }}
+                  >
+                    {line.id.replace("exo", "Line ")}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Fare Info */}
-      <section className="py-12 bg-white border-t border-gray-200">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-2">
-            Unified Fare System
-          </h2>
-          <p className="text-gray-500 text-center mb-8 max-w-xl mx-auto">
-            One ticket covers Metro, REM, and Exo. Valid for 120 minutes across all modes.
-            Pay with OPUS card or contactless payment.
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+      {/* ─── Fares ─── */}
+      <section className="py-16 bg-white border-y border-[var(--border)]">
+        <div className="max-w-6xl mx-auto px-5">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <h2 className="font-heading text-2xl font-bold tracking-tight">Fare Zones</h2>
+              <p className="text-[var(--text-muted)] text-[15px] mt-1">
+                Unified pricing across all modes. Valid 120 minutes.
+              </p>
+            </div>
+            <span className="text-[12px] font-medium text-[var(--text-muted)] uppercase tracking-wider">OPUS Card or Contactless</span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { zone: "A", price: "$3.75", desc: "Montreal Island" },
-              { zone: "AB", price: "$5.25", desc: "Montreal + Laval" },
-              { zone: "ABC", price: "$7.00", desc: "+ Inner Suburbs" },
-              { zone: "ABCD", price: "$9.25", desc: "Full Network" },
+              { zone: "A", price: "$3.75", area: "Montreal Island", accent: "var(--blue-line)" },
+              { zone: "AB", price: "$5.25", area: "Montreal + Laval", accent: "var(--orange-line)" },
+              { zone: "ABC", price: "$7.00", area: "+ Inner Suburbs", accent: "var(--green-line)" },
+              { zone: "ABCD", price: "$9.25", area: "Full Network", accent: "var(--text-primary)" },
             ].map((f) => (
-              <div key={f.zone} className="bg-gray-50 rounded-lg p-4 text-center border border-gray-100">
-                <div className="text-xs font-medium text-gray-400 mb-1">Zone {f.zone}</div>
-                <div className="text-xl font-bold text-gray-900">{f.price}</div>
-                <div className="text-xs text-gray-500 mt-1">{f.desc}</div>
+              <div key={f.zone} className="stat-card">
+                <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ backgroundColor: f.accent }} />
+                <div className="text-[11px] font-semibold tracking-widest text-[var(--text-muted)] uppercase mb-2">
+                  Zone {f.zone}
+                </div>
+                <div className="font-heading text-3xl font-bold tracking-tight">{f.price}</div>
+                <div className="text-[13px] text-[var(--text-muted)] mt-1.5">{f.area}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SEO intro text */}
-      <section className="py-12">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-xl font-bold mb-3">Plan Your Montreal Transit Trip</h2>
-          <p className="text-gray-600 text-sm leading-relaxed">
-            MTL Metro helps you find the fastest route between any two stations on Montreal&apos;s
-            transit network. Whether you&apos;re traveling on the STM Metro (Green, Orange, Blue,
-            or Yellow line), the new REM automated light rail, or one of 5 Exo commuter train
-            lines, we calculate the optimal path including transfers, travel time, number of
-            stops, and fare information. Start typing a station name above to plan your trip.
+      {/* ─── SEO Text ─── */}
+      <section className="py-16">
+        <div className="max-w-2xl mx-auto px-5 text-center">
+          <h2 className="font-heading text-xl font-bold tracking-tight mb-3">
+            Plan Your Montreal Transit Trip
+          </h2>
+          <p className="text-[var(--text-secondary)] text-[15px] leading-relaxed">
+            MTL Metro calculates the fastest route between any two stations on Montreal&apos;s
+            transit network. Whether you&apos;re traveling on the STM Metro, the REM automated
+            light rail, or Exo commuter trains, get the optimal path with transfers,
+            travel time, stops, and fare info.
           </p>
         </div>
       </section>
