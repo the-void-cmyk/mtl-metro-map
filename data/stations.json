@@ -1,149 +1,2317 @@
 [
-  {"id":"angrignon","name":"Angrignon","nameFr":"Angrignon","slug":"angrignon","lineIds":["green"],"network":"metro","zone":"A","lat":45.4462,"lng":-73.6039,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"monk","name":"Monk","nameFr":"Monk","slug":"monk","lineIds":["green"],"network":"metro","zone":"A","lat":45.4513,"lng":-73.5932,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"jolicoeur","name":"Jolicoeur","nameFr":"Jolicoeur","slug":"jolicoeur","lineIds":["green"],"network":"metro","zone":"A","lat":45.4569,"lng":-73.5828,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"verdun","name":"Verdun","nameFr":"Verdun","slug":"verdun","lineIds":["green"],"network":"metro","zone":"A","lat":45.4593,"lng":-73.5718,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"de-l-eglise","name":"De l'Eglise","nameFr":"De l'Eglise","slug":"de-l-eglise","lineIds":["green"],"network":"metro","zone":"A","lat":45.4618,"lng":-73.5667,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"lasalle","name":"LaSalle","nameFr":"LaSalle","slug":"lasalle","lineIds":["green"],"network":"metro","zone":"A","lat":45.4703,"lng":-73.5664,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"charlevoix","name":"Charlevoix","nameFr":"Charlevoix","slug":"charlevoix","lineIds":["green"],"network":"metro","zone":"A","lat":45.4777,"lng":-73.5695,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"lionel-groulx","name":"Lionel-Groulx","nameFr":"Lionel-Groulx","slug":"lionel-groulx","lineIds":["green","orange"],"network":"metro","zone":"A","lat":45.4832,"lng":-73.5679,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"atwater","name":"Atwater","nameFr":"Atwater","slug":"atwater","lineIds":["green"],"network":"metro","zone":"A","lat":45.4896,"lng":-73.5885,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"guy-concordia","name":"Guy-Concordia","nameFr":"Guy-Concordia","slug":"guy-concordia","lineIds":["green"],"network":"metro","zone":"A","lat":45.4962,"lng":-73.5789,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"peel","name":"Peel","nameFr":"Peel","slug":"peel","lineIds":["green"],"network":"metro","zone":"A","lat":45.5012,"lng":-73.5738,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"mcgill","name":"McGill","nameFr":"McGill","slug":"mcgill","lineIds":["green"],"network":"metro","zone":"A","lat":45.5040,"lng":-73.5718,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"place-des-arts","name":"Place-des-Arts","nameFr":"Place-des-Arts","slug":"place-des-arts","lineIds":["green"],"network":"metro","zone":"A","lat":45.5083,"lng":-73.5680,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"saint-laurent","name":"Saint-Laurent","nameFr":"Saint-Laurent","slug":"saint-laurent","lineIds":["green"],"network":"metro","zone":"A","lat":45.5115,"lng":-73.5645,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"berri-uqam","name":"Berri-UQAM","nameFr":"Berri-UQAM","slug":"berri-uqam","lineIds":["green","orange","yellow"],"network":"metro","zone":"A","lat":45.5149,"lng":-73.5560,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"beaudry","name":"Beaudry","nameFr":"Beaudry","slug":"beaudry","lineIds":["green"],"network":"metro","zone":"A","lat":45.5190,"lng":-73.5523,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"papineau","name":"Papineau","nameFr":"Papineau","slug":"papineau","lineIds":["green"],"network":"metro","zone":"A","lat":45.5235,"lng":-73.5518,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"frontenac","name":"Frontenac","nameFr":"Frontenac","slug":"frontenac","lineIds":["green"],"network":"metro","zone":"A","lat":45.5332,"lng":-73.5524,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"prefontaine","name":"Prefontaine","nameFr":"Prefontaine","slug":"prefontaine","lineIds":["green"],"network":"metro","zone":"A","lat":45.5413,"lng":-73.5498,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"joliette","name":"Joliette","nameFr":"Joliette","slug":"joliette","lineIds":["green"],"network":"metro","zone":"A","lat":45.5475,"lng":-73.5505,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"pie-ix","name":"Pie-IX","nameFr":"Pie-IX","slug":"pie-ix","lineIds":["green"],"network":"metro","zone":"A","lat":45.5535,"lng":-73.5516,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"viau","name":"Viau","nameFr":"Viau","slug":"viau","lineIds":["green"],"network":"metro","zone":"A","lat":45.5610,"lng":-73.5468,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"assomption","name":"Assomption","nameFr":"Assomption","slug":"assomption","lineIds":["green"],"network":"metro","zone":"A","lat":45.5658,"lng":-73.5435,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"cadillac","name":"Cadillac","nameFr":"Cadillac","slug":"cadillac","lineIds":["green"],"network":"metro","zone":"A","lat":45.5719,"lng":-73.5404,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"langelier","name":"Langelier","nameFr":"Langelier","slug":"langelier","lineIds":["green"],"network":"metro","zone":"A","lat":45.5803,"lng":-73.5341,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"radisson","name":"Radisson","nameFr":"Radisson","slug":"radisson","lineIds":["green"],"network":"metro","zone":"A","lat":45.5893,"lng":-73.5302,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"honore-beaugrand","name":"Honore-Beaugrand","nameFr":"Honore-Beaugrand","slug":"honore-beaugrand","lineIds":["green"],"network":"metro","zone":"A","lat":45.5964,"lng":-73.5172,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-
-  {"id":"cote-vertu","name":"Cote-Vertu","nameFr":"Cote-Vertu","slug":"cote-vertu","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5146,"lng":-73.6838,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"du-college","name":"Du College","nameFr":"Du College","slug":"du-college","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5097,"lng":-73.6732,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"de-la-savane","name":"De la Savane","nameFr":"De la Savane","slug":"de-la-savane","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5003,"lng":-73.6622,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"namur","name":"Namur","nameFr":"Namur","slug":"namur","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4948,"lng":-73.6530,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"plamondon","name":"Plamondon","nameFr":"Plamondon","slug":"plamondon","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4946,"lng":-73.6380,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"cote-sainte-catherine","name":"Cote-Sainte-Catherine","nameFr":"Cote-Sainte-Catherine","slug":"cote-sainte-catherine","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4923,"lng":-73.6328,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"snowdon","name":"Snowdon","nameFr":"Snowdon","slug":"snowdon","lineIds":["orange","blue"],"network":"metro","zone":"A","lat":45.4853,"lng":-73.6277,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"villa-maria","name":"Villa-Maria","nameFr":"Villa-Maria","slug":"villa-maria","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4800,"lng":-73.6195,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"vendome","name":"Vendome","nameFr":"Vendome","slug":"vendome","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4738,"lng":-73.6042,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"place-saint-henri","name":"Place-Saint-Henri","nameFr":"Place-Saint-Henri","slug":"place-saint-henri","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4770,"lng":-73.5868,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"georges-vanier","name":"Georges-Vanier","nameFr":"Georges-Vanier","slug":"georges-vanier","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4887,"lng":-73.5716,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"lucien-l-allier","name":"Lucien-L'Allier","nameFr":"Lucien-L'Allier","slug":"lucien-l-allier","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4943,"lng":-73.5713,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"bonaventure","name":"Bonaventure","nameFr":"Bonaventure","slug":"bonaventure","lineIds":["orange"],"network":"metro","zone":"A","lat":45.4981,"lng":-73.5674,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"square-victoria-oaci","name":"Square-Victoria-OACI","nameFr":"Square-Victoria-OACI","slug":"square-victoria-oaci","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5019,"lng":-73.5627,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"place-d-armes","name":"Place-d'Armes","nameFr":"Place-d'Armes","slug":"place-d-armes","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5061,"lng":-73.5596,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"champ-de-mars","name":"Champ-de-Mars","nameFr":"Champ-de-Mars","slug":"champ-de-mars","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5102,"lng":-73.5567,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"sherbrooke","name":"Sherbrooke","nameFr":"Sherbrooke","slug":"sherbrooke","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5188,"lng":-73.5686,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"mont-royal","name":"Mont-Royal","nameFr":"Mont-Royal","slug":"mont-royal","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5244,"lng":-73.5818,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"laurier","name":"Laurier","nameFr":"Laurier","slug":"laurier","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5270,"lng":-73.5863,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"rosemont","name":"Rosemont","nameFr":"Rosemont","slug":"rosemont","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5317,"lng":-73.5971,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"beaubien","name":"Beaubien","nameFr":"Beaubien","slug":"beaubien","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5361,"lng":-73.6042,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"jean-talon","name":"Jean-Talon","nameFr":"Jean-Talon","slug":"jean-talon","lineIds":["orange","blue"],"network":"metro","zone":"A","lat":45.5393,"lng":-73.6134,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"jarry","name":"Jarry","nameFr":"Jarry","slug":"jarry","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5435,"lng":-73.6288,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"cremazie","name":"Cremazie","nameFr":"Cremazie","slug":"cremazie","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5464,"lng":-73.6372,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"sauve","name":"Sauve","nameFr":"Sauve","slug":"sauve","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5508,"lng":-73.6462,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"henri-bourassa","name":"Henri-Bourassa","nameFr":"Henri-Bourassa","slug":"henri-bourassa","lineIds":["orange"],"network":"metro","zone":"A","lat":45.5569,"lng":-73.6528,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"cartier","name":"Cartier","nameFr":"Cartier","slug":"cartier","lineIds":["orange"],"network":"metro","zone":"B","lat":45.5597,"lng":-73.6810,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"de-la-concorde","name":"De la Concorde","nameFr":"De la Concorde","slug":"de-la-concorde","lineIds":["orange"],"network":"metro","zone":"B","lat":45.5608,"lng":-73.7066,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"montmorency","name":"Montmorency","nameFr":"Montmorency","slug":"montmorency","lineIds":["orange"],"network":"metro","zone":"B","lat":45.5582,"lng":-73.7214,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-
-  {"id":"cote-des-neiges","name":"Cote-des-Neiges","nameFr":"Cote-des-Neiges","slug":"cote-des-neiges","lineIds":["blue"],"network":"metro","zone":"A","lat":45.4963,"lng":-73.6328,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"universite-de-montreal","name":"Universite-de-Montreal","nameFr":"Universite-de-Montreal","slug":"universite-de-montreal","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5035,"lng":-73.6243,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"edouard-montpetit","name":"Edouard-Montpetit","nameFr":"Edouard-Montpetit","slug":"edouard-montpetit","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5096,"lng":-73.6133,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"outremont","name":"Outremont","nameFr":"Outremont","slug":"outremont","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5200,"lng":-73.6147,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"acadie","name":"Acadie","nameFr":"Acadie","slug":"acadie","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5232,"lng":-73.6234,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"parc","name":"Parc","nameFr":"Parc","slug":"parc","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5305,"lng":-73.6246,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"de-castelnau","name":"De Castelnau","nameFr":"De Castelnau","slug":"de-castelnau","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5350,"lng":-73.6201,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"fabre","name":"Fabre","nameFr":"Fabre","slug":"fabre","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5447,"lng":-73.6104,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"d-iberville","name":"D'Iberville","nameFr":"D'Iberville","slug":"d-iberville","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5499,"lng":-73.6020,"accessible":false,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"saint-michel","name":"Saint-Michel","nameFr":"Saint-Michel","slug":"saint-michel","lineIds":["blue"],"network":"metro","zone":"A","lat":45.5595,"lng":-73.5992,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-
-  {"id":"jean-drapeau","name":"Jean-Drapeau","nameFr":"Jean-Drapeau","slug":"jean-drapeau","lineIds":["yellow"],"network":"metro","zone":"A","lat":45.5112,"lng":-73.5334,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-  {"id":"longueuil-universite-de-sherbrooke","name":"Longueuil-Universite-de-Sherbrooke","nameFr":"Longueuil-Universite-de-Sherbrooke","slug":"longueuil-universite-de-sherbrooke","lineIds":["yellow"],"network":"metro","zone":"B","lat":45.5254,"lng":-73.5220,"accessible":true,"firstTrain":"05:30","lastTrain":"01:00"},
-
-  {"id":"gare-centrale-rem","name":"Gare Centrale (REM)","nameFr":"Gare Centrale (REM)","slug":"gare-centrale-rem","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4988,"lng":-73.5671,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"griffintown-bernard-landry","name":"Griffintown-Bernard-Landry","nameFr":"Griffintown-Bernard-Landry","slug":"griffintown-bernard-landry","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4921,"lng":-73.5588,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"du-canal","name":"Du Canal","nameFr":"Du Canal","slug":"du-canal","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4845,"lng":-73.5713,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"ile-des-soeurs","name":"Ile-des-Soeurs","nameFr":"Ile-des-Soeurs","slug":"ile-des-soeurs","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4672,"lng":-73.5553,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"panama","name":"Panama","nameFr":"Panama","slug":"panama","lineIds":["rem-a"],"network":"rem","zone":"B","lat":45.4589,"lng":-73.5316,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"bois-franc","name":"Bois-Franc","nameFr":"Bois-Franc","slug":"bois-franc","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.5183,"lng":-73.7108,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"du-ruisseau","name":"Du Ruisseau","nameFr":"Du Ruisseau","slug":"du-ruisseau","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.5172,"lng":-73.6934,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"montpellier","name":"Montpellier","nameFr":"Montpellier","slug":"montpellier","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.5091,"lng":-73.7353,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"sunnybrooke","name":"Sunnybrooke","nameFr":"Sunnybrooke","slug":"sunnybrooke","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4943,"lng":-73.7621,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"a-40","name":"A-40","nameFr":"A-40","slug":"a-40","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4825,"lng":-73.7915,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"marie-curie","name":"Marie-Curie","nameFr":"Marie-Curie","slug":"marie-curie","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4712,"lng":-73.8141,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"yul-aeroport-de-montreal","name":"YUL Aeroport de Montreal","nameFr":"YUL Aeroport de Montreal","slug":"yul-aeroport-de-montreal","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4576,"lng":-73.7497,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"des-sources","name":"Des Sources","nameFr":"Des Sources","slug":"des-sources","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4642,"lng":-73.8098,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"pointe-claire","name":"Pointe-Claire","nameFr":"Pointe-Claire","slug":"pointe-claire","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4567,"lng":-73.8347,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"cedar-park","name":"Cedar Park","nameFr":"Cedar Park","slug":"cedar-park","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4470,"lng":-73.8545,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"anse-a-l-orme","name":"Anse-a-l'Orme","nameFr":"Anse-a-l'Orme","slug":"anse-a-l-orme","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4370,"lng":-73.9392,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-  {"id":"sainte-anne-de-bellevue","name":"Sainte-Anne-de-Bellevue","nameFr":"Sainte-Anne-de-Bellevue","slug":"sainte-anne-de-bellevue","lineIds":["rem-a"],"network":"rem","zone":"A","lat":45.4055,"lng":-73.9543,"accessible":true,"firstTrain":"05:00","lastTrain":"01:00"},
-
-  {"id":"lucien-l-allier-exo","name":"Lucien-L'Allier (Exo)","nameFr":"Lucien-L'Allier (Exo)","slug":"lucien-l-allier-exo","lineIds":["exo1","exo4"],"network":"exo","zone":"A","lat":45.4948,"lng":-73.5710,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"vendome-exo","name":"Vendome (Exo)","nameFr":"Vendome (Exo)","slug":"vendome-exo","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4735,"lng":-73.6038,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"montreal-ouest","name":"Montreal-Ouest","nameFr":"Montreal-Ouest","slug":"montreal-ouest","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4533,"lng":-73.6491,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"lachine","name":"Lachine","nameFr":"Lachine","slug":"lachine","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4379,"lng":-73.6843,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"dorval","name":"Dorval","nameFr":"Dorval","slug":"dorval","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4444,"lng":-73.7410,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"pine-beach","name":"Pine Beach","nameFr":"Pine Beach","slug":"pine-beach","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4360,"lng":-73.7640,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"valois","name":"Valois","nameFr":"Valois","slug":"valois","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4410,"lng":-73.7850,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"pointe-claire-exo","name":"Pointe-Claire (Exo)","nameFr":"Pointe-Claire (Exo)","slug":"pointe-claire-exo","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4499,"lng":-73.8150,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"cedar-park-exo","name":"Cedar Park (Exo)","nameFr":"Cedar Park (Exo)","slug":"cedar-park-exo","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4475,"lng":-73.8540,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"beaconsfield","name":"Beaconsfield","nameFr":"Beaconsfield","slug":"beaconsfield","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4413,"lng":-73.8700,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"beaurepaire","name":"Beaurepaire","nameFr":"Beaurepaire","slug":"beaurepaire","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4370,"lng":-73.8984,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"baie-d-urfe","name":"Baie-d'Urfe","nameFr":"Baie-d'Urfe","slug":"baie-d-urfe","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4126,"lng":-73.9198,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"sainte-anne-de-bellevue-exo","name":"Sainte-Anne-de-Bellevue (Exo)","nameFr":"Sainte-Anne-de-Bellevue (Exo)","slug":"sainte-anne-de-bellevue-exo","lineIds":["exo1"],"network":"exo","zone":"A","lat":45.4060,"lng":-73.9530,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"ile-perrot","name":"Ile-Perrot","nameFr":"Ile-Perrot","slug":"ile-perrot","lineIds":["exo1"],"network":"exo","zone":"C","lat":45.3886,"lng":-73.9541,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"terrasse-vaudreuil","name":"Terrasse-Vaudreuil","nameFr":"Terrasse-Vaudreuil","slug":"terrasse-vaudreuil","lineIds":["exo1"],"network":"exo","zone":"C","lat":45.3964,"lng":-74.0334,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"dorion","name":"Dorion","nameFr":"Dorion","slug":"dorion","lineIds":["exo1"],"network":"exo","zone":"C","lat":45.4466,"lng":-74.0551,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"vaudreuil","name":"Vaudreuil","nameFr":"Vaudreuil","slug":"vaudreuil","lineIds":["exo1"],"network":"exo","zone":"C","lat":45.4016,"lng":-74.0312,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"hudson","name":"Hudson","nameFr":"Hudson","slug":"hudson","lineIds":["exo1"],"network":"exo","zone":"D","lat":45.4485,"lng":-74.1440,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-
-  {"id":"gare-centrale-exo","name":"Gare Centrale (Exo)","nameFr":"Gare Centrale (Exo)","slug":"gare-centrale-exo","lineIds":["exo3","exo5"],"network":"exo","zone":"A","lat":45.4985,"lng":-73.5668,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"bois-franc-exo","name":"Bois-Franc (Exo)","nameFr":"Bois-Franc (Exo)","slug":"bois-franc-exo","lineIds":["exo2"],"network":"exo","zone":"A","lat":45.5180,"lng":-73.7100,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"sunnybrooke-exo","name":"Sunnybrooke (Exo)","nameFr":"Sunnybrooke (Exo)","slug":"sunnybrooke-exo","lineIds":["exo2"],"network":"exo","zone":"A","lat":45.4940,"lng":-73.7615,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"roxboro-pierrefonds","name":"Roxboro-Pierrefonds","nameFr":"Roxboro-Pierrefonds","slug":"roxboro-pierrefonds","lineIds":["exo2"],"network":"exo","zone":"A","lat":45.5023,"lng":-73.7992,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"ile-bigras","name":"Ile-Bigras","nameFr":"Ile-Bigras","slug":"ile-bigras","lineIds":["exo2"],"network":"exo","zone":"B","lat":45.5219,"lng":-73.8109,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"sainte-dorothee","name":"Sainte-Dorothee","nameFr":"Sainte-Dorothee","slug":"sainte-dorothee","lineIds":["exo2"],"network":"exo","zone":"B","lat":45.5244,"lng":-73.8350,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"de-la-concorde-exo","name":"De la Concorde (Exo)","nameFr":"De la Concorde (Exo)","slug":"de-la-concorde-exo","lineIds":["exo2"],"network":"exo","zone":"B","lat":45.5612,"lng":-73.7070,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"parc-exo","name":"Parc (Exo)","nameFr":"Parc (Exo)","slug":"parc-exo","lineIds":["exo2","exo5"],"network":"exo","zone":"A","lat":45.5310,"lng":-73.6250,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"chabanel","name":"Chabanel","nameFr":"Chabanel","slug":"chabanel","lineIds":["exo2"],"network":"exo","zone":"A","lat":45.5380,"lng":-73.6500,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"du-ruisseau-exo","name":"Du Ruisseau (Exo)","nameFr":"Du Ruisseau (Exo)","slug":"du-ruisseau-exo","lineIds":["exo2"],"network":"exo","zone":"A","lat":45.5170,"lng":-73.6930,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"bois-de-boulogne","name":"Bois-de-Boulogne","nameFr":"Bois-de-Boulogne","slug":"bois-de-boulogne","lineIds":["exo2"],"network":"exo","zone":"A","lat":45.5340,"lng":-73.6710,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"laval-centre","name":"Laval Centre","nameFr":"Laval Centre","slug":"laval-centre","lineIds":["exo2"],"network":"exo","zone":"B","lat":45.5699,"lng":-73.7370,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"sainte-rose","name":"Sainte-Rose","nameFr":"Sainte-Rose","slug":"sainte-rose","lineIds":["exo2"],"network":"exo","zone":"B","lat":45.5998,"lng":-73.7820,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"rosemere","name":"Rosemere","nameFr":"Rosemere","slug":"rosemere","lineIds":["exo2"],"network":"exo","zone":"C","lat":45.6227,"lng":-73.7835,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"sainte-therese","name":"Sainte-Therese","nameFr":"Sainte-Therese","slug":"sainte-therese","lineIds":["exo2"],"network":"exo","zone":"C","lat":45.6384,"lng":-73.8374,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"blainville","name":"Blainville","nameFr":"Blainville","slug":"blainville","lineIds":["exo2"],"network":"exo","zone":"C","lat":45.6636,"lng":-73.8835,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"saint-jerome","name":"Saint-Jerome","nameFr":"Saint-Jerome","slug":"saint-jerome","lineIds":["exo2"],"network":"exo","zone":"D","lat":45.7803,"lng":-74.0046,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-
-  {"id":"saint-lambert","name":"Saint-Lambert","nameFr":"Saint-Lambert","slug":"saint-lambert","lineIds":["exo3"],"network":"exo","zone":"B","lat":45.4997,"lng":-73.5039,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"saint-hubert","name":"Saint-Hubert","nameFr":"Saint-Hubert","slug":"saint-hubert","lineIds":["exo3"],"network":"exo","zone":"B","lat":45.5155,"lng":-73.4363,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"saint-bruno","name":"Saint-Bruno","nameFr":"Saint-Bruno","slug":"saint-bruno","lineIds":["exo3"],"network":"exo","zone":"B","lat":45.5357,"lng":-73.3622,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"saint-basile-le-grand","name":"Saint-Basile-le-Grand","nameFr":"Saint-Basile-le-Grand","slug":"saint-basile-le-grand","lineIds":["exo3"],"network":"exo","zone":"C","lat":45.5366,"lng":-73.3114,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"mcmasterville","name":"McMasterville","nameFr":"McMasterville","slug":"mcmasterville","lineIds":["exo3"],"network":"exo","zone":"C","lat":45.5505,"lng":-73.2394,"accessible":false,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"mont-saint-hilaire","name":"Mont-Saint-Hilaire","nameFr":"Mont-Saint-Hilaire","slug":"mont-saint-hilaire","lineIds":["exo3"],"network":"exo","zone":"C","lat":45.5588,"lng":-73.1843,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-
-  {"id":"lasalle-exo","name":"LaSalle (Exo)","nameFr":"LaSalle (Exo)","slug":"lasalle-exo","lineIds":["exo4"],"network":"exo","zone":"A","lat":45.4280,"lng":-73.6262,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"saint-constant","name":"Saint-Constant","nameFr":"Saint-Constant","slug":"saint-constant","lineIds":["exo4"],"network":"exo","zone":"B","lat":45.3712,"lng":-73.5662,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"sainte-catherine","name":"Sainte-Catherine","nameFr":"Sainte-Catherine","slug":"sainte-catherine","lineIds":["exo4"],"network":"exo","zone":"B","lat":45.3912,"lng":-73.5805,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"candiac","name":"Candiac","nameFr":"Candiac","slug":"candiac","lineIds":["exo4"],"network":"exo","zone":"B","lat":45.3820,"lng":-73.5228,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-
-  {"id":"ahuntsic","name":"Ahuntsic","nameFr":"Ahuntsic","slug":"ahuntsic","lineIds":["exo5"],"network":"exo","zone":"A","lat":45.5543,"lng":-73.6600,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"sauve-exo","name":"Sauve (Exo)","nameFr":"Sauve (Exo)","slug":"sauve-exo","lineIds":["exo5"],"network":"exo","zone":"A","lat":45.5510,"lng":-73.6465,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"chabanel-exo","name":"Chabanel (Exo5)","nameFr":"Chabanel (Exo5)","slug":"chabanel-exo","lineIds":["exo5"],"network":"exo","zone":"A","lat":45.5385,"lng":-73.6505,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"anjou","name":"Anjou","nameFr":"Anjou","slug":"anjou","lineIds":["exo5"],"network":"exo","zone":"A","lat":45.5998,"lng":-73.5584,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"pointe-aux-trembles","name":"Pointe-aux-Trembles","nameFr":"Pointe-aux-Trembles","slug":"pointe-aux-trembles","lineIds":["exo5"],"network":"exo","zone":"A","lat":45.6434,"lng":-73.5062,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"repentigny","name":"Repentigny","nameFr":"Repentigny","slug":"repentigny","lineIds":["exo5"],"network":"exo","zone":"C","lat":45.7456,"lng":-73.4601,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"le-gardeur","name":"Le Gardeur","nameFr":"Le Gardeur","slug":"le-gardeur","lineIds":["exo5"],"network":"exo","zone":"C","lat":45.7621,"lng":-73.4701,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"},
-  {"id":"mascouche","name":"Mascouche","nameFr":"Mascouche","slug":"mascouche","lineIds":["exo5"],"network":"exo","zone":"C","lat":45.7417,"lng":-73.6013,"accessible":true,"firstTrain":"06:00","lastTrain":"23:30"}
+  {
+    "id": "angrignon",
+    "name": "Angrignon",
+    "nameFr": "Angrignon",
+    "slug": "angrignon",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4462,
+    "lng": -73.6039,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "monk",
+    "name": "Monk",
+    "nameFr": "Monk",
+    "slug": "monk",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4513,
+    "lng": -73.5932,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "jolicoeur",
+    "name": "Jolicoeur",
+    "nameFr": "Jolicoeur",
+    "slug": "jolicoeur",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4569,
+    "lng": -73.5828,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "verdun",
+    "name": "Verdun",
+    "nameFr": "Verdun",
+    "slug": "verdun",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4593,
+    "lng": -73.5718,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "de-l-eglise",
+    "name": "De l'Eglise",
+    "nameFr": "De l'Eglise",
+    "slug": "de-l-eglise",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4618,
+    "lng": -73.5667,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "lasalle",
+    "name": "LaSalle",
+    "nameFr": "LaSalle",
+    "slug": "lasalle",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4703,
+    "lng": -73.5664,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "charlevoix",
+    "name": "Charlevoix",
+    "nameFr": "Charlevoix",
+    "slug": "charlevoix",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4777,
+    "lng": -73.5695,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "lionel-groulx",
+    "name": "Lionel-Groulx",
+    "nameFr": "Lionel-Groulx",
+    "slug": "lionel-groulx",
+    "lineIds": [
+      "green",
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4832,
+    "lng": -73.5679,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "atwater",
+    "name": "Atwater",
+    "nameFr": "Atwater",
+    "slug": "atwater",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4896,
+    "lng": -73.5885,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "guy-concordia",
+    "name": "Guy-Concordia",
+    "nameFr": "Guy-Concordia",
+    "slug": "guy-concordia",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4962,
+    "lng": -73.5789,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "peel",
+    "name": "Peel",
+    "nameFr": "Peel",
+    "slug": "peel",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5012,
+    "lng": -73.5738,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "mcgill",
+    "name": "McGill",
+    "nameFr": "McGill",
+    "slug": "mcgill",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.504,
+    "lng": -73.5718,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "place-des-arts",
+    "name": "Place-des-Arts",
+    "nameFr": "Place-des-Arts",
+    "slug": "place-des-arts",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5083,
+    "lng": -73.568,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "saint-laurent",
+    "name": "Saint-Laurent",
+    "nameFr": "Saint-Laurent",
+    "slug": "saint-laurent",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5115,
+    "lng": -73.5645,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "berri-uqam",
+    "name": "Berri-UQAM",
+    "nameFr": "Berri-UQAM",
+    "slug": "berri-uqam",
+    "lineIds": [
+      "green",
+      "orange",
+      "yellow"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5149,
+    "lng": -73.556,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "beaudry",
+    "name": "Beaudry",
+    "nameFr": "Beaudry",
+    "slug": "beaudry",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.519,
+    "lng": -73.5523,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "papineau",
+    "name": "Papineau",
+    "nameFr": "Papineau",
+    "slug": "papineau",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5235,
+    "lng": -73.5518,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "frontenac",
+    "name": "Frontenac",
+    "nameFr": "Frontenac",
+    "slug": "frontenac",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5332,
+    "lng": -73.5524,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "prefontaine",
+    "name": "Prefontaine",
+    "nameFr": "Prefontaine",
+    "slug": "prefontaine",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5413,
+    "lng": -73.5498,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "joliette",
+    "name": "Joliette",
+    "nameFr": "Joliette",
+    "slug": "joliette",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5475,
+    "lng": -73.5505,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "pie-ix",
+    "name": "Pie-IX",
+    "nameFr": "Pie-IX",
+    "slug": "pie-ix",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5535,
+    "lng": -73.5516,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "viau",
+    "name": "Viau",
+    "nameFr": "Viau",
+    "slug": "viau",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.561,
+    "lng": -73.5468,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "assomption",
+    "name": "Assomption",
+    "nameFr": "Assomption",
+    "slug": "assomption",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5658,
+    "lng": -73.5435,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "cadillac",
+    "name": "Cadillac",
+    "nameFr": "Cadillac",
+    "slug": "cadillac",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5719,
+    "lng": -73.5404,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "langelier",
+    "name": "Langelier",
+    "nameFr": "Langelier",
+    "slug": "langelier",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5803,
+    "lng": -73.5341,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "radisson",
+    "name": "Radisson",
+    "nameFr": "Radisson",
+    "slug": "radisson",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5893,
+    "lng": -73.5302,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "honore-beaugrand",
+    "name": "Honore-Beaugrand",
+    "nameFr": "Honore-Beaugrand",
+    "slug": "honore-beaugrand",
+    "lineIds": [
+      "green"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5964,
+    "lng": -73.5172,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "cote-vertu",
+    "name": "Cote-Vertu",
+    "nameFr": "Cote-Vertu",
+    "slug": "cote-vertu",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5146,
+    "lng": -73.6838,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "du-college",
+    "name": "Du College",
+    "nameFr": "Du College",
+    "slug": "du-college",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5097,
+    "lng": -73.6732,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "de-la-savane",
+    "name": "De la Savane",
+    "nameFr": "De la Savane",
+    "slug": "de-la-savane",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5003,
+    "lng": -73.6622,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "namur",
+    "name": "Namur",
+    "nameFr": "Namur",
+    "slug": "namur",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4948,
+    "lng": -73.653,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "plamondon",
+    "name": "Plamondon",
+    "nameFr": "Plamondon",
+    "slug": "plamondon",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4946,
+    "lng": -73.638,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "cote-sainte-catherine",
+    "name": "Cote-Sainte-Catherine",
+    "nameFr": "Cote-Sainte-Catherine",
+    "slug": "cote-sainte-catherine",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4923,
+    "lng": -73.6328,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "snowdon",
+    "name": "Snowdon",
+    "nameFr": "Snowdon",
+    "slug": "snowdon",
+    "lineIds": [
+      "orange",
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4853,
+    "lng": -73.6277,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "villa-maria",
+    "name": "Villa-Maria",
+    "nameFr": "Villa-Maria",
+    "slug": "villa-maria",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.48,
+    "lng": -73.6195,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "vendome",
+    "name": "Vendome",
+    "nameFr": "Vendome",
+    "slug": "vendome",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4738,
+    "lng": -73.6042,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "place-saint-henri",
+    "name": "Place-Saint-Henri",
+    "nameFr": "Place-Saint-Henri",
+    "slug": "place-saint-henri",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.477,
+    "lng": -73.5868,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "georges-vanier",
+    "name": "Georges-Vanier",
+    "nameFr": "Georges-Vanier",
+    "slug": "georges-vanier",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4887,
+    "lng": -73.5716,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "lucien-l-allier",
+    "name": "Lucien-L'Allier",
+    "nameFr": "Lucien-L'Allier",
+    "slug": "lucien-l-allier",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4943,
+    "lng": -73.5713,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "bonaventure",
+    "name": "Bonaventure",
+    "nameFr": "Bonaventure",
+    "slug": "bonaventure",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4981,
+    "lng": -73.5674,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "square-victoria-oaci",
+    "name": "Square-Victoria-OACI",
+    "nameFr": "Square-Victoria-OACI",
+    "slug": "square-victoria-oaci",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5019,
+    "lng": -73.5627,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "place-d-armes",
+    "name": "Place-d'Armes",
+    "nameFr": "Place-d'Armes",
+    "slug": "place-d-armes",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5061,
+    "lng": -73.5596,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "champ-de-mars",
+    "name": "Champ-de-Mars",
+    "nameFr": "Champ-de-Mars",
+    "slug": "champ-de-mars",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5102,
+    "lng": -73.5567,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "sherbrooke",
+    "name": "Sherbrooke",
+    "nameFr": "Sherbrooke",
+    "slug": "sherbrooke",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5188,
+    "lng": -73.5686,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "mont-royal",
+    "name": "Mont-Royal",
+    "nameFr": "Mont-Royal",
+    "slug": "mont-royal",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5244,
+    "lng": -73.5818,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "laurier",
+    "name": "Laurier",
+    "nameFr": "Laurier",
+    "slug": "laurier",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.527,
+    "lng": -73.5863,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "rosemont",
+    "name": "Rosemont",
+    "nameFr": "Rosemont",
+    "slug": "rosemont",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5317,
+    "lng": -73.5971,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "beaubien",
+    "name": "Beaubien",
+    "nameFr": "Beaubien",
+    "slug": "beaubien",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5361,
+    "lng": -73.6042,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "jean-talon",
+    "name": "Jean-Talon",
+    "nameFr": "Jean-Talon",
+    "slug": "jean-talon",
+    "lineIds": [
+      "orange",
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5393,
+    "lng": -73.6134,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "jarry",
+    "name": "Jarry",
+    "nameFr": "Jarry",
+    "slug": "jarry",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5435,
+    "lng": -73.6288,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "cremazie",
+    "name": "Cremazie",
+    "nameFr": "Cremazie",
+    "slug": "cremazie",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5464,
+    "lng": -73.6372,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "sauve",
+    "name": "Sauve",
+    "nameFr": "Sauve",
+    "slug": "sauve",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5508,
+    "lng": -73.6462,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "henri-bourassa",
+    "name": "Henri-Bourassa",
+    "nameFr": "Henri-Bourassa",
+    "slug": "henri-bourassa",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5569,
+    "lng": -73.6528,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "cartier",
+    "name": "Cartier",
+    "nameFr": "Cartier",
+    "slug": "cartier",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "B",
+    "lat": 45.5597,
+    "lng": -73.681,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "de-la-concorde",
+    "name": "De la Concorde",
+    "nameFr": "De la Concorde",
+    "slug": "de-la-concorde",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "B",
+    "lat": 45.5608,
+    "lng": -73.7066,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "montmorency",
+    "name": "Montmorency",
+    "nameFr": "Montmorency",
+    "slug": "montmorency",
+    "lineIds": [
+      "orange"
+    ],
+    "network": "metro",
+    "zone": "B",
+    "lat": 45.5582,
+    "lng": -73.7214,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "cote-des-neiges",
+    "name": "Cote-des-Neiges",
+    "nameFr": "Cote-des-Neiges",
+    "slug": "cote-des-neiges",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.4963,
+    "lng": -73.6328,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "universite-de-montreal",
+    "name": "Universite-de-Montreal",
+    "nameFr": "Universite-de-Montreal",
+    "slug": "universite-de-montreal",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5035,
+    "lng": -73.6243,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "edouard-montpetit",
+    "name": "Edouard-Montpetit",
+    "nameFr": "Edouard-Montpetit",
+    "slug": "edouard-montpetit",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5096,
+    "lng": -73.6133,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "outremont",
+    "name": "Outremont",
+    "nameFr": "Outremont",
+    "slug": "outremont",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.52,
+    "lng": -73.6147,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "acadie",
+    "name": "Acadie",
+    "nameFr": "Acadie",
+    "slug": "acadie",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5232,
+    "lng": -73.6234,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "parc",
+    "name": "Parc",
+    "nameFr": "Parc",
+    "slug": "parc",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5305,
+    "lng": -73.6246,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "de-castelnau",
+    "name": "De Castelnau",
+    "nameFr": "De Castelnau",
+    "slug": "de-castelnau",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.535,
+    "lng": -73.6201,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "fabre",
+    "name": "Fabre",
+    "nameFr": "Fabre",
+    "slug": "fabre",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5447,
+    "lng": -73.6104,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "d-iberville",
+    "name": "D'Iberville",
+    "nameFr": "D'Iberville",
+    "slug": "d-iberville",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5499,
+    "lng": -73.602,
+    "accessible": false,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "saint-michel",
+    "name": "Saint-Michel",
+    "nameFr": "Saint-Michel",
+    "slug": "saint-michel",
+    "lineIds": [
+      "blue"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5595,
+    "lng": -73.5992,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "jean-drapeau",
+    "name": "Jean-Drapeau",
+    "nameFr": "Jean-Drapeau",
+    "slug": "jean-drapeau",
+    "lineIds": [
+      "yellow"
+    ],
+    "network": "metro",
+    "zone": "A",
+    "lat": 45.5112,
+    "lng": -73.5334,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "longueuil-universite-de-sherbrooke",
+    "name": "Longueuil-Universite-de-Sherbrooke",
+    "nameFr": "Longueuil-Universite-de-Sherbrooke",
+    "slug": "longueuil-universite-de-sherbrooke",
+    "lineIds": [
+      "yellow"
+    ],
+    "network": "metro",
+    "zone": "B",
+    "lat": 45.5254,
+    "lng": -73.522,
+    "accessible": true,
+    "firstTrain": "05:30",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "gare-centrale-rem",
+    "name": "Gare Centrale (REM)",
+    "nameFr": "Gare Centrale (REM)",
+    "slug": "gare-centrale-rem",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4988,
+    "lng": -73.5671,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "du-canal",
+    "name": "Du Canal",
+    "nameFr": "Du Canal",
+    "slug": "du-canal",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4845,
+    "lng": -73.5713,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "ile-des-soeurs",
+    "name": "Ile-des-Soeurs",
+    "nameFr": "Ile-des-Soeurs",
+    "slug": "ile-des-soeurs",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4672,
+    "lng": -73.5553,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "panama",
+    "name": "Panama",
+    "nameFr": "Panama",
+    "slug": "panama",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "B",
+    "lat": 45.4589,
+    "lng": -73.5316,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "bois-franc",
+    "name": "Bois-Franc",
+    "nameFr": "Bois-Franc",
+    "slug": "bois-franc",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.5183,
+    "lng": -73.7108,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "du-ruisseau",
+    "name": "Du Ruisseau",
+    "nameFr": "Du Ruisseau",
+    "slug": "du-ruisseau",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.5172,
+    "lng": -73.6934,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "montpellier",
+    "name": "Montpellier",
+    "nameFr": "Montpellier",
+    "slug": "montpellier",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.5091,
+    "lng": -73.7353,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "sunnybrooke",
+    "name": "Sunnybrooke",
+    "nameFr": "Sunnybrooke",
+    "slug": "sunnybrooke",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4943,
+    "lng": -73.7621,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "a-40",
+    "name": "A-40",
+    "nameFr": "A-40",
+    "slug": "a-40",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4825,
+    "lng": -73.7915,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "marie-curie",
+    "name": "Marie-Curie",
+    "nameFr": "Marie-Curie",
+    "slug": "marie-curie",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4712,
+    "lng": -73.8141,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "yul-aeroport-de-montreal",
+    "name": "YUL Aeroport de Montreal",
+    "nameFr": "YUL Aeroport de Montreal",
+    "slug": "yul-aeroport-de-montreal",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4576,
+    "lng": -73.7497,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "des-sources",
+    "name": "Des Sources",
+    "nameFr": "Des Sources",
+    "slug": "des-sources",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4642,
+    "lng": -73.8098,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "pointe-claire",
+    "name": "Pointe-Claire",
+    "nameFr": "Pointe-Claire",
+    "slug": "pointe-claire",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4567,
+    "lng": -73.8347,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "cedar-park",
+    "name": "Cedar Park",
+    "nameFr": "Cedar Park",
+    "slug": "cedar-park",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.447,
+    "lng": -73.8545,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "anse-a-l-orme",
+    "name": "Anse-a-l'Orme",
+    "nameFr": "Anse-a-l'Orme",
+    "slug": "anse-a-l-orme",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.437,
+    "lng": -73.9392,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "sainte-anne-de-bellevue",
+    "name": "Sainte-Anne-de-Bellevue",
+    "nameFr": "Sainte-Anne-de-Bellevue",
+    "slug": "sainte-anne-de-bellevue",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.4055,
+    "lng": -73.9543,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "lucien-l-allier-exo",
+    "name": "Lucien-L'Allier (Exo)",
+    "nameFr": "Lucien-L'Allier (Exo)",
+    "slug": "lucien-l-allier-exo",
+    "lineIds": [
+      "exo1",
+      "exo2",
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4948,
+    "lng": -73.571,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "vendome-exo",
+    "name": "Vendome (Exo)",
+    "nameFr": "Vendome (Exo)",
+    "slug": "vendome-exo",
+    "lineIds": [
+      "exo1",
+      "exo2",
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4735,
+    "lng": -73.6038,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "montreal-ouest",
+    "name": "Montreal-Ouest",
+    "nameFr": "Montreal-Ouest",
+    "slug": "montreal-ouest",
+    "lineIds": [
+      "exo1",
+      "exo2",
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4533,
+    "lng": -73.6491,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "lachine",
+    "name": "Lachine",
+    "nameFr": "Lachine",
+    "slug": "lachine",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4379,
+    "lng": -73.6843,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "dorval",
+    "name": "Dorval",
+    "nameFr": "Dorval",
+    "slug": "dorval",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4444,
+    "lng": -73.741,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "pine-beach",
+    "name": "Pine Beach",
+    "nameFr": "Pine Beach",
+    "slug": "pine-beach",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.436,
+    "lng": -73.764,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "valois",
+    "name": "Valois",
+    "nameFr": "Valois",
+    "slug": "valois",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.441,
+    "lng": -73.785,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "pointe-claire-exo",
+    "name": "Pointe-Claire (Exo)",
+    "nameFr": "Pointe-Claire (Exo)",
+    "slug": "pointe-claire-exo",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4499,
+    "lng": -73.815,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "cedar-park-exo",
+    "name": "Cedar Park (Exo)",
+    "nameFr": "Cedar Park (Exo)",
+    "slug": "cedar-park-exo",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4475,
+    "lng": -73.854,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "beaconsfield",
+    "name": "Beaconsfield",
+    "nameFr": "Beaconsfield",
+    "slug": "beaconsfield",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4413,
+    "lng": -73.87,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "beaurepaire",
+    "name": "Beaurepaire",
+    "nameFr": "Beaurepaire",
+    "slug": "beaurepaire",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.437,
+    "lng": -73.8984,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "baie-d-urfe",
+    "name": "Baie-d'Urfe",
+    "nameFr": "Baie-d'Urfe",
+    "slug": "baie-d-urfe",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4126,
+    "lng": -73.9198,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "sainte-anne-de-bellevue-exo",
+    "name": "Sainte-Anne-de-Bellevue (Exo)",
+    "nameFr": "Sainte-Anne-de-Bellevue (Exo)",
+    "slug": "sainte-anne-de-bellevue-exo",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.406,
+    "lng": -73.953,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "ile-perrot",
+    "name": "Ile-Perrot",
+    "nameFr": "Ile-Perrot",
+    "slug": "ile-perrot",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.3886,
+    "lng": -73.9541,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "terrasse-vaudreuil",
+    "name": "Pincourt-Terrasse-Vaudreuil",
+    "nameFr": "Pincourt-Terrasse-Vaudreuil",
+    "slug": "terrasse-vaudreuil",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.3964,
+    "lng": -74.0334,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "dorion",
+    "name": "Dorion",
+    "nameFr": "Dorion",
+    "slug": "dorion",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.4466,
+    "lng": -74.0551,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "vaudreuil",
+    "name": "Vaudreuil",
+    "nameFr": "Vaudreuil",
+    "slug": "vaudreuil",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.4016,
+    "lng": -74.0312,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "hudson",
+    "name": "Hudson",
+    "nameFr": "Hudson",
+    "slug": "hudson",
+    "lineIds": [
+      "exo1"
+    ],
+    "network": "exo",
+    "zone": "D",
+    "lat": 45.4485,
+    "lng": -74.144,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "gare-centrale-exo",
+    "name": "Gare Centrale (Exo)",
+    "nameFr": "Gare Centrale (Exo)",
+    "slug": "gare-centrale-exo",
+    "lineIds": [
+      "exo3"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4985,
+    "lng": -73.5668,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "parc-exo",
+    "name": "Parc (Exo)",
+    "nameFr": "Parc (Exo)",
+    "slug": "parc-exo",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.531,
+    "lng": -73.625,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "chabanel",
+    "name": "Chabanel",
+    "nameFr": "Chabanel",
+    "slug": "chabanel",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.538,
+    "lng": -73.65,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "sainte-rose",
+    "name": "Sainte-Rose",
+    "nameFr": "Sainte-Rose",
+    "slug": "sainte-rose",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.5998,
+    "lng": -73.782,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "rosemere",
+    "name": "Rosemere",
+    "nameFr": "Rosemere",
+    "slug": "rosemere",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.6227,
+    "lng": -73.7835,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "sainte-therese",
+    "name": "Sainte-Therese",
+    "nameFr": "Sainte-Therese",
+    "slug": "sainte-therese",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.6384,
+    "lng": -73.8374,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "blainville",
+    "name": "Blainville",
+    "nameFr": "Blainville",
+    "slug": "blainville",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.6636,
+    "lng": -73.8835,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "saint-jerome",
+    "name": "Saint-Jerome",
+    "nameFr": "Saint-Jerome",
+    "slug": "saint-jerome",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "D",
+    "lat": 45.7803,
+    "lng": -74.0046,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "saint-lambert",
+    "name": "Saint-Lambert",
+    "nameFr": "Saint-Lambert",
+    "slug": "saint-lambert",
+    "lineIds": [
+      "exo3"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.4997,
+    "lng": -73.5039,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "saint-hubert",
+    "name": "Saint-Hubert",
+    "nameFr": "Saint-Hubert",
+    "slug": "saint-hubert",
+    "lineIds": [
+      "exo3"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.5155,
+    "lng": -73.4363,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "saint-bruno",
+    "name": "Saint-Bruno",
+    "nameFr": "Saint-Bruno",
+    "slug": "saint-bruno",
+    "lineIds": [
+      "exo3"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.5357,
+    "lng": -73.3622,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "saint-basile-le-grand",
+    "name": "Saint-Basile-le-Grand",
+    "nameFr": "Saint-Basile-le-Grand",
+    "slug": "saint-basile-le-grand",
+    "lineIds": [
+      "exo3"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.5366,
+    "lng": -73.3114,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "mcmasterville",
+    "name": "McMasterville",
+    "nameFr": "McMasterville",
+    "slug": "mcmasterville",
+    "lineIds": [
+      "exo3"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.5505,
+    "lng": -73.2394,
+    "accessible": false,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "mont-saint-hilaire",
+    "name": "Mont-Saint-Hilaire",
+    "nameFr": "Mont-Saint-Hilaire",
+    "slug": "mont-saint-hilaire",
+    "lineIds": [
+      "exo3"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.5588,
+    "lng": -73.1843,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "lasalle-exo",
+    "name": "LaSalle (Exo)",
+    "nameFr": "LaSalle (Exo)",
+    "slug": "lasalle-exo",
+    "lineIds": [
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.428,
+    "lng": -73.6262,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "saint-constant",
+    "name": "Saint-Constant",
+    "nameFr": "Saint-Constant",
+    "slug": "saint-constant",
+    "lineIds": [
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.3712,
+    "lng": -73.5662,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "sainte-catherine",
+    "name": "Sainte-Catherine",
+    "nameFr": "Sainte-Catherine",
+    "slug": "sainte-catherine",
+    "lineIds": [
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.3912,
+    "lng": -73.5805,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "candiac",
+    "name": "Candiac",
+    "nameFr": "Candiac",
+    "slug": "candiac",
+    "lineIds": [
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.382,
+    "lng": -73.5228,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "anjou",
+    "name": "Anjou",
+    "nameFr": "Anjou",
+    "slug": "anjou",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.5998,
+    "lng": -73.5584,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "pointe-aux-trembles",
+    "name": "Pointe-aux-Trembles",
+    "nameFr": "Pointe-aux-Trembles",
+    "slug": "pointe-aux-trembles",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.6434,
+    "lng": -73.5062,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "repentigny",
+    "name": "Repentigny",
+    "nameFr": "Repentigny",
+    "slug": "repentigny",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.7456,
+    "lng": -73.4601,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "mascouche",
+    "name": "Mascouche",
+    "nameFr": "Mascouche",
+    "slug": "mascouche",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.7417,
+    "lng": -73.6013,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "vimont",
+    "name": "Vimont",
+    "nameFr": "Vimont",
+    "slug": "vimont",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.5789,
+    "lng": -73.735,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "mirabel",
+    "name": "Mirabel",
+    "nameFr": "Mirabel",
+    "slug": "mirabel",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.6983,
+    "lng": -73.9167,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "du-canal-exo",
+    "name": "Du Canal (Exo)",
+    "nameFr": "Du Canal (Exo)",
+    "slug": "du-canal-exo",
+    "lineIds": [
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.4379,
+    "lng": -73.67,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "delson",
+    "name": "Delson",
+    "nameFr": "Delson",
+    "slug": "delson",
+    "lineIds": [
+      "exo4"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.3675,
+    "lng": -73.551,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "cote-de-liesse-exo",
+    "name": "Cote-de-Liesse (Exo)",
+    "nameFr": "Cote-de-Liesse (Exo)",
+    "slug": "cote-de-liesse-exo",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.5,
+    "lng": -73.685,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "saint-michel-mtl-nord",
+    "name": "Saint-Michel-Montreal-Nord",
+    "nameFr": "Saint-Michel-Montreal-Nord",
+    "slug": "saint-michel-mtl-nord",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.565,
+    "lng": -73.61,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "saint-leonard-mtl-nord",
+    "name": "Saint-Leonard-Montreal-Nord",
+    "nameFr": "Saint-Leonard-Montreal-Nord",
+    "slug": "saint-leonard-mtl-nord",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.578,
+    "lng": -73.59,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "riviere-des-prairies",
+    "name": "Riviere-des-Prairies",
+    "nameFr": "Riviere-des-Prairies",
+    "slug": "riviere-des-prairies",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "A",
+    "lat": 45.62,
+    "lng": -73.54,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "terrebonne",
+    "name": "Terrebonne",
+    "nameFr": "Terrebonne",
+    "slug": "terrebonne",
+    "lineIds": [
+      "exo5"
+    ],
+    "network": "exo",
+    "zone": "C",
+    "lat": 45.71,
+    "lng": -73.63,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  },
+  {
+    "id": "mcgill-rem",
+    "name": "McGill (REM)",
+    "nameFr": "McGill (REM)",
+    "slug": "mcgill-rem",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.504,
+    "lng": -73.5718,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "edouard-montpetit-rem",
+    "name": "Edouard-Montpetit (REM)",
+    "nameFr": "Edouard-Montpetit (REM)",
+    "slug": "edouard-montpetit-rem",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.5096,
+    "lng": -73.6133,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "canora",
+    "name": "Canora",
+    "nameFr": "Canora",
+    "slug": "canora",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.518,
+    "lng": -73.628,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "ville-de-mont-royal",
+    "name": "Ville-de-Mont-Royal",
+    "nameFr": "Ville-de-Mont-Royal",
+    "slug": "ville-de-mont-royal",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.524,
+    "lng": -73.645,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "cote-de-liesse-rem",
+    "name": "Cote-de-Liesse (REM)",
+    "nameFr": "Cote-de-Liesse (REM)",
+    "slug": "cote-de-liesse-rem",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.5,
+    "lng": -73.685,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "pierrefonds-roxboro",
+    "name": "Pierrefonds-Roxboro",
+    "nameFr": "Pierrefonds-Roxboro",
+    "slug": "pierrefonds-roxboro",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "A",
+    "lat": 45.5023,
+    "lng": -73.7992,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "ile-bigras-rem",
+    "name": "Ile-Bigras (REM)",
+    "nameFr": "Ile-Bigras (REM)",
+    "slug": "ile-bigras-rem",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "B",
+    "lat": 45.5219,
+    "lng": -73.8109,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "sainte-dorothee-rem",
+    "name": "Sainte-Dorothee (REM)",
+    "nameFr": "Sainte-Dorothee (REM)",
+    "slug": "sainte-dorothee-rem",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "B",
+    "lat": 45.5244,
+    "lng": -73.835,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "grand-moulin",
+    "name": "Grand-Moulin",
+    "nameFr": "Grand-Moulin",
+    "slug": "grand-moulin",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "B",
+    "lat": 45.54,
+    "lng": -73.86,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "deux-montagnes",
+    "name": "Deux-Montagnes",
+    "nameFr": "Deux-Montagnes",
+    "slug": "deux-montagnes",
+    "lineIds": [
+      "rem-a"
+    ],
+    "network": "rem",
+    "zone": "B",
+    "lat": 45.535,
+    "lng": -73.895,
+    "accessible": true,
+    "firstTrain": "05:00",
+    "lastTrain": "01:00"
+  },
+  {
+    "id": "de-la-concorde-exo",
+    "name": "De la Concorde (Exo)",
+    "nameFr": "De la Concorde (Exo)",
+    "slug": "de-la-concorde-exo",
+    "lineIds": [
+      "exo2"
+    ],
+    "network": "exo",
+    "zone": "B",
+    "lat": 45.5612,
+    "lng": -73.707,
+    "accessible": true,
+    "firstTrain": "06:00",
+    "lastTrain": "23:30"
+  }
 ]

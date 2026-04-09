@@ -46,3 +46,4 @@ next-env.d.ts
 *.db-wal
 db/
 data/stations.ts
+scripts/fix-station-data.ts
