@@ -58,12 +58,12 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "MTL Metro",
-              url: "https://mtlmetro.com",
+              url: "https://mtlmetromap.com",
               description:
                 "Montreal Metro route finder. Plan your trip across Metro, REM, and Exo commuter trains.",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://mtlmetro.com/?q={search_term_string}",
+                target: "https://mtlmetromap.com/?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),

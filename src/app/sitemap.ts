@@ -5,7 +5,7 @@ import type { Station, Line } from "@/lib/types"
 
 const allStations = stations as Station[]
 const allLines = lines as Line[]
-const BASE_URL = "https://mtlmetro.com"
+const BASE_URL = "https://mtlmetromap.com"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString()

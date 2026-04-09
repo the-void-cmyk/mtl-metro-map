@@ -7,8 +7,8 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: [
-      "https://mtlmetro.com/sitemap.xml",
-      "https://mtlmetro.com/api/sitemap-routes",
+      "https://mtlmetromap.com/sitemap.xml",
+      "https://mtlmetromap.com/api/sitemap-routes",
     ],
   }
 }

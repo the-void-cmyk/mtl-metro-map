@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 import { getSitemapEntries } from "@/lib/db"
 
-const BASE_URL = "https://mtlmetro.com"
+const BASE_URL = "https://mtlmetromap.com"
 
 /**
  * Dynamic sitemap for promoted route pages.

@@ -51,7 +51,7 @@ export default async function RoutePage({ params }: RoutePageProps) {
   const route = findRoute(parsed.from, parsed.to)
   if (!route) notFound()
 
-  const baseUrl = "https://mtlmetro.com"
+  const baseUrl = "https://mtlmetromap.com"
   const schemas = [
     generateRouteSchema(route),
     generateFAQSchema(route),
