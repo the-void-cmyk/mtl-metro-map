@@ -1,0 +1,34 @@
+{
+  "currency": "CAD",
+  "validityMinutes": 120,
+  "paymentMethods": ["OPUS Card", "Contactless Payment"],
+  "zones": {
+    "A": {
+      "name": "Zone A",
+      "description": "Island of Montreal",
+      "singleTrip": 3.75
+    },
+    "AB": {
+      "name": "Zone AB",
+      "description": "Montreal + Laval/Longueuil",
+      "singleTrip": 5.25
+    },
+    "ABC": {
+      "name": "Zone ABC",
+      "description": "Montreal + Inner Suburbs",
+      "singleTrip": 7.00
+    },
+    "ABCD": {
+      "name": "Zone ABCD",
+      "description": "Full Network",
+      "singleTrip": 9.25
+    }
+  },
+  "discounts": {
+    "monthly_A": { "price": 94.00, "zone": "A" },
+    "monthly_AB": { "price": 132.50, "zone": "AB" },
+    "monthly_ABC": { "price": 176.00, "zone": "ABC" },
+    "monthly_ABCD": { "price": 220.50, "zone": "ABCD" },
+    "reduced_single_A": { "price": 2.50, "zone": "A", "eligibility": "6-17 years, 65+" }
+  }
+}

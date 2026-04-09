@@ -1,0 +1,142 @@
+[
+  {
+    "id": "green",
+    "name": "Green Line",
+    "nameFr": "Ligne verte",
+    "color": "#00A651",
+    "textColor": "#FFFFFF",
+    "network": "metro",
+    "stations": [
+      "angrignon", "monk", "jolicoeur", "verdun", "de-l-eglise", "lasalle",
+      "charlevoix", "lionel-groulx", "atwater", "guy-concordia", "peel",
+      "mcgill", "place-des-arts", "saint-laurent", "berri-uqam", "beaudry",
+      "papineau", "frontenac", "prefontaine", "joliette", "pie-ix", "viau",
+      "assomption", "cadillac", "langelier", "radisson", "honore-beaugrand"
+    ]
+  },
+  {
+    "id": "orange",
+    "name": "Orange Line",
+    "nameFr": "Ligne orange",
+    "color": "#F58220",
+    "textColor": "#FFFFFF",
+    "network": "metro",
+    "stations": [
+      "cote-vertu", "du-college", "de-la-savane", "namur", "plamondon",
+      "cote-sainte-catherine", "snowdon", "villa-maria", "vendome",
+      "place-saint-henri", "lionel-groulx", "georges-vanier", "lucien-l-allier",
+      "bonaventure", "square-victoria-oaci", "place-d-armes", "champ-de-mars",
+      "berri-uqam", "sherbrooke", "mont-royal", "laurier", "rosemont",
+      "beaubien", "jean-talon", "jarry", "cremazie", "sauve",
+      "henri-bourassa", "cartier", "de-la-concorde", "montmorency"
+    ]
+  },
+  {
+    "id": "blue",
+    "name": "Blue Line",
+    "nameFr": "Ligne bleue",
+    "color": "#0072BC",
+    "textColor": "#FFFFFF",
+    "network": "metro",
+    "stations": [
+      "snowdon", "cote-des-neiges", "universite-de-montreal", "edouard-montpetit",
+      "outremont", "acadie", "parc", "de-castelnau", "jean-talon", "fabre",
+      "d-iberville", "saint-michel"
+    ]
+  },
+  {
+    "id": "yellow",
+    "name": "Yellow Line",
+    "nameFr": "Ligne jaune",
+    "color": "#FFD200",
+    "textColor": "#000000",
+    "network": "metro",
+    "stations": [
+      "berri-uqam", "jean-drapeau", "longueuil-universite-de-sherbrooke"
+    ]
+  },
+  {
+    "id": "rem-a",
+    "name": "REM",
+    "nameFr": "REM",
+    "color": "#00B2A9",
+    "textColor": "#FFFFFF",
+    "network": "rem",
+    "stations": [
+      "gare-centrale-rem", "griffintown-bernard-landry", "du-canal",
+      "ile-des-soeurs", "panama", "bois-franc", "du-ruisseau",
+      "montpellier", "sunnybrooke", "a-40", "marie-curie",
+      "yul-aeroport-de-montreal", "des-sources",
+      "pointe-claire", "cedar-park", "anse-a-l-orme",
+      "sainte-anne-de-bellevue"
+    ]
+  },
+  {
+    "id": "exo1",
+    "name": "Exo 1 - Vaudreuil-Hudson",
+    "nameFr": "Exo 1 - Vaudreuil-Hudson",
+    "color": "#965F26",
+    "textColor": "#FFFFFF",
+    "network": "exo",
+    "stations": [
+      "lucien-l-allier-exo", "vendome-exo", "montreal-ouest",
+      "lachine", "dorval", "pine-beach", "valois", "pointe-claire-exo",
+      "cedar-park-exo", "beaconsfield", "beaurepaire", "baie-d-urfe",
+      "sainte-anne-de-bellevue-exo", "ile-perrot", "terrasse-vaudreuil",
+      "dorion", "vaudreuil", "hudson"
+    ]
+  },
+  {
+    "id": "exo2",
+    "name": "Exo 2 - Saint-Jerome",
+    "nameFr": "Exo 2 - Saint-Jerome",
+    "color": "#965F26",
+    "textColor": "#FFFFFF",
+    "network": "exo",
+    "stations": [
+      "lucien-l-allier-exo", "bois-franc-exo", "sunnybrooke-exo",
+      "roxboro-pierrefonds", "ile-bigras", "sainte-dorothee",
+      "de-la-concorde-exo", "parc-exo", "chabanel", "du-ruisseau-exo",
+      "bois-de-boulogne", "laval-centre", "sainte-rose",
+      "rosemere", "sainte-therese", "blainville", "saint-jerome"
+    ]
+  },
+  {
+    "id": "exo3",
+    "name": "Exo 3 - Mont-Saint-Hilaire",
+    "nameFr": "Exo 3 - Mont-Saint-Hilaire",
+    "color": "#965F26",
+    "textColor": "#FFFFFF",
+    "network": "exo",
+    "stations": [
+      "gare-centrale-exo", "saint-lambert", "saint-hubert",
+      "saint-bruno", "saint-basile-le-grand", "mcmasterville",
+      "mont-saint-hilaire"
+    ]
+  },
+  {
+    "id": "exo4",
+    "name": "Exo 4 - Candiac",
+    "nameFr": "Exo 4 - Candiac",
+    "color": "#965F26",
+    "textColor": "#FFFFFF",
+    "network": "exo",
+    "stations": [
+      "lucien-l-allier-exo", "lasalle-exo", "saint-constant",
+      "sainte-catherine", "candiac"
+    ]
+  },
+  {
+    "id": "exo5",
+    "name": "Exo 5 - Mascouche",
+    "nameFr": "Exo 5 - Mascouche",
+    "color": "#965F26",
+    "textColor": "#FFFFFF",
+    "network": "exo",
+    "stations": [
+      "gare-centrale-exo", "ahuntsic", "sauve-exo",
+      "parc-exo", "chabanel-exo", "anjou", "pointe-aux-trembles",
+      "repentigny", "le-gardeur", "mascouche"
+    ]
+  }
+]
