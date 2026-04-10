@@ -28,14 +28,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <header id="main-navbar" className="fixed top-0 left-0 right-0 z-50 border-b border-white/10">
         <NavGlass />
         <div className="relative max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-          <Link href={`/${locale}`} className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-lg bg-[var(--hero-bg)] flex items-center justify-center transition-transform group-hover:scale-105">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-white" aria-hidden="true">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 .67 3 1.5S13.66 8 12 8s-3-.67-3-1.5S10.34 5 12 5zM7 19v-2c0-2.76 4-4 5-4s5 1.24 5 4v2H7z" fill="currentColor"/>
-                <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.5"/>
-              </svg>
-            </div>
-            <span className="font-heading font-semibold text-[17px] tracking-tight text-white">{t.siteName}</span>
+          <Link href={`/${locale}`} className="flex items-center group transition-opacity hover:opacity-80">
+            <svg width="40" height="40" viewBox="0 0 1024 1024" fill="currentColor" className="text-white" aria-label={t.siteName}>
+              <path d="M65.39,709.62h89.32v89.32h-89.32v-89.32ZM244.04,530.97v89.32h-89.32v-89.32h89.32ZM422.68,173.69v446.61h89.32v89.32h-89.32v89.32h-89.32v-446.61h-89.32v-178.64h178.64ZM869.29,352.33h-178.64v89.32h-89.32v-89.32h89.32v-89.32h89.32v-89.32h178.64v89.32h-89.32v89.32ZM601.32,709.62h89.32v89.32h-89.32v-89.32ZM690.65,441.65h89.32v178.64h-89.32v-178.64Z"/>
+            </svg>
           </Link>
           <nav className="flex items-center gap-1">
             <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[13px] font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
