@@ -31,7 +31,15 @@ export default function NavMore({ locale }: NavMoreProps) {
     }
   }, [close])
 
-  const items = [
+  // Mobile: show all nav items. Desktop: only secondary items.
+  const primaryItems = [
+    { href: `/${locale}/status`, label: t.navStatus },
+    { href: `/${locale}/trip`, label: t.navTrip },
+    { href: `/${locale}/map`, label: t.navMap },
+    { href: `/${locale}/fares`, label: t.navFares },
+  ]
+
+  const secondaryItems = [
     { href: `/${locale}/compare`, label: t.navCompare },
     { href: `/${locale}/calculator`, label: t.navCalculator },
     { href: `/${locale}/destinations`, label: t.navDestinations },
@@ -39,13 +47,14 @@ export default function NavMore({ locale }: NavMoreProps) {
     { href: `/${locale}/guide`, label: t.navGuides },
   ]
 
-  const linkClass = "block px-3 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors"
+  const linkClass = "block px-3 py-2.5 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors"
 
   return (
     <div ref={ref} className="relative">
+      {/* Desktop: text button */}
       <button
         onClick={() => setOpen(v => !v)}
-        className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors flex items-center gap-1"
+        className="hidden sm:flex px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors items-center gap-1"
         aria-expanded={open}
         aria-haspopup="true"
       >
@@ -55,9 +64,41 @@ export default function NavMore({ locale }: NavMoreProps) {
         </svg>
       </button>
 
+      {/* Mobile: hamburger icon */}
+      <button
+        onClick={() => setOpen(v => !v)}
+        className="sm:hidden p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors"
+        aria-expanded={open}
+        aria-label={open ? "Close menu" : "Open menu"}
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+          {open ? (
+            <>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </>
+          ) : (
+            <>
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </>
+          )}
+        </svg>
+      </button>
+
       {open && (
-        <div className="absolute right-0 top-full mt-1 w-44 bg-[var(--surface-elevated)] border border-[var(--border)] rounded-xl shadow-lg p-1.5 z-50">
-          {items.map(item => (
+        <div className="absolute right-0 top-full mt-1 w-52 bg-[var(--surface-elevated)] border border-[var(--border)] rounded-xl shadow-lg p-1.5 z-50">
+          {/* On mobile: show primary items first */}
+          <div className="sm:hidden">
+            {primaryItems.map(item => (
+              <Link key={item.href} href={item.href} className={linkClass} onClick={close}>
+                {item.label}
+              </Link>
+            ))}
+            <div className="border-t border-[var(--border)] my-1" />
+          </div>
+          {secondaryItems.map(item => (
             <Link key={item.href} href={item.href} className={linkClass} onClick={close}>
               {item.label}
             </Link>

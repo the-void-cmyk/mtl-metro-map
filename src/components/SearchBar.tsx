@@ -159,7 +159,6 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
       <div className={`flex ${compact ? "flex-col gap-2" : "flex-col gap-2 sm:flex-row sm:gap-3"} items-stretch`}>
         {/* From */}
         <div className="relative flex-1">
-          <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">{labels.from}</label>
           <input
             ref={fromRef}
             type="text"
@@ -209,7 +208,6 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
 
         {/* To */}
         <div className="relative flex-1">
-          <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">{labels.to}</label>
           <input
             ref={toRef}
             type="text"
