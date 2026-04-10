@@ -34,12 +34,14 @@ export default async function HomePage({ params }: HomeProps) {
         {/* WebGL liquid glass canvas renders the background + glass effect */}
         <LiquidGlassHero imageSrc="/hero-desktop.jpg" glassTargetId="hero-search-card" />
         {/* Art-directed hero images per breakpoint */}
-        <picture className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
-          <source media="(min-width: 1024px)" srcSet="/hero-desktop.jpg" />
-          <source media="(min-width: 640px)" srcSet="/hero-tablet.jpg" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/hero-mobile.jpg" alt="" aria-hidden="true" className="w-full h-full object-cover" />
-        </picture>
+        <div className="absolute inset-0" style={{ zIndex: 0 }}>
+          <picture>
+            <source media="(min-width: 1024px)" srcSet="/hero-desktop.jpg" />
+            <source media="(min-width: 640px)" srcSet="/hero-tablet.jpg" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/hero-mobile.jpg" alt="" aria-hidden="true" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
+          </picture>
+        </div>
         <div className="relative max-w-6xl mx-auto px-5" style={{ zIndex: 2 }}>
           <div className="text-center mb-6 sm:mb-10">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-4 sm:mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.8)" }}>
