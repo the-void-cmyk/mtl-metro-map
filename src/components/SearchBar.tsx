@@ -156,7 +156,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
 
   return (
     <div ref={dropdownRef}>
-      <div className={`flex ${compact ? "flex-col gap-2" : "flex-col sm:flex-row gap-3"} items-stretch`}>
+      <div className={`flex ${compact ? "flex-col gap-2" : "flex-col gap-2 sm:flex-row sm:gap-3"} items-stretch`}>
         {/* From */}
         <div className="relative flex-1">
           <label className="block text-[11px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-1.5">{labels.from}</label>
@@ -190,7 +190,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
 
         {/* Swap */}
         {!compact && (
-          <div className="flex items-end pb-0.5">
+          <div className="hidden sm:flex items-end pb-0.5">
             <button
               onClick={swapStations}
               className="p-2.5 text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors"

@@ -34,18 +34,20 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             </svg>
           </Link>
           <nav className="flex items-center gap-1">
-            <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--orange-line)] hover:text-[var(--orange-line)] hover:bg-[var(--orange-line)]/10 rounded-lg transition-colors">
-              {t.navStatus}
-            </Link>
-            <Link href={`/${locale}/trip`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--orange-line)] hover:text-[var(--orange-line)] hover:bg-[var(--orange-line)]/10 rounded-lg transition-colors">
-              {t.navTrip}
-            </Link>
-            <Link href={`/${locale}/map`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--orange-line)] hover:text-[var(--orange-line)] hover:bg-[var(--orange-line)]/10 rounded-lg transition-colors">
-              {t.navMap}
-            </Link>
-            <Link href={`/${locale}/fares`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--orange-line)] hover:text-[var(--orange-line)] hover:bg-[var(--orange-line)]/10 rounded-lg transition-colors">
-              {t.navFares}
-            </Link>
+            <div className="hidden sm:flex items-center gap-1">
+              <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--orange-line)] hover:text-[var(--orange-line)] hover:bg-[var(--orange-line)]/10 rounded-lg transition-colors">
+                {t.navStatus}
+              </Link>
+              <Link href={`/${locale}/trip`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--orange-line)] hover:text-[var(--orange-line)] hover:bg-[var(--orange-line)]/10 rounded-lg transition-colors">
+                {t.navTrip}
+              </Link>
+              <Link href={`/${locale}/map`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--orange-line)] hover:text-[var(--orange-line)] hover:bg-[var(--orange-line)]/10 rounded-lg transition-colors">
+                {t.navMap}
+              </Link>
+              <Link href={`/${locale}/fares`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--orange-line)] hover:text-[var(--orange-line)] hover:bg-[var(--orange-line)]/10 rounded-lg transition-colors">
+                {t.navFares}
+              </Link>
+            </div>
             <NavMore locale={locale as Locale} />
             <ThemeToggle />
             <Link
