@@ -31,11 +31,7 @@ export default async function HomePage({ params }: HomeProps) {
       {/* Hero */}
       <section className="relative overflow-hidden py-20 sm:py-28">
         {/* Responsive hero images */}
-        <picture className="absolute inset-0 block w-full h-full">
-          <source media="(min-width: 1024px)" srcSet="/hero-desktop.jpg" />
-          <source media="(min-width: 640px)" srcSet="/hero-tablet.jpg" />
-          <img src="/hero-mobile.jpg" alt="" className="block w-full h-full object-cover" aria-hidden="true" />
-        </picture>
+        <div className="absolute inset-0 bg-cover bg-center bg-[url('/hero-mobile.jpg')] sm:bg-[url('/hero-tablet.jpg')] lg:bg-[url('/hero-desktop.jpg')]" aria-hidden="true" />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/55" />
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,102,204,0.15), transparent), radial-gradient(ellipse 60% 50% at 80% 100%, rgba(0,166,81,0.08), transparent)" }} />
