@@ -30,7 +30,7 @@ export default async function HomePage({ params }: HomeProps) {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden h-screen flex items-center -mt-16">
+      <section className="relative overflow-hidden flex items-center -mt-16" style={{ height: "100dvh" }}>
         {/* WebGL liquid glass canvas renders the background + glass effect */}
         <LiquidGlassHero imageSrc="/hero-desktop.jpg" imageSrcTablet="/hero-tablet.jpg" imageSrcMobile="/hero-mobile.jpg" glassTargetId="hero-search-card" />
         {/* Fallback solid bg while WebGL loads */}
