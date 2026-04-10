@@ -4,6 +4,7 @@ import { isValidLocale, getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import ThemeToggle from "@/components/ThemeToggle"
 import NavMore from "@/components/NavMore"
+import NavGlass from "@/components/NavGlass"
 import PWAInstall from "@/components/PWAInstall"
 
 interface LocaleLayoutProps {
@@ -24,8 +25,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <>
-      <header className="bg-[var(--surface-elevated)]/80 backdrop-blur-lg border-b border-[var(--border)] sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <header id="main-navbar" className="fixed top-0 left-0 right-0 z-50 border-b border-white/10">
+        <NavGlass />
+        <div className="relative max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 rounded-lg bg-[var(--hero-bg)] flex items-center justify-center transition-transform group-hover:scale-105">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-white" aria-hidden="true">
@@ -33,26 +35,26 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
                 <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.5"/>
               </svg>
             </div>
-            <span className="font-heading font-semibold text-[17px] tracking-tight">{t.siteName}</span>
+            <span className="font-heading font-semibold text-[17px] tracking-tight text-white">{t.siteName}</span>
           </Link>
           <nav className="flex items-center gap-1">
-            <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+            <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[13px] font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
               {t.navStatus}
             </Link>
-            <Link href={`/${locale}/trip`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+            <Link href={`/${locale}/trip`} className="px-3.5 py-2 text-[13px] font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
               {t.navTrip}
             </Link>
-            <Link href={`/${locale}/map`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+            <Link href={`/${locale}/map`} className="px-3.5 py-2 text-[13px] font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
               {t.navMap}
             </Link>
-            <Link href={`/${locale}/fares`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+            <Link href={`/${locale}/fares`} className="px-3.5 py-2 text-[13px] font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
               {t.navFares}
             </Link>
             <NavMore locale={locale as Locale} />
             <ThemeToggle />
             <Link
               href={`/${altLocale}`}
-              className="ml-1 px-2.5 py-1.5 text-[12px] font-semibold uppercase tracking-wider text-[var(--text-muted)] hover:text-[var(--text-primary)] border border-[var(--border)] hover:border-[#bbb] rounded-md transition-colors"
+              className="ml-1 px-2.5 py-1.5 text-[12px] font-semibold uppercase tracking-wider text-white/50 hover:text-white border border-white/20 hover:border-white/40 rounded-md transition-colors"
             >
               {altLocale.toUpperCase()}
             </Link>
@@ -60,7 +62,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         </div>
       </header>
 
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 pt-16">{children}</main>
 
       <footer className="border-t border-[var(--border)] bg-[var(--surface-elevated)] py-10 mt-auto">
         <div className="max-w-6xl mx-auto px-5">
