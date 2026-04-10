@@ -25,7 +25,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 rounded-lg bg-[var(--hero-bg)] flex items-center justify-center transition-transform group-hover:scale-105">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-white" aria-hidden="true">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 .67 3 1.5S13.66 8 12 8s-3-.67-3-1.5S10.34 5 12 5zM7 19v-2c0-2.76 4-4 5-4s5 1.24 5 4v2H7z" fill="currentColor"/>
                 <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.5"/>
               </svg>

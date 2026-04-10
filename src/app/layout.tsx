@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { Space_Grotesk, DM_Sans } from "next/font/google"
 import "./globals.css"
 
@@ -64,16 +65,10 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* GA4 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJMD4ND0V5" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-YJMD4ND0V5');`,
-          }}
-        />
       </head>
       <body className="min-h-full flex flex-col antialiased overflow-x-hidden">
         {children}
+        <GoogleAnalytics gaId="G-YJMD4ND0V5" />
       </body>
     </html>
   )

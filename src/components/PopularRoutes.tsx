@@ -47,10 +47,9 @@ export default async function PopularRoutes({ stationSlug, locale }: PopularRout
                 <div>
                   <span className="text-[14px] font-medium">{dest.name}</span>
                   <div className="flex gap-1 mt-0.5">
-                    {dest.lineIds.map(lid => {
-                      const line = getAllStations().find(s => s.lineIds.includes(lid))
-                      return <span key={lid} className={`line-dot line-dot-${lid}`} />
-                    })}
+                    {dest.lineIds.map(lid => (
+                      <span key={lid} className={`line-dot line-dot-${lid}`} aria-label={`${lid} line`} />
+                    ))}
                   </div>
                 </div>
                 {route && (

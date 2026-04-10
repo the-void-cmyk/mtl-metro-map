@@ -130,7 +130,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en' }: 
 
   const getLineDots = (station: Station) =>
     station.lineIds.map((lineId) => (
-      <span key={lineId} className={`line-dot line-dot-${lineId}`} />
+      <span key={lineId} className={`line-dot line-dot-${lineId}`} aria-label={`${lineId} line`} />
     ))
 
   const labels = locale === 'fr'
