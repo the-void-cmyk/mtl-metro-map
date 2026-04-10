@@ -2,6 +2,7 @@ import Link from "next/link"
 import { getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import SearchBar from "@/components/SearchBar"
+import LiquidGlass from "@/components/LiquidGlass"
 import NearbyStations from "@/components/NearbyStations"
 import stations from "../../../data/stations.json"
 import lines from "../../../data/lines.json"
@@ -53,15 +54,11 @@ export default async function HomePage({ params }: HomeProps) {
             <p className="text-[15px] max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{t.heroSubtitle}</p>
           </div>
           {/* Liquid glass search card */}
-          <div className="max-w-2xl mx-auto rounded-2xl p-6" style={{
-            background: "rgba(255,255,255,0.12)",
-            backdropFilter: "blur(20px) saturate(1.8)",
-            WebkitBackdropFilter: "blur(20px) saturate(1.8)",
-            border: "1px solid rgba(255,255,255,0.25)",
-            boxShadow: "0 8px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -1px 0 rgba(255,255,255,0.05)"
-          }}>
-            <SearchBar stations={allStations} locale={locale as Locale} />
-          </div>
+          <LiquidGlass backgroundSrc="/hero-desktop.jpg" className="max-w-2xl mx-auto">
+            <div className="rounded-2xl p-6">
+              <SearchBar stations={allStations} locale={locale as Locale} />
+            </div>
+          </LiquidGlass>
         </div>
       </section>
 
