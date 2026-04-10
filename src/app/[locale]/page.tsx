@@ -2,6 +2,7 @@ import Link from "next/link"
 import { getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import SearchBar from "@/components/SearchBar"
+import LiquidGlassHero from "@/components/LiquidGlassHero"
 import NearbyStations from "@/components/NearbyStations"
 import stations from "../../../data/stations.json"
 import lines from "../../../data/lines.json"
@@ -30,7 +31,9 @@ export default async function HomePage({ params }: HomeProps) {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden h-screen flex items-center">
-        {/* Hero background image */}
+        {/* WebGL liquid glass canvas renders the background + glass effect */}
+        <LiquidGlassHero imageSrc="/hero-desktop.jpg" glassTargetId="hero-search-card" />
+        {/* Fallback bg image for before WebGL loads */}
         <img
           src="/hero-mobile.jpg"
           srcSet="/hero-mobile.jpg 768w, /hero-tablet.jpg 1024w, /hero-desktop.jpg 1920w"
@@ -38,8 +41,9 @@ export default async function HomePage({ params }: HomeProps) {
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ zIndex: 0 }}
         />
-        <div className="relative max-w-6xl mx-auto px-5">
+        <div className="relative max-w-6xl mx-auto px-5" style={{ zIndex: 2 }}>
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.8)" }}>
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
@@ -51,7 +55,7 @@ export default async function HomePage({ params }: HomeProps) {
             </h1>
             <p className="text-[15px] max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.65)", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>{t.heroSubtitle}</p>
           </div>
-          <div className="max-w-2xl mx-auto rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}>
+          <div id="hero-search-card" className="max-w-2xl mx-auto rounded-2xl p-6">
             <SearchBar stations={allStations} locale={locale as Locale} />
           </div>
         </div>
