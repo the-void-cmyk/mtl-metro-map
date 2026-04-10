@@ -36,18 +36,13 @@ export default async function HomePage({ params }: HomeProps) {
         {/* Fallback solid bg while WebGL loads */}
         <div className="absolute inset-0 bg-[#8a8a87]" style={{ zIndex: 0 }} />
         <div className="relative max-w-6xl mx-auto px-5" style={{ zIndex: 2 }}>
-          <div className="text-center mb-6 sm:mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-4 sm:mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.8)" }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              {t.heroBadge(allStations.length)}
+          <div id="hero-search-card" className="max-w-2xl mx-auto rounded-2xl p-6 sm:p-8">
+            <div className="text-center mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-2" style={{ color: "#FAF3EB" }}>
+                {t.heroTitle1}
+              </h1>
+              <p className="text-[14px] sm:text-[15px] mb-6" style={{ color: "rgba(255,255,255,0.6)" }}>{t.heroSubtitle}</p>
             </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.1] mb-3 sm:mb-4" style={{ color: "#FAF3EB", textShadow: "0 2px 30px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.4)" }}>
-              {t.heroTitle1}<br />
-              <span style={{ color: "rgba(255,255,255,0.55)" }}>{t.heroTitle2}</span>
-            </h1>
-            <p className="text-[14px] sm:text-[15px] max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.65)", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>{t.heroSubtitle}</p>
-          </div>
-          <div id="hero-search-card" className="max-w-2xl mx-auto rounded-2xl p-4 sm:p-6">
             <SearchBar stations={allStations} locale={locale as Locale} />
           </div>
         </div>
