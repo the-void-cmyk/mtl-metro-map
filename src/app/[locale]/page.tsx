@@ -29,21 +29,29 @@ export default async function HomePage({ params }: HomeProps) {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden py-20 sm:py-28" style={{ background: "#0C1220" }}>
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,102,204,0.12), transparent), radial-gradient(ellipse 60% 50% at 80% 100%, rgba(0,166,81,0.06), transparent)" }} />
+      <section className="relative overflow-hidden py-20 sm:py-28">
+        {/* Responsive hero images */}
+        <picture className="absolute inset-0">
+          <source media="(min-width: 1024px)" srcSet="/hero-desktop.jpg" />
+          <source media="(min-width: 640px)" srcSet="/hero-tablet.jpg" />
+          <img src="/hero-mobile.jpg" alt="" className="w-full h-full object-cover" aria-hidden="true" />
+        </picture>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,102,204,0.15), transparent), radial-gradient(ellipse 60% 50% at 80% 100%, rgba(0,166,81,0.08), transparent)" }} />
         <div className="relative max-w-6xl mx-auto px-5">
           <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.6)" }}>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.7)" }}>
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               {t.heroBadge(allStations.length)}
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.1] mb-4" style={{ color: "#FFFFFF", fontFamily: "var(--font-space-grotesk), system-ui" }}>
               {t.heroTitle1}<br />
-              <span style={{ color: "rgba(255,255,255,0.45)" }}>{t.heroTitle2}</span>
+              <span style={{ color: "rgba(255,255,255,0.5)" }}>{t.heroTitle2}</span>
             </h1>
-            <p className="text-[15px] max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.4)" }}>{t.heroSubtitle}</p>
+            <p className="text-[15px] max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>{t.heroSubtitle}</p>
           </div>
-          <div className="max-w-2xl mx-auto rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)" }}>
+          <div className="max-w-2xl mx-auto rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}>
             <SearchBar stations={allStations} locale={locale as Locale} />
           </div>
         </div>
