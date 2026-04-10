@@ -33,6 +33,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             <span className="font-heading font-semibold text-[17px] tracking-tight">{t.siteName}</span>
           </Link>
           <nav className="flex items-center gap-1">
+            <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+              {t.navStatus}
+            </Link>
             <Link href={`/${locale}/map`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
               {t.navMap}
             </Link>

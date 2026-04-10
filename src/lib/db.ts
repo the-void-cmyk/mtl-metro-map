@@ -59,6 +59,15 @@ async function ensureInitialized(): Promise<void> {
 
     CREATE INDEX IF NOT EXISTS idx_route_views_from
       ON route_views(from_slug, view_count DESC);
+
+    CREATE TABLE IF NOT EXISTS service_status (
+      line_id TEXT PRIMARY KEY,
+      status TEXT NOT NULL DEFAULT 'normal',
+      message TEXT,
+      message_fr TEXT,
+      source TEXT,
+      updated_at TEXT NOT NULL
+    );
   `)
 
   initialized = true
@@ -141,6 +150,51 @@ export async function promoteToSitemap(threshold: number): Promise<number> {
 
   await db.batch(transaction)
   return qualifying.rows.length
+}
+
+// Service status
+export interface ServiceStatusRow {
+  lineId: string
+  status: 'normal' | 'delayed' | 'interrupted' | 'planned'
+  message: string | null
+  messageFr: string | null
+  source: string | null
+  updatedAt: string
+}
+
+export async function getServiceStatus(): Promise<ServiceStatusRow[]> {
+  await ensureInitialized()
+  const db = getClient()
+  const result = await db.execute(
+    'SELECT line_id as lineId, status, message, message_fr as messageFr, source, updated_at as updatedAt FROM service_status ORDER BY line_id'
+  )
+  return result.rows as unknown as ServiceStatusRow[]
+}
+
+export async function upsertServiceStatus(
+  lineId: string,
+  status: string,
+  message: string | null,
+  messageFr: string | null,
+  source: string | null
+): Promise<void> {
+  await ensureInitialized()
+  const db = getClient()
+  const now = new Date().toISOString()
+
+  await db.execute({
+    sql: `INSERT INTO service_status (line_id, status, message, message_fr, source, updated_at)
+          VALUES (?, ?, ?, ?, ?, ?)
+          ON CONFLICT(line_id) DO UPDATE SET
+            status = ?, message = ?, message_fr = ?, source = ?, updated_at = ?`,
+    args: [lineId, status, message, messageFr, source, now, status, message, messageFr, source, now],
+  })
+}
+
+export async function clearServiceStatus(): Promise<void> {
+  await ensureInitialized()
+  const db = getClient()
+  await db.execute('DELETE FROM service_status')
 }
 
 // Update popular routes for a station (used by weekly cron)

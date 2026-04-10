@@ -7,6 +7,10 @@
     {
       "path": "/api/cron/popular",
       "schedule": "0 3 * * 1"
+    },
+    {
+      "path": "/api/cron/status",
+      "schedule": "*/5 * * * *"
     }
   ]
 }
