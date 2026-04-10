@@ -49,7 +49,7 @@ export default async function HomePage({ params }: HomeProps) {
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               {t.heroBadge(allStations.length)}
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.1] mb-4" style={{ color: "#FFFFFF", fontFamily: "var(--font-space-grotesk), system-ui", textShadow: "0 2px 30px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.4)" }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.1] mb-4" style={{ color: "#FAF3EB", fontFamily: "var(--font-space-grotesk), system-ui", textShadow: "0 2px 30px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.4)" }}>
               {t.heroTitle1}<br />
               <span style={{ color: "rgba(255,255,255,0.55)" }}>{t.heroTitle2}</span>
             </h1>
