@@ -2,7 +2,6 @@ import Link from "next/link"
 import { getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import SearchBar from "@/components/SearchBar"
-import LiquidGlass from "@/components/LiquidGlass"
 import NearbyStations from "@/components/NearbyStations"
 import stations from "../../../data/stations.json"
 import lines from "../../../data/lines.json"
@@ -41,24 +40,20 @@ export default async function HomePage({ params }: HomeProps) {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative max-w-6xl mx-auto px-5">
-          {/* Text area with subtle backdrop for readability */}
-          <div className="text-center mb-10 py-8 px-6 rounded-3xl" style={{ background: "rgba(0,0,0,0.3)", backdropFilter: "blur(2px)", WebkitBackdropFilter: "blur(2px)" }}>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.85)" }}>
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.8)" }}>
               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
               {t.heroBadge(allStations.length)}
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.1] mb-4" style={{ color: "#FFFFFF", fontFamily: "var(--font-space-grotesk), system-ui", textShadow: "0 2px 20px rgba(0,0,0,0.3)" }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight leading-[1.1] mb-4" style={{ color: "#FFFFFF", fontFamily: "var(--font-space-grotesk), system-ui", textShadow: "0 2px 30px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.4)" }}>
               {t.heroTitle1}<br />
-              <span style={{ color: "rgba(255,255,255,0.6)" }}>{t.heroTitle2}</span>
+              <span style={{ color: "rgba(255,255,255,0.55)" }}>{t.heroTitle2}</span>
             </h1>
-            <p className="text-[15px] max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{t.heroSubtitle}</p>
+            <p className="text-[15px] max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.65)", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>{t.heroSubtitle}</p>
           </div>
-          {/* Liquid glass search card */}
-          <LiquidGlass backgroundSrc="/hero-desktop.jpg" className="max-w-2xl mx-auto">
-            <div className="rounded-2xl p-6">
-              <SearchBar stations={allStations} locale={locale as Locale} />
-            </div>
-          </LiquidGlass>
+          <div className="max-w-2xl mx-auto rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)" }}>
+            <SearchBar stations={allStations} locale={locale as Locale} />
+          </div>
         </div>
       </section>
 
