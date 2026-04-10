@@ -38,10 +38,10 @@ export default async function HomePage({ params }: HomeProps) {
         <div className="relative max-w-6xl mx-auto px-5" style={{ zIndex: 2 }}>
           <div id="hero-search-card" className="max-w-2xl mx-auto rounded-2xl p-6 sm:p-8">
             <div className="text-center mb-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-2" style={{ color: "#FAF3EB" }}>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] mb-2" style={{ color: "#141413" }}>
                 {t.heroTitle1}
               </h1>
-              <p className="text-[14px] sm:text-[15px] mb-6" style={{ color: "rgba(255,255,255,0.6)" }}>{t.heroSubtitle}</p>
+              <p className="text-[14px] sm:text-[15px] mb-6" style={{ color: "rgba(0,0,0,0.5)" }}>{t.heroSubtitle}</p>
             </div>
             <SearchBar stations={allStations} locale={locale as Locale} />
           </div>
