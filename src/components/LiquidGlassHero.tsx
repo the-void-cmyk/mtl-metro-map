@@ -127,17 +127,28 @@ function compile(gl: WebGLRenderingContext, type: number, src: string) {
 
 interface Props {
   imageSrc: string
-  /** CSS selector or ref for the element to apply glass effect to */
+  imageSrcMobile?: string
+  imageSrcTablet?: string
   glassTargetId: string
 }
 
-export default function LiquidGlassHero({ imageSrc, glassTargetId }: Props) {
+function pickImage(desktop: string, tablet?: string, mobile?: string): string {
+  if (typeof window === "undefined") return desktop
+  const w = window.innerWidth
+  if (w < 640 && mobile) return mobile
+  if (w < 1024 && tablet) return tablet
+  return desktop
+}
+
+export default function LiquidGlassHero({ imageSrc, imageSrcMobile, imageSrcTablet, glassTargetId }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rafRef = useRef(0)
 
   const init = useCallback(() => {
     const canvas = canvasRef.current
     if (!canvas) return
+
+    const selectedSrc = pickImage(imageSrc, imageSrcTablet, imageSrcMobile)
 
     const gl = canvas.getContext("webgl", { antialias: true, alpha: true })
     if (!gl) return
@@ -171,7 +182,7 @@ export default function LiquidGlassHero({ imageSrc, glassTargetId }: Props) {
     const tex = gl.createTexture()
     const img = new Image()
     img.crossOrigin = "anonymous"
-    img.src = imageSrc
+    img.src = selectedSrc
 
     img.onload = () => {
       gl.bindTexture(gl.TEXTURE_2D, tex)
@@ -220,7 +231,7 @@ export default function LiquidGlassHero({ imageSrc, glassTargetId }: Props) {
 
       draw()
     }
-  }, [imageSrc, glassTargetId])
+  }, [imageSrc, imageSrcMobile, imageSrcTablet, glassTargetId])
 
   useEffect(() => {
     init()

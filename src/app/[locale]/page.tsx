@@ -32,11 +32,9 @@ export default async function HomePage({ params }: HomeProps) {
       {/* Hero */}
       <section className="relative overflow-hidden h-screen flex items-center -mt-16">
         {/* WebGL liquid glass canvas renders the background + glass effect */}
-        <LiquidGlassHero imageSrc="/hero-desktop.jpg" glassTargetId="hero-search-card" />
-        {/* Hero background images - one per breakpoint, show/hide */}
-        <img src="/hero-mobile.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover block sm:hidden" style={{ zIndex: 0 }} />
-        <img src="/hero-tablet.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover hidden sm:block lg:hidden" style={{ zIndex: 0 }} />
-        <img src="/hero-desktop.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover hidden lg:block" style={{ zIndex: 0 }} />
+        <LiquidGlassHero imageSrc="/hero-desktop.jpg" imageSrcTablet="/hero-tablet.jpg" imageSrcMobile="/hero-mobile.jpg" glassTargetId="hero-search-card" />
+        {/* Fallback solid bg while WebGL loads */}
+        <div className="absolute inset-0 bg-[#8a8a87]" style={{ zIndex: 0 }} />
         <div className="relative max-w-6xl mx-auto px-5" style={{ zIndex: 2 }}>
           <div className="text-center mb-6 sm:mb-10">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-4 sm:mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.8)" }}>
