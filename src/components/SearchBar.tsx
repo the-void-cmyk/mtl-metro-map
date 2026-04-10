@@ -238,12 +238,12 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
           )}
         </div>
 
-        {/* Submit */}
-        <div className="flex items-end">
+        {/* Submit - desktop inline */}
+        <div className="hidden sm:flex items-end">
           <button
             onClick={handleSubmit}
             disabled={!fromStation || !toStation || fromStation.id === toStation.id}
-            className={`${compact ? "w-full" : "w-full sm:w-auto"} px-6 py-2.5 bg-[var(--accent)] text-white text-[14px] font-medium rounded-lg
+            className={`${compact ? "w-full" : "w-full sm:w-auto"} px-6 py-2.5 bg-[var(--accent)] text-white text-[16px] sm:text-[14px] font-medium rounded-lg
               hover:bg-[#0055AA] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
               transition-all`}
           >
@@ -253,6 +253,19 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
       </div>
 
       <TimePicker locale={locale} onChange={handleTimeChange} />
+
+      {/* Submit - mobile last CTA */}
+      <div className="sm:hidden mt-3">
+        <button
+          onClick={handleSubmit}
+          disabled={!fromStation || !toStation || fromStation.id === toStation.id}
+          className="w-full px-6 py-3 bg-[var(--accent)] text-white text-[16px] font-semibold rounded-lg
+            hover:bg-[#0055AA] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
+            transition-all"
+        >
+          {labels.find}
+        </button>
+      </div>
     </div>
   )
 }
