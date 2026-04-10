@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server"
 import { upsertServiceStatus } from "@/lib/db"
+import GtfsRealtimeBindings from "gtfs-realtime-bindings"
 
-// GTFS-RT Service Alerts protobuf is complex to parse without a library.
-// Instead we fetch from the transit agencies' public JSON/RSS feeds when available.
+const { FeedMessage } = GtfsRealtimeBindings.transit_realtime
+
 // Add API keys to env vars to enable live feeds:
 //   STM_API_KEY - from stm.info/en/about/developers
 //   EXO_API_KEY - from exo.quebec/en/about/open-data
@@ -13,6 +14,54 @@ interface AlertEntry {
   message: string | null
   messageFr: string | null
   source: string
+}
+
+// Map GTFS route IDs to our line IDs
+const ROUTE_TO_LINE: Record<string, string> = {
+  // STM Metro
+  "1": "green",
+  "2": "orange",
+  "4": "yellow",
+  "5": "blue",
+  // Exo commuter trains
+  "11": "exo1",
+  "12": "exo2",
+  "13": "exo3",
+  "14": "exo4",
+  "15": "exo5",
+}
+
+function parseProtobufFeed(buffer: ArrayBuffer, source: string): AlertEntry[] {
+  const feed = FeedMessage.decode(new Uint8Array(buffer))
+  const alerts: AlertEntry[] = []
+
+  for (const entity of feed.entity) {
+    const alert = entity.alert
+    if (!alert) continue
+
+    const routeIds = (alert.informedEntity ?? [])
+      .map((ie) => ie.routeId)
+      .filter(Boolean) as string[]
+
+    const enText = alert.headerText?.translation?.find((t) => t.language === "en")?.text ?? null
+    const frText = alert.headerText?.translation?.find((t) => t.language === "fr")?.text ?? null
+
+    const effect = alert.effect ?? 0
+    let status: AlertEntry["status"] = "delayed"
+    // GTFS-RT Effect enum: 1=NO_SERVICE, 2=REDUCED_SERVICE, 6=MODIFIED_SERVICE
+    if (effect === 1) status = "interrupted"
+    else if (effect === 2 || effect === 6) status = "delayed"
+    else if (effect === 0) status = "delayed" // UNKNOWN_EFFECT, treat as delay
+
+    for (const routeId of routeIds) {
+      const lineId = ROUTE_TO_LINE[routeId]
+      if (lineId) {
+        alerts.push({ lineId, status, message: enText, messageFr: frText, source })
+      }
+    }
+  }
+
+  return alerts
 }
 
 async function fetchSTMAlerts(): Promise<AlertEntry[]> {
@@ -30,16 +79,8 @@ async function fetchSTMAlerts(): Promise<AlertEntry[]> {
 
     if (!res.ok) return []
 
-    // GTFS-RT returns protobuf by default. Try JSON content type.
-    const contentType = res.headers.get("content-type") ?? ""
-    if (contentType.includes("json")) {
-      const data = await res.json()
-      return parseGTFSAlerts(data, "stm")
-    }
-
-    // Protobuf response, we'd need a parser library.
-    // For now, mark as checked but no alerts parsed.
-    return []
+    const buffer = await res.arrayBuffer()
+    return parseProtobufFeed(buffer, "stm")
   } catch {
     return []
   }
@@ -60,64 +101,11 @@ async function fetchExoAlerts(): Promise<AlertEntry[]> {
 
     if (!res.ok) return []
 
-    const contentType = res.headers.get("content-type") ?? ""
-    if (contentType.includes("json")) {
-      const data = await res.json()
-      return parseGTFSAlerts(data, "exo")
-    }
-
-    return []
+    const buffer = await res.arrayBuffer()
+    return parseProtobufFeed(buffer, "exo")
   } catch {
     return []
   }
-}
-
-// Map GTFS route IDs to our line IDs
-const ROUTE_TO_LINE: Record<string, string> = {
-  // STM Metro
-  "1": "green",
-  "2": "orange",
-  "4": "yellow",
-  "5": "blue",
-  // Exo commuter trains
-  "11": "exo1",
-  "12": "exo2",
-  "13": "exo3",
-  "14": "exo4",
-  "15": "exo5",
-}
-
-function parseGTFSAlerts(
-  data: { entity?: Array<{ alert?: { informedEntity?: Array<{ routeId?: string }>; headerText?: { translation?: Array<{ language?: string; text?: string }> }; effect?: string } }> },
-  source: string
-): AlertEntry[] {
-  const alerts: AlertEntry[] = []
-
-  for (const entity of data.entity ?? []) {
-    const alert = entity.alert
-    if (!alert) continue
-
-    const routeIds = (alert.informedEntity ?? [])
-      .map((ie) => ie.routeId)
-      .filter(Boolean) as string[]
-
-    const enText = alert.headerText?.translation?.find((t) => t.language === "en")?.text ?? null
-    const frText = alert.headerText?.translation?.find((t) => t.language === "fr")?.text ?? null
-
-    const effect = alert.effect ?? ""
-    let status: AlertEntry["status"] = "delayed"
-    if (effect === "NO_SERVICE") status = "interrupted"
-    else if (effect === "MODIFIED_SERVICE" || effect === "REDUCED_SERVICE") status = "delayed"
-
-    for (const routeId of routeIds) {
-      const lineId = ROUTE_TO_LINE[routeId]
-      if (lineId) {
-        alerts.push({ lineId, status, message: enText, messageFr: frText, source })
-      }
-    }
-  }
-
-  return alerts
 }
 
 export async function GET(request: NextRequest) {
@@ -126,10 +114,22 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
   }
 
-  const [stmAlerts, exoAlerts] = await Promise.all([
-    fetchSTMAlerts(),
-    fetchExoAlerts(),
-  ])
+  let stmError: string | null = null
+  let exoError: string | null = null
+  let stmAlerts: AlertEntry[] = []
+  let exoAlerts: AlertEntry[] = []
+
+  try {
+    stmAlerts = await fetchSTMAlerts()
+  } catch (e) {
+    stmError = String(e)
+  }
+
+  try {
+    exoAlerts = await fetchExoAlerts()
+  } catch (e) {
+    exoError = String(e)
+  }
 
   const allAlerts = [...stmAlerts, ...exoAlerts]
 
@@ -154,7 +154,7 @@ export async function GET(request: NextRequest) {
     const isExo = lineId.startsWith("exo")
 
     // Only clear to normal if we successfully checked the relevant feed
-    if ((isStm && hasStmKey) || (isExo && hasExoKey)) {
+    if ((isStm && hasStmKey && !stmError) || (isExo && hasExoKey && !exoError)) {
       await upsertServiceStatus(lineId, "normal", null, null, isStm ? "stm" : "exo")
       updated++
     }
@@ -165,8 +165,8 @@ export async function GET(request: NextRequest) {
     alertsFound: allAlerts.length,
     linesUpdated: updated,
     sources: {
-      stm: hasStmKey ? "connected" : "no_api_key",
-      exo: hasExoKey ? "connected" : "no_api_key",
+      stm: stmError ? `error: ${stmError}` : hasStmKey ? "connected" : "no_api_key",
+      exo: exoError ? `error: ${exoError}` : hasExoKey ? "connected" : "no_api_key",
       rem: "coming_soon",
     },
     timestamp: new Date().toISOString(),
