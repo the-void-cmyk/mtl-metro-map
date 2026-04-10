@@ -36,6 +36,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
               {t.navStatus}
             </Link>
+            <Link href={`/${locale}/trip`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+              {t.navTrip}
+            </Link>
             <Link href={`/${locale}/map`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
               {t.navMap}
             </Link>
@@ -68,6 +71,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
                 <p className="font-medium text-[var(--text-muted)] text-[11px] uppercase tracking-wider">{t.navigate}</p>
                 <Link href={`/${locale}/map`} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">{t.networkMap}</Link>
                 <Link href={`/${locale}/fares`} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">{t.faresZones}</Link>
+                <Link href={`/${locale}/accessibility`} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">{t.navAccessibility}</Link>
               </div>
               <div className="space-y-2">
                 <p className="font-medium text-[var(--text-muted)] text-[11px] uppercase tracking-wider">{t.lines}</p>

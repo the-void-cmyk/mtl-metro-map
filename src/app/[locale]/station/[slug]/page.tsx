@@ -97,7 +97,23 @@ export default async function StationPage({ params }: StationPageProps) {
                 </div>
                 <div>
                   <dt className="text-[var(--text-muted)] text-[12px] uppercase tracking-wider font-medium">{t.accessible}</dt>
-                  <dd className="font-medium mt-0.5">{station.accessible ? t.yes : t.no}</dd>
+                  <dd className="font-medium mt-0.5 flex items-center gap-1.5">
+                    {station.accessible ? (
+                      <>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[#2E7D32] flex-shrink-0" aria-hidden="true">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.59l-3.29-3.3 1.41-1.41L11 13.76l4.88-4.88 1.41 1.41L11 16.59z" fill="currentColor"/>
+                        </svg>
+                        {t.wheelchairAccessible}
+                      </>
+                    ) : (
+                      <>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[#E65100] flex-shrink-0" aria-hidden="true">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="currentColor"/>
+                        </svg>
+                        {t.limitedAccessibility}
+                      </>
+                    )}
+                  </dd>
                 </div>
                 <div>
                   <dt className="text-[var(--text-muted)] text-[12px] uppercase tracking-wider font-medium">{t.lines}</dt>

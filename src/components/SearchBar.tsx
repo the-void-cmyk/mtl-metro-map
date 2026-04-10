@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react"
 import { useRouter } from "next/navigation"
 import type { Station } from "@/lib/types"
 import type { Locale } from "@/lib/i18n"
+import TimePicker, { type TimeSelection } from "@/components/TimePicker"
 
 interface SearchBarProps {
   stations: Station[]
@@ -19,6 +20,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en' }: 
   const [toStation, setToStation] = useState<Station | null>(null)
   const [activeField, setActiveField] = useState<"from" | "to" | null>(null)
   const [activeIndex, setActiveIndex] = useState(-1)
+  const [timeSelection, setTimeSelection] = useState<TimeSelection | null>(null)
   const fromRef = useRef<HTMLInputElement>(null)
   const toRef = useRef<HTMLInputElement>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -70,9 +72,19 @@ export default function SearchBar({ stations, compact = false, locale = 'en' }: 
     }
   }
 
+  const handleTimeChange = useCallback((selection: TimeSelection) => {
+    setTimeSelection(selection)
+  }, [])
+
   const handleSubmit = () => {
     if (fromStation && toStation && fromStation.id !== toStation.id) {
-      router.push(`/${locale}/route/${fromStation.slug}-to-${toStation.slug}`)
+      let url = `/${locale}/route/${fromStation.slug}-to-${toStation.slug}`
+      if (timeSelection) {
+        const param = timeSelection.mode === "depart" ? "depart" : "arrive"
+        const dayPrefix = timeSelection.day === "tomorrow" ? "tomorrow-" : ""
+        url += `?${param}=${dayPrefix}${timeSelection.time}`
+      }
+      router.push(url)
     }
   }
 
@@ -238,6 +250,8 @@ export default function SearchBar({ stations, compact = false, locale = 'en' }: 
           </button>
         </div>
       </div>
+
+      <TimePicker locale={locale} onChange={handleTimeChange} />
     </div>
   )
 }

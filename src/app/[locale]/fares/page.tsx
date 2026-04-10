@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import { getTranslations } from "@/lib/i18n"
@@ -213,6 +214,27 @@ export default async function FaresPage({ params }: FaresPageProps) {
               </dl>
             </div>
           </div>
+
+          <Link href={`/${locale}/calculator`} className="info-card block group hover:border-[var(--accent)] transition-colors">
+            <div className="info-card-body">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-[var(--surface-inset)] flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--accent)]/10 transition-colors">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="text-[var(--text-secondary)] group-hover:text-[var(--accent)] transition-colors" aria-hidden="true">
+                    <rect x="4" y="2" width="16" height="20" rx="2" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M8 6h8M8 10h8M8 14h3M13 14h3M8 18h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-heading font-semibold text-[14px] group-hover:text-[var(--accent)] transition-colors">
+                    {t.costCalculator}
+                  </p>
+                  <p className="text-[12px] text-[var(--text-muted)] mt-0.5 leading-relaxed">
+                    {t.costCalculatorDesc}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

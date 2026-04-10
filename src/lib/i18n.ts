@@ -17,6 +17,7 @@ const translations = {
     navMap: 'Map',
     navFares: 'Fares',
     navStatus: 'Status',
+    navTrip: 'Trip',
 
     // Home
     heroTitle1: 'Montreal Metro',
@@ -115,8 +116,55 @@ const translations = {
     faqTrainsAnswer: (first: string, last: string) =>
       `The first train departs at ${first} and the last train departs at ${last}.`,
 
+    // Multi-stop trip planner
+    planTrip: 'Plan a Trip',
+    addStop: 'Add stop',
+    removeStop: 'Remove',
+    stop: 'Stop',
+    totalTrip: 'Total Trip',
+    leg: 'Leg',
+    planMultiStop: 'Plan your multi-stop journey across Montreal transit.',
+
+    // Trip planner
+    departAt: 'Depart at',
+    arriveBy: 'Arrive by',
+    today: 'Today',
+    tomorrow: 'Tomorrow',
+    estimatedArrival: 'Est. arrival',
+    estimatedDeparture: 'Est. departure',
+    outsideServiceHours: 'Outside service hours',
+
     // Breadcrumbs
     home: 'Home',
+
+    // Accessibility
+    navAccessibility: 'Accessibility',
+    accessibilityGuide: 'Accessibility Guide',
+    accessibilityDescription: 'Accessibility information for Montreal Metro, REM, and Exo stations.',
+    fullyAccessible: 'Fully Accessible',
+    limitedAccessibility: 'Limited Accessibility',
+    accessibleStations: (count: number, total: number) => `${count} of ${total} stations are fully accessible`,
+    accessibilityTips: 'Accessibility Tips',
+    generalAccessibilityInfo: 'General Information',
+    accessibilityOverview: 'Overview',
+    wheelchairAccessible: 'Wheelchair Accessible',
+
+    // Cost Calculator
+    costCalculator: 'Cost Calculator',
+    costCalculatorDesc: 'Compare pay-per-ride vs monthly pass for your commute.',
+    homeStation: 'Home station',
+    workStation: 'Work station',
+    tripsPerWeek: 'Days per week',
+    payPerRide: 'Pay per ride',
+    monthlyPass: 'Monthly pass',
+    perMonth: '/month',
+    savings: 'You save',
+    breakEven: (trips: number) => `Monthly pass pays for itself after ${trips} trips`,
+    cheaperOption: 'Cheaper option',
+    calculate: 'Calculate',
+    selectBothStations: 'Select both stations to see your cost comparison.',
+    tripsPerMonth: 'trips/month',
+    costCalculatorIntro: 'Enter your home and work stations to compare paying per ride versus buying a monthly pass. Find out which option saves you more money based on how often you commute.',
 
     // Footer
     footerDescription: 'Montreal transit route finder covering Metro, REM, and Exo commuter train networks.',
@@ -133,6 +181,7 @@ const translations = {
     navMap: 'Carte',
     navFares: 'Tarifs',
     navStatus: 'Statut',
+    navTrip: 'Trajet',
 
     heroTitle1: 'Metro Montreal',
     heroTitle2: 'Planificateur de trajet',
@@ -225,7 +274,52 @@ const translations = {
     faqTrainsAnswer: (first: string, last: string) =>
       `Le premier train part a ${first} et le dernier train part a ${last}.`,
 
+    planTrip: 'Planifier un trajet',
+    addStop: 'Ajouter un arret',
+    removeStop: 'Retirer',
+    stop: 'Arret',
+    totalTrip: 'Trajet total',
+    leg: 'Troncon',
+    planMultiStop: 'Planifiez votre trajet multi-arrets sur le reseau de Montreal.',
+
+    departAt: 'Depart a',
+    arriveBy: 'Arriver avant',
+    today: "Aujourd'hui",
+    tomorrow: 'Demain',
+    estimatedArrival: 'Arrivee est.',
+    estimatedDeparture: 'Depart est.',
+    outsideServiceHours: 'Hors des heures de service',
+
     home: 'Accueil',
+
+    // Accessibility
+    navAccessibility: 'Accessibilite',
+    accessibilityGuide: "Guide d'accessibilite",
+    accessibilityDescription: "Informations sur l'accessibilite des stations du Metro, REM et Exo de Montreal.",
+    fullyAccessible: 'Entierement accessible',
+    limitedAccessibility: 'Accessibilite limitee',
+    accessibleStations: (count: number, total: number) => `${count} de ${total} stations sont entierement accessibles`,
+    accessibilityTips: "Conseils d'accessibilite",
+    generalAccessibilityInfo: 'Informations generales',
+    accessibilityOverview: 'Apercu',
+    wheelchairAccessible: 'Accessible en fauteuil roulant',
+
+    // Cost Calculator
+    costCalculator: 'Calculateur de couts',
+    costCalculatorDesc: 'Comparez le cout par trajet vs la passe mensuelle.',
+    homeStation: 'Station de depart',
+    workStation: 'Station de travail',
+    tripsPerWeek: 'Jours par semaine',
+    payPerRide: 'Paiement par trajet',
+    monthlyPass: 'Passe mensuelle',
+    perMonth: '/mois',
+    savings: 'Vous economisez',
+    breakEven: (trips: number) => `La passe mensuelle est rentable apres ${trips} trajets`,
+    cheaperOption: 'Option la moins chere',
+    calculate: 'Calculer',
+    selectBothStations: 'Selectionnez les deux stations pour voir la comparaison des couts.',
+    tripsPerMonth: 'trajets/mois',
+    costCalculatorIntro: 'Entrez vos stations de depart et de travail pour comparer le paiement par trajet et la passe mensuelle. Decouvrez quelle option vous fait economiser le plus selon la frequence de vos deplacements.',
 
     footerDescription: 'Planificateur de trajet couvrant le metro, le REM et les trains de banlieue Exo de Montreal.',
     navigate: 'Navigation',
