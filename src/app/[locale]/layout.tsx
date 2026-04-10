@@ -66,8 +66,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <div className="max-w-6xl mx-auto px-5">
           <div className="flex flex-col sm:flex-row justify-between gap-6">
             <div>
-              <p className="font-heading font-semibold text-sm tracking-tight">{t.siteName}</p>
-              <p className="mt-1.5 text-[13px] text-[var(--text-muted)] max-w-xs leading-relaxed">
+              <svg width="48" height="48" viewBox="0 0 1024 1024" fill="var(--text-primary)" aria-label={t.siteName} className="mb-2">
+                <path d="M65.39,709.62h89.32v89.32h-89.32v-89.32ZM244.04,530.97v89.32h-89.32v-89.32h89.32ZM422.68,173.69v446.61h89.32v89.32h-89.32v89.32h-89.32v-446.61h-89.32v-178.64h178.64ZM869.29,352.33h-178.64v89.32h-89.32v-89.32h89.32v-89.32h89.32v-89.32h178.64v89.32h-89.32v89.32ZM601.32,709.62h89.32v89.32h-89.32v-89.32ZM690.65,441.65h89.32v178.64h-89.32v-178.64Z"/>
+              </svg>
+              <p className="text-[13px] text-[var(--text-muted)] max-w-xs leading-relaxed">
                 {t.footerDescription}
               </p>
             </div>

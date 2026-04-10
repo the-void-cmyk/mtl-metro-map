@@ -19,9 +19,10 @@ uniform vec2 u_resolution;
 uniform vec2 u_center;
 uniform vec2 u_size;
 uniform vec2 u_imageSize;
+uniform float u_scroll;
 varying vec2 v_uv;
 
-// Simulate object-fit: cover
+// Simulate object-fit: cover with parallax scroll offset
 vec2 coverUV(vec2 uv, vec2 canvasSize, vec2 imgSize) {
   float canvasAspect = canvasSize.x / canvasSize.y;
   float imgAspect = imgSize.x / imgSize.y;
@@ -33,7 +34,10 @@ vec2 coverUV(vec2 uv, vec2 canvasSize, vec2 imgSize) {
     // Canvas is taller than image: fit height, crop width
     scale.x = canvasAspect / imgAspect;
   }
-  return (uv - 0.5) * scale + 0.5;
+  vec2 result = (uv - 0.5) * scale + 0.5;
+  // Apply parallax: shift image up as user scrolls down
+  result.y += u_scroll * 0.15;
+  return result;
 }
 
 float roundedBoxSDF(vec2 p, vec2 b, float r) {
@@ -195,6 +199,7 @@ export default function LiquidGlassHero({ imageSrc, imageSrcMobile, imageSrcTabl
     const uSize = gl.getUniformLocation(prog, "u_size")
     const uDpr = gl.getUniformLocation(prog, "u_dpr")
     const uImageSize = gl.getUniformLocation(prog, "u_imageSize")
+    const uScroll = gl.getUniformLocation(prog, "u_scroll")
 
     const tex = gl.createTexture()
     const img = new Image()
@@ -225,6 +230,11 @@ export default function LiquidGlassHero({ imageSrc, imageSrcMobile, imageSrcTabl
         gl.viewport(0, 0, canvas.width, canvas.height)
         gl.uniform1f(uDpr, dpr)
         gl.uniform2f(uRes, canvas.width, canvas.height)
+
+        // Parallax: normalize scroll to 0-1 range based on section height
+        const scrollY = window.scrollY || window.pageYOffset
+        const scrollNorm = Math.min(scrollY / parentRect.height, 1.0)
+        gl.uniform1f(uScroll, scrollNorm)
 
         // Find the glass target element
         const target = document.getElementById(glassTargetId)
