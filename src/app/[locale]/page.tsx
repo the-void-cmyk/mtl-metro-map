@@ -31,10 +31,10 @@ export default async function HomePage({ params }: HomeProps) {
       {/* Hero */}
       <section className="relative overflow-hidden py-20 sm:py-28">
         {/* Responsive hero images */}
-        <picture className="absolute inset-0">
+        <picture className="absolute inset-0 block w-full h-full">
           <source media="(min-width: 1024px)" srcSet="/hero-desktop.jpg" />
           <source media="(min-width: 640px)" srcSet="/hero-tablet.jpg" />
-          <img src="/hero-mobile.jpg" alt="" className="w-full h-full object-cover" aria-hidden="true" />
+          <img src="/hero-mobile.jpg" alt="" className="block w-full h-full object-cover" aria-hidden="true" />
         </picture>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/55" />
