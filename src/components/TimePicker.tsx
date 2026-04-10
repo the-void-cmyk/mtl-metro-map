@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import type { Locale } from "@/lib/i18n"
 import { getTranslations } from "@/lib/i18n"
 
@@ -25,12 +25,26 @@ function getCurrentTime(): string {
 export default function TimePicker({ locale, onChange }: TimePickerProps) {
   const t = getTranslations(locale)
   const [mode, setMode] = useState<"depart" | "arrive">("depart")
-  const [time, setTime] = useState(getCurrentTime)
+  const [time, setTime] = useState(() => {
+    if (typeof window === "undefined") return "12:00"
+    return getCurrentTime()
+  })
   const [day, setDay] = useState<"today" | "tomorrow">("today")
 
-  useEffect(() => {
+  // Notify parent of changes via callback on user interaction
+  const notify = useCallback(() => {
     onChange({ mode, time, day })
-  }, [mode, time, day, onChange])
+  }, [onChange, mode, time, day])
+
+  // Call notify when values change (triggered by user interaction)
+  const prevValues = useRef(`${mode}|${time}|${day}`)
+  useEffect(() => {
+    const key = `${mode}|${time}|${day}`
+    if (key !== prevValues.current) {
+      prevValues.current = key
+      notify()
+    }
+  })
 
   return (
     <div className="flex flex-col gap-2 mt-3">
