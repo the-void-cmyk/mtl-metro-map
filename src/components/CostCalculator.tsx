@@ -147,7 +147,7 @@ export default function CostCalculator({ stations, locale }: CostCalculatorProps
     ? Math.ceil(fareResult.monthlyPass / fareResult.singleTrip)
     : 0
 
-  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-[var(--surface-elevated)]
+  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[16px] sm:text-[14px] bg-[var(--surface-elevated)]
     focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
     placeholder:text-[var(--text-muted)] transition-all`
 

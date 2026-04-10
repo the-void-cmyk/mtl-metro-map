@@ -150,7 +150,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
     ? { from: 'De', to: 'A', dep: 'Station de depart...', arr: "Station d'arrivee...", find: 'Trouver un trajet', swap: 'Inverser' }
     : { from: 'From', to: 'To', dep: 'Departure station...', arr: 'Arrival station...', find: 'Find Route', swap: 'Swap stations' }
 
-  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-[var(--surface-elevated)]
+  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[16px] sm:text-[14px] bg-[var(--surface-elevated)]
     focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
     placeholder:text-[var(--text-muted)] transition-all`
 

@@ -66,7 +66,7 @@ export default function TimePicker({ locale, onChange }: TimePickerProps) {
           type="time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
-          className="px-3 py-1.5 border border-[var(--border)] rounded-lg text-[14px] bg-[var(--surface-elevated)]
+          className="px-3 py-1.5 border border-[var(--border)] rounded-lg text-[16px] sm:text-[14px] bg-[var(--surface-elevated)]
             focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
             transition-all tabular-nums font-medium"
         />
