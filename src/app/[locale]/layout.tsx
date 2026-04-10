@@ -3,6 +3,7 @@ import Link from "next/link"
 import { isValidLocale, getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import ThemeToggle from "@/components/ThemeToggle"
+import NavMore from "@/components/NavMore"
 import PWAInstall from "@/components/PWAInstall"
 
 interface LocaleLayoutProps {
@@ -47,6 +48,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             <Link href={`/${locale}/fares`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
               {t.navFares}
             </Link>
+            <NavMore locale={locale as Locale} />
             <ThemeToggle />
             <Link
               href={`/${altLocale}`}

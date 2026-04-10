@@ -18,6 +18,11 @@ const translations = {
     navFares: 'Fares',
     navStatus: 'Status',
     navTrip: 'Trip',
+    navMore: 'More',
+    navCompare: 'Compare',
+    navCalculator: 'Calculator',
+    navDestinations: 'Destinations',
+    navGuides: 'Guides',
 
     // Home
     heroTitle1: 'Montreal Metro',
@@ -247,6 +252,11 @@ const translations = {
     navFares: 'Tarifs',
     navStatus: 'Statut',
     navTrip: 'Trajet',
+    navMore: 'Plus',
+    navCompare: 'Comparer',
+    navCalculator: 'Calculateur',
+    navDestinations: 'Destinations',
+    navGuides: 'Guides',
 
     heroTitle1: 'Metro Montreal',
     heroTitle2: 'Planificateur de trajet',
