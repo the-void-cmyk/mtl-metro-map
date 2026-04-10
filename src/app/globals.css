@@ -106,6 +106,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Redaction 35', Georgia, serif;
   font-style: italic;
   letter-spacing: -0.02em;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-smooth: never;
 }
 
 /* ─── Line Color System ─── */
