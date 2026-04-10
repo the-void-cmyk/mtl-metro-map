@@ -97,7 +97,7 @@ export default async function RoutePage({ params }: RoutePageProps) {
         />
 
         <div className="mt-5 mb-8">
-          <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight leading-tight">
+          <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight leading-tight break-words">
             {route.from.name}
             <span className="text-[var(--text-muted)] mx-2 font-normal">&rarr;</span>
             {route.to.name}
@@ -109,7 +109,7 @@ export default async function RoutePage({ params }: RoutePageProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6">
           <div className="space-y-6">
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div className="stat-card stat-card-blue">
                 <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{route.totalTime}</div>
                 <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">{t.minutes}</div>
