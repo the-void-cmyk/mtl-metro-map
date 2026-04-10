@@ -94,7 +94,7 @@ async function fetchExoAlerts(): Promise<AlertEntry[]> {
     const res = await fetch(
       "https://exo.chrono-saeiv.com/api/opendata/v1/TRAINS/alert",
       {
-        headers: { Authorization: `Bearer ${apiKey}` },
+        headers: { "Ocp-Apim-Subscription-Key": apiKey },
         signal: AbortSignal.timeout(10000),
       }
     )
