@@ -43,7 +43,7 @@ export default function TimePicker({ locale, onChange }: TimePickerProps) {
             className={`px-3 py-1.5 font-medium transition-colors ${
               mode === "depart"
                 ? "bg-[var(--accent)] text-white"
-                : "bg-white text-[var(--text-secondary)] hover:bg-[var(--surface-inset)]"
+                : "bg-[var(--surface-elevated)] text-[var(--text-secondary)] hover:bg-[var(--surface-inset)]"
             }`}
           >
             {t.departAt}
@@ -54,7 +54,7 @@ export default function TimePicker({ locale, onChange }: TimePickerProps) {
             className={`px-3 py-1.5 font-medium transition-colors ${
               mode === "arrive"
                 ? "bg-[var(--accent)] text-white"
-                : "bg-white text-[var(--text-secondary)] hover:bg-[var(--surface-inset)]"
+                : "bg-[var(--surface-elevated)] text-[var(--text-secondary)] hover:bg-[var(--surface-inset)]"
             }`}
           >
             {t.arriveBy}
@@ -66,7 +66,7 @@ export default function TimePicker({ locale, onChange }: TimePickerProps) {
           type="time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
-          className="px-3 py-1.5 border border-[var(--border)] rounded-lg text-[14px] bg-white
+          className="px-3 py-1.5 border border-[var(--border)] rounded-lg text-[14px] bg-[var(--surface-elevated)]
             focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
             transition-all tabular-nums font-medium"
         />
@@ -79,7 +79,7 @@ export default function TimePicker({ locale, onChange }: TimePickerProps) {
             className={`px-3 py-1.5 font-medium transition-colors ${
               day === "today"
                 ? "bg-[var(--accent)] text-white"
-                : "bg-white text-[var(--text-secondary)] hover:bg-[var(--surface-inset)]"
+                : "bg-[var(--surface-elevated)] text-[var(--text-secondary)] hover:bg-[var(--surface-inset)]"
             }`}
           >
             {t.today}
@@ -90,7 +90,7 @@ export default function TimePicker({ locale, onChange }: TimePickerProps) {
             className={`px-3 py-1.5 font-medium transition-colors ${
               day === "tomorrow"
                 ? "bg-[var(--accent)] text-white"
-                : "bg-white text-[var(--text-secondary)] hover:bg-[var(--surface-inset)]"
+                : "bg-[var(--surface-elevated)] text-[var(--text-secondary)] hover:bg-[var(--surface-inset)]"
             }`}
           >
             {t.tomorrow}

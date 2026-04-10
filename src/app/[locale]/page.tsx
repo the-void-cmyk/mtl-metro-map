@@ -2,6 +2,7 @@ import Link from "next/link"
 import { getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import SearchBar from "@/components/SearchBar"
+import NearbyStations from "@/components/NearbyStations"
 import stations from "../../../data/stations.json"
 import lines from "../../../data/lines.json"
 import type { Station, Line } from "@/lib/types"
@@ -45,6 +46,13 @@ export default async function HomePage({ params }: HomeProps) {
           <div className="max-w-2xl mx-auto rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(12px)" }}>
             <SearchBar stations={allStations} locale={locale as Locale} />
           </div>
+        </div>
+      </section>
+
+      {/* Nearby Stations */}
+      <section className="py-12 sm:py-16">
+        <div className="max-w-6xl mx-auto px-5">
+          <NearbyStations stations={allStations} lines={allLines} locale={locale as Locale} />
         </div>
       </section>
 
@@ -93,7 +101,7 @@ export default async function HomePage({ params }: HomeProps) {
       </section>
 
       {/* Fares */}
-      <section className="py-16 bg-white border-y border-[var(--border)]">
+      <section className="py-16 bg-[var(--surface-elevated)] border-y border-[var(--border)]">
         <div className="max-w-6xl mx-auto px-5">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>

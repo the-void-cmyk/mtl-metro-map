@@ -167,10 +167,75 @@ const translations = {
     costCalculatorIntro: 'Enter your home and work stations to compare paying per ride versus buying a monthly pass. Find out which option saves you more money based on how often you commute.',
 
     // Footer
+    // Share
+    shareRoute: 'Share route',
+    copied: 'Copied!',
+
     footerDescription: 'Montreal transit route finder covering Metro, REM, and Exo commuter train networks.',
     navigate: 'Navigate',
     networkMap: 'Network Map',
     faresZones: 'Fares & Zones',
+
+    // Nearby Stations
+    nearbyStations: 'Nearby Stations',
+    findNearby: 'Find nearby stations',
+    locating: 'Getting your location...',
+    locationError: 'Unable to get your location',
+    metersAway: (m: number) => `${m}m away`,
+    kmAway: (km: string) => `${km}km away`,
+    routeFromHere: 'Route from here',
+
+    // Compare Lines
+    compareLines: 'Compare Lines',
+    compareLinesDesc: 'Side-by-side comparison of all Montreal transit lines.',
+    endToEnd: 'End to end',
+    transferStations: 'Transfer stations',
+    networkStats: 'Network Statistics',
+    longestLine: 'Longest line',
+    mostConnected: 'Most connected',
+    totalStations: 'Total stations',
+    totalLines: 'Total lines',
+    totalConnections: 'Total connections',
+    byStations: 'by stations',
+    byTravelTime: 'by travel time',
+    accessibleCount: 'Accessible',
+
+    // Destinations
+    destinations: 'Destinations',
+    howToGetTo: (name: string) => `How to Get to ${name} by Metro`,
+    nearestStation: 'Nearest station',
+    getDirections: 'Get directions',
+    walkingDistance: 'Short walk from station',
+    categorySports: 'Sports',
+    categoryTourism: 'Tourism',
+    categoryParks: 'Parks',
+    categoryEducation: 'Education',
+    categoryShopping: 'Shopping',
+    categoryCulture: 'Culture',
+    categoryTransport: 'Transport',
+    planYourVisit: 'Plan your visit',
+    servedByLines: 'Served by',
+    viewStation: 'View station details',
+    exploreDestinations: 'Popular Montreal destinations accessible by metro.',
+
+    // Station guides
+    neighborhoodGuide: 'Neighborhood Guide',
+    thingsNearby: 'Things Nearby',
+    localTip: 'Local Tip',
+    education: 'Education',
+    shopping: 'Shopping',
+    entertainment: 'Entertainment',
+    dining: 'Dining',
+    parks: 'Parks',
+    culture: 'Culture',
+    sports: 'Sports',
+    transport: 'Transport',
+
+    // Transit Guides
+    transitGuides: 'Transit Guides',
+    readMore: 'Read more',
+    tableOfContents: 'In this guide',
+    guidesDescription: 'Helpful guides for navigating Montreal transit.',
   },
 
   fr: {
@@ -321,10 +386,75 @@ const translations = {
     tripsPerMonth: 'trajets/mois',
     costCalculatorIntro: 'Entrez vos stations de depart et de travail pour comparer le paiement par trajet et la passe mensuelle. Decouvrez quelle option vous fait economiser le plus selon la frequence de vos deplacements.',
 
+    // Share
+    shareRoute: 'Partager le trajet',
+    copied: 'Copie!',
+
     footerDescription: 'Planificateur de trajet couvrant le metro, le REM et les trains de banlieue Exo de Montreal.',
     navigate: 'Navigation',
     networkMap: 'Carte du reseau',
     faresZones: 'Tarifs et zones',
+
+    // Nearby Stations
+    nearbyStations: 'Stations a proximite',
+    findNearby: 'Trouver les stations proches',
+    locating: 'Localisation en cours...',
+    locationError: 'Impossible de vous localiser',
+    metersAway: (m: number) => `a ${m}m`,
+    kmAway: (km: string) => `a ${km}km`,
+    routeFromHere: 'Trajet depuis ici',
+
+    // Compare Lines
+    compareLines: 'Comparer les lignes',
+    compareLinesDesc: 'Comparaison de toutes les lignes de transport de Montreal.',
+    endToEnd: 'Bout en bout',
+    transferStations: 'Stations de correspondance',
+    networkStats: 'Statistiques du reseau',
+    longestLine: 'Ligne la plus longue',
+    mostConnected: 'La plus connectee',
+    totalStations: 'Total des stations',
+    totalLines: 'Total des lignes',
+    totalConnections: 'Total des correspondances',
+    byStations: 'par stations',
+    byTravelTime: 'par temps de trajet',
+    accessibleCount: 'Accessible',
+
+    // Destinations
+    destinations: 'Destinations',
+    howToGetTo: (name: string) => `Comment se rendre a ${name} en metro`,
+    nearestStation: 'Station la plus proche',
+    getDirections: 'Obtenir l\'itineraire',
+    walkingDistance: 'Courte marche depuis la station',
+    categorySports: 'Sports',
+    categoryTourism: 'Tourisme',
+    categoryParks: 'Parcs',
+    categoryEducation: 'Education',
+    categoryShopping: 'Magasinage',
+    categoryCulture: 'Culture',
+    categoryTransport: 'Transport',
+    planYourVisit: 'Planifiez votre visite',
+    servedByLines: 'Desservie par',
+    viewStation: 'Voir les details de la station',
+    exploreDestinations: 'Destinations populaires de Montreal accessibles en metro.',
+
+    // Station guides
+    neighborhoodGuide: 'Guide du quartier',
+    thingsNearby: 'A proximite',
+    localTip: 'Conseil local',
+    education: 'Education',
+    shopping: 'Shopping',
+    entertainment: 'Divertissement',
+    dining: 'Restauration',
+    parks: 'Parcs',
+    culture: 'Culture',
+    sports: 'Sports',
+    transport: 'Transport',
+
+    // Transit Guides
+    transitGuides: 'Guides de transport',
+    readMore: 'Lire la suite',
+    tableOfContents: 'Dans ce guide',
+    guidesDescription: 'Guides utiles pour naviguer dans le transport de Montreal.',
   },
 } as const
 

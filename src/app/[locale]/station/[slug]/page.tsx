@@ -10,8 +10,37 @@ import SearchBar from "@/components/SearchBar"
 import PopularRoutes from "@/components/PopularRoutes"
 import type { Station } from "@/lib/types"
 import stations from "../../../../../data/stations.json"
+import stationGuidesData from "../../../../../data/station-guides.json"
 
 const allStations = stations as Station[]
+
+interface StationHighlight {
+  name: string
+  nameFr: string
+  type: string
+}
+
+interface StationGuide {
+  stationSlug: string
+  neighborhood: string
+  neighborhoodFr: string
+  highlights: StationHighlight[]
+  tip: string
+  tipFr: string
+}
+
+const stationGuides = stationGuidesData as StationGuide[]
+
+const highlightColors: Record<string, string> = {
+  education: '#0072BC',
+  shopping: '#F58220',
+  entertainment: '#E91E63',
+  dining: '#FF5722',
+  parks: '#00A651',
+  culture: '#9C27B0',
+  sports: '#F44336',
+  transport: '#607D8B',
+}
 
 interface StationPageProps {
   params: Promise<{ slug: string; locale: string }>
@@ -50,6 +79,7 @@ export default async function StationPage({ params }: StationPageProps) {
   const lines = getLinesForStation(station.id)
   const t = getTranslations(locale as Locale)
   const networkLabel = station.network === "metro" ? t.stmLabel : station.network === "rem" ? t.remLabel : t.exoLabel
+  const guide = stationGuides.find(g => g.stationSlug === station.slug)
 
   return (
     <div className="max-w-6xl mx-auto px-5 py-6 sm:py-8">
@@ -128,6 +158,40 @@ export default async function StationPage({ params }: StationPageProps) {
               </dl>
             </div>
           </div>
+
+          {guide && (
+            <div className="info-card">
+              <div className="info-card-header">{t.neighborhoodGuide}</div>
+              <div className="info-card-body space-y-4">
+                <div>
+                  <h3 className="font-heading font-semibold text-[15px]">
+                    {locale === 'fr' ? guide.neighborhoodFr : guide.neighborhood}
+                  </h3>
+                  <p className="text-[12px] text-[var(--text-muted)] uppercase tracking-wider mt-0.5">{t.thingsNearby}</p>
+                </div>
+                <ul className="space-y-2">
+                  {guide.highlights.map((h, i) => (
+                    <li key={i} className="flex items-center gap-2.5 text-[14px]">
+                      <span
+                        className="w-2 h-2 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: highlightColors[h.type] || '#999' }}
+                      />
+                      <span>{locale === 'fr' ? h.nameFr : h.name}</span>
+                      <span className="text-[11px] text-[var(--text-muted)] ml-auto">
+                        {t[h.type as keyof typeof t] as string}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="rounded-lg bg-[var(--surface-inset)] border border-[var(--border-subtle)] px-4 py-3">
+                  <p className="text-[12px] font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-1">{t.localTip}</p>
+                  <p className="text-[13px] text-[var(--text-secondary)] leading-relaxed">
+                    {locale === 'fr' ? guide.tipFr : guide.tip}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
 
           {lines.map((line) => (
             <div key={line.id} className="info-card">

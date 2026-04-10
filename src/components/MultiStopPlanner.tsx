@@ -214,7 +214,7 @@ export default function MultiStopPlanner({ stations, locale }: MultiStopPlannerP
     return locale === "fr" ? `Arret ${index}...` : `Stop ${index}...`
   }
 
-  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-white
+  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-[var(--surface-elevated)]
     focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
     placeholder:text-[var(--text-muted)] transition-all`
 
@@ -235,7 +235,7 @@ export default function MultiStopPlanner({ stations, locale }: MultiStopPlannerP
                   className={`w-3 h-3 rounded-full border-2 ${
                     stop.station
                       ? "bg-[var(--accent)] border-[var(--accent)]"
-                      : "bg-white border-[var(--border)]"
+                      : "bg-[var(--surface-elevated)] border-[var(--border)]"
                   }`}
                 />
                 {index < stops.length - 1 && (

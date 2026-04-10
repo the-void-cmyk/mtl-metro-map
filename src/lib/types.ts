@@ -99,3 +99,13 @@ export interface SitemapEntry {
 }
 
 export type CTRVariant = 'A' | 'B' | 'C' | 'D'
+
+export interface Landmark {
+  id: string
+  name: string
+  nameFr: string
+  nearestStation: string
+  category: 'sports' | 'tourism' | 'parks' | 'education' | 'shopping' | 'culture' | 'transport'
+  description: string
+  descriptionFr: string
+}

@@ -13,6 +13,7 @@ import SchemaMarkup from "@/components/SchemaMarkup"
 import SearchBar from "@/components/SearchBar"
 import ViewTracker from "@/components/ViewTracker"
 import PopularRoutes from "@/components/PopularRoutes"
+import ShareButton from "@/components/ShareButton"
 import stations from "../../../../../data/stations.json"
 import type { Station } from "@/lib/types"
 
@@ -166,11 +167,19 @@ export default async function RoutePage({ params, searchParams }: RoutePageProps
         />
 
         <div className="mt-5 mb-8">
-          <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight leading-tight break-words">
-            {route.from.name}
-            <span className="text-[var(--text-muted)] mx-2 font-normal">&rarr;</span>
-            {route.to.name}
-          </h1>
+          <div className="flex items-center gap-2">
+            <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight leading-tight break-words">
+              {route.from.name}
+              <span className="text-[var(--text-muted)] mx-2 font-normal">&rarr;</span>
+              {route.to.name}
+            </h1>
+            <ShareButton
+              url={`${baseUrl}/${locale}/route/${slug}`}
+              title={`${route.from.name} \u2192 ${route.to.name}`}
+              copiedLabel={t.copied}
+              shareLabel={t.shareRoute}
+            />
+          </div>
           <p className="text-[var(--text-secondary)] text-[15px] mt-2 leading-relaxed">
             {t.routeDescription(route.totalTime, route.stops, route.transfers.length, formatPrice(route.fare.price))}
           </p>

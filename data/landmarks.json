@@ -1,0 +1,110 @@
+[
+  {
+    "id": "bell-centre",
+    "name": "Bell Centre",
+    "nameFr": "Centre Bell",
+    "nearestStation": "lucien-l-allier",
+    "category": "sports",
+    "description": "Home of the Montreal Canadiens",
+    "descriptionFr": "Domicile des Canadiens de Montreal"
+  },
+  {
+    "id": "old-port",
+    "name": "Old Port of Montreal",
+    "nameFr": "Vieux-Port de Montreal",
+    "nearestStation": "champ-de-mars",
+    "category": "tourism",
+    "description": "Historic waterfront area",
+    "descriptionFr": "Zone historique du bord de l'eau"
+  },
+  {
+    "id": "mount-royal",
+    "name": "Mount Royal Park",
+    "nameFr": "Parc du Mont-Royal",
+    "nearestStation": "mont-royal",
+    "category": "parks",
+    "description": "Iconic mountain park designed by Frederick Law Olmsted",
+    "descriptionFr": "Parc emblematique concu par Frederick Law Olmsted"
+  },
+  {
+    "id": "olympic-stadium",
+    "name": "Olympic Stadium",
+    "nameFr": "Stade olympique",
+    "nearestStation": "pie-ix",
+    "category": "sports",
+    "description": "Built for the 1976 Olympics",
+    "descriptionFr": "Construit pour les Jeux de 1976"
+  },
+  {
+    "id": "mcgill-university",
+    "name": "McGill University",
+    "nameFr": "Universite McGill",
+    "nearestStation": "mcgill",
+    "category": "education",
+    "description": "One of Canada's top universities",
+    "descriptionFr": "L'une des meilleures universites du Canada"
+  },
+  {
+    "id": "udem",
+    "name": "Universite de Montreal",
+    "nameFr": "Universite de Montreal",
+    "nearestStation": "universite-de-montreal",
+    "category": "education",
+    "description": "Largest French-language university in the world",
+    "descriptionFr": "Plus grande universite francophone au monde"
+  },
+  {
+    "id": "jean-talon-market",
+    "name": "Jean-Talon Market",
+    "nameFr": "Marche Jean-Talon",
+    "nearestStation": "jean-talon",
+    "category": "shopping",
+    "description": "One of North America's largest open-air markets",
+    "descriptionFr": "L'un des plus grands marches a ciel ouvert d'Amerique du Nord"
+  },
+  {
+    "id": "biodome",
+    "name": "Montreal Biodome",
+    "nameFr": "Biodome de Montreal",
+    "nearestStation": "viau",
+    "category": "tourism",
+    "description": "Living museum with four ecosystems",
+    "descriptionFr": "Musee vivant avec quatre ecosystemes"
+  },
+  {
+    "id": "notre-dame-basilica",
+    "name": "Notre-Dame Basilica",
+    "nameFr": "Basilique Notre-Dame",
+    "nearestStation": "place-d-armes",
+    "category": "tourism",
+    "description": "Historic Gothic Revival basilica",
+    "descriptionFr": "Basilique historique de style neogothique"
+  },
+  {
+    "id": "yul-airport",
+    "name": "Montreal Airport (YUL)",
+    "nameFr": "Aeroport de Montreal (YUL)",
+    "nearestStation": "yul-aeroport-de-montreal",
+    "category": "transport",
+    "description": "Montreal's international airport, served by REM",
+    "descriptionFr": "Aeroport international de Montreal, desservi par le REM"
+  },
+  {
+    "id": "place-des-arts",
+    "name": "Place des Arts",
+    "nameFr": "Place des Arts",
+    "nearestStation": "place-des-arts",
+    "category": "culture",
+    "description": "Montreal's performing arts complex",
+    "descriptionFr": "Complexe des arts de la scene de Montreal"
+  },
+  {
+    "id": "botanical-garden",
+    "name": "Montreal Botanical Garden",
+    "nameFr": "Jardin botanique de Montreal",
+    "nearestStation": "pie-ix",
+    "category": "parks",
+    "description": "One of the world's largest botanical gardens",
+    "descriptionFr": "L'un des plus grands jardins botaniques au monde"
+  }
+]

@@ -2,6 +2,8 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { isValidLocale, getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
+import ThemeToggle from "@/components/ThemeToggle"
+import PWAInstall from "@/components/PWAInstall"
 
 interface LocaleLayoutProps {
   children: React.ReactNode
@@ -21,7 +23,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <>
-      <header className="bg-white/80 backdrop-blur-lg border-b border-[var(--border)] sticky top-0 z-50">
+      <header className="bg-[var(--surface-elevated)]/80 backdrop-blur-lg border-b border-[var(--border)] sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 rounded-lg bg-[var(--hero-bg)] flex items-center justify-center transition-transform group-hover:scale-105">
@@ -45,9 +47,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             <Link href={`/${locale}/fares`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
               {t.navFares}
             </Link>
+            <ThemeToggle />
             <Link
               href={`/${altLocale}`}
-              className="ml-2 px-2.5 py-1.5 text-[12px] font-semibold uppercase tracking-wider text-[var(--text-muted)] hover:text-[var(--text-primary)] border border-[var(--border)] hover:border-[#bbb] rounded-md transition-colors"
+              className="ml-1 px-2.5 py-1.5 text-[12px] font-semibold uppercase tracking-wider text-[var(--text-muted)] hover:text-[var(--text-primary)] border border-[var(--border)] hover:border-[#bbb] rounded-md transition-colors"
             >
               {altLocale.toUpperCase()}
             </Link>
@@ -57,7 +60,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
       <main className="flex-1">{children}</main>
 
-      <footer className="border-t border-[var(--border)] bg-white py-10 mt-auto">
+      <footer className="border-t border-[var(--border)] bg-[var(--surface-elevated)] py-10 mt-auto">
         <div className="max-w-6xl mx-auto px-5">
           <div className="flex flex-col sm:flex-row justify-between gap-6">
             <div>
@@ -72,6 +75,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
                 <Link href={`/${locale}/map`} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">{t.networkMap}</Link>
                 <Link href={`/${locale}/fares`} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">{t.faresZones}</Link>
                 <Link href={`/${locale}/accessibility`} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">{t.navAccessibility}</Link>
+                <Link href={`/${locale}/guide`} className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">{t.transitGuides}</Link>
               </div>
               <div className="space-y-2">
                 <p className="font-medium text-[var(--text-muted)] text-[11px] uppercase tracking-wider">{t.lines}</p>
@@ -83,6 +87,8 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           </div>
         </div>
       </footer>
+
+      <PWAInstall />
     </>
   )
 }

@@ -149,7 +149,7 @@ export default async function MapPage({ params }: MapPageProps) {
               <a
                 key={l.id}
                 href={`#${l.id}`}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap"
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-[var(--surface-elevated)] border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap"
               >
                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: l.color }} />
                 {locale === 'fr' ? l.nameFr.replace('Ligne ', '') : l.name.replace(' Line', '')}
@@ -162,7 +162,7 @@ export default async function MapPage({ params }: MapPageProps) {
           {/* REM */}
           <a
             href="#rem-a"
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap flex-shrink-0"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-[var(--surface-elevated)] border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap flex-shrink-0"
           >
             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--rem-line)' }} />
             REM
@@ -177,7 +177,7 @@ export default async function MapPage({ params }: MapPageProps) {
               <a
                 key={l.id}
                 href={`#${l.id}`}
-                className="flex items-center gap-1 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-white border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap"
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-md text-[12px] font-medium bg-[var(--surface-elevated)] border border-[var(--border)] hover:border-[#bbb] transition-colors whitespace-nowrap"
               >
                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: l.color }} />
                 {l.id.replace('exo', '')}

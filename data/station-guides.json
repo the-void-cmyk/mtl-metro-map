@@ -1,0 +1,237 @@
+[
+  {
+    "stationSlug": "berri-uqam",
+    "neighborhood": "Latin Quarter",
+    "neighborhoodFr": "Quartier latin",
+    "highlights": [
+      { "name": "UQAM Campus", "nameFr": "Campus UQAM", "type": "education" },
+      { "name": "Saint-Denis Street shops", "nameFr": "Boutiques de la rue Saint-Denis", "type": "shopping" },
+      { "name": "Cinema du Parc", "nameFr": "Cinema du Parc", "type": "entertainment" },
+      { "name": "Place Emilie-Gamelin", "nameFr": "Place Emilie-Gamelin", "type": "parks" },
+      { "name": "Grande Bibliotheque", "nameFr": "Grande Bibliotheque", "type": "culture" }
+    ],
+    "tip": "Major transfer hub connecting Green, Orange, and Yellow lines. Exit on Saint-Denis for restaurants and nightlife.",
+    "tipFr": "Hub de correspondance majeur reliant les lignes verte, orange et jaune. Sortie Saint-Denis pour les restaurants et la vie nocturne."
+  },
+  {
+    "stationSlug": "mcgill",
+    "neighborhood": "Downtown Core",
+    "neighborhoodFr": "Centre-ville",
+    "highlights": [
+      { "name": "McGill University", "nameFr": "Universite McGill", "type": "education" },
+      { "name": "Sainte-Catherine Street", "nameFr": "Rue Sainte-Catherine", "type": "shopping" },
+      { "name": "Christ Church Cathedral", "nameFr": "Cathedrale Christ Church", "type": "culture" },
+      { "name": "Place Montreal Trust", "nameFr": "Place Montreal Trust", "type": "shopping" }
+    ],
+    "tip": "Heart of downtown shopping. Direct underground access to major malls via the RESO network.",
+    "tipFr": "Coeur du magasinage au centre-ville. Acces souterrain direct aux grands centres commerciaux via le RESO."
+  },
+  {
+    "stationSlug": "guy-concordia",
+    "neighborhood": "Concordia / Shaughnessy Village",
+    "neighborhoodFr": "Concordia / Village Shaughnessy",
+    "highlights": [
+      { "name": "Concordia University", "nameFr": "Universite Concordia", "type": "education" },
+      { "name": "Montreal Museum of Fine Arts", "nameFr": "Musee des beaux-arts de Montreal", "type": "culture" },
+      { "name": "Crescent Street dining", "nameFr": "Restaurants de la rue Crescent", "type": "dining" },
+      { "name": "Sherbrooke Street galleries", "nameFr": "Galeries de la rue Sherbrooke", "type": "culture" }
+    ],
+    "tip": "Walk north on Guy to reach the museum district. Crescent and Bishop streets have lively terraces in summer.",
+    "tipFr": "Marchez vers le nord sur Guy pour atteindre le quartier des musees. Les rues Crescent et Bishop ont des terrasses animees en ete."
+  },
+  {
+    "stationSlug": "peel",
+    "neighborhood": "Golden Square Mile",
+    "neighborhoodFr": "Mille carre dore",
+    "highlights": [
+      { "name": "Mount Royal Park access", "nameFr": "Acces au parc du Mont-Royal", "type": "parks" },
+      { "name": "Sainte-Catherine Street West", "nameFr": "Rue Sainte-Catherine Ouest", "type": "shopping" },
+      { "name": "Les Cours Mont-Royal", "nameFr": "Les Cours Mont-Royal", "type": "shopping" },
+      { "name": "Rue Peel restaurants", "nameFr": "Restaurants de la rue Peel", "type": "dining" }
+    ],
+    "tip": "Best station for accessing Mount Royal via Peel Street entrance. Walk north to the trailhead in about 10 minutes.",
+    "tipFr": "Meilleure station pour acceder au Mont-Royal par l'entree de la rue Peel. Environ 10 minutes de marche vers le nord jusqu'au sentier."
+  },
+  {
+    "stationSlug": "place-des-arts",
+    "neighborhood": "Quartier des spectacles",
+    "neighborhoodFr": "Quartier des spectacles",
+    "highlights": [
+      { "name": "Place des Arts complex", "nameFr": "Complexe Place des Arts", "type": "entertainment" },
+      { "name": "Montreal Symphony Orchestra", "nameFr": "Orchestre symphonique de Montreal", "type": "culture" },
+      { "name": "Musee d'art contemporain", "nameFr": "Musee d'art contemporain", "type": "culture" },
+      { "name": "Montreal Jazz Festival grounds", "nameFr": "Site du Festival de jazz de Montreal", "type": "entertainment" }
+    ],
+    "tip": "Hub for Montreal's festival season (June to August). The esplanade hosts free outdoor concerts during major events.",
+    "tipFr": "Hub de la saison des festivals de Montreal (juin a aout). L'esplanade accueille des concerts gratuits en plein air lors des grands evenements."
+  },
+  {
+    "stationSlug": "mont-royal",
+    "neighborhood": "Plateau Mont-Royal",
+    "neighborhoodFr": "Plateau Mont-Royal",
+    "highlights": [
+      { "name": "Avenue Mont-Royal shops", "nameFr": "Boutiques de l'avenue Mont-Royal", "type": "shopping" },
+      { "name": "Saint-Denis Street terraces", "nameFr": "Terrasses de la rue Saint-Denis", "type": "dining" },
+      { "name": "Parc La Fontaine", "nameFr": "Parc La Fontaine", "type": "parks" },
+      { "name": "Plateau street art", "nameFr": "Art de rue du Plateau", "type": "culture" }
+    ],
+    "tip": "The Plateau is best explored on foot. Walk east on Mont-Royal for local boutiques and cafes, or south to Parc La Fontaine.",
+    "tipFr": "Le Plateau se decouvre a pied. Marchez vers l'est sur Mont-Royal pour les boutiques locales et cafes, ou vers le sud pour le Parc La Fontaine."
+  },
+  {
+    "stationSlug": "jean-talon",
+    "neighborhood": "Little Italy / Villeray",
+    "neighborhoodFr": "Petite Italie / Villeray",
+    "highlights": [
+      { "name": "Jean-Talon Market", "nameFr": "Marche Jean-Talon", "type": "shopping" },
+      { "name": "Little Italy restaurants", "nameFr": "Restaurants de la Petite Italie", "type": "dining" },
+      { "name": "Saint-Laurent Boulevard", "nameFr": "Boulevard Saint-Laurent", "type": "shopping" },
+      { "name": "Parc Jarry", "nameFr": "Parc Jarry", "type": "parks" }
+    ],
+    "tip": "Transfer station for Blue and Orange lines. The Jean-Talon Market is a 5-minute walk west, open year-round.",
+    "tipFr": "Station de correspondance des lignes bleue et orange. Le Marche Jean-Talon est a 5 minutes de marche vers l'ouest, ouvert toute l'annee."
+  },
+  {
+    "stationSlug": "snowdon",
+    "neighborhood": "Snowdon / Cote-des-Neiges",
+    "neighborhoodFr": "Snowdon / Cote-des-Neiges",
+    "highlights": [
+      { "name": "Decarie Boulevard shopping", "nameFr": "Magasinage du boulevard Decarie", "type": "shopping" },
+      { "name": "Queen Mary Road restaurants", "nameFr": "Restaurants de la rue Queen Mary", "type": "dining" },
+      { "name": "Snowdon Theatre building", "nameFr": "Batiment du Theatre Snowdon", "type": "culture" },
+      { "name": "Cote-Saint-Luc Road shops", "nameFr": "Commerces de la rue Cote-Saint-Luc", "type": "shopping" }
+    ],
+    "tip": "Transfer between Blue and Orange lines. A diverse neighborhood with excellent bakeries and delis along Queen Mary Road.",
+    "tipFr": "Correspondance entre les lignes bleue et orange. Un quartier diversifie avec d'excellentes boulangeries et charcuteries sur la rue Queen Mary."
+  },
+  {
+    "stationSlug": "lionel-groulx",
+    "neighborhood": "Saint-Henri / Little Burgundy",
+    "neighborhoodFr": "Saint-Henri / Petite-Bourgogne",
+    "highlights": [
+      { "name": "Atwater Market", "nameFr": "Marche Atwater", "type": "shopping" },
+      { "name": "Lachine Canal path", "nameFr": "Piste du Canal de Lachine", "type": "parks" },
+      { "name": "Notre-Dame Street West galleries", "nameFr": "Galeries de la rue Notre-Dame Ouest", "type": "culture" },
+      { "name": "Saint-Henri dining scene", "nameFr": "Scene gastronomique de Saint-Henri", "type": "dining" }
+    ],
+    "tip": "Transfer hub for Green and Orange lines. Walk south to the Lachine Canal for cycling and waterside walks.",
+    "tipFr": "Hub de correspondance des lignes verte et orange. Marchez vers le sud pour le Canal de Lachine, velos et promenades au bord de l'eau."
+  },
+  {
+    "stationSlug": "vendome",
+    "neighborhood": "Notre-Dame-de-Grace",
+    "neighborhoodFr": "Notre-Dame-de-Grace",
+    "highlights": [
+      { "name": "MUHC Glen Site hospital", "nameFr": "Hopital CUSM site Glen", "type": "transport" },
+      { "name": "Monkland Avenue shops", "nameFr": "Commerces de l'avenue Monkland", "type": "shopping" },
+      { "name": "Loyola Campus", "nameFr": "Campus Loyola", "type": "education" },
+      { "name": "NDG Park", "nameFr": "Parc NDG", "type": "parks" }
+    ],
+    "tip": "Intermodal station connecting Metro, Exo commuter trains, and the VIA Rail corridor. Closest stop to the MUHC super-hospital.",
+    "tipFr": "Station intermodale reliant le metro, les trains de banlieue Exo et le corridor VIA Rail. Arret le plus proche du super-hopital du CUSM."
+  },
+  {
+    "stationSlug": "atwater",
+    "neighborhood": "Westmount / Atwater",
+    "neighborhoodFr": "Westmount / Atwater",
+    "highlights": [
+      { "name": "Atwater Market", "nameFr": "Marche Atwater", "type": "shopping" },
+      { "name": "Forum Pepsi (former Montreal Forum)", "nameFr": "Forum Pepsi (ancien Forum de Montreal)", "type": "entertainment" },
+      { "name": "Dawson College", "nameFr": "College Dawson", "type": "education" },
+      { "name": "Sainte-Catherine Street dining", "nameFr": "Restaurants de la rue Sainte-Catherine", "type": "dining" }
+    ],
+    "tip": "Walk south to the Atwater Market along the Lachine Canal. The market is open daily with fresh produce and artisan food.",
+    "tipFr": "Marchez vers le sud jusqu'au Marche Atwater le long du Canal de Lachine. Le marche est ouvert tous les jours avec des produits frais et artisanaux."
+  },
+  {
+    "stationSlug": "pie-ix",
+    "neighborhood": "Hochelaga-Maisonneuve",
+    "neighborhoodFr": "Hochelaga-Maisonneuve",
+    "highlights": [
+      { "name": "Olympic Stadium", "nameFr": "Stade olympique", "type": "sports" },
+      { "name": "Montreal Biodome", "nameFr": "Biodome de Montreal", "type": "culture" },
+      { "name": "Botanical Garden", "nameFr": "Jardin botanique", "type": "parks" },
+      { "name": "Saputo Stadium", "nameFr": "Stade Saputo", "type": "sports" }
+    ],
+    "tip": "Gateway to the Olympic Park complex. The Biodome, Planetarium, and Botanical Garden are all within a 10-minute walk.",
+    "tipFr": "Porte d'entree du complexe du Parc olympique. Le Biodome, le Planetarium et le Jardin botanique sont tous a moins de 10 minutes de marche."
+  },
+  {
+    "stationSlug": "longueuil-universite-de-sherbrooke",
+    "neighborhood": "Longueuil Centre",
+    "neighborhoodFr": "Centre de Longueuil",
+    "highlights": [
+      { "name": "Universite de Sherbrooke campus", "nameFr": "Campus de l'Universite de Sherbrooke", "type": "education" },
+      { "name": "Place Charles-Le Moyne", "nameFr": "Place Charles-Le Moyne", "type": "shopping" },
+      { "name": "Bus terminal to South Shore", "nameFr": "Terminus d'autobus vers la Rive-Sud", "type": "transport" },
+      { "name": "Promenade Rene-Levesque", "nameFr": "Promenade Rene-Levesque", "type": "parks" }
+    ],
+    "tip": "Only Yellow Line station on the South Shore. Major bus hub connecting to Brossard, Saint-Hubert, and other South Shore cities.",
+    "tipFr": "Seule station de la ligne jaune sur la Rive-Sud. Hub d'autobus majeur reliant Brossard, Saint-Hubert et d'autres villes de la Rive-Sud."
+  },
+  {
+    "stationSlug": "gare-centrale-rem",
+    "neighborhood": "Downtown / Underground City",
+    "neighborhoodFr": "Centre-ville / Ville souterraine",
+    "highlights": [
+      { "name": "Gare Centrale (Central Station)", "nameFr": "Gare Centrale", "type": "transport" },
+      { "name": "Place Ville Marie", "nameFr": "Place Ville Marie", "type": "shopping" },
+      { "name": "Underground City (RESO)", "nameFr": "Ville souterraine (RESO)", "type": "shopping" },
+      { "name": "Bell Centre (nearby)", "nameFr": "Centre Bell (a proximite)", "type": "sports" }
+    ],
+    "tip": "Main REM terminal downtown. Connected to VIA Rail, Exo commuter trains, and the RESO underground network. Great for airport transfers.",
+    "tipFr": "Terminal principal du REM au centre-ville. Relie a VIA Rail, aux trains Exo et au reseau souterrain RESO. Ideal pour les transferts aeroportuaires."
+  },
+  {
+    "stationSlug": "bonaventure",
+    "neighborhood": "Old Montreal / International Quarter",
+    "neighborhoodFr": "Vieux-Montreal / Quartier international",
+    "highlights": [
+      { "name": "Old Montreal cobblestone streets", "nameFr": "Rues pavees du Vieux-Montreal", "type": "culture" },
+      { "name": "Old Port of Montreal", "nameFr": "Vieux-Port de Montreal", "type": "parks" },
+      { "name": "Notre-Dame Basilica", "nameFr": "Basilique Notre-Dame", "type": "culture" },
+      { "name": "Place d'Armes", "nameFr": "Place d'Armes", "type": "culture" }
+    ],
+    "tip": "Walk south to reach Old Montreal and the waterfront. The Old Port area features seasonal activities including ice skating in winter and boat tours in summer.",
+    "tipFr": "Marchez vers le sud pour atteindre le Vieux-Montreal et le bord de l'eau. Le Vieux-Port offre des activites saisonnieres, dont le patinage en hiver et les croiseres en ete."
+  },
+  {
+    "stationSlug": "jean-drapeau",
+    "neighborhood": "Ile Sainte-Helene / Ile Notre-Dame",
+    "neighborhoodFr": "Ile Sainte-Helene / Ile Notre-Dame",
+    "highlights": [
+      { "name": "La Ronde amusement park", "nameFr": "Parc d'attractions La Ronde", "type": "entertainment" },
+      { "name": "Biosphere Museum", "nameFr": "Musee de la Biosphere", "type": "culture" },
+      { "name": "Circuit Gilles-Villeneuve", "nameFr": "Circuit Gilles-Villeneuve", "type": "sports" },
+      { "name": "Plage Jean-Dore beach", "nameFr": "Plage Jean-Dore", "type": "parks" }
+    ],
+    "tip": "Island station between Montreal and Longueuil. Home to the Canadian Grand Prix circuit and summer festivals. Great cycling destination.",
+    "tipFr": "Station insulaire entre Montreal et Longueuil. Domicile du circuit du Grand Prix du Canada et des festivals d'ete. Excellente destination de velo."
+  },
+  {
+    "stationSlug": "sherbrooke",
+    "neighborhood": "Plateau / McGill Ghetto",
+    "neighborhoodFr": "Plateau / Ghetto McGill",
+    "highlights": [
+      { "name": "Saint-Denis Street", "nameFr": "Rue Saint-Denis", "type": "dining" },
+      { "name": "Carré Saint-Louis", "nameFr": "Carre Saint-Louis", "type": "parks" },
+      { "name": "Rue Prince-Arthur pedestrian mall", "nameFr": "Rue pietonne Prince-Arthur", "type": "dining" },
+      { "name": "McGill University east campus", "nameFr": "Campus est de l'Universite McGill", "type": "education" }
+    ],
+    "tip": "Gateway to the lower Plateau. Walk east to Carre Saint-Louis, a beautiful Victorian-era park, then continue to Prince-Arthur for BYOB restaurants.",
+    "tipFr": "Porte d'entree du bas du Plateau. Marchez vers l'est jusqu'au Carre Saint-Louis, un magnifique parc victorien, puis continuez vers Prince-Arthur pour les restaurants Apportez votre vin."
+  },
+  {
+    "stationSlug": "square-victoria-oaci",
+    "neighborhood": "Old Montreal / Financial District",
+    "neighborhoodFr": "Vieux-Montreal / Quartier financier",
+    "highlights": [
+      { "name": "Square Victoria", "nameFr": "Square Victoria", "type": "parks" },
+      { "name": "Montreal World Trade Centre", "nameFr": "Centre de commerce mondial de Montreal", "type": "culture" },
+      { "name": "Chinatown", "nameFr": "Quartier chinois", "type": "dining" },
+      { "name": "Palais des congres", "nameFr": "Palais des congres", "type": "culture" }
+    ],
+    "tip": "The station entrance features an original Art Nouveau Paris Metro sign. Walk south for Old Montreal or north for Chinatown.",
+    "tipFr": "L'entree de la station presente un panneau Art nouveau original du Metro de Paris. Marchez vers le sud pour le Vieux-Montreal ou vers le nord pour le Quartier chinois."
+  }
+]

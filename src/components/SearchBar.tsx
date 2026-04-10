@@ -10,14 +10,15 @@ interface SearchBarProps {
   stations: Station[]
   compact?: boolean
   locale?: Locale
+  defaultTo?: Station
 }
 
-export default function SearchBar({ stations, compact = false, locale = 'en' }: SearchBarProps) {
+export default function SearchBar({ stations, compact = false, locale = 'en', defaultTo }: SearchBarProps) {
   const router = useRouter()
   const [fromQuery, setFromQuery] = useState("")
-  const [toQuery, setToQuery] = useState("")
+  const [toQuery, setToQuery] = useState(defaultTo ? defaultTo.name : "")
   const [fromStation, setFromStation] = useState<Station | null>(null)
-  const [toStation, setToStation] = useState<Station | null>(null)
+  const [toStation, setToStation] = useState<Station | null>(defaultTo ?? null)
   const [activeField, setActiveField] = useState<"from" | "to" | null>(null)
   const [activeIndex, setActiveIndex] = useState(-1)
   const [timeSelection, setTimeSelection] = useState<TimeSelection | null>(null)
@@ -149,7 +150,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en' }: 
     ? { from: 'De', to: 'A', dep: 'Station de depart...', arr: "Station d'arrivee...", find: 'Trouver un trajet', swap: 'Inverser' }
     : { from: 'From', to: 'To', dep: 'Departure station...', arr: 'Arrival station...', find: 'Find Route', swap: 'Swap stations' }
 
-  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-white
+  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-[var(--surface-elevated)]
     focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
     placeholder:text-[var(--text-muted)] transition-all`
 

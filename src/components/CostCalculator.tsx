@@ -147,7 +147,7 @@ export default function CostCalculator({ stations, locale }: CostCalculatorProps
     ? Math.ceil(fareResult.monthlyPass / fareResult.singleTrip)
     : 0
 
-  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-white
+  const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[14px] bg-[var(--surface-elevated)]
     focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/20 focus:border-[var(--accent)]
     placeholder:text-[var(--text-muted)] transition-all`
 
@@ -255,7 +255,7 @@ export default function CostCalculator({ stations, locale }: CostCalculatorProps
                   className={`flex-1 py-2 text-[14px] font-medium rounded-lg border transition-all ${
                     daysPerWeek === d
                       ? "bg-[var(--accent)] text-white border-[var(--accent)]"
-                      : "bg-white text-[var(--text-secondary)] border-[var(--border)] hover:border-[#bbb]"
+                      : "bg-[var(--surface-elevated)] text-[var(--text-secondary)] border-[var(--border)] hover:border-[#bbb]"
                   }`}
                 >
                   {d}

@@ -27,6 +27,21 @@
   --radius-lg: 16px;
 }
 
+[data-theme="dark"] {
+  --surface: #1a1a1a;
+  --surface-elevated: #242424;
+  --surface-inset: #2a2a2a;
+  --border: #333333;
+  --border-subtle: #2d2d2d;
+  --text-primary: #f0f0ee;
+  --text-secondary: #a8a8a3;
+  --text-muted: #6b6b66;
+  --hero-bg: #0a0e18;
+  --hero-surface: rgba(255, 255, 255, 0.08);
+  --hero-border: rgba(255, 255, 255, 0.12);
+  --accent: #4d9fff;
+}
+
 @theme inline {
   --font-heading: var(--font-space-grotesk);
   --font-body: var(--font-dm-sans);
@@ -96,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   z-index: 40;
-  background: white;
+  background: var(--surface-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow:
@@ -191,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 16px;
   height: 16px;
   border: 3px solid var(--text-primary);
-  background: white;
+  background: var(--surface-elevated);
 }
 
 .route-station-dot-transfer {
