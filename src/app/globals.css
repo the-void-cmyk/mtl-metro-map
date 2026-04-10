@@ -1,5 +1,38 @@
 @import "tailwindcss";
 
+/* Custom fonts */
+@font-face {
+  font-family: 'Redaction 35';
+  src: url('/fonts/Redaction-35-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Redaction 35';
+  src: url('/fonts/Redaction-35-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Redaction 35';
+  src: url('/fonts/Redaction-35-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Standard';
+  src: url('/fonts/GT-Standard-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Metro line colors - the brand */
   --green-line: #00A651;
@@ -43,8 +76,8 @@
 }
 
 @theme inline {
-  --font-heading: var(--font-space-grotesk);
-  --font-body: var(--font-dm-sans);
+  --font-heading: 'Redaction 35', Georgia, serif;
+  --font-body: 'GT Standard', system-ui, -apple-system, sans-serif;
   --color-green-line: var(--green-line);
   --color-orange-line: var(--orange-line);
   --color-blue-line: var(--blue-line);
@@ -63,13 +96,15 @@ html {
 }
 
 body {
-  font-family: var(--font-body, system-ui, -apple-system, sans-serif);
+  font-family: 'GT Standard', system-ui, -apple-system, sans-serif;
+  font-weight: 300;
   background: var(--surface);
   color: var(--text-primary);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading, var(--font-body, system-ui));
+  font-family: 'Redaction 35', Georgia, serif;
+  font-style: italic;
   letter-spacing: -0.02em;
 }
 
