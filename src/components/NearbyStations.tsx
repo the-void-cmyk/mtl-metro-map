@@ -76,7 +76,7 @@ export default function NearbyStations({ stations, lines, locale }: NearbyStatio
         <div className="text-center">
           <button
             onClick={findNearby}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-white text-[14px] font-medium rounded-lg hover:bg-[#0055AA] active:scale-[0.98] transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--accent)] text-white text-[14px] font-medium rounded-lg hover:bg-[#D96F1A] active:scale-[0.98] transition-all"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -103,7 +103,7 @@ export default function NearbyStations({ stations, lines, locale }: NearbyStatio
           <p className="text-red-500 text-[14px] mb-4">{error}</p>
           <button
             onClick={findNearby}
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--accent)] text-white text-[14px] font-medium rounded-lg hover:bg-[#0055AA] active:scale-[0.98] transition-all"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--accent)] text-white text-[14px] font-medium rounded-lg hover:bg-[#D96F1A] active:scale-[0.98] transition-all"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
@@ -153,7 +153,7 @@ export default function NearbyStations({ stations, lines, locale }: NearbyStatio
                     </Link>
                     <Link
                       href={`/${locale}/route/${station.slug}-to-`}
-                      className="px-3 py-1.5 text-[13px] font-medium rounded-md bg-[var(--accent)] text-white hover:bg-[#0055AA] transition-colors"
+                      className="px-3 py-1.5 text-[13px] font-medium rounded-md bg-[var(--accent)] text-white hover:bg-[#D96F1A] transition-colors"
                     >
                       {t.routeFromHere}
                     </Link>

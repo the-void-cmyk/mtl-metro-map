@@ -244,7 +244,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
             onClick={handleSubmit}
             disabled={!fromStation || !toStation || fromStation.id === toStation.id}
             className={`${compact ? "w-full" : "w-full sm:w-auto"} px-6 py-2.5 bg-[var(--accent)] text-white text-[16px] sm:text-[14px] font-medium rounded-lg
-              hover:bg-[#0055AA] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
+              hover:bg-[#D96F1A] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
               transition-all`}
           >
             {labels.find}
@@ -260,7 +260,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
           onClick={handleSubmit}
           disabled={!fromStation || !toStation || fromStation.id === toStation.id}
           className="w-full px-6 py-3 bg-[var(--accent)] text-white text-[16px] font-semibold rounded-lg
-            hover:bg-[#0055AA] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
+            hover:bg-[#D96F1A] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
             transition-all"
         >
           {labels.find}
