@@ -1,7 +1,7 @@
 import { TransitGraph } from './graph'
 import { getStationById, getLineById, getConnections } from './stations'
 import { calculateFare } from './fares'
-import type { RouteResult, Segment, Transfer, Station } from './types'
+import type { RouteResult, RouteComparison, RouteLabel, Segment, Transfer, Station } from './types'
 
 let graph: TransitGraph | null = null
 
@@ -12,19 +12,20 @@ function getGraph(): TransitGraph {
   return graph
 }
 
-export function findRoute(fromSlug: string, toSlug: string): RouteResult | null {
-  const from = getStationById(fromSlug)
-  const to = getStationById(toSlug)
+interface DijkstraResult {
+  path: string[]
+  totalTime: number
+  edges: Array<{ to: string; weight: number; lineId: string; type: 'rail' | 'walk' }>
+}
 
-  if (!from || !to) return null
-  if (from.id === to.id) return null
-
-  const g = getGraph()
-  const result = g.findShortestPath(from.id, to.id)
-
+function buildRouteResult(
+  from: Station,
+  to: Station,
+  result: DijkstraResult,
+  label?: RouteLabel
+): RouteResult | null {
   if (!result || result.path.length < 2) return null
 
-  // Build segments and transfers from the edges
   const segments: Segment[] = []
   const transfers: Transfer[] = []
   const pathStations: Station[] = result.path.map(id => getStationById(id)!).filter(Boolean)
@@ -35,7 +36,6 @@ export function findRoute(fromSlug: string, toSlug: string): RouteResult | null 
   for (let i = 1; i < result.edges.length; i++) {
     const edge = result.edges[i]
     if (edge.lineId !== currentLineId) {
-      // Line change: close current segment, record transfer
       const segStations = pathStations.slice(segmentStart, i + 1)
       const line = getLineById(currentLineId)
       if (line && segStations.length >= 2) {
@@ -51,7 +51,6 @@ export function findRoute(fromSlug: string, toSlug: string): RouteResult | null 
         })
       }
 
-      // Record transfer
       const transferStation = pathStations[i]
       if (transferStation) {
         transfers.push({
@@ -59,7 +58,7 @@ export function findRoute(fromSlug: string, toSlug: string): RouteResult | null 
           stationName: transferStation.name,
           fromLine: currentLineId,
           toLine: edge.lineId,
-          walkTime: 3, // standard transfer time
+          walkTime: 3,
         })
       }
 
@@ -68,7 +67,6 @@ export function findRoute(fromSlug: string, toSlug: string): RouteResult | null 
     }
   }
 
-  // Close final segment
   const finalStations = pathStations.slice(segmentStart)
   const finalLine = getLineById(currentLineId)
   if (finalLine && finalStations.length >= 2) {
@@ -82,11 +80,8 @@ export function findRoute(fromSlug: string, toSlug: string): RouteResult | null 
     })
   }
 
-  // Calculate fare based on zones traversed
   const zonesTraversed = [...new Set(pathStations.map(s => s.zone))]
   const fare = calculateFare(zonesTraversed)
-
-  // Estimate distance (haversine between start and end, rough)
   const distance = haversineDistance(from.lat, from.lng, to.lat, to.lng)
 
   return {
@@ -101,11 +96,88 @@ export function findRoute(fromSlug: string, toSlug: string): RouteResult | null 
     lastTrain: from.lastTrain,
     distance: Math.round(distance * 10) / 10,
     path: pathStations,
+    label,
   }
 }
 
+function getRouteFingerprint(route: RouteResult): string {
+  const lines = route.segments.map(s => s.line.id).join(',')
+  const transferStations = route.transfers.map(t => t.stationId).sort().join(',')
+  return `${lines}|${transferStations}`
+}
+
+export function findRoute(fromSlug: string, toSlug: string): RouteResult | null {
+  const from = getStationById(fromSlug)
+  const to = getStationById(toSlug)
+
+  if (!from || !to) return null
+  if (from.id === to.id) return null
+
+  const g = getGraph()
+  const result = g.findShortestPath(from.id, to.id)
+  if (!result) return null
+
+  return buildRouteResult(from, to, result)
+}
+
+export function findRoutes(fromSlug: string, toSlug: string): RouteComparison | null {
+  const from = getStationById(fromSlug)
+  const to = getStationById(toSlug)
+
+  if (!from || !to) return null
+  if (from.id === to.id) return null
+
+  const g = getGraph()
+
+  // 1. Fastest route (primary)
+  const fastestResult = g.findShortestPath(from.id, to.id)
+  if (!fastestResult) return null
+
+  const primary = buildRouteResult(from, to, fastestResult, 'fastest')
+  if (!primary) return null
+
+  const primaryFingerprint = getRouteFingerprint(primary)
+  const alternatives: RouteResult[] = []
+
+  // 2. Fewest transfers route (high transfer penalty)
+  if (primary.transfers.length > 0) {
+    const fewestResult = g.findShortestPath(from.id, to.id, { transferPenalty: 30 })
+    if (fewestResult) {
+      const fewest = buildRouteResult(from, to, fewestResult, 'fewest-transfers')
+      if (fewest) {
+        const fp = getRouteFingerprint(fewest)
+        if (fp !== primaryFingerprint && fewest.transfers.length < primary.transfers.length) {
+          alternatives.push(fewest)
+        }
+      }
+    }
+  }
+
+  // 3. Alternative path (penalize edges from primary route)
+  const edgePenalties = new Set<string>()
+  for (let i = 0; i < fastestResult.edges.length; i++) {
+    const fromStation = fastestResult.path[i]
+    const edge = fastestResult.edges[i]
+    edgePenalties.add(`${fromStation}->${edge.to}:${edge.lineId}`)
+  }
+
+  const altResult = g.findShortestPath(from.id, to.id, { edgePenalties })
+  if (altResult) {
+    const alt = buildRouteResult(from, to, altResult, 'alternative')
+    if (alt) {
+      const fp = getRouteFingerprint(alt)
+      const isDuplicate = fp === primaryFingerprint || alternatives.some(a => getRouteFingerprint(a) === fp)
+      if (!isDuplicate) {
+        alternatives.push(alt)
+      }
+    }
+  }
+
+  return { primary, alternatives }
+}
+
 function haversineDistance(lat1: number, lng1: number, lat2: number, lng2: number): number {
-  const R = 6371 // Earth radius in km
+  const R = 6371
   const dLat = toRad(lat2 - lat1)
   const dLng = toRad(lng2 - lng1)
   const a =

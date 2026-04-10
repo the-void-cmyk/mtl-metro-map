@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { findRoute } from "@/lib/router"
+import { findRoute, findRoutes } from "@/lib/router"
 import { generateRouteMetadata, generateRouteSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { formatPrice } from "@/lib/fares"
 import { getTranslations } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
-import RouteDiagram from "@/components/RouteDiagram"
+import RouteComparisonTabs from "@/components/RouteComparisonTabs"
 import FAQ from "@/components/FAQ"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import SchemaMarkup from "@/components/SchemaMarkup"
@@ -62,6 +62,8 @@ export default async function RoutePage({ params }: RoutePageProps) {
   const route = findRoute(parsed.from, parsed.to)
   if (!route) notFound()
 
+  const comparison = findRoutes(parsed.from, parsed.to)
+
   const t = getTranslations(locale as Locale)
   const baseUrl = "https://mtlmetromap.com"
   const altLocale = locale === 'en' ? 'fr' : 'en'
@@ -109,31 +111,7 @@ export default async function RoutePage({ params }: RoutePageProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-6">
           <div className="space-y-6">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="stat-card stat-card-blue">
-                <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{route.totalTime}</div>
-                <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">{t.minutes}</div>
-              </div>
-              <div className="stat-card stat-card-neutral">
-                <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{route.stops}</div>
-                <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">{t.stops}</div>
-              </div>
-              <div className="stat-card stat-card-neutral">
-                <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{route.transfers.length}</div>
-                <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">{route.transfers.length !== 1 ? t.transfers : t.transfer}</div>
-              </div>
-              <div className="stat-card stat-card-green">
-                <div className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{formatPrice(route.fare.price)}</div>
-                <div className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider mt-1">{t.fare}</div>
-              </div>
-            </div>
-
-            <div className="info-card">
-              <div className="info-card-header">{t.stepByStepRoute}</div>
-              <div className="info-card-body">
-                <RouteDiagram route={route} locale={locale as Locale} />
-              </div>
-            </div>
+            <RouteComparisonTabs comparison={comparison ?? { primary: route, alternatives: [] }} locale={locale as Locale} />
 
             <FAQ route={route} locale={locale as Locale} />
           </div>

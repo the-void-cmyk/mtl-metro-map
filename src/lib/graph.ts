@@ -56,7 +56,11 @@ export class TransitGraph {
    * Dijkstra's algorithm with line-transfer penalties.
    * State = (stationId, currentLineId) to properly account for transfer time.
    */
-  findShortestPath(fromId: string, toId: string): DijkstraResult | null {
+  findShortestPath(
+    fromId: string,
+    toId: string,
+    options?: { transferPenalty?: number; edgePenalties?: Set<string> }
+  ): DijkstraResult | null {
     if (!this.nodes.has(fromId) || !this.nodes.has(toId)) {
       return null
     }
@@ -86,7 +90,7 @@ export class TransitGraph {
       if (visited.has(current.state)) continue
       visited.add(current.state)
 
-      const [currentStation, currentLine] = current.state.split(':')
+      const [currentStation, currentLine] = current.state.split(':') as [string, string]
 
       // Check if we reached the destination (on any line)
       if (currentStation === toId) {
@@ -97,15 +101,29 @@ export class TransitGraph {
       const node = this.nodes.get(currentStation)
       if (!node) continue
 
+      const penalty = options?.transferPenalty ?? TransitGraph.TRANSFER_PENALTY
+      const edgePenalties = options?.edgePenalties
+
       for (const edge of node.edges) {
         const nextState = `${edge.to}:${edge.lineId}`
 
         // Calculate cost: travel time + transfer penalty if switching lines
-        let transferPenalty = 0
+        let transferCost = 0
         if (currentLine !== '_start' && currentLine !== edge.lineId) {
-          transferPenalty = TransitGraph.TRANSFER_PENALTY
+          transferCost = penalty
         }
-        const newCost = current.cost + edge.weight + transferPenalty
+
+        // Add edge penalty if this edge is in the penalized set
+        let edgeCost = 0
+        if (edgePenalties) {
+          const edgeKey = `${currentStation}->${edge.to}:${edge.lineId}`
+          const reverseKey = `${edge.to}->${currentStation}:${edge.lineId}`
+          if (edgePenalties.has(edgeKey) || edgePenalties.has(reverseKey)) {
+            edgeCost = 15
+          }
+        }
+
+        const newCost = current.cost + edge.weight + transferCost + edgeCost
 
         const currentDist = dist.get(nextState)
         if (currentDist === undefined || newCost < currentDist) {

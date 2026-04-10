@@ -60,6 +60,8 @@ export interface FareInfo {
   validityMinutes: number
 }
 
+export type RouteLabel = 'fastest' | 'fewest-transfers' | 'alternative'
+
 export interface RouteResult {
   from: Station
   to: Station
@@ -72,6 +74,12 @@ export interface RouteResult {
   lastTrain: string
   distance: number // approximate km
   path: Station[] // ordered list of all stations
+  label?: RouteLabel
+}
+
+export interface RouteComparison {
+  primary: RouteResult
+  alternatives: RouteResult[]
 }
 
 export interface PopularRoute {
