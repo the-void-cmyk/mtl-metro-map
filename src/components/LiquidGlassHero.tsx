@@ -18,7 +18,23 @@ uniform sampler2D u_background;
 uniform vec2 u_resolution;
 uniform vec2 u_center;
 uniform vec2 u_size;
+uniform vec2 u_imageSize;
 varying vec2 v_uv;
+
+// Simulate object-fit: cover
+vec2 coverUV(vec2 uv, vec2 canvasSize, vec2 imgSize) {
+  float canvasAspect = canvasSize.x / canvasSize.y;
+  float imgAspect = imgSize.x / imgSize.y;
+  vec2 scale = vec2(1.0);
+  if (canvasAspect > imgAspect) {
+    // Canvas is wider than image: fit width, crop height
+    scale.y = imgAspect / canvasAspect;
+  } else {
+    // Canvas is taller than image: fit height, crop width
+    scale.x = canvasAspect / imgAspect;
+  }
+  return (uv - 0.5) * scale + 0.5;
+}
 
 float roundedBoxSDF(vec2 p, vec2 b, float r) {
   vec2 d = abs(p) - b + vec2(r);
@@ -38,7 +54,7 @@ vec3 blurBg(vec2 uv, vec2 res) {
     for (int y = -3; y <= 3; y++) {
       vec2 off = vec2(float(x), float(y)) * 2.0 / res;
       float w = exp(-(float(x*x + y*y)) / (2.0 * rad));
-      result += texture2D(u_background, uv + off).rgb * w;
+      result += texture2D(u_background, coverUV(uv + off, u_resolution / u_dpr, u_imageSize)).rgb * w;
       total += w;
     }
   }
@@ -72,7 +88,7 @@ void main() {
 
   // Outside the glass: show background as-is
   if (dist > 1.0) {
-    gl_FragColor = texture2D(u_background, v_uv);
+    gl_FragColor = texture2D(u_background, coverUV(v_uv, u_resolution / u_dpr, u_imageSize));
     return;
   }
 
@@ -97,7 +113,7 @@ void main() {
   float combined = clamp(edgeWeight - radialWeight * 0.5, 0.0, 1.0);
   vec2 finalUV = mix(curvedUV, contourUV, combined);
 
-  vec3 refracted = texture2D(u_background, finalUV).rgb;
+  vec3 refracted = texture2D(u_background, coverUV(finalUV, u_resolution / u_dpr, u_imageSize)).rgb;
   vec3 blurred = blurBg(finalUV, u_resolution);
   vec3 base = mix(refracted, blurred, 0.5);
 
@@ -178,6 +194,7 @@ export default function LiquidGlassHero({ imageSrc, imageSrcMobile, imageSrcTabl
     const uCenter = gl.getUniformLocation(prog, "u_center")
     const uSize = gl.getUniformLocation(prog, "u_size")
     const uDpr = gl.getUniformLocation(prog, "u_dpr")
+    const uImageSize = gl.getUniformLocation(prog, "u_imageSize")
 
     const tex = gl.createTexture()
     const img = new Image()
@@ -192,6 +209,7 @@ export default function LiquidGlassHero({ imageSrc, imageSrcMobile, imageSrcTabl
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
       gl.uniform1i(gl.getUniformLocation(prog, "u_background"), 0)
+      gl.uniform2f(uImageSize, img.naturalWidth, img.naturalHeight)
 
       const draw = () => {
         const dpr = window.devicePixelRatio || 1
