@@ -29,7 +29,7 @@ export default async function HomePage({ params }: HomeProps) {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden py-20 sm:py-28" style={{ backgroundColor: "#0C1220" }}>
+      <section className="relative overflow-hidden h-screen flex items-center">
         {/* Hero background image */}
         <img
           src="/hero-mobile.jpg"
@@ -39,9 +39,6 @@ export default async function HomePage({ params }: HomeProps) {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,102,204,0.15), transparent), radial-gradient(ellipse 60% 50% at 80% 100%, rgba(0,166,81,0.08), transparent)" }} />
         <div className="relative max-w-6xl mx-auto px-5">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[12px] font-medium mb-6 tracking-wide" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.7)" }}>
