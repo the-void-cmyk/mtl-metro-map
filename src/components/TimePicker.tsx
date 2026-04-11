@@ -44,13 +44,13 @@ export default function TimePicker({ locale, onChange }: TimePickerProps) {
     }
   })
 
-  const activeClass = "bg-black text-white"
-  const inactiveClass = "bg-white text-black/50 hover:bg-black/5"
+  const activeClass = "bg-[var(--text-primary)] text-[var(--surface)]"
+  const inactiveClass = "bg-[var(--surface-elevated)] text-[var(--text-muted)] hover:bg-[var(--surface-inset)]"
 
   return (
     <div className="flex flex-col gap-2 mt-3">
       <div className="flex items-center gap-2 flex-wrap">
-        <div className="flex rounded-lg border border-black/15 overflow-hidden text-[13px]">
+        <div className="flex border-2 border-[var(--text-primary)] overflow-hidden text-[13px]">
           <button
             type="button"
             onClick={() => setMode("depart")}
@@ -71,13 +71,13 @@ export default function TimePicker({ locale, onChange }: TimePickerProps) {
           type="time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
-          className="px-3 py-1.5 border border-black/15 rounded-lg text-[16px] sm:text-[14px] text-black
-            bg-white
-            focus:outline-none focus:ring-2 focus:ring-black/10 focus:border-black/30
-            transition-all tabular-nums font-medium"
+          className="px-3 py-1.5 border-2 border-[var(--text-primary)] text-[16px] sm:text-[14px] text-[var(--text-primary)]
+            bg-[var(--surface-elevated)]
+            focus:outline-none focus:ring-0 focus:border-[var(--accent)]
+            transition-colors tabular-nums font-medium"
         />
 
-        <div className="flex rounded-lg border border-black/15 overflow-hidden text-[13px]">
+        <div className="flex border-2 border-[var(--text-primary)] overflow-hidden text-[13px]">
           <button
             type="button"
             onClick={() => setDay("today")}

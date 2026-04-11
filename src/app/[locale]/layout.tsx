@@ -4,7 +4,6 @@ import { isValidLocale, getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import ThemeToggle from "@/components/ThemeToggle"
 import NavMore from "@/components/NavMore"
-import NavGlass from "@/components/NavGlass"
 import PWAInstall from "@/components/PWAInstall"
 
 interface LocaleLayoutProps {
@@ -25,8 +24,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <>
-      <header id="main-navbar" className="fixed top-0 left-0 right-0 z-50 border-b border-white/10">
-        <NavGlass />
+      <header id="main-navbar" className="fixed top-0 left-0 right-0 z-50 border-b-2 border-[var(--text-primary)] bg-[var(--surface)]">
         <div className="relative max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
           <Link href={`/${locale}`} className="flex items-center group transition-opacity hover:opacity-80">
             <svg width="40" height="40" viewBox="0 0 1024 1024" fill="var(--text-primary)" aria-label={t.siteName}>
@@ -34,17 +32,17 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             </svg>
           </Link>
           <nav className="flex items-center gap-1">
-            <div className="hidden sm:flex items-center gap-1">
-              <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-primary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+            <div className="hidden sm:flex items-center gap-0">
+              <Link href={`/${locale}/status`} className="px-3.5 py-2 text-[11px] font-medium tracking-[0.1em] uppercase text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors">
                 {t.navStatus}
               </Link>
-              <Link href={`/${locale}/trip`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-primary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+              <Link href={`/${locale}/trip`} className="px-3.5 py-2 text-[11px] font-medium tracking-[0.1em] uppercase text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors">
                 {t.navTrip}
               </Link>
-              <Link href={`/${locale}/map`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-primary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+              <Link href={`/${locale}/map`} className="px-3.5 py-2 text-[11px] font-medium tracking-[0.1em] uppercase text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors">
                 {t.navMap}
               </Link>
-              <Link href={`/${locale}/fares`} className="px-3.5 py-2 text-[13px] font-medium text-[var(--text-primary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors">
+              <Link href={`/${locale}/fares`} className="px-3.5 py-2 text-[11px] font-medium tracking-[0.1em] uppercase text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors">
                 {t.navFares}
               </Link>
             </div>
@@ -52,7 +50,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             <ThemeToggle />
             <Link
               href={`/${altLocale}`}
-              className="ml-1 px-2.5 py-1.5 text-[12px] font-semibold uppercase tracking-wider text-[var(--text-muted)] hover:text-[var(--text-primary)] border border-[var(--border)] hover:border-[#bbb] rounded-md transition-colors"
+              className="ml-1 px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--text-muted)] hover:text-[var(--surface)] border-2 border-[var(--text-primary)] hover:bg-[var(--text-primary)] transition-colors"
             >
               {altLocale.toUpperCase()}
             </Link>
@@ -62,7 +60,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
       <main className="flex-1 pt-16">{children}</main>
 
-      <footer className="border-t border-[var(--border)] bg-[var(--surface-elevated)] py-10 mt-auto">
+      <footer className="border-t-2 border-[var(--text-primary)] bg-[var(--surface-elevated)] py-10 mt-auto">
         <div className="max-w-6xl mx-auto px-5">
           <div className="flex flex-col sm:flex-row justify-between gap-6">
             <div>

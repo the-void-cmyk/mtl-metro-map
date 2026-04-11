@@ -47,14 +47,14 @@ export default function NavMore({ locale }: NavMoreProps) {
     { href: `/${locale}/guide`, label: t.navGuides },
   ]
 
-  const linkClass = "block px-3 py-2.5 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors"
+  const linkClass = "block px-3 py-2.5 text-[11px] font-medium tracking-[0.1em] uppercase text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors"
 
   return (
     <div ref={ref} className="relative">
       {/* Desktop: text button */}
       <button
         onClick={() => setOpen(v => !v)}
-        className="hidden sm:flex px-3.5 py-2 text-[13px] font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] rounded-lg transition-colors items-center gap-1"
+        className="hidden sm:flex px-3.5 py-2 text-[11px] font-medium tracking-[0.1em] uppercase text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors items-center gap-1"
         aria-expanded={open}
         aria-haspopup="true"
       >
@@ -67,7 +67,7 @@ export default function NavMore({ locale }: NavMoreProps) {
       {/* Mobile: hamburger icon */}
       <button
         onClick={() => setOpen(v => !v)}
-        className="sm:hidden p-2 rounded-lg text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors"
+        className="sm:hidden p-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors"
         aria-expanded={open}
         aria-label={open ? "Close menu" : "Open menu"}
       >
@@ -88,7 +88,7 @@ export default function NavMore({ locale }: NavMoreProps) {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 w-52 bg-[var(--surface-elevated)] border border-[var(--border)] rounded-xl shadow-lg p-1.5 z-50">
+        <div className="absolute right-0 top-full mt-0 w-52 bg-[var(--surface-elevated)] border-2 border-[var(--text-primary)] p-1.5 z-50">
           {/* On mobile: show primary items first */}
           <div className="sm:hidden">
             {primaryItems.map(item => (

@@ -2,7 +2,6 @@ import Link from "next/link"
 import { getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import SearchBar from "@/components/SearchBar"
-import LiquidGlassHero from "@/components/LiquidGlassHero"
 import NearbyStations from "@/components/NearbyStations"
 import stations from "../../../data/stations.json"
 import lines from "../../../data/lines.json"
@@ -30,14 +29,67 @@ export default async function HomePage({ params }: HomeProps) {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden flex items-end pb-16 sm:pb-24 -mt-16" style={{ height: "100dvh" }}>
-        {/* WebGL liquid glass canvas renders the background + glass effect */}
-        <LiquidGlassHero imageSrc="/hero-desktop.jpg" imageSrcTablet="/hero-tablet.jpg" imageSrcMobile="/hero-mobile.jpg" glassTargetId="hero-search-card" />
-        {/* Fallback solid bg while WebGL loads */}
-        <div className="absolute inset-0 bg-[#8a8a87]" style={{ zIndex: 0 }} />
-        <div className="relative max-w-6xl mx-auto px-5" style={{ zIndex: 2 }}>
-          <div id="hero-search-card" className="max-w-2xl mx-auto rounded-2xl px-4 py-3 sm:px-5 sm:py-4">
-            <SearchBar stations={allStations} locale={locale as Locale} />
+      <section className="-mt-16">
+        {/* Top label bar */}
+        <div className="border-b-2 border-[var(--text-primary)] bg-[var(--surface)] px-5 lg:px-8 py-2 pt-[calc(theme(spacing.16)+8px)] flex items-center justify-between">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)]">
+            {"// MTL_METRO_MAP"}
+          </span>
+          <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)]">
+            {allStations.length} {locale === 'fr' ? 'STATIONS' : 'STATIONS'} / 3 {locale === 'fr' ? 'RESEAUX' : 'NETWORKS'}
+          </span>
+        </div>
+
+        {/* Two-column hero */}
+        <div className="flex flex-col lg:flex-row border-b-2 border-[var(--text-primary)]" style={{ minHeight: "calc(100dvh - 100px)" }}>
+          {/* Left: Search */}
+          <div className="flex flex-col w-full lg:w-1/2 bg-[var(--surface)]">
+            {/* Header bar */}
+            <div className="flex items-center justify-between px-5 lg:px-8 py-3 border-b-2 border-[var(--text-primary)]">
+              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)]">
+                {locale === 'fr' ? 'PLANIFICATEUR' : 'ROUTE_PLANNER'}
+              </span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--accent)]">
+                v3.0
+              </span>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 flex flex-col justify-center px-5 lg:px-8 py-8 lg:py-12">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight mb-6" style={{ WebkitFontSmoothing: 'none' }}>
+                {locale === 'fr' ? 'Trouvez votre trajet.' : (<>Find your<br />route.</>)}
+              </h1>
+              <p className="text-[13px] text-[var(--text-muted)] leading-relaxed mb-8 max-w-md">
+                {t.heroSubtitle}
+              </p>
+
+              <SearchBar stations={allStations} locale={locale as Locale} />
+            </div>
+          </div>
+
+          {/* Right: Statue image */}
+          <div className="relative w-full lg:w-1/2 min-h-[50vh] lg:min-h-0 border-b-2 lg:border-b-0 lg:border-l-2 border-[var(--text-primary)] overflow-hidden bg-[#8a8a87]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/hero-mobile.jpg"
+              alt=""
+              className="block lg:hidden absolute inset-0 w-full h-full object-cover"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/hero-desktop.jpg"
+              alt=""
+              className="hidden lg:block absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Image overlay label */}
+            <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 py-2 bg-[#8a8a87]/80">
+              <span className="text-[10px] tracking-[0.2em] uppercase text-white/50">
+                MTL / 45.5017 N, 73.5673 W
+              </span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--accent)]">
+                {locale === 'fr' ? 'EN DIRECT' : 'LIVE'}
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -52,6 +104,11 @@ export default async function HomePage({ params }: HomeProps) {
       {/* Network Cards */}
       <section className="py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-5">
+          <div className="section-label mb-8">
+            <span>{"// NETWORK: STATIONS"}</span>
+            <div className="section-line" />
+            <span>{String(allStations.length).padStart(3, '0')}</span>
+          </div>
           <div className="text-center mb-10">
             <h2 className="font-heading text-2xl sm:text-3xl font-bold tracking-tight">{t.networkTitle}</h2>
             <p className="text-[var(--text-muted)] text-[15px] mt-2">{t.networkSubtitle}</p>
@@ -83,7 +140,7 @@ export default async function HomePage({ params }: HomeProps) {
               <p className="text-[var(--text-muted)] text-sm mt-1.5 mb-5">{t.stationsTrainLines(exoCount, 5)}</p>
               <div className="flex justify-center gap-2 flex-wrap">
                 {allLines.filter(l => l.network === "exo").map(line => (
-                  <Link key={line.id} href={`/${locale}/line/${line.id}`} className="line-badge" style={{ backgroundColor: "var(--exo-line)" }}>
+                  <Link key={line.id} href={`/${locale}/line/${line.id}`} className="line-badge" style={{ backgroundColor: "var(--exo-line)", color: "var(--surface)" }}>
                     {line.id.replace("exo", locale === 'fr' ? 'Ligne ' : 'Line ')}
                   </Link>
                 ))}
@@ -94,8 +151,13 @@ export default async function HomePage({ params }: HomeProps) {
       </section>
 
       {/* Fares */}
-      <section className="py-16 bg-[var(--surface-elevated)] border-y border-[var(--border)]">
+      <section className="py-16 bg-[var(--surface-elevated)] border-y-2 border-[var(--text-primary)]">
         <div className="max-w-6xl mx-auto px-5">
+          <div className="section-label mb-8">
+            <span>{"// FARES: ZONE_PRICING"}</span>
+            <div className="section-line" />
+            <span>ARTM</span>
+          </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
               <h2 className="font-heading text-2xl font-bold tracking-tight">{t.fareZonesTitle}</h2>
@@ -113,7 +175,7 @@ export default async function HomePage({ params }: HomeProps) {
               <div key={f.zone} className="stat-card">
                 <div className="absolute top-0 left-0 right-0 h-[3px]" style={{ backgroundColor: f.accent }} />
                 <div className="text-[11px] font-semibold tracking-widest text-[var(--text-muted)] uppercase mb-2">Zone {f.zone}</div>
-                <div className="font-heading text-3xl font-bold tracking-tight">{f.price}</div>
+                <div className="jb-mono text-3xl font-bold tracking-tight">{f.price}</div>
                 <div className="text-[13px] text-[var(--text-muted)] mt-1.5">{f.area}</div>
               </div>
             ))}

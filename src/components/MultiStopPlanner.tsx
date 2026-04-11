@@ -209,9 +209,9 @@ export default function MultiStopPlanner({ stations, locale }: MultiStopPlannerP
   }
 
   const getStopPlaceholder = (index: number): string => {
-    if (index === 0) return locale === "fr" ? "Station de depart..." : "Departure station..."
-    if (index === stops.length - 1) return locale === "fr" ? "Station d'arrivee..." : "Arrival station..."
-    return locale === "fr" ? `Arret ${index}...` : `Stop ${index}...`
+    if (index === 0) return locale === "fr" ? "Station de d\u00e9part..." : "Departure station..."
+    if (index === stops.length - 1) return locale === "fr" ? "Station d'arriv\u00e9e..." : "Arrival station..."
+    return locale === "fr" ? `Arr\u00eat ${index}...` : `Stop ${index}...`
   }
 
   const inputClass = `w-full px-3 py-2.5 border border-[var(--border)] rounded-lg text-[16px] sm:text-[14px] bg-[var(--surface-elevated)]
