@@ -237,24 +237,12 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
           )}
         </div>
 
-        {/* Submit - desktop inline */}
-        <div className="hidden sm:flex items-end">
-          <button
-            onClick={handleSubmit}
-            disabled={!fromStation || !toStation || fromStation.id === toStation.id}
-            className={`${compact ? "w-full" : "w-full sm:w-auto"} px-6 py-2.5 bg-[var(--text-primary)] text-[var(--surface)] text-[16px] sm:text-[14px] font-medium tracking-wider uppercase
-              hover:bg-[var(--accent)] active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
-              transition-colors`}
-          >
-            {labels.find}
-          </button>
-        </div>
       </div>
 
       <TimePicker locale={locale} onChange={handleTimeChange} />
 
-      {/* Submit - mobile last CTA */}
-      <div className="sm:hidden mt-3">
+      {/* Submit - always at bottom */}
+      <div className="mt-4">
         <button
           onClick={handleSubmit}
           disabled={!fromStation || !toStation || fromStation.id === toStation.id}

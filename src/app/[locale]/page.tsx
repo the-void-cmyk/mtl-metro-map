@@ -55,7 +55,7 @@ export default async function HomePage({ params }: HomeProps) {
             </div>
 
             {/* Content */}
-            <div className="flex-1 flex flex-col justify-end px-5 lg:px-8 py-8 lg:py-12">
+            <div className="flex-1 flex flex-col justify-center px-5 lg:px-8 py-8 lg:py-12">
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight mb-6" style={{ WebkitFontSmoothing: 'none' }}>
                 {locale === 'fr' ? 'Trouvez votre trajet.' : 'Find your route.'}
               </h1>
