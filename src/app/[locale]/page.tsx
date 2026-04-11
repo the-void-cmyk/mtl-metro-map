@@ -59,7 +59,7 @@ export default async function HomePage({ params }: HomeProps) {
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight mb-6" style={{ WebkitFontSmoothing: 'none' }}>
                 {locale === 'fr' ? 'Trouvez votre trajet.' : (<>Find your<br />route.</>)}
               </h1>
-              <p className="text-[13px] text-[var(--text-muted)] leading-relaxed mb-8 max-w-md">
+              <p className="text-[15px] text-[var(--text-primary)] leading-relaxed mb-8 max-w-md">
                 {t.heroSubtitle}
               </p>
 
