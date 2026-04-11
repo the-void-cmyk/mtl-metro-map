@@ -32,10 +32,10 @@ export default async function HomePage({ params }: HomeProps) {
       <section className="-mt-16">
         {/* Top label bar */}
         <div className="border-b-2 border-[var(--text-primary)] bg-[var(--surface)] px-5 lg:px-8 py-2 pt-[calc(theme(spacing.16)+8px)] flex items-center justify-between">
-          <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)]">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-primary)]">
             {"// MTL_METRO_MAP"}
           </span>
-          <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)]">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-[var(--text-primary)]">
             {allStations.length} {locale === 'fr' ? 'STATIONS' : 'STATIONS'} / 3 {locale === 'fr' ? 'RESEAUX' : 'NETWORKS'}
           </span>
         </div>
@@ -57,7 +57,7 @@ export default async function HomePage({ params }: HomeProps) {
             {/* Content */}
             <div className="flex-1 flex flex-col justify-center px-5 lg:px-8 py-8 lg:py-12">
               <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight mb-6" style={{ WebkitFontSmoothing: 'none' }}>
-                {locale === 'fr' ? 'Trouvez votre trajet.' : (<>Find your<br />route.</>)}
+                {locale === 'fr' ? 'Trouvez votre trajet.' : 'Find your route.'}
               </h1>
               <p className="text-[15px] text-[var(--text-primary)] leading-relaxed mb-8 max-w-md">
                 {t.heroSubtitle}
