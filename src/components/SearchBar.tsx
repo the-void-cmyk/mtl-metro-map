@@ -150,9 +150,9 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
     ? { from: 'De', to: 'A', dep: 'Station de depart...', arr: "Station d'arrivee...", find: 'Trouver un trajet', swap: 'Inverser' }
     : { from: 'From', to: 'To', dep: 'Departure station...', arr: 'Arrival station...', find: 'Find Route', swap: 'Swap stations' }
 
-  const inputClass = `w-full px-3 py-2.5 border border-white/20 rounded-lg text-[16px] sm:text-[14px] text-black
-    bg-white/10 backdrop-blur-sm
-    focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40
+  const inputClass = `w-full px-3 py-2.5 border border-black/15 rounded-lg text-[16px] sm:text-[14px] text-black
+    bg-white
+    focus:outline-none focus:ring-2 focus:ring-black/10 focus:border-black/30
     placeholder:text-black/40 transition-all`
 
   return (
@@ -193,7 +193,7 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
           <div className="hidden sm:flex items-end pb-0.5">
             <button
               onClick={swapStations}
-              className="p-2.5 text-black/40 hover:text-black hover:bg-white/15 rounded-lg transition-colors"
+              className="p-2.5 text-black/40 hover:text-black hover:bg-black/5 rounded-lg transition-colors"
               title={labels.swap}
               type="button"
             >
@@ -242,8 +242,8 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
           <button
             onClick={handleSubmit}
             disabled={!fromStation || !toStation || fromStation.id === toStation.id}
-            className={`${compact ? "w-full" : "w-full sm:w-auto"} px-6 py-2.5 bg-white/15 backdrop-blur-sm border border-white/20 text-black text-[16px] sm:text-[14px] font-medium rounded-lg
-              hover:bg-white/25 active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
+            className={`${compact ? "w-full" : "w-full sm:w-auto"} px-6 py-2.5 bg-black text-white text-[16px] sm:text-[14px] font-medium rounded-lg
+              hover:bg-black/85 active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
               transition-all`}
           >
             {labels.find}
@@ -258,8 +258,8 @@ export default function SearchBar({ stations, compact = false, locale = 'en', de
         <button
           onClick={handleSubmit}
           disabled={!fromStation || !toStation || fromStation.id === toStation.id}
-          className="w-full px-6 py-3 bg-white/15 backdrop-blur-sm border border-white/20 text-black text-[16px] font-semibold rounded-lg
-            hover:bg-white/25 active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
+          className="w-full px-6 py-3 bg-black text-white text-[16px] font-semibold rounded-lg
+            hover:bg-black/85 active:scale-[0.98] disabled:opacity-30 disabled:cursor-not-allowed
             transition-all"
         >
           {labels.find}
