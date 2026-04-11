@@ -1,25 +1,36 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useCallback, useSyncExternalStore } from "react"
+
+function getThemeSnapshot() {
+  return document.documentElement.getAttribute("data-theme") === "dark"
+}
+
+function getServerSnapshot() {
+  return false
+}
+
+function subscribeTheme(cb: () => void) {
+  const observer = new MutationObserver(cb)
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] })
+  return () => observer.disconnect()
+}
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window === "undefined") return false
-    return document.documentElement.getAttribute("data-theme") === "dark"
-  })
+  const isDark = useSyncExternalStore(subscribeTheme, getThemeSnapshot, getServerSnapshot)
 
   const toggle = useCallback(() => {
     const next = isDark ? "light" : "dark"
     document.documentElement.setAttribute("data-theme", next)
     localStorage.setItem("theme", next)
-    setIsDark(!isDark)
   }, [isDark])
 
   return (
     <button
       onClick={toggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors"
+      className="p-2 text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-inset)] transition-colors"
+      suppressHydrationWarning
     >
       {isDark ? (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

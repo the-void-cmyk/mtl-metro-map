@@ -88,11 +88,11 @@
   --surface: #1a1a1a;
   --surface-elevated: #242424;
   --surface-inset: #2a2a2a;
-  --border: #f0f0ee;
+  --border: #d4d0c8;
   --border-subtle: #333333;
-  --text-primary: #f0f0ee;
-  --text-secondary: #a8a8a3;
-  --text-muted: #6b6b66;
+  --text-primary: #d4d0c8;
+  --text-secondary: #b0ada6;
+  --text-muted: #7a7a74;
   --hero-bg: #0a0e18;
   --hero-surface: rgba(255, 255, 255, 0.08);
   --hero-border: rgba(255, 255, 255, 0.12);
