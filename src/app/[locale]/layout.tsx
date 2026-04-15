@@ -87,10 +87,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
               </div>
             </div>
           </div>
-          <div className="mt-8 pt-6 border-t border-[var(--border-subtle)] text-[12px] text-[var(--text-muted)]">
+          <div className="mt-8 pt-6 border-t border-[var(--border-subtle)] text-[12px] text-[var(--accent)]">
             {locale === 'fr'
-              ? <span>Concu, construit et code par <a href="https://allolumari.com" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors underline">allolumari.com</a></span>
-              : <span>Designed, built and coded by <a href="https://allolumari.com" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors underline">allolumari.com</a></span>
+              ? <span>{'\u00C7'}on{'\u00E7'}u, construit et cod{'\u00E9'} par <a href="https://allolumari.com" target="_blank" rel="noopener noreferrer" className="hover:underline">allolumari.com</a></span>
+              : <span>Designed, built and coded by <a href="https://allolumari.com" target="_blank" rel="noopener noreferrer" className="hover:underline">allolumari.com</a></span>
             }
           </div>
         </div>
