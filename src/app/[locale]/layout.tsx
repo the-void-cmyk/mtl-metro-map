@@ -87,6 +87,12 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
               </div>
             </div>
           </div>
+          <div className="mt-8 pt-6 border-t border-[var(--border-subtle)] text-[12px] text-[var(--text-muted)]">
+            {locale === 'fr'
+              ? <span>Concu, construit et code par <a href="https://allolumari.com" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors underline">allolumari.com</a></span>
+              : <span>Designed, built and coded by <a href="https://allolumari.com" target="_blank" rel="noopener noreferrer" className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors underline">allolumari.com</a></span>
+            }
+          </div>
         </div>
       </footer>
 
