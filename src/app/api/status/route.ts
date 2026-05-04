@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { getServiceStatus } from "@/lib/db"
 import lines from "../../../../data/lines.json"
 
-export const dynamic = "force-dynamic"
+export const revalidate = 30
 
 export async function GET() {
   let dbStatus: Awaited<ReturnType<typeof getServiceStatus>> = []
@@ -30,8 +30,15 @@ export async function GET() {
     }
   })
 
-  return NextResponse.json({
-    lines: allLines,
-    lastChecked: new Date().toISOString(),
-  })
+  return NextResponse.json(
+    {
+      lines: allLines,
+      lastChecked: new Date().toISOString(),
+    },
+    {
+      headers: {
+        "Cache-Control": "public, s-maxage=30, stale-while-revalidate=60",
+      },
+    }
+  )
 }
