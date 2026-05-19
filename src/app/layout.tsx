@@ -4,12 +4,13 @@ import { GoogleAnalytics } from "@next/third-parties/google"
 import "./globals.css"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mtlmetromap.com"),
   title: {
-    default: "MTL Metro - Montreal Metro Route Finder",
+    default: "Montreal Metro Map: Routes, Stations & Fares | STM, REM, Exo",
     template: "%s | MTL Metro",
   },
   description:
-    "Find the fastest route across Montreal's Metro, REM, and Exo commuter train network. 138 stations, real-time routes, fares, and schedules.",
+    "Plan the fastest route across Montreal's transit network. 138 stations covering the STM Metro, REM light rail, and Exo commuter trains, with fares, schedules, and step-by-step directions.",
   openGraph: {
     type: "website",
     locale: "en_CA",
@@ -18,12 +19,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    languages: {
-      en: "/en",
-      fr: "/fr",
-    },
   },
 }
 

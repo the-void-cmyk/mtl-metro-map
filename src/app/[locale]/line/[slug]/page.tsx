@@ -26,15 +26,25 @@ export async function generateMetadata({ params }: LinePageProps): Promise<Metad
   const line = getLineById(slug)
   if (!line) return { title: "Line Not Found" }
 
-  const meta = generateLineMetadata(line, line.stations.length)
+  const meta = generateLineMetadata(line, line.stations.length, locale as Locale)
   const altLocale = locale === 'en' ? 'fr' : 'en'
 
   return {
-    title: meta.title,
+    title: { absolute: meta.title },
     description: meta.description,
     alternates: {
       canonical: `/${locale}/line/${slug}`,
-      languages: { [locale]: `/${locale}/line/${slug}`, [altLocale]: `/${altLocale}/line/${slug}` },
+      languages: {
+        [locale]: `/${locale}/line/${slug}`,
+        [altLocale]: `/${altLocale}/line/${slug}`,
+        'x-default': `/en/line/${slug}`,
+      },
+    },
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
+      type: 'website',
     },
   }
 }

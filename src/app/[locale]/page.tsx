@@ -1,4 +1,5 @@
 import Link from "next/link"
+import type { Metadata } from "next"
 import { getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import SearchBar from "@/components/SearchBar"
@@ -16,6 +17,44 @@ interface HomeProps {
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
+}
+
+export async function generateMetadata({ params }: HomeProps): Promise<Metadata> {
+  const { locale } = await params
+  if (locale === 'fr') {
+    return {
+      title: {
+        absolute: 'Métro Montréal : Itinéraire, Trajet, Horaires | STM, REM, Exo',
+      },
+      description: "Planifiez votre trajet sur le réseau de transport de Montréal. 138 stations entre le métro STM, le REM et les trains de banlieue Exo. Itinéraires, tarifs, horaires et carte du réseau.",
+      alternates: {
+        canonical: '/fr',
+        languages: { en: '/en', fr: '/fr', 'x-default': '/en' },
+      },
+      openGraph: {
+        title: 'Métro Montréal : Itinéraire, Trajet, Horaires',
+        description: "Planifiez votre trajet sur le réseau STM, REM et Exo de Montréal.",
+        locale: 'fr_CA',
+        type: 'website',
+      },
+    }
+  }
+  return {
+    title: {
+      absolute: 'Montreal Metro Map: Routes, Stations, Fares | STM, REM, Exo',
+    },
+    description: "Plan the fastest route across Montreal's transit network. 138 stations covering the STM Metro, REM light rail, and Exo commuter trains. Schedules, fares, route map, and step-by-step directions.",
+    alternates: {
+      canonical: '/en',
+      languages: { en: '/en', fr: '/fr', 'x-default': '/en' },
+    },
+    openGraph: {
+      title: 'Montreal Metro Map: Routes, Stations, Fares',
+      description: "Plan the fastest route across Montreal's transit network.",
+      locale: 'en_CA',
+      type: 'website',
+    },
+  }
 }
 
 export default async function HomePage({ params }: HomeProps) {

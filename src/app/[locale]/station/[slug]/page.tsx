@@ -2,10 +2,11 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getStationBySlug, getLinesForStation } from "@/lib/stations"
-import { generateStationMetadata } from "@/lib/seo"
+import { generateStationMetadata, generateStationSchema, generateBreadcrumbSchema } from "@/lib/seo"
 import { getTranslations, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import SchemaMarkup from "@/components/SchemaMarkup"
 import SearchBar from "@/components/SearchBar"
 import PopularRoutes from "@/components/PopularRoutes"
 import type { Station } from "@/lib/types"
@@ -58,15 +59,25 @@ export async function generateMetadata({ params }: StationPageProps): Promise<Me
   if (!station) return { title: "Station Not Found" }
 
   const lines = getLinesForStation(station.id)
-  const meta = generateStationMetadata(station, lines)
+  const meta = generateStationMetadata(station, lines, locale as Locale)
   const altLocale = locale === 'en' ? 'fr' : 'en'
 
   return {
-    title: meta.title,
+    title: { absolute: meta.title },
     description: meta.description,
     alternates: {
       canonical: `/${locale}/station/${slug}`,
-      languages: { [locale]: `/${locale}/station/${slug}`, [altLocale]: `/${altLocale}/station/${slug}` },
+      languages: {
+        [locale]: `/${locale}/station/${slug}`,
+        [altLocale]: `/${altLocale}/station/${slug}`,
+        'x-default': `/en/station/${slug}`,
+      },
+    },
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      locale: locale === 'fr' ? 'fr_CA' : 'en_CA',
+      type: 'website',
     },
   }
 }
@@ -81,8 +92,18 @@ export default async function StationPage({ params }: StationPageProps) {
   const networkLabel = station.network === "metro" ? t.stmLabel : station.network === "rem" ? t.remLabel : t.exoLabel
   const guide = stationGuides.find(g => g.stationSlug === station.slug)
 
+  const stationSchema = generateStationSchema(station, lines, locale as Locale)
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: locale === 'fr' ? (lines[0]?.nameFr ?? 'Stations') : (lines[0]?.name ?? 'Stations'), url: lines[0] ? `/${locale}/line/${lines[0].id}` : `/${locale}` },
+      { name: station.name, url: `/${locale}/station/${station.slug}` },
+    ],
+    'https://mtlmetromap.com'
+  )
+
   return (
     <div className="max-w-6xl mx-auto px-5 py-6 sm:py-8">
+      <SchemaMarkup data={[stationSchema, breadcrumbSchema]} />
       <Breadcrumbs
         items={[
           { name: locale === 'fr' ? (lines[0]?.nameFr ?? 'Stations') : (lines[0]?.name ?? 'Stations'), url: lines[0] ? `/${locale}/line/${lines[0].id}` : `/${locale}` },

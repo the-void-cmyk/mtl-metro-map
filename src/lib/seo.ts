@@ -65,21 +65,83 @@ function generateDescription(route: RouteResult, variant: string): string {
 }
 
 // Generate station page metadata
-export function generateStationMetadata(station: Station, lines: Line[]) {
+export function generateStationMetadata(station: Station, lines: Line[], locale: 'en' | 'fr' = 'en') {
+  if (locale === 'fr') {
+    const lineNames = lines.map(l => l.nameFr).join(', ')
+    const stationName = station.nameFr || station.name
+    return {
+      title: `Station ${stationName} Métro Montréal : ${lineNames}, Horaires`,
+      description: `Station ${stationName}, ${lineNames}. Zone ${station.zone}. Premier train ${station.firstTrain}, dernier train ${station.lastTrain}. Trouvez vos trajets, horaires et destinations populaires.`,
+      canonical: `/station/${station.slug}`,
+    }
+  }
   const lineNames = lines.map(l => l.name).join(', ')
   return {
-    title: `${station.name} Station | ${lineNames}`,
+    title: `${station.name} Station Montreal Metro: ${lineNames}, Schedule & Map`,
     description: `${station.name} station info: ${lineNames}. Zone ${station.zone}. First train ${station.firstTrain}, last train ${station.lastTrain}. Find routes, schedules, and popular destinations.`,
     canonical: `/station/${station.slug}`,
   }
 }
 
 // Generate line page metadata
-export function generateLineMetadata(line: Line, stationCount: number) {
+export function generateLineMetadata(line: Line, stationCount: number, locale: 'en' | 'fr' = 'en') {
+  if (locale === 'fr') {
+    return {
+      title: `${line.nameFr} Métro Montréal : ${stationCount} Stations, Carte et Horaires`,
+      description: `${line.nameFr}, ${stationCount} stations. Voir tous les arrêts, horaires, carte du trajet et correspondances. Guide de la ligne du métro de Montréal.`,
+      canonical: `/line/${line.id}`,
+    }
+  }
   return {
-    title: `${line.name} | ${stationCount} Stations`,
-    description: `${line.name} - ${stationCount} stations. View all stops, schedules, route map, and connections. Montreal Metro line guide.`,
+    title: `${line.name} Montreal Metro: ${stationCount} Stations, Map & Schedule`,
+    description: `${line.name}, ${stationCount} stations. View all stops, schedules, route map, and connections. Montreal Metro line guide.`,
     canonical: `/line/${line.id}`,
+  }
+}
+
+// TransitStation / TrainStation JSON-LD for AI search and rich results
+export function generateStationSchema(station: Station, lines: Line[], locale: 'en' | 'fr' = 'en') {
+  const stationName = locale === 'fr' ? (station.nameFr || station.name) : station.name
+  const lineLabel = locale === 'fr' ? 'Lignes' : 'Lines'
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'TrainStation',
+    name: stationName,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Montréal',
+      addressRegion: 'QC',
+      addressCountry: 'CA',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: station.lat,
+      longitude: station.lng,
+    },
+    publicAccess: true,
+    isAccessibleForFree: false,
+    additionalProperty: [
+      {
+        '@type': 'PropertyValue',
+        name: lineLabel,
+        value: lines.map(l => locale === 'fr' ? l.nameFr : l.name).join(', '),
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Zone',
+        value: station.zone,
+      },
+      {
+        '@type': 'PropertyValue',
+        name: locale === 'fr' ? 'Premier train' : 'First train',
+        value: station.firstTrain,
+      },
+      {
+        '@type': 'PropertyValue',
+        name: locale === 'fr' ? 'Dernier train' : 'Last train',
+        value: station.lastTrain,
+      },
+    ],
   }
 }
 
