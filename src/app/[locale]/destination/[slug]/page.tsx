@@ -46,6 +46,7 @@ export async function generateMetadata({ params }: DestinationPageProps): Promis
       languages: {
         [locale]: `/${locale}/destination/${slug}`,
         [altLocale]: `/${altLocale}/destination/${slug}`,
+        'x-default': `/en/destination/${slug}`,
       },
     },
   }

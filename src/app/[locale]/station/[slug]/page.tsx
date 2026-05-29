@@ -9,11 +9,13 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import SchemaMarkup from "@/components/SchemaMarkup"
 import SearchBar from "@/components/SearchBar"
 import PopularRoutes from "@/components/PopularRoutes"
-import type { Station } from "@/lib/types"
+import type { Station, Landmark } from "@/lib/types"
 import stations from "../../../../../data/stations.json"
 import stationGuidesData from "../../../../../data/station-guides.json"
+import landmarks from "../../../../../data/landmarks.json"
 
 const allStations = stations as Station[]
+const allLandmarks = landmarks as Landmark[]
 
 interface StationHighlight {
   name: string
@@ -91,6 +93,16 @@ export default async function StationPage({ params }: StationPageProps) {
   const t = getTranslations(locale as Locale)
   const networkLabel = station.network === "metro" ? t.stmLabel : station.network === "rem" ? t.remLabel : t.exoLabel
   const guide = stationGuides.find(g => g.stationSlug === station.slug)
+  const nearbyDestinations = allLandmarks.filter((l) => l.nearestStation === station.slug)
+  const categoryLabels: Record<string, string> = {
+    sports: t.categorySports,
+    tourism: t.categoryTourism,
+    parks: t.categoryParks,
+    education: t.categoryEducation,
+    shopping: t.categoryShopping,
+    culture: t.categoryCulture,
+    transport: t.categoryTransport,
+  }
 
   const stationSchema = generateStationSchema(station, lines, locale as Locale)
   const breadcrumbSchema = generateBreadcrumbSchema(
@@ -243,6 +255,27 @@ export default async function StationPage({ params }: StationPageProps) {
             <div className="info-card-body"><SearchBar stations={allStations} compact locale={locale as Locale} /></div>
           </div>
           <PopularRoutes stationSlug={station.slug} locale={locale as Locale} />
+          {nearbyDestinations.length > 0 && (
+            <div className="info-card">
+              <div className="info-card-header">{t.nearbyDestinations}</div>
+              <div className="info-card-body p-2">
+                <div className="space-y-0.5">
+                  {nearbyDestinations.map((d) => (
+                    <Link
+                      key={d.id}
+                      href={`/${locale}/destination/${d.id}`}
+                      className="flex items-center justify-between gap-2 text-[14px] px-3 py-2.5 rounded-lg hover:bg-[var(--surface-inset)] transition-colors"
+                    >
+                      <span>{locale === 'fr' ? d.nameFr : d.name}</span>
+                      <span className="text-[11px] text-[var(--text-muted)] uppercase tracking-wider">
+                        {categoryLabels[d.category] ?? d.category}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
           <div className="info-card">
             <div className="info-card-header">{t.location}</div>
             <div className="info-card-body text-[13px] text-[var(--text-secondary)] font-heading tabular-nums">

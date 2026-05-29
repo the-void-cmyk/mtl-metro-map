@@ -222,6 +222,7 @@ const translations = {
     servedByLines: 'Served by',
     viewStation: 'View station details',
     exploreDestinations: 'Popular Montreal destinations accessible by metro.',
+    nearbyDestinations: 'Nearby Destinations',
 
     // Station guides
     neighborhoodGuide: 'Neighborhood Guide',
@@ -446,6 +447,7 @@ const translations = {
     servedByLines: 'Desservie par',
     viewStation: 'Voir les details de la station',
     exploreDestinations: 'Destinations populaires de Montréal accessibles en metro.',
+    nearbyDestinations: 'Destinations a proximite',
 
     // Station guides
     neighborhoodGuide: 'Guide du quartier',

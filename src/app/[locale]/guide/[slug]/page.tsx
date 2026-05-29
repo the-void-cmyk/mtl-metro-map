@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
       languages: {
         [locale]: `/${locale}/guide/${slug}`,
         [altLocale]: `/${altLocale}/guide/${slug}`,
+        'x-default': `/en/guide/${slug}`,
       },
     },
   }
@@ -68,7 +69,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://mtlmetro.com/${locale}/guide/${slug}`,
+      "@id": `https://mtlmetromap.com/${locale}/guide/${slug}`,
     },
   }
 
