@@ -108,4 +108,6 @@ export interface Landmark {
   category: 'sports' | 'tourism' | 'parks' | 'education' | 'shopping' | 'culture' | 'transport'
   description: string
   descriptionFr: string
+  walkNote?: string
+  walkNoteFr?: string
 }

@@ -6,10 +6,30 @@
     "excerpt": "Everything you need to know for your first trip on the STM Metro.",
     "excerptFr": "Tout ce que vous devez savoir pour votre premier trajet dans le metro STM.",
     "sections": [
-      { "heading": "Getting an OPUS Card", "headingFr": "Obtenir une carte OPUS", "content": "The OPUS card is Montreal's reloadable transit card. You can buy one at any metro station from the ticket machines for $6. Load a single fare ($3.75 for Zone A) or a monthly pass. Contactless payment (credit/debit tap) also works at all turnstiles.", "contentFr": "La carte OPUS est la carte de transport rechargeable de Montreal. Vous pouvez en acheter une dans n'importe quelle station de metro aux distributrices pour 6$. Chargez un passage simple (3,75$ pour la Zone A) ou une passe mensuelle. Le paiement sans contact fonctionne aussi a tous les tourniquets." },
-      { "heading": "Finding Your Platform", "headingFr": "Trouver votre quai", "content": "Metro signs show the line color and the name of the last station in each direction. For example, on the Green Line, you'll see signs for 'Honore-Beaugrand' (east) or 'Angrignon' (west). Find the direction sign that matches where you're going.", "contentFr": "Les panneaux du metro affichent la couleur de la ligne et le nom de la derniere station dans chaque direction. Par exemple, sur la ligne verte, vous verrez 'Honore-Beaugrand' (est) ou 'Angrignon' (ouest). Trouvez le panneau de direction correspondant a votre destination." },
-      { "heading": "Making Transfers", "headingFr": "Faire des correspondances", "content": "Transfers between lines are free within the same trip (120 minutes). Follow the colored signs to switch lines. At busy stations like Berri-UQAM, follow the overhead signs showing the line color and direction.", "contentFr": "Les correspondances entre lignes sont gratuites dans le meme trajet (120 minutes). Suivez les panneaux colores pour changer de ligne. Aux stations achalandees comme Berri-UQAM, suivez les panneaux suspendus montrant la couleur de la ligne et la direction." },
-      { "heading": "Service Hours", "headingFr": "Heures de service", "content": "The metro runs from approximately 5:30 AM to 1:00 AM on weekdays, with extended hours on Friday and Saturday nights. Trains run every 3-5 minutes during peak hours and every 5-10 minutes off-peak.", "contentFr": "Le metro fonctionne d'environ 5h30 a 1h00 en semaine, avec des heures prolongees les vendredis et samedis soirs. Les trains passent toutes les 3 a 5 minutes aux heures de pointe et toutes les 5 a 10 minutes hors pointe." }
+      {
+        "heading": "Getting an OPUS Card",
+        "headingFr": "Obtenir une carte OPUS",
+        "content": "The OPUS card is Montreal's reloadable transit card. You can buy one at any metro station from the ticket machines for $6. Load a single fare ($3.75 for Zone A) or a monthly pass. Contactless payment (credit/debit tap) also works at all turnstiles.",
+        "contentFr": "La carte OPUS est la carte de transport rechargeable de Montreal. Vous pouvez en acheter une dans n'importe quelle station de metro aux distributrices pour 6$. Chargez un passage simple (3,75$ pour la Zone A) ou une passe mensuelle. Le paiement sans contact fonctionne aussi a tous les tourniquets."
+      },
+      {
+        "heading": "Finding Your Platform",
+        "headingFr": "Trouver votre quai",
+        "content": "Metro signs show the line color and the name of the last station in each direction. For example, on the Green Line, you'll see signs for 'Honore-Beaugrand' (east) or 'Angrignon' (west). Find the direction sign that matches where you're going.",
+        "contentFr": "Les panneaux du metro affichent la couleur de la ligne et le nom de la derniere station dans chaque direction. Par exemple, sur la ligne verte, vous verrez 'Honore-Beaugrand' (est) ou 'Angrignon' (ouest). Trouvez le panneau de direction correspondant a votre destination."
+      },
+      {
+        "heading": "Making Transfers",
+        "headingFr": "Faire des correspondances",
+        "content": "Transfers between lines are free within the same trip (120 minutes). Follow the colored signs to switch lines. At busy stations like Berri-UQAM, follow the overhead signs showing the line color and direction.",
+        "contentFr": "Les correspondances entre lignes sont gratuites dans le meme trajet (120 minutes). Suivez les panneaux colores pour changer de ligne. Aux stations achalandees comme Berri-UQAM, suivez les panneaux suspendus montrant la couleur de la ligne et la direction."
+      },
+      {
+        "heading": "Service Hours",
+        "headingFr": "Heures de service",
+        "content": "The metro runs from approximately 5:30 AM to 1:00 AM on weekdays, with extended hours on Friday and Saturday nights. Trains run every 3-5 minutes during peak hours and every 5-10 minutes off-peak.",
+        "contentFr": "Le metro fonctionne d'environ 5h30 a 1h00 en semaine, avec des heures prolongees les vendredis et samedis soirs. Les trains passent toutes les 3 a 5 minutes aux heures de pointe et toutes les 5 a 10 minutes hors pointe."
+      }
     ]
   },
   {
@@ -19,10 +39,30 @@
     "excerpt": "How to buy, load, and use the OPUS card across all Montreal transit.",
     "excerptFr": "Comment acheter, recharger et utiliser la carte OPUS sur tout le reseau.",
     "sections": [
-      { "heading": "What is the OPUS Card?", "headingFr": "Qu'est-ce que la carte OPUS?", "content": "The OPUS card is a reloadable smart card used across all Montreal transit networks: STM Metro and bus, REM light rail, and Exo commuter trains. One card works everywhere.", "contentFr": "La carte OPUS est une carte a puce rechargeable utilisee sur tous les reseaux de transport de Montreal: metro et bus STM, REM, et trains de banlieue Exo. Une seule carte fonctionne partout." },
-      { "heading": "Where to Buy", "headingFr": "Ou acheter", "content": "Available at all metro station ticket machines, pharmacies (Jean Coutu, Pharmaprix), and some convenience stores. The card itself costs $6 and is valid for 4 years.", "contentFr": "Disponible aux distributrices de toutes les stations de metro, en pharmacie (Jean Coutu, Pharmaprix) et dans certains depanneurs. La carte coute 6$ et est valide 4 ans." },
-      { "heading": "Fare Options", "headingFr": "Options tarifaires", "content": "Load single trips ($3.75 Zone A), 10-trip packs ($35 Zone A), weekly passes ($29 Zone A), or monthly passes ($94 Zone A). Students, seniors (65+), and children (6-17) get reduced rates.", "contentFr": "Chargez des passages simples (3,75$ Zone A), des carnets de 10 (35$ Zone A), des passes hebdomadaires (29$ Zone A) ou mensuelles (94$ Zone A). Etudiants, aines (65+) et enfants (6-17) beneficient de tarifs reduits." },
-      { "heading": "Contactless Alternative", "headingFr": "Alternative sans contact", "content": "You can also tap your credit or debit card directly at turnstiles. The fare is the same as a single OPUS trip. This is ideal for occasional riders who don't want to buy an OPUS card.", "contentFr": "Vous pouvez aussi utiliser votre carte de credit ou debit directement aux tourniquets. Le tarif est le meme qu'un passage simple OPUS. Ideal pour les usagers occasionnels." }
+      {
+        "heading": "What is the OPUS Card?",
+        "headingFr": "Qu'est-ce que la carte OPUS?",
+        "content": "The OPUS card is a reloadable smart card used across all Montreal transit networks: STM Metro and bus, REM light rail, and Exo commuter trains. One card works everywhere.",
+        "contentFr": "La carte OPUS est une carte a puce rechargeable utilisee sur tous les reseaux de transport de Montreal: metro et bus STM, REM, et trains de banlieue Exo. Une seule carte fonctionne partout."
+      },
+      {
+        "heading": "Where to Buy",
+        "headingFr": "Ou acheter",
+        "content": "Available at all metro station ticket machines, pharmacies (Jean Coutu, Pharmaprix), and some convenience stores. The card itself costs $6 and is valid for 4 years.",
+        "contentFr": "Disponible aux distributrices de toutes les stations de metro, en pharmacie (Jean Coutu, Pharmaprix) et dans certains depanneurs. La carte coute 6$ et est valide 4 ans."
+      },
+      {
+        "heading": "Fare Options",
+        "headingFr": "Options tarifaires",
+        "content": "Load single trips ($3.75 Zone A), 10-trip packs ($35 Zone A), weekly passes ($29 Zone A), or monthly passes ($94 Zone A). Students, seniors (65+), and children (6-17) get reduced rates.",
+        "contentFr": "Chargez des passages simples (3,75$ Zone A), des carnets de 10 (35$ Zone A), des passes hebdomadaires (29$ Zone A) ou mensuelles (94$ Zone A). Etudiants, aines (65+) et enfants (6-17) beneficient de tarifs reduits."
+      },
+      {
+        "heading": "Contactless Alternative",
+        "headingFr": "Alternative sans contact",
+        "content": "You can also tap your credit or debit card directly at turnstiles. The fare is the same as a single OPUS trip. This is ideal for occasional riders who don't want to buy an OPUS card.",
+        "contentFr": "Vous pouvez aussi utiliser votre carte de credit ou debit directement aux tourniquets. Le tarif est le meme qu'un passage simple OPUS. Ideal pour les usagers occasionnels."
+      }
     ]
   },
   {
@@ -32,9 +72,24 @@
     "excerpt": "Everything about Montreal's automated light rail system.",
     "excerptFr": "Tout sur le systeme de train leger automatise de Montreal.",
     "sections": [
-      { "heading": "What is the REM?", "headingFr": "Qu'est-ce que le REM?", "content": "The REM (Reseau express metropolitain) is Montreal's automated light rail network. It connects downtown Montreal to the South Shore, West Island, North Shore, and the airport. Trains are fully automated with no driver.", "contentFr": "Le REM (Reseau express metropolitain) est le reseau de train leger automatise de Montreal. Il relie le centre-ville a la Rive-Sud, l'Ouest-de-l'Ile, la Rive-Nord et l'aeroport. Les trains sont entierement automatises." },
-      { "heading": "Stations and Coverage", "headingFr": "Stations et couverture", "content": "The REM has 26 stations spanning 67 km. Key stations include Gare Centrale (downtown), McGill, Edouard-Montpetit (connecting to Blue Line), and YUL Airport. All stations are fully accessible with elevators and level boarding.", "contentFr": "Le REM compte 26 stations sur 67 km. Les stations cles incluent Gare Centrale (centre-ville), McGill, Edouard-Montpetit (connexion a la ligne bleue) et l'aeroport YUL. Toutes les stations sont entierement accessibles." },
-      { "heading": "Fares and Transfers", "headingFr": "Tarifs et correspondances", "content": "REM uses the same ARTM fare system as the metro. Your OPUS card or contactless payment works the same way. Transfers between REM and Metro are included in your 120-minute fare validity.", "contentFr": "Le REM utilise le meme systeme tarifaire ARTM que le metro. Votre carte OPUS ou paiement sans contact fonctionne de la meme facon. Les correspondances entre le REM et le metro sont incluses dans la validite de 120 minutes." }
+      {
+        "heading": "What is the REM?",
+        "headingFr": "Qu'est-ce que le REM?",
+        "content": "The REM (Reseau express metropolitain) is Montreal's automated light rail network. It connects downtown Montreal to the South Shore, West Island, North Shore, and the airport. Trains are fully automated with no driver.",
+        "contentFr": "Le REM (Reseau express metropolitain) est le reseau de train leger automatise de Montreal. Il relie le centre-ville a la Rive-Sud, l'Ouest-de-l'Ile, la Rive-Nord et l'aeroport. Les trains sont entierement automatises."
+      },
+      {
+        "heading": "Stations and Coverage",
+        "headingFr": "Stations et couverture",
+        "content": "The REM has 26 stations spanning 67 km. Key stations include Gare Centrale (downtown), McGill, Edouard-Montpetit (connecting to Blue Line), and YUL Airport. All stations are fully accessible with elevators and level boarding.",
+        "contentFr": "Le REM compte 26 stations sur 67 km. Les stations cles incluent Gare Centrale (centre-ville), McGill, Edouard-Montpetit (connexion a la ligne bleue) et l'aeroport YUL. Toutes les stations sont entierement accessibles."
+      },
+      {
+        "heading": "Fares and Transfers",
+        "headingFr": "Tarifs et correspondances",
+        "content": "REM uses the same ARTM fare system as the metro. Your OPUS card or contactless payment works the same way. Transfers between REM and Metro are included in your 120-minute fare validity.",
+        "contentFr": "Le REM utilise le meme systeme tarifaire ARTM que le metro. Votre carte OPUS ou paiement sans contact fonctionne de la meme facon. Les correspondances entre le REM et le metro sont incluses dans la validite de 120 minutes."
+      }
     ]
   },
   {
@@ -44,9 +99,186 @@
     "excerpt": "Tips for navigating the metro during peak commuting hours.",
     "excerptFr": "Conseils pour naviguer dans le metro aux heures de pointe.",
     "sections": [
-      { "heading": "When is Rush Hour?", "headingFr": "Quand sont les heures de pointe?", "content": "Morning rush: 7:30-9:00 AM. Evening rush: 4:30-6:30 PM. The Orange Line between Montmorency and Berri-UQAM is the busiest segment. If possible, travel before 7:30 AM or after 9:30 AM.", "contentFr": "Pointe du matin: 7h30-9h00. Pointe du soir: 16h30-18h30. La ligne orange entre Montmorency et Berri-UQAM est le segment le plus achalande. Si possible, voyagez avant 7h30 ou apres 9h30." },
-      { "heading": "Best Strategies", "headingFr": "Meilleures strategies", "content": "Position yourself at the ends of the platform where cars are less crowded. Let passengers exit before boarding. On the Orange Line, consider taking the Green Line to Lionel-Groulx and transferring, it can be less packed than the direct Orange Line route.", "contentFr": "Positionnez-vous aux extremites du quai ou les wagons sont moins bondes. Laissez les passagers sortir avant de monter. Sur la ligne orange, envisagez de prendre la ligne verte jusqu'a Lionel-Groulx puis correspondre, cela peut etre moins achalande." },
-      { "heading": "Alternative Options", "headingFr": "Options alternatives", "content": "The REM is a great alternative for North Shore commuters (Deux-Montagnes direction). For West Island commuters, the REM or Exo Line 1 (Vaudreuil-Hudson) avoid the congested Orange Line entirely.", "contentFr": "Le REM est une excellente alternative pour les navetteurs de la Rive-Nord (direction Deux-Montagnes). Pour l'Ouest-de-l'Ile, le REM ou la ligne Exo 1 (Vaudreuil-Hudson) evitent completement la ligne orange congestionnee." }
+      {
+        "heading": "When is Rush Hour?",
+        "headingFr": "Quand sont les heures de pointe?",
+        "content": "Morning rush: 7:30-9:00 AM. Evening rush: 4:30-6:30 PM. The Orange Line between Montmorency and Berri-UQAM is the busiest segment. If possible, travel before 7:30 AM or after 9:30 AM.",
+        "contentFr": "Pointe du matin: 7h30-9h00. Pointe du soir: 16h30-18h30. La ligne orange entre Montmorency et Berri-UQAM est le segment le plus achalande. Si possible, voyagez avant 7h30 ou apres 9h30."
+      },
+      {
+        "heading": "Best Strategies",
+        "headingFr": "Meilleures strategies",
+        "content": "Position yourself at the ends of the platform where cars are less crowded. Let passengers exit before boarding. On the Orange Line, consider taking the Green Line to Lionel-Groulx and transferring, it can be less packed than the direct Orange Line route.",
+        "contentFr": "Positionnez-vous aux extremites du quai ou les wagons sont moins bondes. Laissez les passagers sortir avant de monter. Sur la ligne orange, envisagez de prendre la ligne verte jusqu'a Lionel-Groulx puis correspondre, cela peut etre moins achalande."
+      },
+      {
+        "heading": "Alternative Options",
+        "headingFr": "Options alternatives",
+        "content": "The REM is a great alternative for North Shore commuters (Deux-Montagnes direction). For West Island commuters, the REM or Exo Line 1 (Vaudreuil-Hudson) avoid the congested Orange Line entirely.",
+        "contentFr": "Le REM est une excellente alternative pour les navetteurs de la Rive-Nord (direction Deux-Montagnes). Pour l'Ouest-de-l'Ile, le REM ou la ligne Exo 1 (Vaudreuil-Hudson) evitent completement la ligne orange congestionnee."
+      }
+    ]
+  },
+  {
+    "slug": "airport-by-rem",
+    "title": "Getting to the Airport by REM",
+    "titleFr": "Se rendre a l'aeroport en REM",
+    "excerpt": "How to reach Montreal-Trudeau (YUL) airport on the REM light rail.",
+    "excerptFr": "Comment rejoindre l'aeroport Montreal-Trudeau (YUL) avec le REM.",
+    "sections": [
+      {
+        "heading": "The REM Airport Connection",
+        "headingFr": "La liaison aeroport du REM",
+        "content": "The REM automated light rail links the airport station to downtown Montreal, with a transfer to the Metro at Gare Centrale and McGill. The airport station is indoors and connected to the terminal, so you stay sheltered the whole way.",
+        "contentFr": "Le REM relie la station de l'aeroport au centre-ville de Montreal, avec correspondance vers le metro a Gare Centrale et McGill. La station de l'aeroport est interieure et reliee a l'aerogare, ce qui vous garde a l'abri tout le trajet."
+      },
+      {
+        "heading": "Fares and Payment",
+        "headingFr": "Tarifs et paiement",
+        "content": "The REM uses the regional ARTM fare system. Your OPUS card works, and you can also tap a credit or debit card at the gates. The airport station has its own fare, so check the current ARTM price before you travel.",
+        "contentFr": "Le REM utilise le systeme tarifaire regional ARTM. Votre carte OPUS fonctionne, et vous pouvez aussi payer en approchant une carte de credit ou debit aux barrieres. La station de l'aeroport a son propre tarif, verifiez donc le prix actuel de l'ARTM avant de partir."
+      },
+      {
+        "heading": "Tips for Travelers",
+        "headingFr": "Conseils pour les voyageurs",
+        "content": "All REM stations are fully accessible with elevators and level boarding, which helps if you have luggage. Allow extra time during morning and evening peaks, and keep your fare card handy for the transfer at Gare Centrale.",
+        "contentFr": "Toutes les stations du REM sont entierement accessibles avec ascenseurs et embarquement de plain-pied, ce qui aide avec les bagages. Prevoyez du temps supplementaire aux heures de pointe et gardez votre titre de transport a portee pour la correspondance a Gare Centrale."
+      }
+    ]
+  },
+  {
+    "slug": "night-transport",
+    "title": "Night Transport When the Metro Closes",
+    "titleFr": "Le transport de nuit quand le metro ferme",
+    "excerpt": "How to get around Montreal after the Metro stops running for the night.",
+    "excerptFr": "Comment se deplacer a Montreal apres l'arret du metro pour la nuit.",
+    "sections": [
+      {
+        "heading": "Metro Closing Times",
+        "headingFr": "Heures de fermeture du metro",
+        "content": "The Metro runs from roughly 5:30 AM to around 1:00 AM, with slightly later service on Friday and Saturday nights. Plan to be at your station before the last train, which leaves the terminus earlier than it reaches stations down the line.",
+        "contentFr": "Le metro circule d'environ 5h30 a environ 1h00, avec un service un peu plus tard les vendredis et samedis soirs. Prevoyez d'etre a votre station avant le dernier train, qui quitte le terminus plus tot qu'il n'atteint les stations plus loin sur la ligne."
+      },
+      {
+        "heading": "The Night Bus Network",
+        "headingFr": "Le reseau de bus de nuit",
+        "content": "After the Metro closes, the STM night bus network takes over on major corridors. Night routes are numbered in the 300s and run through the overnight hours. Your OPUS card or contactless payment works the same way as during the day.",
+        "contentFr": "Apres la fermeture du metro, le reseau de bus de nuit de la STM prend le relais sur les grands axes. Les lignes de nuit portent des numeros dans la serie 300 et circulent durant la nuit. Votre carte OPUS ou le paiement sans contact fonctionne comme le jour."
+      },
+      {
+        "heading": "Planning Ahead",
+        "headingFr": "Bien planifier",
+        "content": "Night buses run less frequently than daytime service, so check the schedule for your route before heading out. Major hubs like Berri-UQAM connect several night lines, making them useful transfer points late at night.",
+        "contentFr": "Les bus de nuit passent moins souvent que le service de jour, verifiez donc l'horaire de votre ligne avant de partir. Les grands points d'echange comme Berri-UQAM relient plusieurs lignes de nuit, ce qui en fait des points de correspondance utiles tard le soir."
+      }
+    ]
+  },
+  {
+    "slug": "accessibility-and-elevators",
+    "title": "Metro Accessibility and Elevators",
+    "titleFr": "Accessibilite et ascenseurs du metro",
+    "excerpt": "What to know about wheelchair access, elevators, and step-free travel.",
+    "excerptFr": "Ce qu'il faut savoir sur l'acces en fauteuil roulant, les ascenseurs et les trajets sans marches.",
+    "sections": [
+      {
+        "heading": "Which Stations Are Accessible",
+        "headingFr": "Quelles stations sont accessibles",
+        "content": "Not every Metro station has an elevator, so step-free access varies across the network. Check a station's accessibility status on its page before you travel, especially if you use a wheelchair, a stroller, or have heavy luggage.",
+        "contentFr": "Toutes les stations de metro n'ont pas d'ascenseur, l'acces sans marches varie donc sur le reseau. Verifiez le statut d'accessibilite d'une station sur sa page avant de voyager, surtout si vous utilisez un fauteuil roulant, une poussette ou avez des bagages lourds."
+      },
+      {
+        "heading": "The REM Advantage",
+        "headingFr": "L'avantage du REM",
+        "content": "All REM stations are fully accessible, with elevators and level boarding between the platform and the train. For step-free trips, building your route around REM and accessible Metro stations is often the smoothest option.",
+        "contentFr": "Toutes les stations du REM sont entierement accessibles, avec ascenseurs et embarquement de plain-pied entre le quai et le train. Pour des trajets sans marches, batir votre itineraire autour du REM et des stations de metro accessibles est souvent le plus simple."
+      },
+      {
+        "heading": "Planning a Step-Free Trip",
+        "headingFr": "Planifier un trajet sans marches",
+        "content": "When a transfer involves a station without an elevator, look for an alternative interchange that does. Allow extra time, since elevators can occasionally be out of service, and confirm accessibility for both your start and end stations.",
+        "contentFr": "Quand une correspondance passe par une station sans ascenseur, cherchez un autre point de correspondance qui en a un. Prevoyez du temps supplementaire, car les ascenseurs peuvent parfois etre hors service, et confirmez l'accessibilite de vos stations de depart et d'arrivee."
+      }
+    ]
+  },
+  {
+    "slug": "fares-for-visitors",
+    "title": "Fares and Passes for Visitors",
+    "titleFr": "Tarifs et passes pour les visiteurs",
+    "excerpt": "Choosing the right fare for a short trip to Montreal.",
+    "excerptFr": "Choisir le bon tarif pour un court sejour a Montreal.",
+    "sections": [
+      {
+        "heading": "Single Fares and Contactless",
+        "headingFr": "Passages simples et sans contact",
+        "content": "A single Zone A trip costs $3.75 and is valid for 120 minutes, including transfers. For occasional rides, tapping a credit or debit card at the turnstile is the easiest option and costs the same as a single OPUS trip.",
+        "contentFr": "Un passage simple en Zone A coute 3,75$ et est valide 120 minutes, correspondances incluses. Pour des trajets occasionnels, approcher une carte de credit ou debit au tourniquet est le plus simple et coute le meme prix qu'un passage OPUS simple."
+      },
+      {
+        "heading": "Multi-Trip and Pass Options",
+        "headingFr": "Options de carnets et de passes",
+        "content": "If you plan several rides, a 10-trip pack or a weekly pass loaded on an OPUS card can save money. The OPUS card itself costs $6 and is reusable, so it pays off over a multi-day visit with frequent travel.",
+        "contentFr": "Si vous prevoyez plusieurs trajets, un carnet de 10 passages ou une passe hebdomadaire chargee sur une carte OPUS peut faire economiser. La carte OPUS coute 6$ et est reutilisable, elle devient donc avantageuse lors d'un sejour de plusieurs jours avec deplacements frequents."
+      },
+      {
+        "heading": "One Fare, Three Networks",
+        "headingFr": "Un tarif, trois reseaux",
+        "content": "The same ARTM fare covers the STM Metro, the REM, and Exo commuter trains within your zone, and transfers between them are included in the 120-minute window. Most visitor trips stay within Zone A on the island of Montreal.",
+        "contentFr": "Le meme tarif ARTM couvre le metro STM, le REM et les trains de banlieue Exo dans votre zone, et les correspondances entre eux sont incluses dans la fenetre de 120 minutes. La plupart des trajets touristiques restent en Zone A sur l'ile de Montreal."
+      }
+    ]
+  },
+  {
+    "slug": "three-days-by-metro",
+    "title": "Montreal in 3 Days by Metro",
+    "titleFr": "Montreal en 3 jours en metro",
+    "excerpt": "A simple three-day sightseeing route built entirely around the Metro.",
+    "excerptFr": "Un itineraire touristique simple de trois jours entierement base sur le metro.",
+    "sections": [
+      {
+        "heading": "Day 1: Old Montreal",
+        "headingFr": "Jour 1 : le Vieux-Montreal",
+        "content": "Start in Old Montreal using Place-d'Armes and Champ-de-Mars stations. See Notre-Dame Basilica, Place Jacques-Cartier, the Bonsecours Market, and walk down to the Old Port and the Montreal Science Centre. Pointe-a-Calliere covers the city's archaeology and history.",
+        "contentFr": "Commencez dans le Vieux-Montreal avec les stations Place-d'Armes et Champ-de-Mars. Voyez la basilique Notre-Dame, la place Jacques-Cartier, le marche Bonsecours, puis descendez vers le Vieux-Port et le Centre des sciences. Pointe-a-Calliere raconte l'archeologie et l'histoire de la ville."
+      },
+      {
+        "heading": "Day 2: Downtown and the Mountain",
+        "headingFr": "Jour 2 : centre-ville et la montagne",
+        "content": "Use Peel and McGill stations for downtown shopping on Sainte-Catherine Street, Place Ville Marie, and the Museum of Fine Arts. Then ride to Mont-Royal station and walk up to Mount Royal Park for the lookout over the city.",
+        "contentFr": "Utilisez les stations Peel et McGill pour le magasinage au centre-ville rue Sainte-Catherine, la Place Ville Marie et le Musee des beaux-arts. Rejoignez ensuite la station Mont-Royal et montez au parc du Mont-Royal pour le belvedere sur la ville."
+      },
+      {
+        "heading": "Day 3: Olympic Park and the East",
+        "headingFr": "Jour 3 : le Parc olympique et l'est",
+        "content": "Take the Green Line to Pie-IX and Viau for the Olympic Stadium, the Biodome, the Insectarium, and the Botanical Garden, all close together. Maisonneuve Park next door is a good place to finish the day.",
+        "contentFr": "Prenez la ligne verte jusqu'a Pie-IX et Viau pour le Stade olympique, le Biodome, l'Insectarium et le Jardin botanique, tous proches les uns des autres. Le parc Maisonneuve voisin est un bon endroit pour terminer la journee."
+      }
+    ]
+  },
+  {
+    "slug": "canadiens-game",
+    "title": "Getting to a Canadiens Game at the Bell Centre",
+    "titleFr": "Se rendre a un match des Canadiens au Centre Bell",
+    "excerpt": "How to reach the Bell Centre by Metro on game night.",
+    "excerptFr": "Comment rejoindre le Centre Bell en metro les soirs de match.",
+    "sections": [
+      {
+        "heading": "Which Station to Use",
+        "headingFr": "Quelle station utiliser",
+        "content": "The Bell Centre sits right next to Lucien-L'Allier station on the Orange Line, with Bonaventure station also a short walk away. Both are connected to the downtown pedestrian network, so you can reach the arena without going outside.",
+        "contentFr": "Le Centre Bell se trouve juste a cote de la station Lucien-L'Allier sur la ligne orange, et la station Bonaventure est aussi a courte distance. Les deux sont reliees au reseau pieton du centre-ville, ce qui permet d'atteindre l'amphitheatre sans sortir dehors."
+      },
+      {
+        "heading": "Game Night Crowds",
+        "headingFr": "L'affluence les soirs de match",
+        "content": "Stations near the Bell Centre get very busy before and after games. Arrive early, and on the way out consider walking one station over to avoid the heaviest crowds at the turnstiles.",
+        "contentFr": "Les stations pres du Centre Bell sont tres achalandees avant et apres les matchs. Arrivez tot, et au retour, envisagez de marcher jusqu'a la station voisine pour eviter la cohue aux tourniquets."
+      },
+      {
+        "heading": "Paying Your Fare",
+        "headingFr": "Payer votre passage",
+        "content": "Use your OPUS card or tap a credit or debit card at the turnstile. A single fare is valid for 120 minutes, which usually covers your trip to the arena, though it will not cover the ride home after a full game.",
+        "contentFr": "Utilisez votre carte OPUS ou approchez une carte de credit ou debit au tourniquet. Un passage simple est valide 120 minutes, ce qui couvre habituellement le trajet vers l'amphitheatre, mais pas le retour apres un match complet."
+      }
     ]
   }
 ]

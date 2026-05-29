@@ -291,7 +291,9 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
                   fill="currentColor"
                 />
               </svg>
-              {t.walkingDistance}
+              {locale === "fr"
+                ? landmark.walkNoteFr ?? t.walkingDistance
+                : landmark.walkNote ?? t.walkingDistance}
             </div>
           </div>
 

@@ -106,5 +106,267 @@
     "category": "parks",
     "description": "One of the world's largest botanical gardens",
     "descriptionFr": "L'un des plus grands jardins botaniques au monde"
+  },
+  {
+    "id": "musee-des-beaux-arts",
+    "name": "Montreal Museum of Fine Arts",
+    "nameFr": "Musee des beaux-arts de Montreal",
+    "nearestStation": "guy-concordia",
+    "category": "culture",
+    "description": "Quebec's largest art museum, with a free permanent collection",
+    "descriptionFr": "Le plus grand musee d'art du Quebec, avec une collection permanente gratuite"
+  },
+  {
+    "id": "la-ronde",
+    "name": "La Ronde",
+    "nameFr": "La Ronde",
+    "nearestStation": "jean-drapeau",
+    "category": "tourism",
+    "description": "Quebec's largest amusement park, on Sainte-Helene Island",
+    "descriptionFr": "Le plus grand parc d'attractions du Quebec, sur l'ile Sainte-Helene",
+    "walkNote": "About a 20-minute walk or seasonal shuttle from Jean-Drapeau station, on Sainte-Helene Island.",
+    "walkNoteFr": "Environ 20 minutes de marche ou navette saisonniere depuis la station Jean-Drapeau, sur l'ile Sainte-Helene."
+  },
+  {
+    "id": "casino-de-montreal",
+    "name": "Casino de Montreal",
+    "nameFr": "Casino de Montreal",
+    "nearestStation": "jean-drapeau",
+    "category": "tourism",
+    "description": "Large 24-hour casino on Notre-Dame Island",
+    "descriptionFr": "Grand casino ouvert 24 heures sur l'ile Notre-Dame",
+    "walkNote": "Reached from Jean-Drapeau station by the 777 shuttle bus or a walk across Notre-Dame Island.",
+    "walkNoteFr": "Accessible depuis la station Jean-Drapeau par la navette 777 ou une marche jusqu'a l'ile Notre-Dame."
+  },
+  {
+    "id": "parc-jean-drapeau",
+    "name": "Parc Jean-Drapeau",
+    "nameFr": "Parc Jean-Drapeau",
+    "nearestStation": "jean-drapeau",
+    "category": "parks",
+    "description": "Island park with a beach, festivals, and green space",
+    "descriptionFr": "Parc insulaire avec plage, festivals et espaces verts"
+  },
+  {
+    "id": "concordia-university",
+    "name": "Concordia University",
+    "nameFr": "Universite Concordia",
+    "nearestStation": "guy-concordia",
+    "category": "education",
+    "description": "Major downtown university, Sir George Williams campus",
+    "descriptionFr": "Grande universite du centre-ville, campus Sir-George-Williams"
+  },
+  {
+    "id": "uqam",
+    "name": "UQAM",
+    "nameFr": "UQAM",
+    "nearestStation": "berri-uqam",
+    "category": "education",
+    "description": "Universite du Quebec a Montreal, connected to Berri-UQAM station",
+    "descriptionFr": "Universite du Quebec a Montreal, reliee a la station Berri-UQAM"
+  },
+  {
+    "id": "chinatown",
+    "name": "Montreal Chinatown",
+    "nameFr": "Quartier chinois de Montreal",
+    "nearestStation": "place-d-armes",
+    "category": "tourism",
+    "description": "Historic district with restaurants, shops, and ceremonial gates",
+    "descriptionFr": "Quartier historique avec restaurants, boutiques et portes ceremoniales"
+  },
+  {
+    "id": "the-village",
+    "name": "The Village",
+    "nameFr": "Le Village",
+    "nearestStation": "beaudry",
+    "category": "tourism",
+    "description": "Montreal's Gay Village along Sainte-Catherine East",
+    "descriptionFr": "Le Village gai de Montreal le long de la rue Sainte-Catherine Est"
+  },
+  {
+    "id": "atwater-market",
+    "name": "Atwater Market",
+    "nameFr": "Marche Atwater",
+    "nearestStation": "charlevoix",
+    "category": "shopping",
+    "description": "Indoor and outdoor public market by the Lachine Canal",
+    "descriptionFr": "Marche public interieur et exterieur au bord du canal de Lachine"
+  },
+  {
+    "id": "sainte-catherine-shopping",
+    "name": "Sainte-Catherine Street Shopping",
+    "nameFr": "Magasinage rue Sainte-Catherine",
+    "nearestStation": "mcgill",
+    "category": "shopping",
+    "description": "Montreal's main shopping street and the Eaton Centre",
+    "descriptionFr": "La principale rue commercante de Montreal et le Centre Eaton"
+  },
+  {
+    "id": "palais-des-congres",
+    "name": "Palais des congres",
+    "nameFr": "Palais des congres",
+    "nearestStation": "place-d-armes",
+    "category": "culture",
+    "description": "Montreal's convention centre with its colourful glass wall",
+    "descriptionFr": "Le centre des congres de Montreal et son mur de verre colore"
+  },
+  {
+    "id": "pointe-a-calliere",
+    "name": "Pointe-a-Calliere Museum",
+    "nameFr": "Musee Pointe-a-Calliere",
+    "nearestStation": "place-d-armes",
+    "category": "culture",
+    "description": "Archaeology and history museum in Old Montreal",
+    "descriptionFr": "Musee d'archeologie et d'histoire dans le Vieux-Montreal"
+  },
+  {
+    "id": "marche-bonsecours",
+    "name": "Bonsecours Market",
+    "nameFr": "Marche Bonsecours",
+    "nearestStation": "champ-de-mars",
+    "category": "culture",
+    "description": "Historic domed market building in Old Montreal",
+    "descriptionFr": "Edifice historique a dome dans le Vieux-Montreal"
+  },
+  {
+    "id": "city-hall",
+    "name": "Montreal City Hall",
+    "nameFr": "Hotel de ville de Montreal",
+    "nearestStation": "champ-de-mars",
+    "category": "tourism",
+    "description": "Historic seat of the city government in Old Montreal",
+    "descriptionFr": "Siege historique de l'administration municipale dans le Vieux-Montreal"
+  },
+  {
+    "id": "place-jacques-cartier",
+    "name": "Place Jacques-Cartier",
+    "nameFr": "Place Jacques-Cartier",
+    "nearestStation": "champ-de-mars",
+    "category": "tourism",
+    "description": "Lively cobblestone square in the heart of Old Montreal",
+    "descriptionFr": "Place pavee animee au coeur du Vieux-Montreal"
+  },
+  {
+    "id": "saputo-stadium",
+    "name": "Saputo Stadium",
+    "nameFr": "Stade Saputo",
+    "nearestStation": "viau",
+    "category": "sports",
+    "description": "Home of CF Montreal soccer, next to Olympic Park",
+    "descriptionFr": "Domicile du CF Montreal, voisin du Parc olympique"
+  },
+  {
+    "id": "parc-la-fontaine",
+    "name": "La Fontaine Park",
+    "nameFr": "Parc La Fontaine",
+    "nearestStation": "sherbrooke",
+    "category": "parks",
+    "description": "Large Plateau park with ponds and walking paths",
+    "descriptionFr": "Grand parc du Plateau avec etangs et sentiers",
+    "walkNote": "About a 10-minute walk from Sherbrooke station.",
+    "walkNoteFr": "Environ 10 minutes de marche depuis la station Sherbrooke."
+  },
+  {
+    "id": "little-italy",
+    "name": "Little Italy",
+    "nameFr": "Petite Italie",
+    "nearestStation": "de-castelnau",
+    "category": "tourism",
+    "description": "Italian neighbourhood around the Jean-Talon Market",
+    "descriptionFr": "Quartier italien autour du marche Jean-Talon"
+  },
+  {
+    "id": "insectarium",
+    "name": "Montreal Insectarium",
+    "nameFr": "Insectarium de Montreal",
+    "nearestStation": "viau",
+    "category": "tourism",
+    "description": "Large insect museum next to the Botanical Garden",
+    "descriptionFr": "Grand musee d'insectes voisin du Jardin botanique"
+  },
+  {
+    "id": "place-ville-marie",
+    "name": "Place Ville Marie",
+    "nameFr": "Place Ville Marie",
+    "nearestStation": "mcgill",
+    "category": "shopping",
+    "description": "Landmark downtown tower with shops and an observation deck",
+    "descriptionFr": "Tour emblematique du centre-ville avec boutiques et observatoire"
+  },
+  {
+    "id": "plateau-mont-royal",
+    "name": "Plateau Mont-Royal",
+    "nameFr": "Plateau Mont-Royal",
+    "nearestStation": "mont-royal",
+    "category": "tourism",
+    "description": "Trendy neighbourhood known for murals, cafes, and shops",
+    "descriptionFr": "Quartier branche connu pour ses murales, cafes et boutiques"
+  },
+  {
+    "id": "montreal-forum",
+    "name": "Montreal Forum",
+    "nameFr": "Forum de Montreal",
+    "nearestStation": "atwater",
+    "category": "culture",
+    "description": "Former home of the Canadiens, now an entertainment centre",
+    "descriptionFr": "Ancien domicile des Canadiens, aujourd'hui centre de divertissement"
+  },
+  {
+    "id": "maisonneuve-park",
+    "name": "Maisonneuve Park",
+    "nameFr": "Parc Maisonneuve",
+    "nearestStation": "viau",
+    "category": "parks",
+    "description": "Large east-end park next to the Botanical Garden",
+    "descriptionFr": "Grand parc de l'est, voisin du Jardin botanique"
+  },
+  {
+    "id": "jacques-cartier-bridge",
+    "name": "Jacques Cartier Bridge",
+    "nameFr": "Pont Jacques-Cartier",
+    "nearestStation": "papineau",
+    "category": "tourism",
+    "description": "Iconic bridge with seasonal interactive lighting",
+    "descriptionFr": "Pont emblematique avec eclairage interactif saisonnier"
+  },
+  {
+    "id": "mary-queen-of-the-world",
+    "name": "Mary Queen of the World Cathedral",
+    "nameFr": "Cathedrale Marie-Reine-du-Monde",
+    "nearestStation": "bonaventure",
+    "category": "culture",
+    "description": "Downtown cathedral modelled on St Peter's Basilica in Rome",
+    "descriptionFr": "Cathedrale du centre-ville inspiree de la basilique Saint-Pierre de Rome"
+  },
+  {
+    "id": "complexe-desjardins",
+    "name": "Complexe Desjardins",
+    "nameFr": "Complexe Desjardins",
+    "nearestStation": "place-des-arts",
+    "category": "shopping",
+    "description": "Downtown shopping and office complex with an indoor plaza",
+    "descriptionFr": "Complexe commercial et de bureaux du centre-ville avec place interieure"
+  },
+  {
+    "id": "mile-end",
+    "name": "Mile End",
+    "nameFr": "Mile End",
+    "nearestStation": "laurier",
+    "category": "tourism",
+    "description": "Bohemian neighbourhood famous for bagels, cafes, and music",
+    "descriptionFr": "Quartier boheme celebre pour ses bagels, cafes et sa musique",
+    "walkNote": "About a 10-minute walk from Laurier station.",
+    "walkNoteFr": "Environ 10 minutes de marche depuis la station Laurier."
+  },
+  {
+    "id": "montreal-science-centre",
+    "name": "Montreal Science Centre",
+    "nameFr": "Centre des sciences de Montreal",
+    "nearestStation": "place-d-armes",
+    "category": "tourism",
+    "description": "Interactive science museum on a pier in the Old Port",
+    "descriptionFr": "Musee de sciences interactif sur un quai du Vieux-Port",
+    "walkNote": "About a 12-minute walk from Place-d'Armes station through the Old Port.",
+    "walkNoteFr": "Environ 12 minutes de marche depuis la station Place-d'Armes a travers le Vieux-Port."
   }
 ]
