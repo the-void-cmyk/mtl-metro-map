@@ -4,8 +4,10 @@ let client: Client | null = null
 
 function getClient(): Client {
   if (!client) {
-    const url = process.env.TURSO_DATABASE_URL
-    const authToken = process.env.TURSO_AUTH_TOKEN
+    // Trim to guard against stray whitespace/newlines in the env vars
+    // (a trailing newline makes the URL invalid and crashes createClient).
+    const url = process.env.TURSO_DATABASE_URL?.trim()
+    const authToken = process.env.TURSO_AUTH_TOKEN?.trim()
 
     if (url) {
       // Production: Turso hosted database

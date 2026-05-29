@@ -9,7 +9,14 @@ const BASE_URL = "https://mtlmetromap.com"
  * Consumed by Google Search Console alongside the static sitemap.
  */
 export async function GET() {
-  const entries = await getSitemapEntries()
+  // A sitemap endpoint must never 500: if the DB read fails, fall back to a
+  // valid (empty) sitemap with a 200 so crawlers don't flag it as an error.
+  let entries: Awaited<ReturnType<typeof getSitemapEntries>> = []
+  try {
+    entries = await getSitemapEntries()
+  } catch (err) {
+    console.error("sitemap-routes: failed to read sitemap entries", err)
+  }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
