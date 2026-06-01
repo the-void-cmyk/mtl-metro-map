@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: RoutePageProps): Promise<Meta
   const route = findRoute(parsed.from, parsed.to)
   if (!route) return { title: "Route Not Found" }
 
-  const meta = generateRouteMetadata(route)
+  const meta = generateRouteMetadata(route, locale as Locale)
   const altLocale = locale === 'en' ? 'fr' : 'en'
 
   return {
@@ -181,7 +181,7 @@ export default async function RoutePage({ params, searchParams }: RoutePageProps
             />
           </div>
           <p className="text-[var(--text-secondary)] text-[15px] mt-2 leading-relaxed">
-            {t.routeDescription(route.totalTime, route.stops, route.transfers.length, formatPrice(route.fare.price))}
+            {t.routeDescription(route.totalTime, route.stops, route.transfers.length, formatPrice(route.fare.price), route.distance)}
           </p>
 
           {timeMode && departTime && arriveTime && (

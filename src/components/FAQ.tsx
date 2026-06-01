@@ -17,6 +17,10 @@ export default function FAQ({ route, locale = 'en' }: FAQProps) {
       a: t.faqTimeAnswer(route.from.name, route.to.name, route.totalTime, route.stops, route.transfers.length),
     },
     {
+      q: t.faqDistance(route.from.name, route.to.name),
+      a: t.faqDistanceAnswer(route.from.name, route.to.name, route.distance, route.totalTime),
+    },
+    {
       q: t.faqCost,
       a: t.faqCostAnswer(formatPrice(route.fare.price), route.fare.ticketType, route.fare.validityMinutes),
     },

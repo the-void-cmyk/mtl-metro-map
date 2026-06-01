@@ -57,8 +57,8 @@ const translations = {
 
     // Route page
     routeTitle: (from: string, to: string) => `${from} \u2192 ${to}`,
-    routeDescription: (time: number, stops: number, transfers: number, fare: string) =>
-      `Montreal transit route. ${time} minutes, ${stops} stops${transfers > 0 ? `, ${transfers} transfer(s)` : ', direct'}. Fare: ${fare}.`,
+    routeDescription: (time: number, stops: number, transfers: number, fare: string, distance?: number) =>
+      `Montreal transit route. ${time} minutes, ${stops} stops${transfers > 0 ? `, ${transfers} transfer(s)` : ', direct'}${distance ? `, ${distance} km` : ''}. Fare: ${fare}.`,
     minutes: 'Minutes',
     stops: 'Stops',
     transfers: 'Transfers',
@@ -120,6 +120,9 @@ const translations = {
     faqTrains: 'What is the first and last train?',
     faqTrainsAnswer: (first: string, last: string) =>
       `The first train departs at ${first} and the last train departs at ${last}.`,
+    faqDistance: (from: string, to: string) => `How far is ${from} from ${to}?`,
+    faqDistanceAnswer: (from: string, to: string, distance: number, time: number) =>
+      `${from} is approximately ${distance} km from ${to} by metro, about a ${time}-minute ride.`,
 
     // Multi-stop trip planner
     planTrip: 'Plan a Trip',
@@ -289,8 +292,8 @@ const translations = {
     swapStations: 'Inverser les stations',
 
     routeTitle: (from: string, to: string) => `${from} \u2192 ${to}`,
-    routeDescription: (time: number, stops: number, transfers: number, fare: string) =>
-      `Trajet en transport en commun à Montréal. ${time} minutes, ${stops} arrêts${transfers > 0 ? `, ${transfers} correspondance(s)` : ', direct'}. Tarif : ${fare}.`,
+    routeDescription: (time: number, stops: number, transfers: number, fare: string, distance?: number) =>
+      `Trajet en transport en commun à Montréal. ${time} minutes, ${stops} arrêts${transfers > 0 ? `, ${transfers} correspondance(s)` : ', direct'}${distance ? `, ${distance} km` : ''}. Tarif : ${fare}.`,
     minutes: 'Minutes',
     stops: 'Arrêts',
     transfers: 'Correspondances',
@@ -349,6 +352,9 @@ const translations = {
     faqTrains: 'Quel est le premier et le dernier train ?',
     faqTrainsAnswer: (first: string, last: string) =>
       `Le premier train part a ${first} et le dernier train part a ${last}.`,
+    faqDistance: (from: string, to: string) => `Quelle est la distance entre ${from} et ${to} ?`,
+    faqDistanceAnswer: (from: string, to: string, distance: number, time: number) =>
+      `${from} est a environ ${distance} km de ${to} en métro, soit environ ${time} minutes de trajet.`,
 
     planTrip: 'Planifier un trajet',
     addStop: 'Ajouter un arrêt',

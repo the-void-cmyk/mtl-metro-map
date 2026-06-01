@@ -3,10 +3,10 @@ import { formatPrice } from './fares'
 import { getCTRVariant } from './ctr-variants'
 
 // Generate metadata for a route page
-export function generateRouteMetadata(route: RouteResult) {
+export function generateRouteMetadata(route: RouteResult, locale: 'en' | 'fr' = 'en') {
   const variant = getCTRVariant(route.from.slug, route.to.slug)
-  const title = generateTitle(route, variant)
-  const description = generateDescription(route, variant)
+  const title = locale === 'fr' ? generateTitleFr(route) : generateTitle(route, variant)
+  const description = locale === 'fr' ? generateDescriptionFr(route) : generateDescription(route, variant)
 
   return {
     title,
@@ -29,18 +29,21 @@ function generateTitle(route: RouteResult, variant: string): string {
   const stops = route.stops
   const fare = formatPrice(route.fare.price)
   const transfers = route.transfers.length
+  const distance = route.distance
 
+  // Each variant keeps its distinct style (CTR experiment preserved), but all
+  // now carry the distance, which is the highest-impression query intent.
   switch (variant) {
     case 'A':
-      return `${from} to ${to} - ${time} min, ${stops} stops`
+      return `${from} to ${to} - ${time} min, ${distance} km, ${stops} stops`
     case 'B':
-      return `${from} to ${to} Route & Schedule`
+      return `${from} to ${to} Route & Schedule (${distance} km)`
     case 'C':
-      return `How to Get from ${from} to ${to} | ${time} min`
+      return `How to Get from ${from} to ${to} | ${time} min, ${distance} km`
     case 'D':
-      return `${from} to ${to} | ${fare}, ${transfers} Transfer${transfers !== 1 ? 's' : ''}`
+      return `${from} to ${to} | ${distance} km, ${fare}, ${transfers} Transfer${transfers !== 1 ? 's' : ''}`
     default:
-      return `${from} to ${to} - ${time} min`
+      return `${from} to ${to} - ${time} min, ${distance} km`
   }
 }
 
@@ -51,17 +54,30 @@ function generateDescription(route: RouteResult, variant: string): string {
   const stops = route.stops
   const fare = formatPrice(route.fare.price)
   const transfers = route.transfers.length
+  const distance = route.distance
   const lineNames = route.segments.map(s => s.line.name).join(', ')
 
   switch (variant) {
     case 'A':
-      return `Get from ${from} to ${to} in ${time} minutes. ${stops} stops, ${transfers} transfer(s). Fare: ${fare}. First train ${route.firstTrain}, last train ${route.lastTrain}. Montreal Metro route guide.`
+      return `Get from ${from} to ${to} in ${time} minutes. ${stops} stops, ${transfers} transfer(s), ${distance} km. Fare: ${fare}. First train ${route.firstTrain}, last train ${route.lastTrain}. Montreal Metro route guide.`
     case 'B':
-      return `Plan your Montreal Metro trip from ${from} to ${to}. ${time}-minute ride via ${lineNames}. See schedule, fare (${fare}), and step-by-step directions.`
+      return `Plan your Montreal Metro trip from ${from} to ${to}. ${time}-minute ride (${distance} km) via ${lineNames}. See schedule, distance, fare (${fare}), and step-by-step directions.`
     case 'C':
     default:
-      return `${from} to ${to} metro route: ${time} min, ${fare}. ${stops} stops, ${transfers} transfer(s). Includes first/last train times, fare info, and step-by-step directions.`
+      return `${from} to ${to} metro route: ${time} min, ${distance} km, ${fare}. ${stops} stops, ${transfers} transfer(s). Includes distance, first/last train times, fare info, and step-by-step directions.`
   }
+}
+
+// French route title/description: targets "trajet métro montréal" + "distance" queries
+function generateTitleFr(route: RouteResult): string {
+  const transfers = route.transfers.length
+  return `${route.from.name} à ${route.to.name} en métro : ${route.totalTime} min, ${route.distance} km${transfers === 0 ? ', direct' : `, ${transfers} corresp.`}`
+}
+
+function generateDescriptionFr(route: RouteResult): string {
+  const lineNames = route.segments.map(s => s.line.nameFr).join(', ')
+  const transfers = route.transfers.length
+  return `Trajet de métro de ${route.from.name} à ${route.to.name} : ${route.totalTime} minutes, ${route.stops} arrêts, ${transfers} correspondance(s), ${route.distance} km. Tarif ${formatPrice(route.fare.price)}. Horaires, distance et itinéraire étape par étape via ${lineNames}.`
 }
 
 // Generate station page metadata
@@ -70,14 +86,14 @@ export function generateStationMetadata(station: Station, lines: Line[], locale:
     const lineNames = lines.map(l => l.nameFr).join(', ')
     const stationName = station.nameFr || station.name
     return {
-      title: `Station ${stationName} Métro Montréal : ${lineNames}, Horaires`,
+      title: `Station ${stationName} (STM) Métro Montréal : ${lineNames}, Horaires`,
       description: `Station ${stationName}, ${lineNames}. Zone ${station.zone}. Premier train ${station.firstTrain}, dernier train ${station.lastTrain}. Trouvez vos trajets, horaires et destinations populaires.`,
       canonical: `/station/${station.slug}`,
     }
   }
   const lineNames = lines.map(l => l.name).join(', ')
   return {
-    title: `${station.name} Station Montreal Metro: ${lineNames}, Schedule & Map`,
+    title: `STM ${station.name} Station, Montreal Metro: ${lineNames}, Map & Schedule`,
     description: `${station.name} station info: ${lineNames}. Zone ${station.zone}. First train ${station.firstTrain}, last train ${station.lastTrain}. Find routes, schedules, and popular destinations.`,
     canonical: `/station/${station.slug}`,
   }
@@ -87,14 +103,14 @@ export function generateStationMetadata(station: Station, lines: Line[], locale:
 export function generateLineMetadata(line: Line, stationCount: number, locale: 'en' | 'fr' = 'en') {
   if (locale === 'fr') {
     return {
-      title: `${line.nameFr} Métro Montréal : ${stationCount} Stations, Carte et Horaires`,
-      description: `${line.nameFr}, ${stationCount} stations. Voir tous les arrêts, horaires, carte du trajet et correspondances. Guide de la ligne du métro de Montréal.`,
+      title: `${line.nameFr} Métro Montréal : Liste des ${stationCount} Stations dans l'Ordre`,
+      description: `${line.nameFr} : liste complète des ${stationCount} stations dans l'ordre, avec carte du trajet, horaires et correspondances. Guide de la ligne du métro de Montréal.`,
       canonical: `/line/${line.id}`,
     }
   }
   return {
-    title: `${line.name} Montreal Metro: ${stationCount} Stations, Map & Schedule`,
-    description: `${line.name}, ${stationCount} stations. View all stops, schedules, route map, and connections. Montreal Metro line guide.`,
+    title: `${line.name} Montreal Metro: All ${stationCount} Stations in Order, Map & Schedule`,
+    description: `${line.name}: full list of all ${stationCount} stations in order, with route map, schedules, transfers, and connections. Montreal Metro line guide.`,
     canonical: `/line/${line.id}`,
   }
 }
@@ -199,6 +215,10 @@ export function generateFAQSchema(route: RouteResult) {
     {
       question: `How long does it take from ${route.from.name} to ${route.to.name}?`,
       answer: `The trip from ${route.from.name} to ${route.to.name} takes approximately ${route.totalTime} minutes with ${route.stops} stops and ${route.transfers.length} transfer(s).`,
+    },
+    {
+      question: `How far is ${route.from.name} from ${route.to.name}?`,
+      answer: `${route.from.name} is approximately ${route.distance} km from ${route.to.name} by metro, about a ${route.totalTime}-minute ride.`,
     },
     {
       question: `How much does the fare cost from ${route.from.name} to ${route.to.name}?`,
