@@ -20,10 +20,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: TripPageProps): Promise<Metadata> {
   const { locale } = await params
   return {
-    title: locale === 'fr' ? 'Planifier un trajet' : 'Plan a Trip',
+    title: locale === 'fr'
+      ? 'Itinéraire Métro Montréal : Planifier un Trajet'
+      : 'Montreal Metro Trip Planner: Routes & Times',
     description: locale === 'fr'
-      ? 'Planifiez votre trajet multi-arrets sur le reseau de Montreal. Metro, REM et trains de banlieue Exo.'
-      : 'Plan your multi-stop journey across Montreal transit. Metro, REM, and Exo commuter trains.',
+      ? 'Planifiez un itinéraire de métro multi-arrêts à Montréal. Ajoutez vos arrêts sur le réseau STM, REM et Exo et obtenez les trajets, horaires, correspondances et tarifs.'
+      : 'Plan a multi-stop Montreal metro trip. Add stops across the STM Metro, REM, and Exo network and get routes, times, transfers, and fares.',
   }
 }
 

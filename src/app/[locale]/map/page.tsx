@@ -16,10 +16,12 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: MapPageProps): Promise<Metadata> {
   const { locale } = await params
   return {
-    title: locale === 'fr' ? 'Carte du reseau' : 'Network Map',
+    title: locale === 'fr'
+      ? 'Carte et Plan du Métro de Montréal : Lignes et Stations'
+      : 'Montreal Subway Map: Metro Lines, Stations & Zones',
     description: locale === 'fr'
-      ? 'Carte interactive du reseau de transport en commun de Montreal. Metro, REM et trains de banlieue Exo.'
-      : 'Interactive map of Montreal\'s transit network. Metro, REM, and Exo commuter trains.',
+      ? 'Carte interactive du métro de Montréal : toutes les lignes du métro STM, le REM et les trains de banlieue Exo, avec chaque station, les correspondances et les zones tarifaires.'
+      : 'Interactive Montreal metro and subway map. All STM Metro lines, the REM, and Exo commuter trains with every station, transfers, and fare zones.',
   }
 }
 
