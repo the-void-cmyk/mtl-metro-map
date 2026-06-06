@@ -1,6 +1,7 @@
 import Link from "next/link"
 import type { Metadata } from "next"
-import { getTranslations, locales } from "@/lib/i18n"
+import { notFound } from "next/navigation"
+import { getTranslations, isValidLocale, locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import SearchBar from "@/components/SearchBar"
 import NearbyStations from "@/components/NearbyStations"
@@ -59,6 +60,7 @@ export async function generateMetadata({ params }: HomeProps): Promise<Metadata>
 
 export default async function HomePage({ params }: HomeProps) {
   const { locale } = await params
+  if (!isValidLocale(locale)) notFound()
   const t = getTranslations(locale as Locale)
 
   const metroCount = allStations.filter((s) => s.network === "metro").length
