@@ -81,8 +81,8 @@
       {
         "heading": "Stations and Coverage",
         "headingFr": "Stations et couverture",
-        "content": "The REM has 26 stations spanning 67 km. Key stations include Gare Centrale (downtown), McGill, Edouard-Montpetit (connecting to Blue Line), and YUL Airport. All stations are fully accessible with elevators and level boarding.",
-        "contentFr": "Le REM compte 26 stations sur 67 km. Les stations cles incluent Gare Centrale (centre-ville), McGill, Edouard-Montpetit (connexion a la ligne bleue) et l'aeroport YUL. Toutes les stations sont entierement accessibles."
+        "content": "The REM has 26 stations spanning 67 km. Key stations include Gare Centrale (downtown), McGill, and Edouard-Montpetit (connecting to the Blue Line), with an airport station expected to open around 2027. All stations are fully accessible with elevators and level boarding.",
+        "contentFr": "Le REM compte 26 stations sur 67 km. Les stations clés incluent Gare Centrale (centre-ville), McGill et Édouard-Montpetit (connexion à la ligne bleue), avec une station à l'aéroport attendue vers 2027. Toutes les stations sont entièrement accessibles."
       },
       {
         "heading": "Fares and Transfers",
@@ -121,28 +121,28 @@
   },
   {
     "slug": "airport-by-rem",
-    "title": "Getting to the Airport by REM",
-    "titleFr": "Se rendre a l'aeroport en REM",
-    "excerpt": "How to reach Montreal-Trudeau (YUL) airport on the REM light rail.",
-    "excerptFr": "Comment rejoindre l'aeroport Montreal-Trudeau (YUL) avec le REM.",
+    "title": "The REM to YUL Airport: What to Know",
+    "titleFr": "Le REM vers l'aéroport YUL : ce qu'il faut savoir",
+    "excerpt": "When the REM will reach Montreal-Trudeau (YUL), and how to get to the airport in the meantime.",
+    "excerptFr": "Quand le REM atteindra Montreal-Trudeau (YUL), et comment se rendre à l'aéroport d'ici là.",
     "sections": [
       {
-        "heading": "The REM Airport Connection",
-        "headingFr": "La liaison aeroport du REM",
-        "content": "The REM automated light rail links the airport station to downtown Montreal, with a transfer to the Metro at Gare Centrale and McGill. The airport station is indoors and connected to the terminal, so you stay sheltered the whole way.",
-        "contentFr": "Le REM relie la station de l'aeroport au centre-ville de Montreal, avec correspondance vers le metro a Gare Centrale et McGill. La station de l'aeroport est interieure et reliee a l'aerogare, ce qui vous garde a l'abri tout le trajet."
+        "heading": "The REM Airport Connection (Coming ~2027)",
+        "headingFr": "La liaison aéroport du REM (vers 2027)",
+        "content": "The REM light rail will connect Montreal-Trudeau (YUL) directly to downtown once the airport station opens, which is expected around 2027. That station is still under construction. Until it opens, the 747 express bus is the main public-transit link between the airport and downtown, running 24 hours a day.",
+        "contentFr": "Le REM reliera directement Montreal-Trudeau (YUL) au centre-ville une fois la station de l'aéroport ouverte, ce qui est attendu vers 2027. Cette station est encore en construction. D'ici là, la navette 747 est le principal lien de transport en commun entre l'aéroport et le centre-ville, en service 24 h sur 24."
       },
       {
         "heading": "Fares and Payment",
         "headingFr": "Tarifs et paiement",
-        "content": "The REM uses the regional ARTM fare system. Your OPUS card works, and you can also tap a credit or debit card at the gates. The airport station has its own fare, so check the current ARTM price before you travel.",
-        "contentFr": "Le REM utilise le systeme tarifaire regional ARTM. Votre carte OPUS fonctionne, et vous pouvez aussi payer en approchant une carte de credit ou debit aux barrieres. La station de l'aeroport a son propre tarif, verifiez donc le prix actuel de l'ARTM avant de partir."
+        "content": "When the REM airport station opens, it will use the regional ARTM fare system, payable with an OPUS card or a contactless tap. For now, the 747 bus costs $11.25, which doubles as a 24-hour pass on the metro, REM, and exo trains in Zone A.",
+        "contentFr": "Quand la station du REM à l'aéroport ouvrira, elle utilisera le système tarifaire régional ARTM, payable avec une carte OPUS ou sans contact. Pour l'instant, la navette 747 coûte 11,25 $, ce qui sert aussi de titre de 24 heures sur le métro, le REM et les trains exo en zone A."
       },
       {
         "heading": "Tips for Travelers",
         "headingFr": "Conseils pour les voyageurs",
-        "content": "All REM stations are fully accessible with elevators and level boarding, which helps if you have luggage. Allow extra time during morning and evening peaks, and keep your fare card handy for the transfer at Gare Centrale.",
-        "contentFr": "Toutes les stations du REM sont entierement accessibles avec ascenseurs et embarquement de plain-pied, ce qui aide avec les bagages. Prevoyez du temps supplementaire aux heures de pointe et gardez votre titre de transport a portee pour la correspondance a Gare Centrale."
+        "content": "Until the airport REM station opens, take the 747 bus from outside the terminal, or a taxi (a flat $49.45 to downtown). When the REM link launches, all its stations are fully accessible with elevators and level boarding, which helps with luggage. Check the latest opening date before you rely on the REM for an airport trip.",
+        "contentFr": "En attendant l'ouverture de la station du REM à l'aéroport, prenez la navette 747 devant l'aérogare, ou un taxi (tarif fixe de 49,45 $ vers le centre-ville). Quand la liaison REM sera lancée, toutes ses stations seront entièrement accessibles avec ascenseurs et embarquement de plain-pied, ce qui aide avec les bagages. Vérifiez la date d'ouverture la plus récente avant de compter sur le REM pour un trajet vers l'aéroport."
       }
     ]
   },
@@ -278,6 +278,33 @@
         "headingFr": "Payer votre passage",
         "content": "Use your OPUS card or tap a credit or debit card at the turnstile. A single fare is valid for 120 minutes, which usually covers your trip to the arena, though it will not cover the ride home after a full game.",
         "contentFr": "Utilisez votre carte OPUS ou approchez une carte de credit ou debit au tourniquet. Un passage simple est valide 120 minutes, ce qui couvre habituellement le trajet vers l'amphitheatre, mais pas le retour apres un match complet."
+      }
+    ]
+  },
+  {
+    "slug": "yul-airport-to-downtown",
+    "title": "Getting from YUL Airport to Downtown Montreal",
+    "titleFr": "Se rendre de l'aéroport YUL au centre-ville de Montréal",
+    "excerpt": "The 747 bus, taxi, and private transfer from Montreal-Trudeau to downtown, with times and prices.",
+    "excerptFr": "La navette 747, le taxi et le transfert privé de Montreal-Trudeau au centre-ville, avec durées et prix.",
+    "sections": [
+      {
+        "heading": "The 747 Express Bus",
+        "headingFr": "La navette 747",
+        "content": "The 747 runs 24/7 between YUL and downtown for $11.25, a fare that doubles as a 24-hour Zone A pass on the metro, REM, and exo. It reaches Berri-UQAM in about 45 to 60 minutes.",
+        "contentFr": "La navette 747 circule 24 h sur 24 entre YUL et le centre-ville pour 11,25 $, un tarif qui sert aussi de passe 24 heures en zone A sur le métro, le REM et exo. Elle atteint Berri-UQAM en environ 45 à 60 minutes."
+      },
+      {
+        "heading": "Taxi and Private Transfer",
+        "headingFr": "Taxi et transfert privé",
+        "content": "A taxi to downtown is a flat $49.45 (or $56.70 overnight), about 20 to 45 minutes. A pre-booked private transfer starts around $101 and meets you at arrivals.",
+        "contentFr": "Un taxi vers le centre-ville coûte un tarif fixe de 49,45 $ (ou 56,70 $ la nuit), environ 20 à 45 minutes. Un transfert privé réservé à l'avance débute autour de 101 $ et vous accueille aux arrivées."
+      },
+      {
+        "heading": "What About the REM?",
+        "headingFr": "Et le REM ?",
+        "content": "The REM does not reach the airport yet. Its station is expected around 2027, so the 747 bus is the best public-transit option from YUL for now.",
+        "contentFr": "Le REM ne dessert pas encore l'aéroport. Sa station est attendue vers 2027, donc la navette 747 demeure la meilleure option de transport en commun depuis YUL pour l'instant."
       }
     ]
   }
