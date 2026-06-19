@@ -11,9 +11,8 @@ import { generateBreadcrumbSchema } from "@/lib/seo"
 // ---------------------------------------------------------------------------
 // Kiwitaxi: ACTIVE. pap=ozhx8mipof6vz tracks on any kiwitaxi.com page.
 const KIWITAXI_LINK = "https://kiwitaxi.com/en/canada/montreal-airport-transfers?pap=ozhx8mipof6vz"
-// Airalo: affiliate application PENDING approval. Interim link is untracked
-// (no commission until the approved tracking link is pasted here).
-const AIRALO_LINK = "https://www.airalo.com/canada-esim"
+// Saily: ACTIVE (approved 2026-06-19). 15% commission, aff_id=14831.
+const AIRALO_LINK = "https://go.saily.site/aff_c?offer_id=101&aff_id=14831"
 // Stay22: ACTIVE. "Downtown Montreal hotels" map (centered on Gare Centrale,
 // AID mtlmetromap). Generated in the Stay22 Hub > Maps tool.
 const STAY22_MAP_EMBED = "https://stay22.com/embed/6a32d087aa5b4cd4a2d09ca4"
