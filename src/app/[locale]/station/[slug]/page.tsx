@@ -255,6 +255,20 @@ export default async function StationPage({ params }: StationPageProps) {
             <div className="info-card-body"><SearchBar stations={allStations} compact locale={locale as Locale} /></div>
           </div>
           <PopularRoutes stationSlug={station.slug} locale={locale as Locale} />
+          <div className="info-card">
+            <div className="info-card-header">{t.gygToursTitle}</div>
+            <div className="info-card-body space-y-3">
+              <p className="text-[13px] text-[var(--text-secondary)] leading-relaxed">{t.gygToursDesc}</p>
+              <a
+                href="https://www.getyourguide.com/montreal-l195/?partner_id=O4R8HQT&utm_medium=online_publisher"
+                rel="sponsored noopener noreferrer"
+                target="_blank"
+                className="block w-full text-center text-[13px] font-semibold px-4 py-2.5 rounded-lg bg-[#FF5533] text-white hover:opacity-90 transition-opacity"
+              >
+                {t.gygToursLink}
+              </a>
+            </div>
+          </div>
           {nearbyDestinations.length > 0 && (
             <div className="info-card">
               <div className="info-card-header">{t.nearbyDestinations}</div>
