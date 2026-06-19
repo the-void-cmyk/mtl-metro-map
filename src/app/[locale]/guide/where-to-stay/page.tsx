@@ -36,7 +36,7 @@ const COPY = {
     mapHeading: "Find hotels near the metro",
     mapBody:
       "Compare live prices across all neighbourhoods. The map is centred on the downtown core, with hotels along the Green and Orange lines.",
-    greenHeading: "Green Line: downtown, Old Montreal, and the Plateau",
+    greenHeading: "Green Line: downtown and the Plateau",
     greenAreas: [
       {
         name: "Downtown core (Peel, McGill, Place-des-Arts)",
@@ -94,7 +94,7 @@ const COPY = {
       },
       {
         q: "How early does the Montreal metro start running?",
-        a: "Trains run from approximately 5:30 AM on weekdays. On Friday and Saturday nights the metro runs until around 1:30 AM. Check the MTL Metro schedule for your specific line and station.",
+        a: "Trains run from approximately 5:30 AM to around 1:00 AM, with slightly later service on Friday and Saturday nights. Check the MTL Metro schedule for your specific line and station.",
       },
       {
         q: "Should I stay in Old Montreal or downtown?",
@@ -111,13 +111,13 @@ const COPY = {
     description:
       "Choisissez où séjourner à Montréal selon l'accès au métro. Lignes verte et orange pour le centre-ville, le Vieux-Montréal et le Plateau. Carte de prix en temps réel.",
     intro:
-      "L'endroit où vous séjournez à Montréal détermine facilement vous accédez à ce que vous êtes venu faire. Les quatre lignes du métro relient les principales zones touristiques en quelques minutes, mais le bon quartier dépend de si vous souhaitez des restaurants à portée de marche, la vue sur le fleuve ou une base résidentielle tranquille. Voici le guide par ligne.",
+      "L'endroit où vous séjournez à Montréal détermine la facilité avec laquelle vous accédez à ce que vous êtes venu faire. Les quatre lignes du métro relient les principales zones touristiques en quelques minutes, mais le bon quartier dépend de ce que vous recherchez : des restaurants à portée de marche, la vue sur le fleuve ou une base résidentielle tranquille. Voici le guide par ligne.",
     disclosure:
       "Ce guide renvoie à des partenaires de réservation dont nous pouvons toucher une commission, sans frais supplémentaires pour vous.",
     mapHeading: "Trouver des hôtels près du métro",
     mapBody:
       "Comparez les prix en temps réel dans tous les quartiers. La carte est centrée sur le coeur du centre-ville, avec les hôtels le long des lignes verte et orange.",
-    greenHeading: "Ligne verte : centre-ville, Vieux-Montréal et Plateau",
+    greenHeading: "Ligne verte : centre-ville et Plateau",
     greenAreas: [
       {
         name: "Centre-ville (stations Peel, McGill, Place-des-Arts)",
@@ -175,7 +175,7 @@ const COPY = {
       },
       {
         q: "À quelle heure le métro de Montréal commence-t-il à circuler ?",
-        a: "Les trains circulent à partir d'environ 5 h 30 en semaine. Les vendredis et samedis soirs, le métro fonctionne jusqu'à environ 1 h 30. Consultez les horaires MTL Metro pour votre ligne et station spécifiques.",
+        a: "Les trains circulent d'environ 5 h 30 à environ 1 h 00, avec un service légèrement prolongé les vendredis et samedis soirs. Consultez les horaires MTL Metro pour votre ligne et station spécifiques.",
       },
       {
         q: "Vaut-il mieux séjourner au Vieux-Montréal ou au centre-ville ?",
