@@ -245,6 +245,11 @@ const translations = {
     readMore: 'Read more',
     tableOfContents: 'In this guide',
     guidesDescription: 'Helpful guides for navigating Montreal transit.',
+
+    // GetYourGuide affiliate block
+    gygToursTitle: 'Things to Do Nearby',
+    gygToursDesc: 'Book Montreal tours and activities near this station — food walks, bike tours, guided experiences, and more.',
+    gygToursLink: 'Browse Activities on GetYourGuide',
   },
 
   fr: {
@@ -473,6 +478,11 @@ const translations = {
     readMore: 'Lire la suite',
     tableOfContents: 'Dans ce guide',
     guidesDescription: 'Guides utiles pour naviguer dans le transport de Montréal.',
+
+    // GetYourGuide affiliate block
+    gygToursTitle: 'À faire à proximité',
+    gygToursDesc: 'Réservez des visites et activités à Montréal près de cette station — balades gastronomiques, vélo, visites guidées et plus encore.',
+    gygToursLink: 'Voir les activités sur GetYourGuide',
   },
 } as const
 
