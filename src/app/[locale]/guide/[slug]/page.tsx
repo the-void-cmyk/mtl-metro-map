@@ -11,12 +11,11 @@ interface GuidePageProps {
 }
 
 export async function generateStaticParams() {
-  // "yul-airport-to-downtown" is served by its own dedicated page
-  // (src/app/[locale]/guide/yul-airport-to-downtown/page.tsx), so it is
-  // excluded here to avoid two routes resolving the same path.
+  // Slugs with dedicated static routes are excluded here to avoid collisions.
+  const dedicated = new Set(["yul-airport-to-downtown", "visitor-guide", "where-to-stay"])
   return locales.flatMap((locale) =>
     guides
-      .filter((guide) => guide.slug !== "yul-airport-to-downtown")
+      .filter((guide) => !dedicated.has(guide.slug))
       .map((guide) => ({ locale, slug: guide.slug }))
   )
 }

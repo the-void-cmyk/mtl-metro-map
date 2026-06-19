@@ -307,5 +307,21 @@
         "contentFr": "Le REM ne dessert pas encore l'aéroport. Sa station est attendue vers 2027, donc la navette 747 demeure la meilleure option de transport en commun depuis YUL pour l'instant."
       }
     ]
+  },
+  {
+    "slug": "visitor-guide",
+    "title": "Montreal Metro Guide for Visitors: Passes, Tours & Tips",
+    "titleFr": "Guide du metro de Montreal pour les visiteurs : passes, activites et conseils",
+    "excerpt": "Everything tourists need to use the Montreal metro: the right transit pass, getting from the airport, what to do, and where to stay.",
+    "excerptFr": "Tout ce que les touristes doivent savoir pour utiliser le metro de Montreal : le bon titre de transport, comment venir de l'aeroport, quoi faire et ou sejourner.",
+    "sections": []
+  },
+  {
+    "slug": "where-to-stay",
+    "title": "Where to Stay in Montreal: Best Neighbourhoods by Metro Line",
+    "titleFr": "Ou sejourner a Montreal : les meilleurs quartiers par ligne de metro",
+    "excerpt": "Choose where to stay in Montreal based on metro access. Green and Orange lines for downtown, Old Montreal, and the Plateau.",
+    "excerptFr": "Choisissez ou sejourner a Montreal selon l'acces au metro. Lignes verte et orange pour le centre-ville, le Vieux-Montreal et le Plateau.",
+    "sections": []
   }
 ]
