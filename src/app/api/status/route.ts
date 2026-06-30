@@ -98,13 +98,15 @@ async function fetchFeed(
 }
 
 function fetchSTM() {
-  const apiKey = process.env.STM_API_KEY
+  // Trim to guard against a stray trailing newline/space in the env var,
+  // which STM rejects with a 400 (the same guard db.ts uses for Turso).
+  const apiKey = process.env.STM_API_KEY?.trim()
   if (!apiKey) return Promise.resolve({ alerts: [] as AlertEntry[], ok: false })
   return fetchFeed("https://api.stm.info/pub/od/gtfs-rt/ic/v2/serviceAlerts", { apiKey }, STM_ROUTE_TO_LINE)
 }
 
 function fetchExo() {
-  const apiKey = process.env.EXO_API_KEY
+  const apiKey = process.env.EXO_API_KEY?.trim()
   if (!apiKey) return Promise.resolve({ alerts: [] as AlertEntry[], ok: false })
   return fetchFeed(
     "https://exo.chrono-saeiv.com/api/opendata/v1/TRAINS/alert",
