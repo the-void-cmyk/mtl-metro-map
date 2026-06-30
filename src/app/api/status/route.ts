@@ -98,8 +98,10 @@ async function fetchFeed(
 }
 
 function fetchSTM() {
-  // Trim to guard against a stray trailing newline/space in the env var,
-  // which STM rejects with a 400 (the same guard db.ts uses for Turso).
+  // Trim stray whitespace/newline from the key (defensive hygiene; the same
+  // guard db.ts applies to the Turso env vars). Note: a valid key is still
+  // required. An invalid/expired STM_API_KEY returns 400 "Invalid API Key"
+  // and metro lines fall back to "normal" with no live confirmation.
   const apiKey = process.env.STM_API_KEY?.trim()
   if (!apiKey) return Promise.resolve({ alerts: [] as AlertEntry[], ok: false })
   return fetchFeed("https://api.stm.info/pub/od/gtfs-rt/ic/v2/serviceAlerts", { apiKey }, STM_ROUTE_TO_LINE)
