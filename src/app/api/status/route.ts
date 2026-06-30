@@ -24,14 +24,18 @@ interface AlertEntry {
   messageFr: string | null
 }
 
-// Map GTFS route IDs to our line IDs
-const ROUTE_TO_LINE: Record<string, string> = {
-  // STM Metro
+// Map GTFS route IDs to our line IDs. STM and Exo are kept SEPARATE: both
+// agencies number routes in overlapping ranges, so a single shared map lets an
+// Exo alert (e.g. route "4") get mislabeled onto a metro line (yellow). Each
+// feed is parsed only against its own map, so a feed can never write to a line
+// it does not own.
+const STM_ROUTE_TO_LINE: Record<string, string> = {
   "1": "green",
   "2": "orange",
   "4": "yellow",
   "5": "blue",
-  // Exo commuter trains
+}
+const EXO_ROUTE_TO_LINE: Record<string, string> = {
   "11": "exo1",
   "12": "exo2",
   "13": "exo3",
@@ -46,7 +50,7 @@ const SEVERITY: Record<LineStatus, number> = {
   interrupted: 3,
 }
 
-function parseProtobufFeed(buffer: ArrayBuffer): AlertEntry[] {
+function parseProtobufFeed(buffer: ArrayBuffer, routeMap: Record<string, string>): AlertEntry[] {
   const feed = FeedMessage.decode(new Uint8Array(buffer))
   const alerts: AlertEntry[] = []
 
@@ -68,7 +72,7 @@ function parseProtobufFeed(buffer: ArrayBuffer): AlertEntry[] {
     else if (effect === 2 || effect === 6) status = "delayed"
 
     for (const routeId of routeIds) {
-      const lineId = ROUTE_TO_LINE[routeId]
+      const lineId = routeMap[routeId]
       if (lineId) {
         alerts.push({ lineId, status, message: enText, messageFr: frText })
       }
@@ -80,13 +84,14 @@ function parseProtobufFeed(buffer: ArrayBuffer): AlertEntry[] {
 
 async function fetchFeed(
   url: string,
-  headers: Record<string, string>
+  headers: Record<string, string>,
+  routeMap: Record<string, string>
 ): Promise<{ alerts: AlertEntry[]; ok: boolean }> {
   try {
     const res = await fetch(url, { headers, signal: AbortSignal.timeout(8000) })
     if (!res.ok) return { alerts: [], ok: false }
     const buffer = await res.arrayBuffer()
-    return { alerts: parseProtobufFeed(buffer), ok: true }
+    return { alerts: parseProtobufFeed(buffer, routeMap), ok: true }
   } catch {
     return { alerts: [], ok: false }
   }
@@ -95,15 +100,17 @@ async function fetchFeed(
 function fetchSTM() {
   const apiKey = process.env.STM_API_KEY
   if (!apiKey) return Promise.resolve({ alerts: [] as AlertEntry[], ok: false })
-  return fetchFeed("https://api.stm.info/pub/od/gtfs-rt/ic/v2/serviceAlerts", { apiKey })
+  return fetchFeed("https://api.stm.info/pub/od/gtfs-rt/ic/v2/serviceAlerts", { apiKey }, STM_ROUTE_TO_LINE)
 }
 
 function fetchExo() {
   const apiKey = process.env.EXO_API_KEY
   if (!apiKey) return Promise.resolve({ alerts: [] as AlertEntry[], ok: false })
-  return fetchFeed("https://exo.chrono-saeiv.com/api/opendata/v1/TRAINS/alert", {
-    "Ocp-Apim-Subscription-Key": apiKey,
-  })
+  return fetchFeed(
+    "https://exo.chrono-saeiv.com/api/opendata/v1/TRAINS/alert",
+    { "Ocp-Apim-Subscription-Key": apiKey },
+    EXO_ROUTE_TO_LINE
+  )
 }
 
 export async function GET() {
