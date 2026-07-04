@@ -4,15 +4,21 @@ import lines from "../../../../data/lines.json"
 
 const { FeedMessage } = GtfsRealtimeBindings.transit_realtime
 
-// Live service status: fetch the STM/Exo GTFS-realtime alert feeds on demand and
-// cache the result for 60s at the CDN. The page reflects real disruptions within
-// about a minute, with no background cron and no database writes. The function
-// only runs on a cache miss (i.e. when someone is actually viewing the page).
+// Live service status, fetched on demand and cached 60s at the CDN. The function
+// only runs on a cache miss (i.e. when someone is viewing the page).
+//
+//  - STM metro: the i3 "etat du service" JSON API. It returns one line-level
+//    alert per metro line ("Your line" / "Votre ligne") whose description is the
+//    current status ("Normal metro service" when fine, a message when not).
+//  - Exo trains: GTFS-realtime protobuf service-alerts feed.
 //
 // Requires env vars (set in Vercel):
-//   STM_API_KEY - from stm.info/en/about/developers
+//   STM_API_KEY - from the STM API Hub (portail.developpeurs.stm.info). The
+//                 application there must be PUBLISHED or STM returns 400
+//                 "Invalid API Key".
 //   EXO_API_KEY - from exo.quebec/en/about/open-data
-// Without a key the relevant feed degrades to "normal" with no freshness stamp.
+// Without a valid key the relevant feed degrades to "normal" with no freshness
+// stamp; it never invents an alert.
 export const revalidate = 60
 
 type LineStatus = "normal" | "delayed" | "interrupted" | "planned"
@@ -24,17 +30,14 @@ interface AlertEntry {
   messageFr: string | null
 }
 
-// Map GTFS route IDs to our line IDs. STM and Exo are kept SEPARATE: both
-// agencies number routes in overlapping ranges, so a single shared map lets an
-// Exo alert (e.g. route "4") get mislabeled onto a metro line (yellow). Each
-// feed is parsed only against its own map, so a feed can never write to a line
-// it does not own.
-const STM_ROUTE_TO_LINE: Record<string, string> = {
-  "1": "green",
-  "2": "orange",
-  "4": "yellow",
-  "5": "blue",
-}
+const SEVERITY: Record<LineStatus, number> = { normal: 0, planned: 1, delayed: 2, interrupted: 3 }
+
+// STM metro route_short_name -> our line id. green=1, orange=2, yellow=4,
+// blue=5 (there is no line 3). Bus routes use higher numbers and are ignored.
+const STM_RSN_TO_LINE: Record<string, string> = { "1": "green", "2": "orange", "4": "yellow", "5": "blue" }
+
+// Exo trains, keyed by GTFS-realtime route id (kept separate from STM so the
+// two agencies' overlapping route numbers can never cross-contaminate).
 const EXO_ROUTE_TO_LINE: Record<string, string> = {
   "11": "exo1",
   "12": "exo2",
@@ -43,14 +46,79 @@ const EXO_ROUTE_TO_LINE: Record<string, string> = {
   "15": "exo5",
 }
 
-const SEVERITY: Record<LineStatus, number> = {
-  normal: 0,
-  planned: 1,
-  delayed: 2,
-  interrupted: 3,
+// --- STM: i3 "etat du service" JSON ----------------------------------------
+interface StmText {
+  language?: string
+  text?: string | null
+}
+interface StmEntity {
+  route_short_name?: string
+  direction_id?: string
+  stop_code?: string
+}
+interface StmAlert {
+  informed_entities?: StmEntity[]
+  description_texts?: StmText[]
+  header_texts?: StmText[]
+}
+interface StmFeed {
+  alerts?: StmAlert[]
 }
 
-function parseProtobufFeed(buffer: ArrayBuffer, routeMap: Record<string, string>): AlertEntry[] {
+function pickText(arr: StmText[] | undefined, lang: string): string | null {
+  return arr?.find((t) => t.language === lang)?.text ?? null
+}
+
+function parseStmEtatService(data: StmFeed): AlertEntry[] {
+  const out: AlertEntry[] = []
+  for (const a of data.alerts ?? []) {
+    const ents = a.informed_entities ?? []
+    // Line-level status only. Entries carrying a stop_code are station-entrance
+    // notices (e.g. "Entrance B closed"), not line disruptions, so skip them.
+    if (ents.some((e) => e.stop_code != null)) continue
+    const rsn = ents
+      .map((e) => e.route_short_name)
+      .find((r): r is string => typeof r === "string" && r in STM_RSN_TO_LINE)
+    if (!rsn) continue
+
+    const en = pickText(a.description_texts, "en")
+    const fr = pickText(a.description_texts, "fr")
+    const combined = `${en ?? ""} ${fr ?? ""}`.trim().toLowerCase()
+
+    // No description -> do not fabricate an alert.
+    if (!combined) continue
+    // Normal service produces no alert entry.
+    // ("Normal metro service" / "Service normal du metro")
+    if (/service normal|normal m[eé]tro service/.test(combined)) continue
+
+    // effect/cause are not populated in this feed, so classify from the text.
+    let status: LineStatus = "delayed"
+    if (/interrom|interrup|no service|aucun service|suspend|ferm[eé]|closed|arr[eê]t complet/.test(combined)) {
+      status = "interrupted"
+    }
+    out.push({ lineId: STM_RSN_TO_LINE[rsn], status, message: en, messageFr: fr })
+  }
+  return out
+}
+
+async function fetchSTM(): Promise<{ alerts: AlertEntry[]; ok: boolean }> {
+  const apiKey = process.env.STM_API_KEY?.trim()
+  if (!apiKey) return { alerts: [], ok: false }
+  try {
+    const res = await fetch("https://api.stm.info/pub/od/i3/v2/messages/etatservice", {
+      headers: { apiKey, accept: "application/json" },
+      signal: AbortSignal.timeout(8000),
+    })
+    if (!res.ok) return { alerts: [], ok: false }
+    const data = (await res.json()) as StmFeed
+    return { alerts: parseStmEtatService(data), ok: true }
+  } catch {
+    return { alerts: [], ok: false }
+  }
+}
+
+// --- Exo: GTFS-realtime protobuf -------------------------------------------
+function parseExoFeed(buffer: ArrayBuffer): AlertEntry[] {
   const feed = FeedMessage.decode(new Uint8Array(buffer))
   const alerts: AlertEntry[] = []
 
@@ -72,7 +140,7 @@ function parseProtobufFeed(buffer: ArrayBuffer, routeMap: Record<string, string>
     else if (effect === 2 || effect === 6) status = "delayed"
 
     for (const routeId of routeIds) {
-      const lineId = routeMap[routeId]
+      const lineId = EXO_ROUTE_TO_LINE[routeId]
       if (lineId) {
         alerts.push({ lineId, status, message: enText, messageFr: frText })
       }
@@ -82,45 +150,26 @@ function parseProtobufFeed(buffer: ArrayBuffer, routeMap: Record<string, string>
   return alerts
 }
 
-async function fetchFeed(
-  url: string,
-  headers: Record<string, string>,
-  routeMap: Record<string, string>
-): Promise<{ alerts: AlertEntry[]; ok: boolean }> {
+async function fetchExo(): Promise<{ alerts: AlertEntry[]; ok: boolean }> {
+  const apiKey = process.env.EXO_API_KEY?.trim()
+  if (!apiKey) return { alerts: [], ok: false }
   try {
-    const res = await fetch(url, { headers, signal: AbortSignal.timeout(8000) })
+    const res = await fetch("https://exo.chrono-saeiv.com/api/opendata/v1/TRAINS/alert", {
+      headers: { "Ocp-Apim-Subscription-Key": apiKey },
+      signal: AbortSignal.timeout(8000),
+    })
     if (!res.ok) return { alerts: [], ok: false }
     const buffer = await res.arrayBuffer()
-    return { alerts: parseProtobufFeed(buffer, routeMap), ok: true }
+    return { alerts: parseExoFeed(buffer), ok: true }
   } catch {
     return { alerts: [], ok: false }
   }
 }
 
-function fetchSTM() {
-  // Trim stray whitespace/newline from the key (defensive hygiene; the same
-  // guard db.ts applies to the Turso env vars). Note: a valid key is still
-  // required. An invalid/expired STM_API_KEY returns 400 "Invalid API Key"
-  // and metro lines fall back to "normal" with no live confirmation.
-  const apiKey = process.env.STM_API_KEY?.trim()
-  if (!apiKey) return Promise.resolve({ alerts: [] as AlertEntry[], ok: false })
-  return fetchFeed("https://api.stm.info/pub/od/gtfs-rt/ic/v2/serviceAlerts", { apiKey }, STM_ROUTE_TO_LINE)
-}
-
-function fetchExo() {
-  const apiKey = process.env.EXO_API_KEY?.trim()
-  if (!apiKey) return Promise.resolve({ alerts: [] as AlertEntry[], ok: false })
-  return fetchFeed(
-    "https://exo.chrono-saeiv.com/api/opendata/v1/TRAINS/alert",
-    { "Ocp-Apim-Subscription-Key": apiKey },
-    EXO_ROUTE_TO_LINE
-  )
-}
-
 export async function GET() {
   const [stm, exo] = await Promise.all([fetchSTM(), fetchExo()])
 
-  // Worst alert wins if a line is referenced by more than one alert.
+  // Worst alert wins if a line is referenced more than once.
   const alertMap = new Map<string, AlertEntry>()
   for (const a of [...stm.alerts, ...exo.alerts]) {
     const existing = alertMap.get(a.lineId)
