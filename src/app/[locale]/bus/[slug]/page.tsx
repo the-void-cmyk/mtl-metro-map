@@ -8,6 +8,7 @@ import { locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import SchemaMarkup from "@/components/SchemaMarkup"
+import BusStatus from "@/components/BusStatus"
 
 const BASE = "https://mtlmetromap.com"
 
@@ -136,6 +137,7 @@ export default async function BusPage({ params }: BusPageProps) {
         </div>
 
         <div className="space-y-5">
+          <BusStatus route={bus.route} locale={locale as Locale} />
           <div className="info-card">
             <div className="info-card-header">{L.details}</div>
             <div className="info-card-body">
