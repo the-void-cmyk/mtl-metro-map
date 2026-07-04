@@ -1,0 +1,6247 @@
+[
+ {
+  "route": "747",
+  "name": "YUL Aéroport  / Centre-Ville",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est - Vers le centre-ville de Montréal",
+   "Ouest - Vers YUL aéroport Montréal-Trudeau"
+  ],
+  "headsigns": [
+   "Est - Vers le centre-ville de Montréal trajet 1 gare d’autocars de Montréal",
+   "Ouest - Vers YUL aéroport Montréal-Trudeau"
+  ],
+  "stopCount": 12,
+  "stops": [
+   "YUL Aéroport Montréal-Trudeau",
+   "Station Lionel-Groulx",
+   "Guy / René-Lévesque",
+   "René-Lévesque / Bishop",
+   "René-Lévesque / Drummond",
+   "René-Lévesque / Stanley",
+   "René-Lévesque / Mansfield",
+   "René-Lévesque / Union",
+   "René-Lévesque / Jeanne-Mance",
+   "René-Lévesque / Saint-Laurent",
+   "René-Lévesque / de l'Hôtel-de-Ville",
+   "Saint-Hubert / De La Gauchetière"
+  ],
+  "metroConnections": [
+   {
+    "slug": "yul-aeroport-de-montreal",
+    "name": "YUL Aeroport de Montreal",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "lucien-l-allier",
+    "name": "Lucien-L'Allier",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "lucien-l-allier-exo",
+    "name": "Lucien-L'Allier (Exo)",
+    "lineIds": [
+     "exo1",
+     "exo2",
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "bonaventure",
+    "name": "Bonaventure",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "gare-centrale-rem",
+    "name": "Gare Centrale (REM)",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "square-victoria-oaci",
+    "name": "Square-Victoria-OACI",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-d-armes",
+    "name": "Place-d'Armes",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "champ-de-mars",
+    "name": "Champ-de-Mars",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "berri-uqam",
+    "name": "Berri-UQAM",
+    "lineIds": [
+     "green",
+     "orange",
+     "yellow"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 4067
+ },
+ {
+  "route": "439",
+  "name": "Express Pie-IX",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud destination Pie-IX / Notre-Dame",
+   "Nord destination Cégep Marie-Victorin"
+  ],
+  "stopCount": 37,
+  "stops": [
+   "Marie-Victorin / No 7000",
+   "Marie-Victorin / Albert-Hudon",
+   "Albert-Hudon / Maurice-Duplessis",
+   "Maurice-Duplessis / Langelier",
+   "Maurice-Duplessis / Monty",
+   "Maurice-Duplessis / Lapierre",
+   "Maurice-Duplessis / Rolland",
+   "Maurice-Duplessis / Laurier",
+   "Lacordaire / des Tulipes",
+   "Lacordaire / des Iris",
+   "Lacordaire / des Narcisses",
+   "Henri-Bourassa / Jean-Meunier",
+   "Henri-Bourassa / Salk",
+   "Henri-Bourassa / Sainte-Gertrude",
+   "Henri-Bourassa / Léger",
+   "SRB Pie-IX / d'Amos",
+   "SRB Pie-IX / de Castille",
+   "SRB Pie-IX / Fleury",
+   "SRB Pie-IX / 56e rue",
+   "SRB Pie-IX / 47e rue",
+   "SRB Pie-IX / 39e rue",
+   "SRB Pie-IX / Robert",
+   "SRB Pie-IX / Jarry",
+   "SRB Pie-IX / Jean-Talon",
+   "SRB Pie-IX / Bélanger",
+   "SRB Pie-IX / Beaubien",
+   "SRB Pie-IX / Rosemont",
+   "SRB Pie-IX / Laurier",
+   "SRB Pie-IX / du Mont-Royal",
+   "Station Pie-IX (Pie-IX / Pierre-De Coubertin)",
+   "Pie-IX / Hochelaga",
+   "Pie-IX / de Rouen",
+   "Pie-IX / No 2050",
+   "Pie-IX / Ontario",
+   "Pie-IX / La Fontaine",
+   "Pie-IX / Adam",
+   "Pie-IX / Sainte-Catherine"
+  ],
+  "metroConnections": [
+   {
+    "slug": "pie-ix",
+    "name": "Pie-IX",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2912
+ },
+ {
+  "route": "165",
+  "name": "Côte-des-Neiges",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 35,
+  "stops": [
+   "Graham / Dunkirk",
+   "Lombard / Graham",
+   "Laird / Chester",
+   "Laird / Stanstead",
+   "Laird / Caledonia",
+   "Laird / Kenilworth",
+   "Laird / Saint-Clare",
+   "de la Côte-des-Neiges / de Bedford",
+   "de la Côte-des-Neiges / Barclay",
+   "de la Côte-des-Neiges / Carlton",
+   "de la Côte-des-Neiges / Van Horne",
+   "de la Côte-des-Neiges / De La Peltrie",
+   "de la Côte-des-Neiges / Côte-Sainte-Catherine",
+   "de la Côte-des-Neiges / Saint-Kevin",
+   "de la Côte-des-Neiges / Lacombe",
+   "Station Côte-des-Neiges",
+   "de la Côte-des-Neiges / Queen-Mary",
+   "de la Côte-des-Neiges / No 4858",
+   "de la Côte-des-Neiges / Ridgewood",
+   "de la Côte-des-Neiges / Forest Hill",
+   "de la Côte-des-Neiges / Remembrance",
+   "de la Côte-des-Neiges / Belvédère",
+   "de la Côte-des-Neiges / Blueridge",
+   "de la Côte-des-Neiges / Gage",
+   "McDougall / The Boulevard",
+   "de la Côte-des-Neiges / Cedar",
+   "du Docteur-Penfield / Atwater",
+   "du Docteur-Penfield / de la Côte-des-Neiges",
+   "de la Côte-des-Neiges / Summerhill",
+   "Saint-Mathieu / Sherbrooke",
+   "Station Guy-Concordia (St-Mathieu/De Maisonneuve)",
+   "Saint-Mathieu / Sainte-Catherine",
+   "Saint-Mathieu / René-Lévesque",
+   "Guy / René-Lévesque",
+   "Station Guy-Concordia (Guy / De Maisonneuve)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "cote-des-neiges",
+    "name": "Cote-des-Neiges",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "guy-concordia",
+    "name": "Guy-Concordia",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2871
+ },
+ {
+  "route": "141",
+  "name": "Jean-Talon Est",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 51,
+  "stops": [
+   "Station Saint-Michel (Édicule Est)",
+   "Jean-Talon / 13e Avenue",
+   "Jean-Talon / 15e Avenue",
+   "Jean-Talon / 17e Avenue",
+   "Jean-Talon / 18e Avenue",
+   "Bélanger / Pie-IX",
+   "Bélanger / 24e Avenue",
+   "Bélanger / 26e Avenue",
+   "Bélanger / 28e Avenue",
+   "Bélanger / 30e Avenue",
+   "Bélanger / 33e Avenue",
+   "Bélanger / 35e Avenue",
+   "Bélanger / Viau (Institut de cardiologie)",
+   "Bélanger / 40e Avenue",
+   "Bélanger / 43e Avenue",
+   "Bélanger / de l'Assomption",
+   "Bélanger / Châtelain",
+   "Bélanger / de Pontoise",
+   "Bélanger / Lacordaire",
+   "Bélanger / Valdombre",
+   "Bélanger / d'Avila",
+   "Bélanger / Dumesnil",
+   "Bélanger / Daveluy",
+   "Bélanger / Langelier",
+   "Bélanger / Jean-Milot",
+   "Bélanger / Étienne-Bouchard",
+   "des Halles / Bélanger",
+   "des Halles / Jean-Talon",
+   "Jean-Talon / des Galeries-d'Anjou",
+   "Métropolitain / des Galeries d'Anjou",
+   "Bourgneuf / Bertin",
+   "Bourgneuf / Bodinier",
+   "de Châteauneuf / Goncourt",
+   "de Châteauneuf / Joseph-Renaud",
+   "de Châteauneuf / Talcy",
+   "de Châteauneuf / Rabelais",
+   "de Châteauneuf / de la Loire",
+   "de Châteauneuf / de Fougeray",
+   "de Châteauneuf / Des Ormeaux",
+   "Des Ormeaux / Georges",
+   "Des Ormeaux / Chaumont",
+   "Des Ormeaux / Yves-Prévost",
+   "Des Ormeaux / Éric",
+   "Des Ormeaux / Sentennes",
+   "Des Ormeaux / Tiffin",
+   "Des Ormeaux / De Grosbois",
+   "Des Ormeaux / De Forbin-Janson",
+   "Des Ormeaux / Sherbrooke",
+   "Sherbrooke / Baldwin",
+   "Sherbrooke / Saint-Donat",
+   "Station Honoré-Beaugrand / Terminus Sud"
+  ],
+  "metroConnections": [
+   {
+    "slug": "saint-michel",
+    "name": "Saint-Michel",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "anjou",
+    "name": "Anjou",
+    "lineIds": [
+     "exo5"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 2750
+ },
+ {
+  "route": "51",
+  "name": "Édouard-Montpetit",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 51,
+  "stops": [
+   "Gare Montréal-Ouest (Elmhurst / Sherbrooke)",
+   "Sherbrooke / Westmore",
+   "West Broadway / Sherbrooke",
+   "West Broadway / de Terrebonne",
+   "West Broadway / Somerled",
+   "West Broadway / Fielding",
+   "Fielding / Doherty",
+   "Fielding / Saint-Ignatius",
+   "Fielding / Coronation",
+   "Fielding / Rosedale",
+   "Fielding / Walkley",
+   "Fielding / Cavendish",
+   "Fielding / West Hill",
+   "Fielding / Grand Boulevard",
+   "Fielding / Hingston",
+   "Fielding / Côte-Saint-Luc",
+   "Ellerdale / Queen-Mary",
+   "Queen-Mary / Stratford",
+   "Queen-Mary / Macdonald",
+   "Queen-Mary / Earnscliffe",
+   "Queen-Mary / Décarie",
+   "Queen-Mary / Trans Island",
+   "Station Snowdon (Queen-Mary / Circle)",
+   "Queen-Mary / Lemieux",
+   "Queen-Mary / Victoria",
+   "Queen-Mary / Roslyn",
+   "Queen-Mary / Cedar Crescent",
+   "Queen-Mary / du Frère-André (Oratoire St-Joseph)",
+   "Queen-Mary / Gatineau",
+   "Decelles / Jean-Brillant",
+   "Decelles / Édouard-Montpetit",
+   "Édouard-Montpetit / McKenna",
+   "Édouard-Montpetit / Louis-Colin",
+   "Station Université-de-Montréal",
+   "Édouard-Montpetit / Woodbury",
+   "Édouard-Montpetit / de Stirling",
+   "Station Édouard-Montpetit",
+   "Vincent-d'Indy / Willowdale",
+   "Vincent-D'Indy / Côte-Sainte-Catherine",
+   "Côte-Sainte-Catherine / Dunlop",
+   "de la Côte-Sainte-Catherine / Courcelette",
+   "Côte-Sainte-Catherine / Pagnuelo",
+   "Côte-Sainte-Catherine / Stuart",
+   "Côte-Sainte-Catherine / Outremont",
+   "Laurier / Querbes",
+   "Laurier / du Parc",
+   "Laurier / Saint-Urbain",
+   "Saint-Joseph / Saint-Laurent",
+   "Saint-Joseph / De Bullion",
+   "Saint-Joseph / Saint-Denis",
+   "Station Laurier (Saint-Joseph / Berri)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "snowdon",
+    "name": "Snowdon",
+    "lineIds": [
+     "orange",
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "universite-de-montreal",
+    "name": "Universite-de-Montreal",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "edouard-montpetit",
+    "name": "Edouard-Montpetit",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "laurier",
+    "name": "Laurier",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2712
+ },
+ {
+  "route": "67",
+  "name": "Saint-Michel",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Nord",
+   "Sud"
+  ],
+  "headsigns": [
+   "Nord",
+   "Sud"
+  ],
+  "stopCount": 38,
+  "stops": [
+   "Station Joliette (Hochelaga / Joliette)",
+   "Hochelaga / Davidson",
+   "Davidson / Sherbrooke",
+   "Davidson / Rachel",
+   "Saint-Michel / William-Tremblay",
+   "Saint-Michel / du Mont-Royal",
+   "Saint-Michel / Saint-Joseph",
+   "Saint-Michel / Laurier",
+   "Saint-Michel / Masson",
+   "Saint-Michel / Dandurand",
+   "Saint-Michel / Holt",
+   "Saint-Michel / Rosemont",
+   "Saint-Michel / de Bellechasse",
+   "Saint-Michel / Beaubien",
+   "Saint-Michel / Saint-Zotique",
+   "Saint-Michel / Bélanger",
+   "Saint-Michel / Bélair",
+   "Saint-Michel / Jean-Talon",
+   "Station Saint-Michel (Saint-Michel / Everett)",
+   "Saint-Michel / Villeray",
+   "Saint-Michel / Crémazie",
+   "Saint-Michel / Jarry",
+   "Saint-Michel / D'Hérelle est",
+   "Saint-Michel / D'Hérelle ouest",
+   "Saint-Michel / Deville",
+   "Saint-Michel / Robert",
+   "Saint-Michel / Denis-Papin",
+   "Saint-Michel / Émile-Journault",
+   "Saint-Michel / Legendre",
+   "Saint-Michel / de Louvain",
+   "Saint-Michel / Champdoré",
+   "Saint-Michel / Charland",
+   "Saint-Michel / Sauvé",
+   "Saint-Michel / Mont-Joli",
+   "Saint-Michel / Fleury",
+   "Saint-Michel / Prieur",
+   "Saint-Michel / Henri-Bourassa",
+   "Saint-Michel / Henri-Bourassa"
+  ],
+  "metroConnections": [
+   {
+    "slug": "joliette",
+    "name": "Joliette",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "saint-michel",
+    "name": "Saint-Michel",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "saint-michel-mtl-nord",
+    "name": "Saint-Michel-Montreal-Nord",
+    "lineIds": [
+     "exo5"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 2386
+ },
+ {
+  "route": "105",
+  "name": "Sherbrooke",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 19,
+  "stops": [
+   "Gare Montréal-Ouest (Elmhurst / Sherbrooke)",
+   "Sherbrooke / Westmore",
+   "Sherbrooke / West Broadway",
+   "Université Concordia / Campus Loyola",
+   "Sherbrooke / Coronation",
+   "Sherbrooke / Mariette",
+   "Sherbrooke / King-Edward",
+   "Sherbrooke / Walkley",
+   "Sherbrooke / Cavendish",
+   "Sherbrooke / Benny",
+   "Sherbrooke / Madison",
+   "Sherbrooke / Grand Boulevard",
+   "Sherbrooke / Hingston",
+   "Sherbrooke / de Clifton",
+   "Sherbrooke / Wilson",
+   "Sherbrooke / Oxford",
+   "Sherbrooke / Girouard",
+   "Sherbrooke / Décarie",
+   "Station Vendôme"
+  ],
+  "metroConnections": [
+   {
+    "slug": "vendome",
+    "name": "Vendome",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2328
+ },
+ {
+  "route": "18",
+  "name": "Beaubien",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 46,
+  "stops": [
+   "Saint-Laurent / Saint-Zotique",
+   "Saint-Dominique / Beaubien",
+   "Beaubien / Alma",
+   "Beaubien / Saint-Denis",
+   "Station Beaubien",
+   "Beaubien / Saint-Hubert",
+   "Beaubien / Christophe-Colomb",
+   "Beaubien / De Lanaudière",
+   "Beaubien / Papineau",
+   "Beaubien / De Lorimier",
+   "Beaubien / des Écores",
+   "Beaubien / D'Iberville",
+   "Beaubien / 1re Avenue",
+   "Beaubien / 6e Avenue",
+   "Beaubien / 9e Avenue",
+   "Beaubien / Saint-Michel",
+   "Beaubien / 13e Avenue",
+   "Beaubien / 16e Avenue",
+   "Beaubien / 20e Avenue",
+   "Beaubien / Pie-IX",
+   "Beaubien / 26e Avenue",
+   "Beaubien / 29e Avenue",
+   "Beaubien / 33e Avenue",
+   "Beaubien / 35e Avenue",
+   "Beaubien / Viau",
+   "Beaubien / 40e Avenue",
+   "Beaubien / 42e Avenue",
+   "Beaubien / de l'Assomption",
+   "Beaubien / de Pontoise",
+   "Beaubien / Lacordaire",
+   "Beaubien / Place Beaubien",
+   "Beaubien / Albani",
+   "Beaubien / de Carignan",
+   "Beaubien / Langelier",
+   "Beaubien / François-Boivin",
+   "Beaubien / Pierre-Gadois",
+   "Beaubien / des Galeries-d'Anjou",
+   "Beaubien / des Roseraies",
+   "du Val d'Anjou / de la Nantaise",
+   "Val d'Anjou / Place Val d'Anjou",
+   "des Roseraies / Louis-H.-La Fontaine",
+   "Louis-Hippolyte-La Fontaine / de la Malicorne",
+   "Louis-Hippolyte-La Fontaine / Pierre-Corneille",
+   "Louis-Hippolyte-La Fontaine / Curatteau",
+   "Sherbrooke / Lepailleur",
+   "Station Honoré-Beaugrand"
+  ],
+  "metroConnections": [
+   {
+    "slug": "beaubien",
+    "name": "Beaubien",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2195
+ },
+ {
+  "route": "106",
+  "name": "Newman",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 28,
+  "stops": [
+   "Terminus Lafleur / Newman",
+   "Lafleur / Airlie",
+   "Lafleur / Centrale",
+   "Lafleur / Monette",
+   "LaSalle / Lafleur",
+   "LaSalle / Orchard",
+   "90e Avenue / Centrale",
+   "90e Avenue / Red Cross",
+   "90e Avenue / Airlie",
+   "90e Avenue / Airlie",
+   "90e Avenue / No 999",
+   "90e Avenue / Newman",
+   "Newman / Dollard",
+   "Newman / Dollard",
+   "Newman / No 8600",
+   "Newman / Shevchenko",
+   "Newman / Lise",
+   "Newman / Thierry",
+   "Newman / No 7700",
+   "Newman / Lapierre",
+   "Newman / No 7475",
+   "Newman / Léger",
+   "Newman / No 7214",
+   "Newman / Senkus",
+   "Newman / Guy-Bouchard",
+   "Newman / Angrignon",
+   "Angrignon / Tours Angrignon",
+   "Station Angrignon"
+  ],
+  "metroConnections": [
+   {
+    "slug": "angrignon",
+    "name": "Angrignon",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2192
+ },
+ {
+  "route": "161",
+  "name": "Van Horne",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 44,
+  "stops": [
+   "Kildare / Westminster",
+   "Kildare / McMurray",
+   "Kildare / Melling",
+   "Kildare / Trinity",
+   "Kildare / Parkhaven",
+   "Kildare / Wildwood",
+   "Kildare / Einstein",
+   "Kildare / Kellert",
+   "Kildare / Cavendish",
+   "Cavendish / Heywood",
+   "Fleet / Randall",
+   "Fleet / Pinedale",
+   "Fleet / Minden",
+   "Fleet / Queen-Mary",
+   "Fleet / Netherwood",
+   "Fleet / Finchley",
+   "Fleet / Macdonald",
+   "Van Horne / Clanranald",
+   "Van Horne / Décarie",
+   "Van Horne / Décarie",
+   "Van Horne / de Westbury",
+   "Van Horne / Lemieux",
+   "Station Plamondon (Van Horne / Victoria)",
+   "Van Horne / Lavoie",
+   "Van Horne / Légaré",
+   "Van Horne / de la Côte-des-Neiges",
+   "Van Horne / Decelles",
+   "Van Horne / Hudson",
+   "Van Horne / Linton",
+   "Van Horne / de Darlington",
+   "Van Horne / Wilderton",
+   "Van Horne / du Boisé",
+   "Van Horne / de Vimy",
+   "Van Horne / Pratt",
+   "Van Horne / Hartland",
+   "Van Horne / Rockland",
+   "Van Horne / Dollard",
+   "Station Outremont (Van Horne / Wiseman)",
+   "Van Horne / Bloomfield",
+   "Van Horne / Querbes",
+   "Van Horne / Hutchison",
+   "Van Horne / Jeanne-Mance",
+   "Van Horne / Waverly",
+   "Station Rosemont (Rosemont / De Saint-Vallier)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "plamondon",
+    "name": "Plamondon",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "cote-des-neiges",
+    "name": "Cote-des-Neiges",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "universite-de-montreal",
+    "name": "Universite-de-Montreal",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "outremont",
+    "name": "Outremont",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "rosemont",
+    "name": "Rosemont",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2071
+ },
+ {
+  "route": "48",
+  "name": "Perras",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 45,
+  "stops": [
+   "Station Henri-Bourassa",
+   "Henri-Bourassa / Christophe-Colomb",
+   "Henri-Bourassa / Séguin",
+   "Henri-Bourassa / Saint-Michel",
+   "Henri-Bourassa / de Bruxelles",
+   "Henri-Bourassa / Pie-IX",
+   "Henri-Bourassa / Pelletier",
+   "Léger / L'Archevêque",
+   "Léger / Sainte-Gertrude",
+   "Léger / Brunet",
+   "Léger / Salk",
+   "Léger / Sainte-Colette",
+   "Léger / Lanthier",
+   "Léger / Lacordaire",
+   "Léger / Désy",
+   "Léger / Fortin",
+   "Léger / Rolland",
+   "Léger / Chartrand",
+   "Léger / Allard",
+   "Léger / Albert-Hudon",
+   "Perras / Ozias-Leduc (Hôpital Rivière-des-Prairies",
+   "Perras / 6e Avenue",
+   "Perras / Gilbert-Barbier",
+   "Perras / Marc-Aurèle-Fortin",
+   "Perras / Fernand-Gauthier",
+   "Perras / Élie-Beauregard",
+   "Perras / Salomon-Marion",
+   "Perras / Armand-Bombardier",
+   "Perras / 25e Avenue",
+   "Perras / 27e Avenue",
+   "Perras / Alfred-Nobel",
+   "Perras / Rita-Levi-Montalcini",
+   "Perras / Pierre-Baillargeon",
+   "Perras / Rodolphe-Forget",
+   "Rodolphe-Forget / Louis-Dessaulles",
+   "Rodolphe-Forget / Maurice-Duplessis",
+   "Maurice-Duplessis / J.-J.-Joubert",
+   "Maurice-Duplessis / Jean-Yves-Bigras",
+   "Maurice-Duplessis / 54e Avenue",
+   "Maurice-Duplessis / Rivière-des-Prairies",
+   "Maurice-Duplessis / 63e Avenue",
+   "Maurice-Duplessis / No 10000",
+   "Maurice-Duplessis / Olivier-Lejeune",
+   "Maurice-Duplessis / Saint-Jean-Baptiste",
+   "Gare Rivière-des-Prairies"
+  ],
+  "metroConnections": [],
+  "trips": 2071
+ },
+ {
+  "route": "33",
+  "name": "Langelier",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 60,
+  "stops": [
+   "Ozias-Leduc / Paul-Letondal",
+   "Ozias-Leduc / Gouin",
+   "Gouin / No 7015",
+   "Gouin / No 6885",
+   "Gouin / No 6755",
+   "Langelier / Allard",
+   "Langelier / Léger",
+   "Langelier / Villeneuve",
+   "Langelier / Arthur-Chevrier",
+   "Langelier / Maurice-Duplessis",
+   "Langelier / Marie-Victorin",
+   "Langelier / Dijon",
+   "Langelier / Henri-Bourassa",
+   "Henri-Bourassa / No 6475",
+   "Henri-Bourassa / Valade",
+   "Henri-Bourassa / Rolland",
+   "Henri-Bourassa / No 6085",
+   "Henri-Bourassa / Désy",
+   "Lacordaire / Henri-Bourassa",
+   "Lacordaire / d'Amos",
+   "Lacordaire / de Charleroi",
+   "Lacordaire / Industriel",
+   "Gare Saint-Léonard-Montréal-Nord",
+   "des Grandes-Prairies / No 5850",
+   "des Grandes-Prairies / du Prado",
+   "des Grandes-Prairies / No 6150",
+   "des Grandes-Prairies / Langelier",
+   "Langelier / No 9300",
+   "Langelier / Couture",
+   "Langelier / Lavoisier",
+   "Langelier / Lacoursière",
+   "Langelier / Bombardier",
+   "Langelier / Belherbe",
+   "Langelier / P.-E.-Lamarche",
+   "Langelier / Robert",
+   "Langelier / De Blainville",
+   "Langelier / Jarry",
+   "Langelier / Métropolitain (coin Nord-Ouest)",
+   "Langelier / Métropolitain (coin Sud-Ouest)",
+   "Langelier / Jean-Talon",
+   "Langelier / Dumesnil",
+   "Langelier / De Lotbinière",
+   "Langelier / Bélanger",
+   "Langelier / Michel-Bouvier",
+   "Langelier / Beaubien",
+   "Langelier / Ernest-Lavigne",
+   "Langelier / Rosemont",
+   "Langelier / Chauvin",
+   "Langelier / De Renty",
+   "Langelier / Senneville",
+   "Station Langelier (Langelier / Sherbrooke)",
+   "Langelier / de Marseille",
+   "Pierre-De Coubertin / Parkville",
+   "Pierre-De Coubertin / Haig",
+   "Haig / Hochelaga",
+   "Haig / No 2105",
+   "Haig / Ontario",
+   "La Fontaine / Haig",
+   "La Fontaine / Émile-Legrand",
+   "Émile-Legrand / Notre-Dame"
+  ],
+  "metroConnections": [
+   {
+    "slug": "langelier",
+    "name": "Langelier",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2067
+ },
+ {
+  "route": "64",
+  "name": "Grenet",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 20,
+  "stops": [
+   "Grenet / De Serres",
+   "Ranger / Gouin",
+   "De Mésy / Grenet",
+   "Grenet / Legault",
+   "Grenet / De Salaberry",
+   "Grenet / No 11940",
+   "Grenet / de Louisbourg",
+   "Station Bois-Franc",
+   "Grenet / Henri-Bourassa",
+   "Grenet / Laval",
+   "Grenet / Oxford",
+   "Grenet / Cambridge",
+   "Grenet / Poirier",
+   "Grenet / Bombardier",
+   "Grenet / Deguire",
+   "Deguire / Crevier",
+   "Crevier / Tassé",
+   "Crevier / Rochon",
+   "Rochon / Gohier",
+   "Station Côte-Vertu"
+  ],
+  "metroConnections": [
+   {
+    "slug": "du-ruisseau",
+    "name": "Du Ruisseau",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "cote-vertu",
+    "name": "Cote-Vertu",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 2006
+ },
+ {
+  "route": "121",
+  "name": "Sauvé / Côte-Vertu",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 48,
+  "stops": [
+   "Beaulac / Thimens",
+   "Beaulac / Thimens",
+   "Thimens / Place Vertu",
+   "Thimens / Cavendish",
+   "Cavendish / Place Vertu",
+   "Côte-Vertu / Hocquart",
+   "Côte-Vertu / Hills",
+   "Côte-Vertu / No 2308",
+   "Côte-Vertu / Alexis-Nihon",
+   "Côte-Vertu / Marlatt",
+   "Côte-Vertu / Marcel-Laurin",
+   "Côte-Vertu / Leduc",
+   "Côte-Vertu / Cardinal",
+   "Station Côte-Vertu (Côte-Vertu / Décarie)",
+   "Côte-Vertu / Saint-Germain",
+   "Côte-Vertu / Sainte-Croix",
+   "Côte-Vertu / Dutrisac",
+   "Côte-Vertu / Montpellier",
+   "Côte-Vertu / Muir",
+   "Côte-Vertu / Jules-Poitras",
+   "Côte-Vertu / Grimard",
+   "Côte-Vertu / No 100",
+   "Sauvé / Elzéar-Soucy",
+   "Sauvé / de l'Acadie",
+   "Sauvé / Meilleur",
+   "Sauvé / Tolhurst",
+   "Sauvé / Waverly",
+   "Sauvé / Clark",
+   "Sauvé / Grande Allée",
+   "Sauvé / Laverdure",
+   "Station Sauvé (Édicule Sud)",
+   "Sauvé / Lajeunesse",
+   "Sauvé / Millen",
+   "Sauvé / Saint-Hubert",
+   "Sauvé / Georges-Baril",
+   "Sauvé / Chambord",
+   "Sauvé / Christophe-Colomb",
+   "Sauvé / Curotte",
+   "Sauvé / Garnier",
+   "Sauvé / Papineau",
+   "Sauvé / Charton",
+   "Sauvé / De Lorimier",
+   "Sauvé / Parthenais",
+   "Sauvé / de Lille",
+   "Sauvé / D'Iberville",
+   "Sauvé / Sackville",
+   "Sauvé / Larose",
+   "Saint-Michel / Sauvé"
+  ],
+  "metroConnections": [
+   {
+    "slug": "cote-vertu",
+    "name": "Cote-Vertu",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "bois-de-boulogne",
+    "name": "Bois-de-Boulogne",
+    "lineIds": [
+     "exo2"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "henri-bourassa",
+    "name": "Henri-Bourassa",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1897
+ },
+ {
+  "route": "24",
+  "name": "Sherbrooke",
+  "color": "781B7D",
+  "category": "Fréquente",
+  "freqFr": "Fréquence aux 2 à 12 minutes entre 6h et 20h du lundi au vendredi (dans les 2 directions)",
+  "directions": [
+   "Ouest",
+   "Est"
+  ],
+  "headsigns": [
+   "Ouest",
+   "Est"
+  ],
+  "stopCount": 47,
+  "stops": [
+   "Montgomery / Sherbrooke",
+   "Sherbrooke / Hogan",
+   "Sherbrooke / Gascon",
+   "Sherbrooke / D'Iberville",
+   "Sherbrooke / Fullum",
+   "Sherbrooke / Parthenais",
+   "Sherbrooke / De Lorimier",
+   "Sherbrooke / Dorion",
+   "Sherbrooke / Émile-Duployé",
+   "Sherbrooke / Plessis",
+   "Sherbrooke / Cherrier",
+   "Cherrier / du Parc-La Fontaine",
+   "Cherrier / Saint-Hubert",
+   "Station Sherbrooke (Édicule Ouest)",
+   "Sherbrooke / Saint-Denis",
+   "Sherbrooke / de l'Hôtel-de-Ville",
+   "Sherbrooke / Saint-Laurent",
+   "Sherbrooke / Saint-Urbain",
+   "Sherbrooke / Jeanne-Mance",
+   "Sherbrooke / Hutchison",
+   "Sherbrooke / Aylmer",
+   "Sherbrooke / University",
+   "Sherbrooke / Mansfield",
+   "Sherbrooke / Peel",
+   "Sherbrooke / de la Montagne",
+   "Sherbrooke / Redpath",
+   "Sherbrooke / de la Côte-des-Neiges",
+   "Sherbrooke / Saint-Mathieu",
+   "Sherbrooke / Saint-Marc",
+   "Sherbrooke / Chomedey",
+   "Sherbrooke / Atwater",
+   "Sherbrooke / Vignal",
+   "Sherbrooke / Wood",
+   "Sherbrooke / Mount-Pleasant",
+   "Sherbrooke / Kitchener",
+   "Sherbrooke / Redfern",
+   "Sherbrooke / Metcalfe",
+   "Sherbrooke / Strathcona",
+   "Sherbrooke / Lansdowne",
+   "Sherbrooke / Victoria",
+   "Sherbrooke / Claremont",
+   "Sherbrooke / de Vendôme",
+   "Sherbrooke / Décarie",
+   "Décarie / Côte-Saint-Antoine",
+   "Décarie / Notre-Dame-de-Grâce",
+   "Décarie / Duquette",
+   "Station Villa-Maria (Décarie / de Monkland)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "sherbrooke",
+    "name": "Sherbrooke",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "saint-laurent",
+    "name": "Saint-Laurent",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-des-arts",
+    "name": "Place-des-Arts",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "mcgill",
+    "name": "McGill",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "peel",
+    "name": "Peel",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "guy-concordia",
+    "name": "Guy-Concordia",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "atwater",
+    "name": "Atwater",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "vendome",
+    "name": "Vendome",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "villa-maria",
+    "name": "Villa-Maria",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1831
+ },
+ {
+  "route": "55",
+  "name": "Saint-Laurent",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 46,
+  "stops": [
+   "Millen / Henri-Bourassa",
+   "Station Henri-Bourassa",
+   "Henri-Bourassa / Laverdure",
+   "Saint-Laurent / Henri-Bourassa",
+   "Saint-Laurent / Prieur",
+   "Saint-Laurent / Fleury",
+   "Saint-Laurent / Sauriol",
+   "Saint-Laurent / Sauvé",
+   "Saint-Laurent / de Port-Royal",
+   "Saint-Laurent / de Louvain",
+   "Saint-Laurent / Chabanel",
+   "Saint-Laurent / Legendre",
+   "Saint-Laurent / De Beauharnois",
+   "Saint-Laurent / Crémazie",
+   "Saint-Laurent / de Liège",
+   "Saint-Laurent / Guizot",
+   "Saint-Laurent / Jarry",
+   "Saint-Laurent / Gounod",
+   "Saint-Laurent / Villeray",
+   "Saint-Laurent / Gary-Carter",
+   "Station De Castelnau",
+   "Clark / Jean-Talon",
+   "Clark / Mozart",
+   "Clark / Saint-Zotique",
+   "Clark / Beaubien",
+   "Clark / Voie ferrée",
+   "Saint-Urbain / Bernard",
+   "Saint-Urbain / Saint-Viateur",
+   "Saint-Urbain / Fairmount",
+   "Saint-Urbain / Laurier",
+   "Saint-Urbain / Villeneuve",
+   "Saint-Urbain / du Mont-Royal",
+   "Saint-Urbain / Marie-Anne",
+   "Saint-Urbain / Rachel",
+   "Saint-Urbain / Duluth",
+   "Hôpital Hôtel-Dieu de Montréal (St-Urbain / St-Cut",
+   "Saint-Urbain / des Pins",
+   "Saint-Urbain / Prince-Arthur",
+   "Saint-Urbain / Sherbrooke",
+   "Station Place-des-Arts (Saint-Urbain / Président-K",
+   "Saint-Urbain / Sainte-Catherine",
+   "Saint-Urbain / René-Lévesque",
+   "Saint-Urbain / De La Gauchetière",
+   "Station Place-d'Armes (Saint-Urbain / Viger)",
+   "Notre-Dame / Saint-Sulpice",
+   "Saint-Laurent / Saint-Jacques"
+  ],
+  "metroConnections": [
+   {
+    "slug": "de-castelnau",
+    "name": "De Castelnau",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-des-arts",
+    "name": "Place-des-Arts",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-d-armes",
+    "name": "Place-d'Armes",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1803
+ },
+ {
+  "route": "49",
+  "name": "Maurice-Duplessis",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 62,
+  "stops": [
+   "Station Henri-Bourassa",
+   "Henri-Bourassa / Christophe-Colomb",
+   "Henri-Bourassa / Séguin",
+   "Henri-Bourassa / Saint-Michel",
+   "Henri-Bourassa / de Bruxelles",
+   "Henri-Bourassa / Pie-IX",
+   "Henri-Bourassa / Pelletier",
+   "Léger / L'Archevêque",
+   "Léger / Sainte-Gertrude",
+   "Léger / Brunet",
+   "Léger / Salk",
+   "Léger / Sainte-Colette",
+   "Léger / Lanthier",
+   "Léger / Lacordaire",
+   "Lacordaire / Claude",
+   "Maurice-Duplessis / Lacordaire",
+   "Maurice-Duplessis / Désy",
+   "Maurice-Duplessis / Hurteau",
+   "Maurice-Duplessis / Langelier",
+   "Maurice-Duplessis / Albert-Hudon",
+   "Maurice-Duplessis / No 7000",
+   "Maurice-Duplessis / Marie-Victorin (Cégep Marie-Vi",
+   "Maurice-Duplessis / 6e Avenue",
+   "Maurice-Duplessis / Pierre-Blanchet",
+   "Maurice-Duplessis / Marc-Aurèle-Fortin",
+   "Maurice-Duplessis / Fernand-Gauthier",
+   "Maurice-Duplessis / La Valinière",
+   "Maurice-Duplessis / No 7860",
+   "Maurice-Duplessis / Armand-Bombardier",
+   "Maurice-Duplessis / Clément-Ader",
+   "Maurice-Duplessis / 27e Avenue",
+   "Maurice-Duplessis / André-Dumas",
+   "Maurice-Duplessis / Rita-Levi-Montalcini",
+   "Maurice-Duplessis / Pierre-Baillargeon",
+   "Maurice-Duplessis / 41e Avenue",
+   "Rodolphe-Forget / Maurice-Duplessis",
+   "Rodolphe-Forget / Louis-Dessaulles",
+   "Rodolphe-Forget / Perras",
+   "Perras / René-Masson",
+   "Perras / 49e Avenue",
+   "Perras / 54e Avenue",
+   "Perras / 57e Avenue",
+   "Perras / Rivière-des-Prairies",
+   "Perras / 62e Avenue",
+   "Perras / Marien",
+   "Perras / 70e Avenue",
+   "Perras / Primat-Paré",
+   "Perras / Voltaire",
+   "Perras / Saint-Jean-Baptiste",
+   "Perras / No 10955",
+   "87e Avenue / Perras",
+   "87e Avenue / 4e Rue",
+   "87e Avenue / No 12300",
+   "87e Avenue / No 12123",
+   "87e Avenue / 6e Rue",
+   "Gare Rivière-des-Prairies",
+   "Saint-Jean-Baptiste / No 12045",
+   "Saint-Jean-Baptiste / Cité des Prairies",
+   "Saint-Jean-Baptiste / No 12301",
+   "Saint-Jean-Baptiste / Émilie-Du Châtelet",
+   "Saint-Jean-Baptiste / Perras",
+   "Perras / 81e Avenue"
+  ],
+  "metroConnections": [],
+  "trips": 1775
+ },
+ {
+  "route": "69",
+  "name": "Gouin",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 62,
+  "stops": [
+   "Station Bois-Franc",
+   "Henri-Bourassa / No 5375",
+   "Henri-Bourassa / No 5265",
+   "Henri-Bourassa / Marcel-Laurin",
+   "Henri-Bourassa / Grenet",
+   "Henri-Bourassa / de Londres",
+   "Henri-Bourassa / de la Sorbonne",
+   "Henri-Bourassa / O'Brien",
+   "Henri-Bourassa / Dépatie",
+   "Henri-Bourassa / Filion",
+   "Henri-Bourassa / Norman",
+   "Henri-Bourassa / Jules-Poitras",
+   "Henri-Bourassa / de l'Acadie",
+   "Henri-Bourassa / de l'Acadie",
+   "Henri-Bourassa / Marcelin-Wilson",
+   "Collège de Bois-de-Boulogne",
+   "SAAQ (Henri-Bourassa / Meilleur)",
+   "Henri-Bourassa / Verville",
+   "Henri-Bourassa / de l'Esplanade",
+   "Henri-Bourassa / Saint-Laurent",
+   "Henri-Bourassa / Laverdure",
+   "Station Henri-Bourassa",
+   "Station Henri-Bourassa",
+   "Henri-Bourassa / Saint-Hubert",
+   "Henri-Bourassa / Georges-Baril",
+   "Henri-Bourassa / Chambord",
+   "Henri-Bourassa / Christophe-Colomb",
+   "Henri-Bourassa / Hamel",
+   "Henri-Bourassa / Francis",
+   "Henri-Bourassa / du Fort-Lorette",
+   "Henri-Bourassa / Papineau",
+   "Henri-Bourassa / Séguin",
+   "Henri-Bourassa / De Saint-Firmin",
+   "Henri-Bourassa / Bruchési",
+   "Henri-Bourassa / Vianney",
+   "Henri-Bourassa / Saint-Michel",
+   "Henri-Bourassa / Leblanc",
+   "Henri-Bourassa / Cobourg",
+   "Henri-Bourassa / de Bruxelles",
+   "Henri-Bourassa / des Récollets",
+   "Henri-Bourassa / Pie-IX",
+   "Henri-Bourassa / Hôtel-de-Ville",
+   "Henri-Bourassa / Pelletier",
+   "Henri-Bourassa / Balzac",
+   "Henri-Bourassa / Bellevois",
+   "Henri-Bourassa / Sainte-Gertrude",
+   "Henri-Bourassa / Racette",
+   "Henri-Bourassa / Alfred",
+   "Henri-Bourassa / Salk",
+   "Henri-Bourassa / Sainte-Colette",
+   "Henri-Bourassa / Lacordaire",
+   "Henri-Bourassa / Désy",
+   "Henri-Bourassa / No 6100",
+   "Henri-Bourassa / Rolland",
+   "Henri-Bourassa / Valade",
+   "Langelier / Renoir",
+   "Langelier / Dijon",
+   "Langelier / Marie-Victorin",
+   "Langelier / Bonneville",
+   "Maurice-Duplessis / Albert-Hudon",
+   "Maurice-Duplessis / No 7000",
+   "Marie-Victorin / No 7000"
+  ],
+  "metroConnections": [
+   {
+    "slug": "bois-franc",
+    "name": "Bois-Franc",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   }
+  ],
+  "trips": 1749
+ },
+ {
+  "route": "44",
+  "name": "Armand-Bombardier",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 37,
+  "stops": [
+   "26e Avenue / Gouin",
+   "27e Avenue / Octave-Pelletier",
+   "Perras / 25e Avenue",
+   "Armand-Bombardier / Perras",
+   "Armand-Bombardier / Philippe-Lebon",
+   "Armand-Bombardier / André-Ampère",
+   "Armand-Bombardier / Jean-Vincent",
+   "Armand-Bombardier / Maurice-Duplessis",
+   "Armand-Bombardier / Blaise-Pascal",
+   "Armand-Bombardier / Henri-Bourassa",
+   "Henri-Bourassa / Marco-Polo",
+   "L.-J.- Forget / Henri-Bourassa",
+   "Larrey / L.-J.-Forget",
+   "Larrey / Mirabeau",
+   "Colbert / Larrey",
+   "Colbert / No 10700",
+   "Colbert / Ravenel",
+   "Colbert / Bombardier",
+   "Bombardier / Renaude-Lapointe",
+   "des Galeries-d'Anjou / Bombardier",
+   "des Galeries-d'Anjou / M.-B.-Jodoin",
+   "des Galeries-d'Anjou / de l'Alsace",
+   "des Galeries-d'Anjou / Giraud",
+   "des Galeries-d'Anjou / Jarry",
+   "des Galeries-d'Anjou / de la Pléiade",
+   "des Galeries-d'Anjou / Jean-Talon",
+   "des Galeries-d'Anjou / Jean-Talon",
+   "des Galeries d'Anjou / Entrée des Halles",
+   "des Galeries-d'Anjou / Bélanger",
+   "des Galeries-d'Anjou / Saint-Zotique",
+   "des Galeries-d'Anjou / Beaubien",
+   "des Galeries-d'Anjou / des Jalesnes",
+   "des Galeries d'Anjou / de la Malicorne",
+   "Radisson / des Galeries-d'Anjou",
+   "Radisson / Davis",
+   "Station Radisson",
+   "Station Radisson"
+  ],
+  "metroConnections": [
+   {
+    "slug": "anjou",
+    "name": "Anjou",
+    "lineIds": [
+     "exo5"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1700
+ },
+ {
+  "route": "131",
+  "name": "De l'Assomption",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 19,
+  "stops": [
+   "des Angevins / de Lisieux",
+   "Lisieux / Jean-Talon",
+   "de l'Assomption / Jean-Talon",
+   "de l'Assomption / des Becquets",
+   "de l'Assomption / Bélanger",
+   "de l'Assomption / Saint-Zotique",
+   "de l'Assomption / Beaubien",
+   "de l'Assomption / de Bellechasse",
+   "de l'Assomption / Rosemont",
+   "de l'Assomption / No 5780",
+   "de l'Assomption / des Sapins (Hôp. M.-Rosemont)",
+   "de l'Assomption / des Saules (Polyclinique)",
+   "de l'Assomption / No 5150",
+   "de l'Assomption / Sherbrooke",
+   "Chauveau / de l'Assomption",
+   "Chauveau / Dickson",
+   "Dickson / de Marseille",
+   "de l'Assomption / de Marseille",
+   "Station Assomption (de l'Assomption / Chauveau)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "cadillac",
+    "name": "Cadillac",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "assomption",
+    "name": "Assomption",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1637
+ },
+ {
+  "route": "193",
+  "name": "Jarry",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 48,
+  "stops": [
+   "Aréna Howie-Morenz (Querbes / No 8650)",
+   "de Liège / De L'Épée",
+   "Bloomfield / d'Anvers",
+   "Bloomfield / No 8120",
+   "Jarry / Querbes",
+   "Jarry / de l'Esplanade",
+   "Jarry / Saint-Laurent",
+   "Jarry / De Gaspé",
+   "Jarry / Saint-Denis",
+   "Station Jarry (Jarry / Lajeunesse)",
+   "Jarry / Foucher",
+   "Jarry / Saint-Hubert",
+   "Jarry / Christophe-Colomb",
+   "École Georges-Vanier (Jarry / De Normanville)",
+   "Jarry / Rousselot",
+   "Jarry / Fabre",
+   "Jarry / Papineau",
+   "Jarry / Chabot",
+   "Jarry / De Lorimier",
+   "Jarry / D'Iberville",
+   "Jarry / 2e Avenue",
+   "Jarry / 9e Avenue",
+   "Jarry / Saint-Michel",
+   "Jarry / Joseph-Guibord",
+   "Jarry / 17e Avenue",
+   "Jarry / 19e Avenue",
+   "Jarry / Pie-IX",
+   "Jarry / 23e Avenue",
+   "Jarry / 25e Avenue",
+   "Jarry / Nice",
+   "Jarry / Viau",
+   "Jarry / Chamilly",
+   "Jarry / Jean-Nicolet",
+   "Jarry / Fleuricourt",
+   "Jarry / Lacordaire",
+   "Jarry / Aimé-Renaud",
+   "Jarry / Comtois",
+   "Jarry / Louis-Vanier",
+   "Jarry / de la Salette",
+   "Jarry / No 6180",
+   "Jarry / Langelier",
+   "Jarry / du Creusot",
+   "Jarry / Pascal-Gagnon",
+   "Jarry / Neuville",
+   "Jarry / des Galeries-d'Anjou",
+   "Jarry / de Vernantes",
+   "Jarry / du Haut-Anjou",
+   "Jarry / Louis-Hippolyte-La Fontaine"
+  ],
+  "metroConnections": [
+   {
+    "slug": "jarry",
+    "name": "Jarry",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "saint-michel-mtl-nord",
+    "name": "Saint-Michel-Montreal-Nord",
+    "lineIds": [
+     "exo5"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1626
+ },
+ {
+  "route": "90",
+  "name": "Saint-Jacques",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 53,
+  "stops": [
+   "Esther-Blondin / No 745 (École Dalbé-Viau)",
+   "Esther-Blondin / Provost",
+   "Provost / 16e Avenue",
+   "Provost / 12e Avenue",
+   "Provost / 10e Avenue",
+   "Provost / 7e Avenue",
+   "Provost / 5e Avenue",
+   "Provost / 3e Avenue",
+   "Provost / 1re Avenue",
+   "1re Avenue / Saint-Antoine",
+   "1re Avenue / Victoria",
+   "William-MacDonald / George-V",
+   "George-V / Saint-Joseph",
+   "Saint-Joseph / Skaniatarati",
+   "Saint-Joseph / No 160",
+   "Saint-Joseph / No 130",
+   "Gare du Canal (Saint-Joseph / Victoria)",
+   "Saint-Joseph / No 56",
+   "Saint-Joseph / No 31",
+   "Saint-Joseph / Notre-Dame",
+   "des Érables / Richardson",
+   "des Érables / Saint-Pierre",
+   "Saint-Jacques / du Chalet",
+   "Saint-Jacques / Duranceau",
+   "Saint-Jacques / No 92",
+   "Avon / Ronald",
+   "Avon / Brynmor",
+   "Saint-Jacques / Elmhurst",
+   "Saint-Jacques / West Broadway",
+   "Saint-Jacques / Saint-Jacques",
+   "Sainte-Anne-de-Bellevue / Saint-Jacques",
+   "Saint-Jacques / No 6910",
+   "Saint-Jacques / No 6710",
+   "Saint-Jacques / No 6640",
+   "Saint-Jacques / Cavendish",
+   "Saint-Jacques / No 6360",
+   "Saint-Jacques / Madison",
+   "Saint-Jacques / Upper-Lachine",
+   "Upper-Lachine / de Clifton",
+   "Upper-Lachine / de Melrose",
+   "Upper-Lachine / Oxford",
+   "Upper-Lachine / Girouard",
+   "Station Vendôme",
+   "De Maisonneuve / Bulmer",
+   "Sainte-Catherine / Victoria",
+   "Sainte-Catherine / Béthune",
+   "Sainte-Catherine / Irvine",
+   "Sainte-Catherine / Metcalfe",
+   "Sainte-Catherine / Hillside Lane",
+   "Sainte-Catherine / Dorchester",
+   "Sainte-Catherine / Greene",
+   "Sainte-Catherine / Gladstone",
+   "Sainte-Catherine / Atwater"
+  ],
+  "metroConnections": [
+   {
+    "slug": "du-canal-exo",
+    "name": "Du Canal (Exo)",
+    "lineIds": [
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "vendome",
+    "name": "Vendome",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "atwater",
+    "name": "Atwater",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1572
+ },
+ {
+  "route": "80",
+  "name": "Avenue du Parc",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 31,
+  "stops": [
+   "Querbes / Durocher",
+   "de Liège / De L'Épée",
+   "Bloomfield / d'Anvers",
+   "Bloomfield / Jarry",
+   "Bloomfield / Ball",
+   "Bloomfield / Saint-Roch",
+   "Bloomfield / Ogilvy",
+   "Ogilvy / Querbes",
+   "Station Parc (Ogilvy / Hutchison)",
+   "du Parc / Beaumont",
+   "du Parc / No 6590",
+   "du Parc / Beaubien",
+   "du Parc / Van Horne",
+   "du Parc / Bernard",
+   "du Parc / Saint-Viateur",
+   "du Parc / Fairmount",
+   "du Parc / Laurier",
+   "du Parc / Saint-Joseph",
+   "du Parc / Villeneuve",
+   "du Parc / du Mont-Royal",
+   "Monument Sir-George-Étienne-Cartier",
+   "du Parc / des Pins",
+   "du Parc / Léo-Pariseau",
+   "du Parc / Prince-Arthur",
+   "du Parc / Milton",
+   "du Parc / Sherbrooke",
+   "Station Place-des-Arts (De Bleury / De Maisonneuve",
+   "De Bleury / Sainte-Catherine",
+   "René-Lévesque / Jeanne-Mance",
+   "du Président-Kennedy / Saint-Urbain",
+   "Station Place-des-Arts (Président-Kennedy / Jeanne"
+  ],
+  "metroConnections": [
+   {
+    "slug": "parc-exo",
+    "name": "Parc (Exo)",
+    "lineIds": [
+     "exo2"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "parc",
+    "name": "Parc",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-des-arts",
+    "name": "Place-des-Arts",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-d-armes",
+    "name": "Place-d'Armes",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1543
+ },
+ {
+  "route": "103",
+  "name": "Monkland",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 21,
+  "stops": [
+   "Côte-Saint-Luc / Hudson",
+   "Côte-Saint-Luc / Sunnybrooke",
+   "Côte-Saint-Luc / Robert-Burns",
+   "Centre Côte Saint-Luc (Côte St-Luc / Coronation)",
+   "Côte-Saint-Luc / Rosedale",
+   "Côte-Saint-Luc / Walkley",
+   "Côte-Saint-Luc / Cavendish",
+   "Côte-Saint-Luc / Randall",
+   "Côte-Saint-Luc / West Hill",
+   "Côte-Saint-Luc / Grand Boulevard",
+   "Grand Boulevard / Fielding",
+   "Grand Boulevard / Somerled",
+   "Grand Boulevard / de Terrebonne",
+   "Grand Boulevard / de Monkland",
+   "de Monkland / Hingston",
+   "de Monkland / Royal",
+   "de Monkland / de Melrose",
+   "de Monkland / Harvard",
+   "de Monkland / Marcil",
+   "de Monkland / Girouard",
+   "Station Villa-Maria (Décarie / de Monkland)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "villa-maria",
+    "name": "Villa-Maria",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1541
+ },
+ {
+  "route": "32",
+  "name": "Lacordaire",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 46,
+  "stops": [
+   "Lacordaire / Léger",
+   "Lacordaire / Joseph-Dufresne",
+   "Napoléon-Bédard / Lacordaire",
+   "Lacordaire / Joseph-Dufresne",
+   "Lacordaire / Léger",
+   "Lacordaire / Arthur-Chevrier",
+   "Lacordaire / Claude",
+   "Lacordaire / Maurice-Duplessis",
+   "Lacordaire / des Iris",
+   "Lacordaire / Henri-Bourassa",
+   "Lacordaire / d'Amos",
+   "Lacordaire / de Charleroi",
+   "Lacordaire / Industriel",
+   "Gare Saint-Léonard-Montréal-Nord",
+   "Lacordaire / des Grandes-Prairies",
+   "Lacordaire / Couture",
+   "Lacordaire / Honoré-Mercier",
+   "Lacordaire / Lavoisier",
+   "Lacordaire / Lafourcade",
+   "Lacordaire / Jobin",
+   "Lacordaire / Robert",
+   "Lacordaire / des Galets",
+   "Lacordaire / Jarry",
+   "Lacordaire / Métropolitain",
+   "Lacordaire / Paimpol",
+   "Lacordaire / Jean-Talon",
+   "Lacordaire / Bourdaloue",
+   "Lacordaire / Bélanger",
+   "Lacordaire / Saint-Zotique",
+   "Lacordaire / Beaubien",
+   "Lacordaire / Rosemont",
+   "Pierre-Bédard / Lacordaire",
+   "Lacordaire / Gérin-Lajoie",
+   "Lacordaire / Turenne",
+   "De Jumonville / Louis-Veuillot",
+   "De Jumonville / De Cadillac",
+   "Station Cadillac (De Cadillac / Sherbrooke)",
+   "De Cadillac / Chauveau",
+   "De Cadillac / de Marseille",
+   "De Cadillac / Pierre-De Coubertin",
+   "De Cadillac / Hochelaga",
+   "De Cadillac / de Toulouse",
+   "De Cadillac / Ontario",
+   "De Cadillac / La Fontaine",
+   "De Cadillac / Notre-Dame",
+   "Rougemont / Notre-Dame"
+  ],
+  "metroConnections": [
+   {
+    "slug": "cadillac",
+    "name": "Cadillac",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1541
+ },
+ {
+  "route": "496",
+  "name": "Express Victoria",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 22,
+  "stops": [
+   "Terminus Dorval",
+   "Bouchard / Racine",
+   "Bouchard / Poste de pompiers",
+   "Bouchard / George-V",
+   "Bouchard / No 215",
+   "Bouchard / No 200",
+   "Bouchard / Bourke",
+   "Victoria / 54e Avenue",
+   "Victoria / 51e Avenue",
+   "Victoria / 49e Avenue",
+   "Victoria / 44e Avenue",
+   "Victoria / 40e Avenue",
+   "Victoria / 36e Avenue",
+   "Victoria / 33e Avenue",
+   "Victoria / 28e Avenue",
+   "Victoria / 21e Avenue",
+   "Victoria / 18e Avenue",
+   "Victoria / 15e Avenue",
+   "Victoria / 10e Avenue",
+   "Victoria / 6e Avenue",
+   "William-MacDonald / George-V",
+   "Station Lionel-Groulx / Saint-Jacques"
+  ],
+  "metroConnections": [
+   {
+    "slug": "dorval",
+    "name": "Dorval",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "lachine",
+    "name": "Lachine",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "du-canal-exo",
+    "name": "Du Canal (Exo)",
+    "lineIds": [
+     "exo4"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1510
+ },
+ {
+  "route": "136",
+  "name": "Viau",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 31,
+  "stops": [
+   "des Grandes-Prairies / No 5940",
+   "des Grandes-Prairies / du Prado",
+   "du Prado / Couture",
+   "Couture / Périnault",
+   "Couture / Lacordaire",
+   "Couture / Puyseaux",
+   "Couture / Salvaye",
+   "Couture / François-1er",
+   "Couture / Long-Sault",
+   "Viau / Lavoisier",
+   "Viau / Valéry",
+   "Viau / Robert",
+   "Viau / Jean-Nicolet",
+   "Viau / D'Artagnan",
+   "Viau / Jean-Rivard",
+   "Viau / Jarry",
+   "Viau / Métropolitain",
+   "Viau / Viterbe",
+   "Viau / Millet",
+   "Viau / Jean-Talon",
+   "Viau / Bélanger (Institut de cardiologie)",
+   "Viau / Saint-Zotique",
+   "Viau / Beaubien",
+   "Viau / de Bellechasse",
+   "Viau / Rosemont",
+   "Viau / des Sorbiers",
+   "Viau / Sherbrooke",
+   "Viau / No 3265 (Stade Saputo)",
+   "Viau / de Marseille",
+   "Viau / Pierre-De Coubertin",
+   "Station Viau"
+  ],
+  "metroConnections": [
+   {
+    "slug": "saint-leonard-mtl-nord",
+    "name": "Saint-Leonard-Montreal-Nord",
+    "lineIds": [
+     "exo5"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "viau",
+    "name": "Viau",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1501
+ },
+ {
+  "route": "189",
+  "name": "Notre-Dame",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 64,
+  "stops": [
+   "Station Honoré-Beaugrand / Terminus Nord",
+   "Honoré-Beaugrand / de Marseille",
+   "Honoré-Beaugrand / Sainte-Claire",
+   "Honoré-Beaugrand / Pierre-De Coubertin",
+   "Honoré-Beaugrand / Hochelaga",
+   "Hochelaga / Liébert",
+   "Hochelaga / Lapointe",
+   "Hochelaga / Lebrun",
+   "Hochelaga / Des Ormeaux",
+   "Hochelaga / Joffre",
+   "Hochelaga / Pierre-Bernard",
+   "Hochelaga / Taillon",
+   "Hochelaga / Aubry",
+   "Hochelaga / Fletcher",
+   "Hochelaga / Hector",
+   "Hochelaga / Georges-V",
+   "Georges-V / Notre-Dame",
+   "Notre-Dame / David",
+   "Notre-Dame / Joseph-Versailles",
+   "Notre-Dame / No 10150",
+   "Notre-Dame / Gamble",
+   "Notre-Dame / No 10800",
+   "Notre-Dame / Richard",
+   "Notre-Dame / Hinton",
+   "Notre-Dame / Providence",
+   "Notre-Dame / Broadway",
+   "Notre-Dame / Marien",
+   "Notre-Dame / 1re Avenue",
+   "Notre-Dame / 3e Avenue",
+   "Notre-Dame / 6e Avenue",
+   "Notre-Dame / 8e Avenue",
+   "Notre-Dame / Saint-Jean-Baptiste",
+   "Notre-Dame / 14e Avenue",
+   "Notre-Dame / 16e Avenue",
+   "Notre-Dame / 19e Avenue",
+   "Notre-Dame / No 12620",
+   "Notre-Dame / du Tricentenaire",
+   "Notre-Dame / 26e Avenue",
+   "Notre-Dame / Place Saint-Georges",
+   "Notre-Dame / 32e Avenue",
+   "Notre-Dame / No 13280",
+   "Notre-Dame / 36e Avenue",
+   "Notre-Dame / 39e Avenue",
+   "Notre-Dame / 41e Avenue",
+   "Notre-Dame / 43e Avenue",
+   "CLSC de l'Est-de-Montréal",
+   "Notre-Dame / De La Rousselière",
+   "Notre-Dame / 54e Avenue",
+   "Notre-Dame / 57e Avenue",
+   "Notre-Dame / 60e Avenue",
+   "Notre-Dame / 64e Avenue",
+   "Notre-Dame / 67e Avenue",
+   "Parc-Nature de la Pointe-aux-Prairies",
+   "Notre-Dame / Beausoleil",
+   "Notre-Dame / Bellevue",
+   "Notre-Dame / No 15290",
+   "Notre-Dame / 79e Avenue",
+   "Notre-Dame / 81e Avenue",
+   "Notre-Dame / 83e Avenue",
+   "Notre-Dame / 86e Avenue",
+   "Notre-Dame / Raoul-Jobin",
+   "Notre-Dame / 93e Avenue",
+   "Sherbrooke / Delphis-Delorme",
+   "Sherbrooke / Gouin"
+  ],
+  "metroConnections": [
+   {
+    "slug": "honore-beaugrand",
+    "name": "Honore-Beaugrand",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1494
+ },
+ {
+  "route": "187",
+  "name": "René-Lévesque",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 44,
+  "stops": [
+   "Station Honoré-Beaugrand / Terminus Nord",
+   "Sherbrooke / Saint-Donat",
+   "Sherbrooke / Des Ormeaux",
+   "Sherbrooke / Pierre-Bernard",
+   "Sherbrooke / Fletcher",
+   "Sherbrooke / Joseph-Versailles",
+   "Sherbrooke / Indorama",
+   "Durocher / Sherbrooke",
+   "Durocher / Nexans",
+   "Durocher / Sainte-Catherine",
+   "Sainte-Catherine / Lelièvre",
+   "Sainte-Catherine / Broadway",
+   "Sainte-Catherine / Marien",
+   "Marien / Dorchester",
+   "René-Lévesque / 1re Avenue",
+   "René-Lévesque / 3e Avenue",
+   "René-Lévesque / 5e Avenue",
+   "René-Lévesque / 8e Avenue",
+   "René-Lévesque / Saint-Jean-Baptiste",
+   "René-Lévesque / 14e Avenue",
+   "René-Lévesque / 16e Avenue",
+   "René-Lévesque / du Poitou",
+   "René-Lévesque / des Saules",
+   "René-Lévesque / No 865",
+   "René-Lévesque / du Tricentenaire",
+   "du Tricentenaire / Joseph-d'Argent",
+   "du Tricentenaire / De Montigny",
+   "De Montigny / Georges-Vermette",
+   "De Montigny / Régnier",
+   "De Montigny / 32e Avenue",
+   "De Montigny / 36e Avenue",
+   "De Montigny / 40e Avenue",
+   "De Montigny / 43e Avenue",
+   "De Montigny / 47e Avenue",
+   "De Montigny / De La Rousselière",
+   "De Montigny / 51e Avenue",
+   "53e Avenue / De Montigny",
+   "53e Avenue / Forsyth",
+   "53e Avenue / 52e Avenue",
+   "52e Avenue / Sherbrooke",
+   "Prince-Arthur / No 14135",
+   "Prince-Arthur / François-Harel",
+   "Prince-Arthur / 44e Avenue",
+   "42e Avenue / Henri-Bourassa"
+  ],
+  "metroConnections": [],
+  "trips": 1440
+ },
+ {
+  "route": "97",
+  "name": "Avenue-du-Mont-Royal",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 34,
+  "stops": [
+   "Parc du Mont-Royal",
+   "du Mont-Royal / du Parc",
+   "du Mont-Royal / Saint-Urbain",
+   "du Mont-Royal / Saint-Laurent",
+   "du Mont-Royal / De Bullion",
+   "du Mont-Royal / Henri-Julien",
+   "du Mont-Royal / Saint-Denis",
+   "Station Mont-Royal (du Mont-Royal / Berri)",
+   "du Mont-Royal / de Mentana",
+   "du Mont-Royal / Christophe-Colomb",
+   "du Mont-Royal / De La Roche",
+   "du Mont-Royal / De Lanaudière",
+   "du Mont-Royal / Fabre",
+   "du Mont-Royal / Papineau",
+   "du Mont-Royal / Chabot",
+   "du Mont-Royal / De Lorimier",
+   "du Mont-Royal / Parthenais",
+   "du Mont-Royal / Fullum",
+   "du Mont-Royal / D'Iberville",
+   "D'Iberville / Marie-Anne",
+   "Rachel / Frontenac",
+   "Rachel / Montgomery",
+   "Rachel / Molson",
+   "Rachel / André-Laurendeau",
+   "Rachel / Dézéry",
+   "Rachel / Davidson",
+   "Saint-Michel / William-Tremblay",
+   "Saint-Michel / du Mont-Royal",
+   "du Mont-Royal / Moïse-Picard",
+   "du Mont-Royal / De Chambly",
+   "du Mont-Royal / Bourbonnière",
+   "du Mont-Royal / Pie-IX",
+   "Pie-IX / Sherbrooke",
+   "Station Pie-IX (Pie-IX / Pierre-De Coubertin)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "mont-royal",
+    "name": "Mont-Royal",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "pie-ix",
+    "name": "Pie-IX",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1425
+ },
+ {
+  "route": "100",
+  "name": "Crémazie",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 43,
+  "stops": [
+   "Terminus CAE",
+   "Montée de Liesse / Côte-de-Liesse",
+   "Montée de Liesse / No 180",
+   "Montée de Liesse / Bourg",
+   "Montée de Liesse / No 110",
+   "Montée de Liesse / Hickmore",
+   "Hickmore / No 4500",
+   "Hickmore / No 4300",
+   "Hickmore / No 4200",
+   "Hickmore / No 4200",
+   "Hickmore / Merizzi",
+   "McArthur / Ness",
+   "McArthur / Griffith",
+   "Griffith / Locke",
+   "Griffith / Migneron",
+   "Cavendish / Griffith",
+   "Cavendish / Côte-de-Liesse",
+   "Dalton / Côte-de-Liesse",
+   "Passerelle Isabey-Darnley (Côte-de-Liesse/Isabey)",
+   "Côte-de-Liesse / No 5750",
+   "de la Côte-de-Liesse / No 5430",
+   "Décarie / Royalmount",
+   "Station De la Savane (Décarie / de Sorel)",
+   "Côte-de-Liesse / Décarie",
+   "Côte-de-Liesse / Lucerne",
+   "Côte-de-Liesse / Graham",
+   "Côte-de-Liesse / Saint-Clare",
+   "Côte-de-Liesse / Macneil",
+   "Côte-de-Liesse / Sunset",
+   "Côte-de-Liesse / Parc Fleming",
+   "Côte-de-Liesse / CHSLD Mont-Royal",
+   "Côte-de-Liesse / Rockland",
+   "Centre Rockland",
+   "Crémazie / de l'Acadie",
+   "Crémazie / de l'Acadie",
+   "Crémazie / d'Outremont",
+   "Crémazie / de l'Esplanade",
+   "Crémazie / de Reims",
+   "Crémazie / Clark",
+   "Crémazie / Saint-Laurent",
+   "Crémazie / Casgrain",
+   "Crémazie / Henri-Julien",
+   "Station Crémazie Sud (Crémazie / Berri)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "de-la-savane",
+    "name": "De la Savane",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "cremazie",
+    "name": "Cremazie",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1401
+ },
+ {
+  "route": "179",
+  "name": "De l'Acadie",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 30,
+  "stops": [
+   "de l'Acadie / De Salaberry",
+   "de l'Acadie / De Salaberry",
+   "de l'Acadie / de Louisbourg",
+   "de l'Acadie / Dudemaine",
+   "de l'Acadie / Charles-Gill",
+   "de l'Acadie / Henri-Bourassa",
+   "de l'Acadie / Place de l'Acadie",
+   "de l'Acadie / No 10500",
+   "de l'Acadie / Persillier",
+   "de l'Acadie / Olivier-Berthelet",
+   "de l'Acadie / Arthur-Lismer",
+   "de l'Acadie / Sauvé",
+   "de l'Acadie / Yvette-Brillon",
+   "de l'Acadie / de Louvain",
+   "de l'Acadie / Mazurette",
+   "de l'Acadie / Chabanel",
+   "de l'Acadie / Legendre",
+   "Marché Central (de l'Acadie / Crémazie)",
+   "de l'Acadie / Crémazie",
+   "de l'Acadie / de Liège",
+   "de l'Acadie / d'Anvers",
+   "Jarry / de l'Acadie",
+   "Jarry / Wiseman",
+   "Jarry / Bloomfield",
+   "Bloomfield / Ball",
+   "Bloomfield / Saint-Roch",
+   "Bloomfield / Ogilvy",
+   "Ogilvy / d'Outremont",
+   "de l'Acadie / Jean-Talon",
+   "Station Acadie (Beaumont / de l'Acadie)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "bois-de-boulogne",
+    "name": "Bois-de-Boulogne",
+    "lineIds": [
+     "exo2"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "parc-exo",
+    "name": "Parc (Exo)",
+    "lineIds": [
+     "exo2"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "parc",
+    "name": "Parc",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "acadie",
+    "name": "Acadie",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1393
+ },
+ {
+  "route": "144",
+  "name": "Avenue des Pins",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 21,
+  "stops": [
+   "Station Atwater (Atwater / Tupper)",
+   "Atwater / Lincoln",
+   "Atwater / Sherbrooke",
+   "Atwater / Picquet",
+   "Atwater / du Docteur-Penfield",
+   "du Docteur-Penfield / de la Côte-des-Neiges",
+   "du Docteur-Penfield / Redpath",
+   "du Docteur-Penfield / de la Montagne",
+   "du Docteur-Penfield / Peel",
+   "du Docteur-Penfield / Réservoir McTavish",
+   "du Docteur-Penfield / des Pins",
+   "des Pins / University",
+   "des Pins / Aylmer",
+   "des Pins / du Parc (coin Sud-Ouest)",
+   "des Pins / du Parc (coin Sud-Est)",
+   "des Pins / Basset",
+   "des Pins / Saint-Laurent",
+   "des Pins / de l'Hôtel-de-Ville",
+   "Saint-Denis / des Pins",
+   "Cherrier / Berri",
+   "Station Sherbrooke (Édicule Ouest)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "atwater",
+    "name": "Atwater",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "sherbrooke",
+    "name": "Sherbrooke",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1389
+ },
+ {
+  "route": "139",
+  "name": "Pie-IX",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 42,
+  "stops": [
+   "Carrefour Henri-Bourassa / Pie-IX",
+   "Pie-IX / Parc Pilon",
+   "Pie-IX / Martial",
+   "Pie-IX / Monselet",
+   "Pie-IX / Prieur",
+   "Pie-IX / Forest",
+   "Pie-IX / Fleury",
+   "Pie-IX / Larin",
+   "Pie-IX / Industriel",
+   "Pie-IX / 55e Rue",
+   "Pie-IX / des Grandes-Prairies",
+   "Pie-IX / 46e Rue",
+   "Pie-IX / 43e Rue",
+   "Pie-IX / 39e Rue",
+   "Pie-IX / Denis-Papin",
+   "Pie-IX / Robert",
+   "Pie-IX / Jean-Rivard",
+   "Pie-IX / D'Hérelle",
+   "Pie-IX / Jarry",
+   "Pie-IX / Villeray",
+   "Pie-IX / Everett",
+   "Pie-IX / Jean-Talon",
+   "Pie-IX / Bélair",
+   "Pie-IX / Bélanger",
+   "Pie-IX / Saint-Zotique",
+   "Pie-IX / Beaubien",
+   "Pie-IX / de Bellechasse",
+   "Pie-IX / Rosemont",
+   "Pie-IX / Dandurand",
+   "Pie-IX / Masson",
+   "Pie-IX / Laurier",
+   "Pie-IX / Saint-Joseph",
+   "Pie-IX / du Mont-Royal",
+   "Pie-IX / Sherbrooke",
+   "Station Pie-IX (Pie-IX / Pierre-De Coubertin)",
+   "Pie-IX / Hochelaga",
+   "Pie-IX / de Rouen",
+   "Pie-IX / No 2050",
+   "Pie-IX / Ontario",
+   "Pie-IX / La Fontaine",
+   "Pie-IX / Adam",
+   "Pie-IX / Sainte-Catherine"
+  ],
+  "metroConnections": [
+   {
+    "slug": "pie-ix",
+    "name": "Pie-IX",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1375
+ },
+ {
+  "route": "197",
+  "name": "Rosemont",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 40,
+  "stops": [
+   "Station Rosemont",
+   "Rosemont / Saint-Hubert",
+   "Rosemont / Christophe-Colomb",
+   "Rosemont / De Normanville",
+   "Rosemont / Chambord",
+   "Rosemont / Garnier",
+   "Rosemont / Papineau",
+   "Rosemont / Chabot",
+   "Rosemont / De Lorimier",
+   "Rosemont / des Écores",
+   "Rosemont / D'Iberville",
+   "Rosemont / 2e Avenue",
+   "Rosemont / 5e Avenue",
+   "Rosemont / 8e Avenue",
+   "Rosemont / Saint-Michel",
+   "Rosemont / 15e Avenue",
+   "Rosemont / 17e Avenue",
+   "Rosemont / Bourbonnière",
+   "Rosemont / Pie-IX",
+   "Rosemont / 25e Avenue",
+   "Rosemont / 28e Avenue",
+   "Rosemont / 31e Avenue",
+   "Rosemont / 35e Avenue",
+   "Rosemont / Viau",
+   "Rosemont / des Marronniers",
+   "Rosemont / 42e Avenue",
+   "Rosemont / de l'Assomption",
+   "Rosemont / Châtelain",
+   "Rosemont / Pavillon Rosemont",
+   "Rosemont / Lacordaire",
+   "Rosemont / Duquesne",
+   "Rosemont / de Carignan",
+   "Rosemont / Langelier",
+   "Langelier / Chauvin",
+   "Langelier / De Renty",
+   "Langelier / Senneville",
+   "Station Langelier (Langelier / Sherbrooke)",
+   "de Granby / Faribault",
+   "de Marseille / Boutet",
+   "Station Langelier (Langelier / Sherbrooke)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "rosemont",
+    "name": "Rosemont",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "langelier",
+    "name": "Langelier",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1370
+ },
+ {
+  "route": "112",
+  "name": "Airlie",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 41,
+  "stops": [
+   "Terminus Lafleur / Newman",
+   "Lafleur / Airlie",
+   "Lafleur / Centrale",
+   "Centrale / Orchard",
+   "Behrens / Airlie",
+   "Airlie / 90e Avenue",
+   "Place Airlie (Airlie / No 9189)",
+   "Airlie / 80e Avenue",
+   "75e Avenue / Beauport",
+   "Salley / Tittley",
+   "Salley / Dollard",
+   "Bibliothèque L'Octogone (Dollard / De La Vérendrye",
+   "Dollard / Champlain (Hôpital de LaSalle)",
+   "Champlain / 35e Avenue",
+   "Champlain / No 8398",
+   "Champlain / Raymond",
+   "Raymond / George",
+   "Raymond / Lévis-Sauvé",
+   "Raymond / Mongeau",
+   "Centrale / Murphy",
+   "Centrale / Duranceau",
+   "Centrale / 12e Avenue",
+   "Centrale / Bishop-Power",
+   "Centrale / 8e Avenue",
+   "Centrale / 5e Avenue",
+   "Centrale / 2e Avenue",
+   "Centrale / Lacharité",
+   "Champlain / Parkdale",
+   "Champlain / Crawford",
+   "Champlain / No 7100",
+   "Champlain / No 7070",
+   "Champlain / Stephens",
+   "Stephens / No 1482",
+   "Beurling / Rolland",
+   "Beurling / Allard",
+   "Beurling / Brown",
+   "Beurling / Moffat",
+   "Champlain / Woodland",
+   "Champlain / Desmarchais",
+   "Champlain / 5e Avenue",
+   "Station Jolicoeur (Drake / Jolicoeur)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "lasalle-exo",
+    "name": "LaSalle (Exo)",
+    "lineIds": [
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "jolicoeur",
+    "name": "Jolicoeur",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1358
+ },
+ {
+  "route": "113",
+  "name": "Lapierre",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 31,
+  "stops": [
+   "Terminus Lafleur / Newman",
+   "Lafleur / Numéro 225",
+   "Bergevin / des Oblats",
+   "Bergevin / No 318",
+   "Bergevin / Jean-Milot",
+   "Jean-Milot / des Oblats",
+   "Jean-Milot / Lafleur",
+   "Jean-Milot / Comte",
+   "Newman / 90e Avenue",
+   "Newman / Dollard",
+   "Dollard / Gloria",
+   "Dollard / Réjane",
+   "Dollard / Chartrand",
+   "Dollard / John-F.-Kennedy",
+   "Jean-Brillon / Marie-Claire",
+   "Jean-Brillon / Rancourt",
+   "Jean-Brillon / Patrice",
+   "Jean-Brillon / Boursier",
+   "Jean-Brillon / Shevchenko",
+   "Jean-Brillon / Bernie",
+   "Jean-Brillon / Thierry",
+   "Jean-Brillon / Lapierre",
+   "Lapierre / Jean-Chevalier",
+   "Lapierre / Leclerc",
+   "Lapierre / Hébert",
+   "De La Vérendrye / Ducas",
+   "Parc Angrignon",
+   "des Trinitaires / D'Aragon",
+   "des Trinitaires / Jogues",
+   "des Trinitaires / Lamont",
+   "Station Angrignon"
+  ],
+  "metroConnections": [
+   {
+    "slug": "lasalle-exo",
+    "name": "LaSalle (Exo)",
+    "lineIds": [
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "angrignon",
+    "name": "Angrignon",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1341
+ },
+ {
+  "route": "171",
+  "name": "Henri-Bourassa",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 22,
+  "stops": [
+   "Station Côte-Vertu",
+   "Côte-Vertu / Saint-Germain",
+   "Côte-Vertu / Sainte-Croix",
+   "Côte-Vertu / Dutrisac",
+   "Côte-Vertu / Montpellier",
+   "Côte-Vertu / Muir",
+   "Jules-Poitras / Côte-Vertu",
+   "Jules-Poitras / Thompson",
+   "Jules-Poitras / No 1385",
+   "Jules-Poitras / Deguire",
+   "Jules-Poitras / Crépeau",
+   "Henri-Bourassa / de l'Acadie",
+   "Henri-Bourassa / de l'Acadie",
+   "Henri-Bourassa / Marcelin-Wilson",
+   "Collège de Bois-de-Boulogne",
+   "SAAQ (Henri-Bourassa / Meilleur)",
+   "Henri-Bourassa / Verville",
+   "Henri-Bourassa / de l'Esplanade",
+   "Henri-Bourassa / Saint-Laurent",
+   "Henri-Bourassa / Laverdure",
+   "Station Henri-Bourassa",
+   "Station Henri-Bourassa"
+  ],
+  "metroConnections": [
+   {
+    "slug": "cote-vertu",
+    "name": "Cote-Vertu",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1340
+ },
+ {
+  "route": "186",
+  "name": "Sherbrooke-Est",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 44,
+  "stops": [
+   "Station Honoré-Beaugrand / Terminus Nord",
+   "Sherbrooke / Liébert",
+   "Sherbrooke / Saint-Donat",
+   "Sherbrooke / Baldwin",
+   "Sherbrooke / Des Ormeaux",
+   "Sherbrooke / Joffre",
+   "Sherbrooke / Pierre-Bernard",
+   "Sherbrooke / Taillon",
+   "Sherbrooke / Fletcher",
+   "Sherbrooke / Hector",
+   "Sherbrooke / Joseph-Versailles",
+   "Sherbrooke / No 10025",
+   "Sherbrooke / Indorama",
+   "Sherbrooke / Gamble",
+   "Sherbrooke / No 10930",
+   "Sherbrooke / Durocher",
+   "Sherbrooke / de la Grande Allée",
+   "Sherbrooke / Marien",
+   "Sherbrooke / 3e Avenue",
+   "Sherbrooke / 8e Avenue",
+   "Sherbrooke / Saint-Jean-Baptiste",
+   "Sherbrooke / 16e Avenue",
+   "Sherbrooke / No 12572",
+   "Sherbrooke / du Tricentenaire",
+   "Sherbrooke / Robert-Chevalier",
+   "Sherbrooke / No 13092",
+   "Sherbrooke / 32e Avenue",
+   "Sherbrooke / 36e Avenue",
+   "Sherbrooke / 40e Avenue",
+   "Sherbrooke / 42e Avenue",
+   "Sherbrooke / 47e Avenue",
+   "Sherbrooke / De La Rousselière",
+   "Sherbrooke / 53e Avenue",
+   "Gare Pointe-aux-Trembles",
+   "Sherbrooke / Réal-Benoit",
+   "Sherbrooke / Yves-Thériault",
+   "Sherbrooke / Arthur-Généreux",
+   "Cimetière des Trembles",
+   "Sherbrooke / Damien-Gauthier",
+   "Sherbrooke / Polyvalente Pointe-aux-Trembles",
+   "Sherbrooke / No 15400",
+   "Sherbrooke / 81e Avenue",
+   "Sherbrooke / de la Famille-Dubreuil",
+   "Terminus Sherbrooke / Gouin"
+  ],
+  "metroConnections": [],
+  "trips": 1322
+ },
+ {
+  "route": "150",
+  "name": "René-Lévesque",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 24,
+  "stops": [
+   "Station Atwater (Ste-Catherine / Lambert-Closse)",
+   "René-Lévesque / du Fort",
+   "René-Lévesque / Saint-Mathieu",
+   "René-Lévesque / Guy",
+   "René-Lévesque / Bishop",
+   "René-Lévesque / Drummond",
+   "René-Lévesque / Stanley",
+   "René-Lévesque / Mansfield",
+   "René-Lévesque / Union",
+   "Basilique St-Patrick (R.-Lévesque / St-Alexandre)",
+   "René-Lévesque / Jeanne-Mance",
+   "René-Lévesque / Saint-Laurent",
+   "René-Lévesque / de l'Hôtel-de-Ville",
+   "René-Lévesque / Sanguinet (CHUM)",
+   "René-Lévesque / Saint-Denis (CHUM)",
+   "René-Lévesque / Berri",
+   "René-Lévesque / Saint-Hubert",
+   "René-Lévesque / Atateken",
+   "René-Lévesque / Panet",
+   "René-Lévesque / Papineau (Maison Radio-Canada)",
+   "De Lorimier / Sainte-Catherine",
+   "De Lorimier / De Maisonneuve",
+   "Logan / Parthenais",
+   "Station Papineau (Dorion / Sainte-Catherine)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "atwater",
+    "name": "Atwater",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "lucien-l-allier",
+    "name": "Lucien-L'Allier",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "lucien-l-allier-exo",
+    "name": "Lucien-L'Allier (Exo)",
+    "lineIds": [
+     "exo1",
+     "exo2",
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "bonaventure",
+    "name": "Bonaventure",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "gare-centrale-rem",
+    "name": "Gare Centrale (REM)",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "square-victoria-oaci",
+    "name": "Square-Victoria-OACI",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-d-armes",
+    "name": "Place-d'Armes",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "champ-de-mars",
+    "name": "Champ-de-Mars",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "berri-uqam",
+    "name": "Berri-UQAM",
+    "lineIds": [
+     "green",
+     "orange",
+     "yellow"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "beaudry",
+    "name": "Beaudry",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "papineau",
+    "name": "Papineau",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1269
+ },
+ {
+  "route": "11",
+  "name": "Parc-du-Mont-Royal / Ridgewood",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Ouest",
+   "Est"
+  ],
+  "headsigns": [
+   "Ouest",
+   "Est"
+  ],
+  "stopCount": 37,
+  "stops": [
+   "De La Roche / Rachel",
+   "De La Roche / Marie-Anne",
+   "du Mont-Royal / Christophe-Colomb",
+   "du Mont-Royal / de Mentana",
+   "du Mont-Royal / Saint-Hubert",
+   "Station Mont-Royal (du Mont-Royal / Pontiac)",
+   "du Mont-Royal / Saint-Denis",
+   "du Mont-Royal / Henri-Julien",
+   "du Mont-Royal / De Bullion",
+   "du Mont-Royal / Saint-Laurent",
+   "du Mont-Royal / Saint-Urbain",
+   "du Mont-Royal / du Parc",
+   "du Mont-Royal / Côte-Sainte-Catherine",
+   "Belvédère Camillien-Houde",
+   "Remembrance / du Chalet (Belvédère Kondiaronk)",
+   "Lac aux Castors",
+   "Remembrance / de la Côte-des-Neiges",
+   "de la Côte-des-Neiges / Forest Hill",
+   "Ridgewood / Côte-des-Neiges",
+   "Ridgewood / Côte-des-Neiges",
+   "Ridgewood / No 3440",
+   "Ridgewood / Ridgewood",
+   "Ridgewood / Ridgewood",
+   "Ridgewood / No 3635",
+   "Ridgewood / Ridgewood",
+   "Ridgewood / Ridgewood",
+   "Ridgewood / Ridgewood",
+   "Ridgewood / No 3360",
+   "Ridgewood / No 3280",
+   "Côte-des-Neiges / Ridgewood",
+   "de la Côte-des-Neiges / Decelles",
+   "de la Côte-des-Neiges / Queen-Mary",
+   "Jean-Brillant / de la Côte-des-Neiges",
+   "Jean-Brillant / Légaré",
+   "Lavoie / Isabella",
+   "Lacombe / Légaré",
+   "Station Côte-des-Neiges"
+  ],
+  "metroConnections": [
+   {
+    "slug": "mont-royal",
+    "name": "Mont-Royal",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1266
+ },
+ {
+  "route": "12",
+  "name": "Île-des-Soeurs",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 34,
+  "stops": [
+   "Station De l'Église",
+   "de l'Église / Gertrude",
+   "Station De l'Église (Galt / Wellington)",
+   "Galt / LaSalle",
+   "Gaétan-Laberge / de l'Église",
+   "Hôpital de Verdun (Gaétan-Laberge / Hickson)",
+   "Stade Ronald-Piché (Gaétan-Laberge / No 3750)",
+   "Gaétan-Laberge / Rhéaume",
+   "Gaétan-Laberge / Gilberte-Dubé",
+   "Campus Bell",
+   "Station Île-des-Soeurs",
+   "René-Lévesque / Levert",
+   "du Commerce / Levert",
+   "du Commerce / Cité de l'Île",
+   "du Commerce / No 40",
+   "du Golf / No 210",
+   "du Golf / No 500",
+   "du Golf / William-Paul",
+   "du Golf / No 800",
+   "du Golf / No 1050",
+   "du Golf / No 1061",
+   "Marguerite-Bourgeoys / du Club-Marin",
+   "Marguerite-Bourgeoys / de la Forêt",
+   "Marguerite-Bourgeoys / de l'Île-des-Soeurs",
+   "de l'Île-des-Soeurs / Abélard",
+   "de l'Île-des-Soeurs / Berlioz",
+   "de l'Île-des-Soeurs / Elgar",
+   "de l'Île-des-Soeurs / De Gaspé",
+   "de l'Île-des-Soeurs / Hall",
+   "de la Pointe-Sud / de l'Orée-du-Bois",
+   "de la Pointe-Sud / des Parulines",
+   "de la Pointe-Sud / No 250",
+   "de la Pointe-Sud / André-Prévost",
+   "André-Prévost / Serge-Garant"
+  ],
+  "metroConnections": [
+   {
+    "slug": "de-l-eglise",
+    "name": "De l'Eglise",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "lasalle",
+    "name": "LaSalle",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "ile-des-soeurs",
+    "name": "Ile-des-Soeurs",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   }
+  ],
+  "trips": 1260
+ },
+ {
+  "route": "211",
+  "name": "Bord-du-Lac",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 40,
+  "stops": [
+   "Station Kirkland",
+   "Sainte-Marie / Transcanadienne",
+   "du Ruisseau / Sainte-Marie",
+   "Sainte-Marie / Saint-Tropez",
+   "Montrose / Arlington",
+   "Montrose / Northcliff",
+   "Montrose / Windermere",
+   "Sherbrooke / Robin",
+   "Sherbrooke / Fleet",
+   "Sherbrooke / Brighton",
+   "Sherbrooke / Westcroft",
+   "Sherbrooke / Hollis",
+   "Sherbrooke / Woodside",
+   "Sherbrooke / Allancroft",
+   "Sherbrooke / Bermuda",
+   "Sherbrooke / Castle",
+   "Sherbrooke / de Cadillac",
+   "Gare Beaconsfield",
+   "Saint-Charles / Prairie",
+   "Beaconsfield / Claude",
+   "Beaconsfield / Hyde Park",
+   "Beaconsfield / Lakeshore",
+   "Bord-du-Lac / Pointe-Claire",
+   "Bord-du-Lac / Saint-Jean-Baptiste",
+   "Bord-du-Lac / Sainte-Anne",
+   "Lanthier / Cartier",
+   "Cartier / No 117",
+   "Cartier / de Val-Soleil",
+   "Cartier / Autoroute 20",
+   "Autoroute 20 / Saint-Jean",
+   "Gare Pointe-Claire",
+   "Herron / Pine Beach",
+   "Herron / No 1268",
+   "Dumont / Fénelon",
+   "Carson / Roy",
+   "Carson / Lepage",
+   "Carson / Les Jardins Dorval",
+   "Dorval / No 352",
+   "Terminus Dorval",
+   "Station Lionel-Groulx"
+  ],
+  "metroConnections": [
+   {
+    "slug": "beaconsfield",
+    "name": "Beaconsfield",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "dorval",
+    "name": "Dorval",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1254
+ },
+ {
+  "route": "61",
+  "name": "Wellington",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 52,
+  "stops": [
+   "Gagné / George",
+   "Gagné / Lévis-Sauvé",
+   "Centrale / Duranceau",
+   "Centrale / 12e Avenue",
+   "Centrale / Bishop-Power",
+   "Bishop-Power / No 220",
+   "Édouard / 8e Avenue",
+   "Édouard / 5e Avenue",
+   "Édouard / 3e Avenue",
+   "Édouard / Alepin",
+   "Lacharité / Ouimet",
+   "Ouimet / Fayolle",
+   "Ouimet / Clémenceau",
+   "Ouimet / Crawford",
+   "Crawford / Churchill",
+   "Crawford / LaSalle",
+   "LaSalle / No 7105",
+   "LaSalle / No 6875",
+   "LaSalle / Bannantyne",
+   "LaSalle / Valiquette",
+   "LaSalle / Godin",
+   "LaSalle / Richard",
+   "LaSalle / Beatty",
+   "Wellington / Argyle",
+   "Wellington / Desmarchais",
+   "Wellington / 4e Avenue",
+   "Wellington / 1re Avenue",
+   "Station De l'Église (Wellington / Galt)",
+   "Wellington / de l'Église",
+   "Wellington / Hickson",
+   "Wellington / Regina",
+   "LaSalle / de Rushbrooke",
+   "LaSalle / Caisse",
+   "LaSalle / Henri-Duhamel",
+   "LaSalle / Gibbons",
+   "D'Argenson / Grand Trunk",
+   "D'Argenson / du Centre",
+   "Station Charlevoix (Centre / Charlevoix)",
+   "du Centre / Ropery",
+   "du Centre / Island",
+   "du Centre / Shearer",
+   "du Centre / de la Sucrerie",
+   "du Centre / Wellington",
+   "Wellington / Bridge",
+   "Wellington / Young",
+   "Peel / Ottawa",
+   "École de technologie supérieure (Peel / Notre-Dame",
+   "Peel / Saint-Jacques",
+   "Peel / Saint-Antoine",
+   "Peel / des Canadiens-de-Montréal",
+   "Place du Canada (Peel / René-Lévesque)",
+   "Peel / Sainte-Catherine"
+  ],
+  "metroConnections": [
+   {
+    "slug": "verdun",
+    "name": "Verdun",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "de-l-eglise",
+    "name": "De l'Eglise",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "lasalle",
+    "name": "LaSalle",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "charlevoix",
+    "name": "Charlevoix",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "lionel-groulx",
+    "name": "Lionel-Groulx",
+    "lineIds": [
+     "green",
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "bonaventure",
+    "name": "Bonaventure",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "peel",
+    "name": "Peel",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1245
+ },
+ {
+  "route": "45",
+  "name": "Papineau",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 42,
+  "stops": [
+   "De Saint-Firmin / Gouin",
+   "De Saint-Firmin / Henri-Bourassa",
+   "De Saint-Firmin / Prieur",
+   "Fleury / Charton",
+   "Papineau / Fleury",
+   "Papineau / Sauriol",
+   "Papineau / Sauvé",
+   "Papineau / Charland",
+   "Papineau / de Louvain",
+   "Papineau / Lecocq",
+   "Papineau / Legendre",
+   "Papineau / Émile-Journault",
+   "Papineau / François-H.-Prévost",
+   "Papineau / Barnabé-Larocque",
+   "Papineau / Jacques-Casault",
+   "Papineau / Crémazie (coin Nord-Ouest)",
+   "Papineau / Crémazie (coin Sud-Ouest)",
+   "Papineau / Jarry",
+   "Papineau / Tillemont",
+   "Papineau / Villeray",
+   "Papineau / L.-O.-David",
+   "Papineau / Everett",
+   "Station Fabre (Papineau / Jean-Talon)",
+   "Papineau / Bélanger",
+   "Papineau / Saint-Zotique",
+   "Papineau / Beaubien",
+   "Papineau / de Bellechasse",
+   "Papineau / Rosemont",
+   "Papineau / Masson",
+   "Papineau / Laurier",
+   "Papineau / Saint-Joseph",
+   "Papineau / Gilford",
+   "Papineau / du Mont-Royal",
+   "Papineau / Marie-Anne",
+   "Papineau / Rachel",
+   "Papineau / Gauthier",
+   "Papineau / Sherbrooke",
+   "Papineau / Ontario",
+   "Papineau / La Fontaine",
+   "Papineau / De Maisonneuve",
+   "Papineau / Sainte-Catherine",
+   "Station Papineau (Cartier / Sainte-Catherine)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "fabre",
+    "name": "Fabre",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "d-iberville",
+    "name": "D'Iberville",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "papineau",
+    "name": "Papineau",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1240
+ },
+ {
+  "route": "27",
+  "name": "Saint-Joseph",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Ouest",
+   "Est"
+  ],
+  "headsigns": [
+   "Ouest",
+   "Est"
+  ],
+  "stopCount": 22,
+  "stops": [
+   "Laurier / Pie-IX",
+   "Pie-IX / Saint-Joseph",
+   "Saint-Joseph / Bourbonnière",
+   "Saint-Joseph / No 3600",
+   "Saint-Joseph / 13e Avenue",
+   "Saint-Joseph / Saint-Michel",
+   "Saint-Joseph / 9e Avenue",
+   "Saint-Joseph / 6e Avenue",
+   "Saint-Joseph / 3e Avenue",
+   "Saint-Joseph / Molson",
+   "Saint-Joseph / D'Iberville",
+   "Saint-Joseph / Messier",
+   "Saint-Joseph / Parthenais",
+   "Saint-Joseph / De Lorimier",
+   "Saint-Joseph / Chabot",
+   "Saint-Joseph / Papineau",
+   "Saint-Joseph / Fabre",
+   "Saint-Joseph / De Lanaudière",
+   "Saint-Joseph / De La Roche",
+   "Saint-Joseph / Christophe-Colomb",
+   "Saint-Joseph / de Mentana",
+   "Station Laurier (Berri / Saint-Joseph)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "laurier",
+    "name": "Laurier",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1237
+ },
+ {
+  "route": "107",
+  "name": "Verdun",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Ouest",
+   "Est"
+  ],
+  "headsigns": [
+   "Ouest",
+   "Est"
+  ],
+  "stopCount": 50,
+  "stops": [
+   "du Square-Victoria / Saint-Antoine",
+   "McGill / Notre-Dame",
+   "McGill / Saint-Paul",
+   "McGill / William",
+   "Wellington / des Soeurs-Grises",
+   "Wellington / Queen",
+   "Wellington / Robert-Bourassa",
+   "Wellington / Ann",
+   "Wellington / Murray",
+   "Wellington / Bridge",
+   "Wellington / De Condé",
+   "Wellington / de la Sucrerie",
+   "Wellington / Sainte-Madeleine",
+   "Wellington / Charon",
+   "Wellington / Fortune",
+   "Wellington / de Liverpool",
+   "Wellington / Charlevoix",
+   "Wellington / Gilberte-Dubé",
+   "Wellington / Albert-Denault",
+   "Regina / Evelyn",
+   "de Verdun / Hickson",
+   "de Verdun / de l'Église",
+   "de Verdun / Galt",
+   "Station Verdun (de Verdun / Willibrord)",
+   "de Verdun / 5e Avenue",
+   "de Verdun / Desmarchais",
+   "de Verdun / Woodland",
+   "de Verdun / Beatty",
+   "de Verdun / Manning",
+   "de Verdun / Brault",
+   "LaSalle / Riverview",
+   "LaSalle / Valiquette",
+   "LaSalle / Bannantyne",
+   "LaSalle / No 6875",
+   "LaSalle / No 7105",
+   "LaSalle / Crawford",
+   "Crawford / Churchill",
+   "Crawford / Ouimet",
+   "Ouimet / Clémenceau",
+   "Ouimet / Fayolle",
+   "Ouimet / Lacharité",
+   "Lacharité / Édouard",
+   "Lacharité / Centrale",
+   "Champlain / Allion",
+   "Champlain / 2e Avenue",
+   "George / 6e Avenue",
+   "George / 9e Avenue",
+   "George / 11e Avenue",
+   "George / Gagné",
+   "Gagné / Centre Lecavalier"
+  ],
+  "metroConnections": [
+   {
+    "slug": "square-victoria-oaci",
+    "name": "Square-Victoria-OACI",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "lasalle",
+    "name": "LaSalle",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "de-l-eglise",
+    "name": "De l'Eglise",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "verdun",
+    "name": "Verdun",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1236
+ },
+ {
+  "route": "95",
+  "name": "Bélanger",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 43,
+  "stops": [
+   "Station Jean-Talon (Jean-Talon / De Chateaubriand)",
+   "Bélanger / Saint-Hubert",
+   "Bélanger / Christophe-Colomb",
+   "Bélanger / De Normanville",
+   "Bélanger / De Lanaudière",
+   "Bélanger / Fabre",
+   "Bélanger / Papineau",
+   "Bélanger / Chabot",
+   "Bélanger / De Lorimier",
+   "Bélanger / Louis-Hémon",
+   "Bélanger / D'Iberville",
+   "Bélanger / 6e Avenue",
+   "Bélanger / 9e Avenue",
+   "Bélanger / Saint-Michel",
+   "Bélanger / 13e Avenue",
+   "Bélanger / 15e Avenue",
+   "Bélanger / 17e Avenue",
+   "Bélanger / 19e Avenue",
+   "Bélanger / Pie-IX",
+   "Bélanger / 24e Avenue",
+   "Bélanger / 26e Avenue",
+   "Bélanger / 28e Avenue",
+   "Bélanger / 30e Avenue",
+   "Bélanger / 33e Avenue",
+   "Bélanger / 35e Avenue",
+   "Bélanger / Viau (Institut de cardiologie)",
+   "Bélanger / 40e Avenue",
+   "Bélanger / 43e Avenue",
+   "Bélanger / de l'Assomption",
+   "Bélanger / Châtelain",
+   "Bélanger / de Pontoise",
+   "Bélanger / Lacordaire",
+   "Bélanger / Valdombre",
+   "Bélanger / d'Avila",
+   "Bélanger / Dumesnil",
+   "Bélanger / Daveluy",
+   "Bélanger / Langelier",
+   "Bélanger / Jean-Milot",
+   "Bélanger / Étienne-Bouchard",
+   "des Halles / Bélanger",
+   "des Halles / Jean-Talon",
+   "Jean-Talon / des Galeries-d'Anjou",
+   "des Galeries d'Anjou / Halles d'Anjou"
+  ],
+  "metroConnections": [
+   {
+    "slug": "jean-talon",
+    "name": "Jean-Talon",
+    "lineIds": [
+     "orange",
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "fabre",
+    "name": "Fabre",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "d-iberville",
+    "name": "D'Iberville",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1211
+ },
+ {
+  "route": "170",
+  "name": "Keller",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 27,
+  "stops": [
+   "Jean-Bourdon / Louis-Jadon",
+   "Jean-Bourdon / de Beauséjour",
+   "de Beauséjour / Gouin",
+   "Toupin / Gouin",
+   "Toupin / L'Heureux",
+   "Toupin / Métivier",
+   "Toupin / Trépanier",
+   "Toupin / Baker",
+   "Keller / de Beauséjour",
+   "Keller / Jean-Bouillet",
+   "Keller / Carroll",
+   "Keller / Somerset",
+   "Keller / No 1947",
+   "Keller / Laurentien",
+   "de Louisbourg / Ranger",
+   "de Louisbourg / Grenet",
+   "de Louisbourg / De Meulles",
+   "de Louisbourg / Saint-Germain",
+   "O'Brien / Dudemaine",
+   "O'Brien / Voie ferrée C.P.",
+   "O'Brien / Cléroux",
+   "O'Brien / Poirier",
+   "Décarie / Poirier",
+   "Décarie / Deguire",
+   "Décarie / Tassé",
+   "Décarie / Rochon",
+   "Station Côte-Vertu"
+  ],
+  "metroConnections": [
+   {
+    "slug": "du-ruisseau",
+    "name": "Du Ruisseau",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "cote-vertu",
+    "name": "Cote-Vertu",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1205
+ },
+ {
+  "route": "470",
+  "name": "Express Pierrefonds",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 27,
+  "stops": [
+   "Usine de filtration de Pierrefonds",
+   "du Château-Pierrefonds / Oka",
+   "de Pierrefonds / du Château-Pierrefonds",
+   "de Pierrefonds / Prével",
+   "de Pierrefonds / des Cageux",
+   "de Pierrefonds / Nanterre",
+   "de Pierrefonds / Saint-Charles",
+   "de Pierrefonds / Richelieu",
+   "de Pierrefonds / Sainte-Anne",
+   "de Pierrefonds / Paiement",
+   "de Pierrefonds / Jacques-Bizard",
+   "de Pierrefonds / Esther-Blondin",
+   "de Pierrefonds / Harry-Worth",
+   "de Pierrefonds / Saint-Jean",
+   "Saint-Jean / Harry-Worth",
+   "Saint-Jean / Jolicoeur",
+   "Saint-Jean / Harris",
+   "Saint-Jean / Shakespeare",
+   "Saint-Jean / Westminster",
+   "Saint-Jean / de Salaberry",
+   "Saint-Jean / Devon",
+   "Saint-Jean / Labrosse",
+   "Saint-Jean / Brunswick",
+   "Station Fairview-Pointe-Claire",
+   "Brunswick / Fairview",
+   "Brunswick / CF Fairview Pointe-Claire",
+   "Station Côte-Vertu"
+  ],
+  "metroConnections": [
+   {
+    "slug": "pointe-claire",
+    "name": "Pointe-Claire",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "cote-vertu",
+    "name": "Cote-Vertu",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1202
+ },
+ {
+  "route": "215",
+  "name": "Henri-Bourassa",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 49,
+  "stops": [
+   "Terminus Fairview-Pointe-Claire (Aile B-Quai 16)",
+   "Brunswick / Fairview",
+   "Brunswick / Auto Plaza",
+   "Brunswick / Revcon",
+   "Brunswick / Selkirk",
+   "Brunswick / Ellingham",
+   "Brunswick / No 195",
+   "Brunswick / Hewitt",
+   "Brunswick / Tecumseh",
+   "Brunswick / Montrose",
+   "Brunswick / Hôtel-de-Ville",
+   "Brunswick / Bancroft",
+   "Brunswick / No 64",
+   "Brunswick / Bovis",
+   "Brunswick / des Sources",
+   "Brunswick / Davignon",
+   "Brunswick / Deacon",
+   "Saint-Régis / Deacon",
+   "Saint-Régis / No 2000",
+   "Saint-Régis / Séville",
+   "Saint-Régis / No 1604",
+   "Saint-Régis / Sunnybrooke",
+   "Saint-Régis / Chemin McDonald",
+   "Saint-Régis / No 1055",
+   "Henri-Bourassa / Douglas-B.-Floreani",
+   "Henri-Bourassa / Halpern",
+   "Henri-Bourassa / De Miniac",
+   "Henri-Bourassa / Valiquette",
+   "Brabant-Marineau / De Baene",
+   "Brabant-Marineau / Botham",
+   "Cousens / No 4600",
+   "Cousens / Thimens",
+   "Guénette / Henri-Bourassa",
+   "Henri-Bourassa / Félix-Leclerc",
+   "Henri-Bourassa / Sartelon",
+   "Henri-Bourassa / Marette",
+   "Henri-Bourassa / Vermandère",
+   "Henri-Bourassa / Cavendish",
+   "Henri-Bourassa / Duchesne",
+   "Henri-Bourassa / No 5700",
+   "Henri-Bourassa / No 5600",
+   "Henri-Bourassa / Wilfrid-Reid",
+   "Henri-Bourassa / No 5265",
+   "Henri-Bourassa / Marcel-Laurin",
+   "Marcel-Laurin / Poirier",
+   "Marcel-Laurin / No 1515",
+   "Marcel-Laurin / Lucien-Thimens",
+   "Marcel-Laurin / Côte-Vertu",
+   "Station Côte-Vertu"
+  ],
+  "metroConnections": [
+   {
+    "slug": "pointe-claire",
+    "name": "Pointe-Claire",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "marie-curie",
+    "name": "Marie-Curie",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "a-40",
+    "name": "A-40",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "sunnybrooke",
+    "name": "Sunnybrooke",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "montpellier",
+    "name": "Montpellier",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "bois-franc",
+    "name": "Bois-Franc",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "du-ruisseau",
+    "name": "Du Ruisseau",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "cote-vertu",
+    "name": "Cote-Vertu",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1202
+ },
+ {
+  "route": "28",
+  "name": "Honoré-Beaugrand",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 41,
+  "stops": [
+   "Centre de transport Anjou",
+   "Larrey / Secant",
+   "J.-René-Ouimet / Parkway",
+   "Parkway / No 10800",
+   "Parkway / No 10700",
+   "Parkway / No 10600",
+   "Jules-Léger / Parkway",
+   "Jules-Léger / Ray-Lawson",
+   "Ray-Lawson / Ernest-Cormier",
+   "Ray-Lawson / Grenache",
+   "Grenache / Parkway",
+   "Grenache / Edison",
+   "Claveau / Grenache",
+   "Claveau / No 9100",
+   "Claveau / Jarry",
+   "Jarry / Edison",
+   "Jarry / Parkway",
+   "Jarry / Ray-Lawson",
+   "Roi-René / de Châteauneuf",
+   "de Châteauneuf / de la Loire",
+   "de Châteauneuf / de Vaujours",
+   "Joseph-Renaud / de Châteauneuf",
+   "Joseph-Renaud / Wilfrid-Pelletier",
+   "Joseph-Renaud / de Châtillon",
+   "Joseph-Renaud / des Vendéens",
+   "Joseph-Renaud / Yves-Prévost",
+   "Chénier / Saint-Donat",
+   "Saint-Donat / des Réaux",
+   "Saint-Donat / Fonteneau",
+   "Saint-Donat / De Grosbois",
+   "Saint-Donat / De Forbin-Janson",
+   "Saint-Donat / Sherbrooke",
+   "Station Honoré-Beaugrand / Terminus Sud",
+   "Honoré-Beaugrand / de Marseille",
+   "Honoré-Beaugrand / Sainte-Claire",
+   "Honoré-Beaugrand / Pierre-De Coubertin",
+   "Honoré-Beaugrand / Hochelaga",
+   "Honoré-Beaugrand / Tellier",
+   "Honoré-Beaugrand / Ontario",
+   "Honoré-Beaugrand / La Fontaine",
+   "La Fontaine / Georges-Bizet"
+  ],
+  "metroConnections": [],
+  "trips": 1201
+ },
+ {
+  "route": "198",
+  "name": "Broadway",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 56,
+  "stops": [
+   "Terminus Dorval",
+   "Dorval / Carson",
+   "Dorval / Dawson",
+   "Dorval / No 135",
+   "Bord-du-Lac / Decary",
+   "Bord-du-Lac / de la Présentation",
+   "Bord-du-Lac / Dahlia",
+   "Bord-du-Lac / Saint-Charles",
+   "Bord-du-Lac / Sévigny",
+   "Bord-du-Lac / Joubert",
+   "Saint-Joseph / 56e Avenue",
+   "Saint-Joseph / 53e Avenue",
+   "Saint-Joseph / 51e Avenue",
+   "Saint-Joseph / 48e Avenue",
+   "Saint-Joseph / 46e Avenue",
+   "Broadway / 44e Avenue",
+   "Broadway / 42e Avenue",
+   "Broadway / 39e Avenue",
+   "Broadway / 36e Avenue",
+   "Victoria / 33e Avenue",
+   "32e Avenue / Remembrance",
+   "32e Avenue / Saint-Antoine",
+   "32e Avenue / Provost",
+   "Provost / 26e Avenue",
+   "Provost / 24e Avenue",
+   "Provost / 18e Avenue",
+   "Provost / 16e Avenue",
+   "Provost / 10e Avenue",
+   "Provost / 7e Avenue",
+   "Provost / 3e Avenue",
+   "Provost / 1re Avenue",
+   "1re Avenue / Saint-Antoine",
+   "William-MacDonald / George-V",
+   "Saint-Jacques / Richardson",
+   "Saint-Jacques / Jolicoeur",
+   "Saint-Pierre / Notre-Dame",
+   "Dollard / No 850",
+   "Dollard / Elmslie",
+   "Dollard / Hull",
+   "Dollard / Trudeau",
+   "Dollard / Bédard",
+   "Dollard / Newman",
+   "Dollard / Réjane",
+   "Dollard / Chartrand",
+   "Dollard / Jean-Brillon",
+   "Dollard / Salley",
+   "Dollard / Champlain (Hôpital de LaSalle)",
+   "Champlain / 35e Avenue",
+   "Champlain / Raymond",
+   "Champlain / Gagné",
+   "Champlain / Bishop-Power",
+   "Bourdeau / No 7675",
+   "Bourdeau / Thierry",
+   "Bourdeau / Lapierre",
+   "des Trinitaires / Lamont",
+   "Station Angrignon"
+  ],
+  "metroConnections": [
+   {
+    "slug": "dorval",
+    "name": "Dorval",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "lachine",
+    "name": "Lachine",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "du-canal-exo",
+    "name": "Du Canal (Exo)",
+    "lineIds": [
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "lasalle-exo",
+    "name": "LaSalle (Exo)",
+    "lineIds": [
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "angrignon",
+    "name": "Angrignon",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1194
+ },
+ {
+  "route": "94",
+  "name": "D'Iberville",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 29,
+  "stops": [
+   "Cirque du Soleil",
+   "du Cirque / Jarry",
+   "D'Iberville / Crémazie",
+   "D'Iberville / Tillemont",
+   "D'Iberville / Villeray",
+   "D'Iberville / L.-O.-David",
+   "D'Iberville / Everett",
+   "Station D'Iberville (D'Iberville / Jean-Talon)",
+   "D'Iberville / Bélanger",
+   "D'Iberville / Saint-Zotique",
+   "D'Iberville / Beaubien",
+   "D'Iberville / de Bellechasse",
+   "D'Iberville / Rosemont",
+   "D'Iberville / Holt",
+   "D'Iberville / Dandurand",
+   "D'Iberville / Masson",
+   "D'Iberville / No 5184",
+   "D'Iberville / Saint-Joseph",
+   "D'Iberville / No 5000",
+   "D'Iberville / du Mont-Royal",
+   "D'Iberville / Marie-Anne",
+   "D'Iberville / Rachel",
+   "D'Iberville / Sherbrooke",
+   "D'Iberville / Hochelaga",
+   "D'Iberville / de Rouen",
+   "Station Frontenac (du Havre / Ontario)",
+   "du Havre / La Fontaine",
+   "du Havre / De Maisonneuve",
+   "du Havre / Sainte-Catherine"
+  ],
+  "metroConnections": [
+   {
+    "slug": "d-iberville",
+    "name": "D'Iberville",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "frontenac",
+    "name": "Frontenac",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1192
+ },
+ {
+  "route": "34",
+  "name": "Sainte-Catherine",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 31,
+  "stops": [
+   "Station Papineau (Dorion / Sainte-Catherine)",
+   "Sainte-Catherine / De Lorimier",
+   "Sainte-Catherine / Parthenais",
+   "Sainte-Catherine / Fullum",
+   "Sainte-Catherine / Dufresne",
+   "Sainte-Catherine / D'Iberville",
+   "Sainte-Catherine / du Havre",
+   "Sainte-Catherine / Alphonse-D.-Roy",
+   "Sainte-Catherine / Moreau",
+   "Sainte-Catherine / Dézéry",
+   "Sainte-Catherine / Davidson",
+   "Sainte-Catherine / Aylwin",
+   "Sainte-Catherine / Nicolet",
+   "Sainte-Catherine / Bourbonnière",
+   "Sainte-Catherine / Jeanne-d'Arc",
+   "Sainte-Catherine / Pie-IX",
+   "Sainte-Catherine / Letourneux",
+   "Sainte-Catherine / William-David",
+   "Sainte-Catherine / Aird",
+   "Sainte-Catherine / Leclaire",
+   "Sainte-Catherine / Saint-Clément",
+   "Sainte-Catherine / Vimont",
+   "Sainte-Catherine / Notre-Dame",
+   "Notre-Dame / Viau",
+   "Viau / Sainte-Catherine",
+   "Viau / Adam",
+   "Viau / La Fontaine",
+   "Viau / Ontario",
+   "Viau / de Rouen",
+   "Viau / Hochelaga",
+   "Station Viau"
+  ],
+  "metroConnections": [
+   {
+    "slug": "papineau",
+    "name": "Papineau",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "viau",
+    "name": "Viau",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1190
+ },
+ {
+  "route": "164",
+  "name": "Dudemaine",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 47,
+  "stops": [
+   "Centre de transport St-Laurent (Guénette / Cousens",
+   "Guénette / Bois-Franc",
+   "Guénette / Dobrin",
+   "Guénette / No 2260",
+   "Steinberg / No 4200",
+   "Thimens / Bois-Franc",
+   "Thimens / Cousens",
+   "Thimens / Henri-Bourassa",
+   "Henri-Bourassa / Guénette",
+   "Henri-Bourassa / Félix-Leclerc",
+   "Henri-Bourassa / Sartelon",
+   "Henri-Bourassa / Marette",
+   "Henri-Bourassa / Vermandère",
+   "Toupin / Saint-Charles",
+   "Toupin / Marcel",
+   "Toupin / Marcel",
+   "Toupin / Keller",
+   "Keller / de Beauséjour",
+   "Keller / Jean-Bouillet",
+   "Keller / Carroll",
+   "Keller / Somerset",
+   "Keller / No 1947",
+   "Keller / Laurentien",
+   "de Louisbourg / Ranger",
+   "de Louisbourg / Grenet",
+   "Dudemaine / Grenet",
+   "Dudemaine / Michel-Sarrazin",
+   "Dudemaine / Robert-Giffard",
+   "Dudemaine / Saint-Évariste",
+   "Dudemaine / O'Brien",
+   "Dudemaine / Guertin",
+   "Dudemaine / Élie-Blanchard",
+   "Dudemaine / De Poutrincourt",
+   "Dudemaine / James-Morrice",
+   "Dudemaine / Pasteur",
+   "Dudemaine / de l'Acadie",
+   "Dudemaine / Laforest",
+   "du Bois-de-Boulogne / Marie-Rollet",
+   "du Bois-de-Boulogne / Henri-Bourassa",
+   "Collège de Bois-de-Boulogne",
+   "SAAQ (Henri-Bourassa / Meilleur)",
+   "Henri-Bourassa / Verville",
+   "Henri-Bourassa / de l'Esplanade",
+   "Henri-Bourassa / Saint-Laurent",
+   "Henri-Bourassa / Laverdure",
+   "Station Henri-Bourassa",
+   "Station Henri-Bourassa"
+  ],
+  "metroConnections": [
+   {
+    "slug": "montpellier",
+    "name": "Montpellier",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   }
+  ],
+  "trips": 1189
+ },
+ {
+  "route": "37",
+  "name": "Jolicoeur",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Ouest",
+   "Est"
+  ],
+  "headsigns": [
+   "Ouest",
+   "Est"
+  ],
+  "stopCount": 27,
+  "stops": [
+   "Station LaSalle",
+   "Caisse / LaSalle",
+   "LaSalle / Victor",
+   "LaSalle / Hickson",
+   "LaSalle / de l'Église",
+   "LaSalle / Rielle",
+   "LaSalle / 2e Avenue",
+   "LaSalle / 5e Avenue",
+   "LaSalle / Desmarchais",
+   "LaSalle / Woodland",
+   "Woodland / de Verdun",
+   "Woodland / Bannantyne",
+   "Woodland / Champlain",
+   "Station Jolicoeur (Drake / Holy Cross)",
+   "Jolicoeur / Angers",
+   "Jolicoeur / Laurendeau",
+   "Jolicoeur / Eadie",
+   "Jolicoeur / Hadley",
+   "Jolicoeur / Monk",
+   "Jolicoeur / Hamilton",
+   "Jolicoeur / Dumas",
+   "Jolicoeur / Jogues",
+   "Newman / Jean-Béraud",
+   "Newman / Joseph-Arthur-Cousineau",
+   "Carrefour Angrignon (Newman / No 6767)",
+   "Angrignon / Tours Angrignon",
+   "Station Angrignon"
+  ],
+  "metroConnections": [
+   {
+    "slug": "lasalle",
+    "name": "LaSalle",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "de-l-eglise",
+    "name": "De l'Eglise",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "jolicoeur",
+    "name": "Jolicoeur",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "angrignon",
+    "name": "Angrignon",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1188
+ },
+ {
+  "route": "160",
+  "name": "Barclay",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 35,
+  "stops": [
+   "Clanranald / David-Lewis",
+   "David-Lewis / Tommy-Douglas",
+   "Abraham-de-Sola / Clanranald",
+   "McLynn / Vézina",
+   "McLynn / Plamondon",
+   "Plamondon / Décarie",
+   "Plamondon / Trans Island",
+   "Plamondon / Barclay",
+   "Plamondon / Lemieux",
+   "Station Plamondon (Plamondon / Victoria)",
+   "Plamondon / Lavoie",
+   "Plamondon / Légaré",
+   "Plamondon / de la Côte-des-Neiges",
+   "de la Côte-des-Neiges / Barclay",
+   "Goyer / de la Côte-des-Neiges",
+   "Goyer / Decelles",
+   "Goyer / Hudson",
+   "Goyer / de Darlington",
+   "Goyer / Wilderton",
+   "Wilderton / de Bedford",
+   "Bates / Wilderton",
+   "Bates / de Vimy",
+   "Bates / Pratt",
+   "Bates / Rockland",
+   "Thérèse-Lavoie-Roux / Dollard",
+   "Thérèse-Lavoie-Roux / Champagneur",
+   "Thérèse-Lavoie-Roux / Durocher",
+   "Beaubien / Hutchison",
+   "Beaubien / de l'Esplanade",
+   "Beaubien / Clark",
+   "Saint-Laurent / Saint-Zotique",
+   "Saint-Dominique / Beaubien",
+   "Beaubien / Alma",
+   "Beaubien / Saint-Denis",
+   "Station Beaubien"
+  ],
+  "metroConnections": [
+   {
+    "slug": "plamondon",
+    "name": "Plamondon",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "canora",
+    "name": "Canora",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "acadie",
+    "name": "Acadie",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "beaubien",
+    "name": "Beaubien",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1186
+ },
+ {
+  "route": "192",
+  "name": "Robert",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 48,
+  "stops": [
+   "Station Crémazie Sud (Crémazie / Lajeunesse)",
+   "Crémazie / Foucher",
+   "Crémazie / Saint-Hubert",
+   "de Liège / Christophe-Colomb",
+   "Crémazie / Christophe-Colomb",
+   "Crémazie / Chambord",
+   "Crémazie / Fabre",
+   "Crémazie / Papineau",
+   "Crémazie / de Bordeaux",
+   "Crémazie / Molson",
+   "Crémazie / 6e Avenue",
+   "Crémazie / Saint-Michel",
+   "Crémazie / Musset",
+   "17e Avenue / Crémazie",
+   "17e Avenue / Jarry",
+   "Jarry / 19e Avenue",
+   "Jarry / Pie-IX",
+   "Jarry / 23e Avenue",
+   "25e Avenue / Jarry",
+   "Provencher / d'Assise",
+   "Provencher / Jean-Rivard",
+   "Provencher / Compiègne",
+   "Robert / Cluny",
+   "Robert / Narbonne",
+   "Robert / D'Artagnan",
+   "Robert / Viau",
+   "Robert / Nevers",
+   "Robert / Lacordaire",
+   "Robert / Aimé-Renaud",
+   "Robert / des Sables",
+   "Robert / Albanel",
+   "Robert / de Honfleur",
+   "Robert / de Guyenne",
+   "Langelier / de Louvois",
+   "Langelier / P.-E.-Lamarche",
+   "Langelier / Belherbe",
+   "Langelier / Bombardier",
+   "Bombardier / No 6630",
+   "Bombardier / Pascal-Gagnon",
+   "Bombardier / Champ-d'Eau",
+   "Bombardier / des Galeries-d'Anjou",
+   "Bombardier / Renaude-Lapointe",
+   "Colbert / Ravenel",
+   "Colbert / No 10700",
+   "Colbert / Larrey",
+   "Larrey / Mirabeau",
+   "Larrey / No 8150",
+   "Centre de transport Anjou"
+  ],
+  "metroConnections": [
+   {
+    "slug": "cremazie",
+    "name": "Cremazie",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "saint-michel-mtl-nord",
+    "name": "Saint-Michel-Montreal-Nord",
+    "lineIds": [
+     "exo5"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1183
+ },
+ {
+  "route": "125",
+  "name": "Ontario",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 40,
+  "stops": [
+   "Station McGill (De Maisonneuve / Robert-Bourassa)",
+   "du Président-Kennedy / Aylmer",
+   "Station Place-des-Arts (Pr.-Kennedy/Bleury)",
+   "Jeanne-Mance / du Président-Kennedy",
+   "Sherbrooke / Saint-Urbain",
+   "Ontario / de l'Hôtel-de-ville",
+   "Ontario / Saint-Denis",
+   "Ontario / Berri",
+   "Ontario / Saint-Hubert",
+   "Ontario / Atateken",
+   "Ontario / de la Visitation",
+   "Ontario / Alexandre-DeSève",
+   "Ontario / De Champlain",
+   "Ontario / Papineau",
+   "Parc des Faubourgs (Ontario/Dorion)",
+   "Ontario / De Lorimier",
+   "Ontario / Parthenais",
+   "Ontario / Fullum",
+   "Ontario / Dufresne",
+   "Station Frontenac (Ontario / du Havre)",
+   "Ontario / Bercy",
+   "Ontario / Wurtele",
+   "Ontario / Lespérance",
+   "Ontario / Préfontaine",
+   "Place des Tisserandes (Ontario / Saint-Germain)",
+   "Ontario / Davidson",
+   "Ontario / Aylwin",
+   "Ontario / De Chambly",
+   "Ontario / Valois",
+   "Ontario / d'Orléans",
+   "Ontario / Pie-IX",
+   "Ontario / Letourneux",
+   "Ontario / William-David",
+   "Ontario / Aird",
+   "Ontario / Leclaire",
+   "Ontario / Saint-Clément",
+   "Viau / Ontario",
+   "Viau / de Rouen",
+   "Viau / Hochelaga",
+   "Station Viau"
+  ],
+  "metroConnections": [
+   {
+    "slug": "mcgill",
+    "name": "McGill",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-des-arts",
+    "name": "Place-des-Arts",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "saint-laurent",
+    "name": "Saint-Laurent",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "sherbrooke",
+    "name": "Sherbrooke",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "frontenac",
+    "name": "Frontenac",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "prefontaine",
+    "name": "Prefontaine",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "viau",
+    "name": "Viau",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1178
+ },
+ {
+  "route": "140",
+  "name": "Fleury",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Ouest",
+   "Est"
+  ],
+  "headsigns": [
+   "Ouest",
+   "Est"
+  ],
+  "stopCount": 59,
+  "stops": [
+   "Gouin / Pigeon",
+   "Léger / Hénault",
+   "Sainte-Gertrude / Perras",
+   "Sainte-Gertrude / des Ardennes",
+   "Sainte-Gertrude / Henri-Bourassa",
+   "Sainte-Gertrude / de Bayonne",
+   "Sainte-Gertrude / d'Amos",
+   "Sainte-Gertrude / de Charleroi",
+   "de Charleroi / L'Archevêque",
+   "de Charleroi / Drapeau",
+   "de Charleroi / Armand-Lavergne",
+   "Armand-Lavergne / de Castille",
+   "Armand-Lavergne / d'Amiens",
+   "d'Amiens / Garon",
+   "d'Amiens / Hébert",
+   "d'Amiens / Pie-IX",
+   "Pie-IX / Prieur",
+   "Pie-IX / Forest",
+   "Pie-IX / Fleury",
+   "Fleury / des Récollets",
+   "Fleury / Plaza",
+   "Fleury / Saint-Vital",
+   "Fleury / de Cobourg",
+   "Fleury / Lausanne",
+   "Fleury / Saint-Michel",
+   "Fleury / Larose",
+   "Fleury / André-Jobin",
+   "Fleury / de Lille",
+   "Fleury / Parthenais",
+   "Fleury / De Lorimier",
+   "Fleury / Charton",
+   "Fleury / Papineau",
+   "Fleury / Garnier",
+   "Fleury / Francis",
+   "Fleury / Hamel",
+   "Fleury / Christophe-Colomb",
+   "Fleury / Chambord",
+   "Fleury / Georges-Baril",
+   "Fleury / Saint-Hubert",
+   "Fleury / Millen",
+   "Fleury / Lajeunesse",
+   "Berri / Sauriol",
+   "Station Sauvé (Édicule Nord)",
+   "Fleury / Berri",
+   "Fleury / D'Auteuil",
+   "Fleury / Saint-Laurent",
+   "Fleury / Saint-Urbain",
+   "Fleury / de l'Esplanade",
+   "Fleury / Jeanne-Mance",
+   "Fleury / Hogue",
+   "Parc Saint-Benoît",
+   "Meilleur / Sauvé",
+   "Meilleur / de Port-Royal",
+   "Meilleur / de Louvain",
+   "Gare Chabanel",
+   "Chabanel / du Marché-Central",
+   "Chabanel / Charles-De La Tour",
+   "Charles-De La Tour / de Louvain",
+   "de Louvain / de l'Acadie"
+  ],
+  "metroConnections": [
+   {
+    "slug": "chabanel",
+    "name": "Chabanel",
+    "lineIds": [
+     "exo2"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1175
+ },
+ {
+  "route": "180",
+  "name": "De Salaberry",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 30,
+  "stops": [
+   "De Serres / Grenet",
+   "Laurentien / Émile-Nelligan",
+   "Centre Cartierville",
+   "Laurentien / Périnault",
+   "De Salaberry / Lachapelle",
+   "De Salaberry / Grenet",
+   "De Salaberry / De Meulles",
+   "De Salaberry / Saint-Évariste",
+   "De Salaberry / O'Brien",
+   "De Salaberry / Guertin",
+   "De Salaberry / De Poutrincourt",
+   "De Salaberry / Taylor",
+   "de l'Acadie / De Salaberry",
+   "de l'Acadie / de Louisbourg",
+   "de l'Acadie / Dudemaine",
+   "de l'Acadie / Charles-Gill",
+   "de l'Acadie / Henri-Bourassa",
+   "de l'Acadie / Place de l'Acadie",
+   "de l'Acadie / No 10500",
+   "de l'Acadie / Persillier",
+   "de l'Acadie / Olivier-Berthelet",
+   "de l'Acadie / Arthur-Lismer",
+   "Sauvé / de l'Acadie",
+   "Sauvé / Meilleur",
+   "Sauvé / Tolhurst",
+   "Sauvé / Waverly",
+   "Sauvé / Clark",
+   "Sauvé / Grande Allée",
+   "Sauvé / Laverdure",
+   "Saint-Denis / Sauvé"
+  ],
+  "metroConnections": [
+   {
+    "slug": "bois-de-boulogne",
+    "name": "Bois-de-Boulogne",
+    "lineIds": [
+     "exo2"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1172
+ },
+ {
+  "route": "195",
+  "name": "Dorval / Angrignon",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 64,
+  "stops": [
+   "Terminus Dorval",
+   "Fénelon / Dumont",
+   "Dumont / Herron",
+   "Herron / Centre Commercial Rond Point",
+   "Bouchard / Racine",
+   "Bouchard / Poste de pompiers",
+   "Bouchard / George-V",
+   "Bouchard / No 215",
+   "Bouchard / No 200",
+   "Bouchard / Bourke",
+   "Sherbrooke / 55e Avenue",
+   "Sherbrooke / 53e Avenue",
+   "Sherbrooke / Meadowbrook",
+   "Sherbrooke / 48e Avenue",
+   "Sherbrooke / 46e Avenue",
+   "Sherbrooke / 44e Avenue",
+   "Sherbrooke / 42e Avenue",
+   "Sherbrooke / 40e Avenue",
+   "40e Avenue / Provost",
+   "Provost / 38e Avenue",
+   "Provost / 36e Avenue",
+   "Provost / 32e Avenue",
+   "32e Avenue / Saint-Antoine",
+   "Victoria / 33e Avenue",
+   "34e Avenue / Broadway",
+   "34e Avenue / Notre-Dame",
+   "Notre-Dame / Dawes",
+   "Notre-Dame / 27e Avenue",
+   "Notre-Dame / 25e Avenue",
+   "Notre-Dame / 23e Avenue",
+   "Notre-Dame / 19e Avenue",
+   "Notre-Dame / 15e Avenue",
+   "Notre-Dame / 12e Avenue",
+   "Notre-Dame / 10e Avenue",
+   "Notre-Dame / 8e Avenue",
+   "Notre-Dame / 6e Avenue",
+   "6e Avenue / Saint-Louis",
+   "6e Avenue / Saint-Joseph",
+   "Saint-Patrick / Lyette",
+   "Saint-Patrick / Lacroix",
+   "Saint-Patrick / Dupras",
+   "Saint-Patrick / Stirling",
+   "Bergevin / Clément",
+   "Bergevin / No 398",
+   "Jean-Milot / Bergevin",
+   "Jean-Milot / des Oblats",
+   "Clément / Lafleur",
+   "Clément / d'Amour",
+   "Clément / Trudeau",
+   "Cordner / Dollard",
+   "Cordner / Hardy",
+   "Cordner / Ménard",
+   "Cordner / Chopin",
+   "Cordner / Shirley",
+   "Cordner / Lapierre",
+   "Cordner / Léger",
+   "Cordner / No 7213",
+   "Cordner / Senkus",
+   "Carr. Angrignon entrée ouest (Senkus / No 2350)",
+   "Senkus / Newman",
+   "Newman / Guy-Bouchard",
+   "Newman / Angrignon",
+   "Angrignon / Tours Angrignon",
+   "Station Angrignon"
+  ],
+  "metroConnections": [
+   {
+    "slug": "dorval",
+    "name": "Dorval",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "lachine",
+    "name": "Lachine",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "du-canal-exo",
+    "name": "Du Canal (Exo)",
+    "lineIds": [
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "angrignon",
+    "name": "Angrignon",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1167
+ },
+ {
+  "route": "57",
+  "name": "Charlevoix",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 21,
+  "stops": [
+   "Station Atwater (Sainte-Catherine / Atwater)",
+   "Sainte-Catherine / du Fort",
+   "Georges-Vanier / Saint-Antoine",
+   "Georges-Vanier / Lionel-Groulx",
+   "Notre-Dame / Dominion",
+   "Notre-Dame / Charlevoix",
+   "Charlevoix / Rufus-Rockhead",
+   "Station Charlevoix (Charlevoix / de Châteauguay)",
+   "Charlevoix / Mullins",
+   "Charlevoix / Knox",
+   "Charlevoix / de Coleraine",
+   "Charlevoix / Wellington",
+   "Parc-Marguerite-Bourgeoys",
+   "Wellington / Fortune",
+   "Wellington / Charon",
+   "Charon / Favard",
+   "Charon / Le Ber",
+   "Le Ber / de la Congrégation",
+   "de la Congrégation / Favard",
+   "de la Congrégation / de Sébastopol",
+   "De Condé / du Centre"
+  ],
+  "metroConnections": [
+   {
+    "slug": "atwater",
+    "name": "Atwater",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "georges-vanier",
+    "name": "Georges-Vanier",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "du-canal",
+    "name": "Du Canal",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "charlevoix",
+    "name": "Charlevoix",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1165
+ },
+ {
+  "route": "36",
+  "name": "Monk",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 36,
+  "stops": [
+   "Station Angrignon",
+   "Angrignon / Newman",
+   "Allard / Newman",
+   "Allard / Irwin",
+   "Allard / De Montmagny",
+   "Allard / Dumas",
+   "Allard / Monk",
+   "Monk / Springland",
+   "Monk / Jolicoeur",
+   "Monk / Jacques-Hertel",
+   "Monk / Denonville",
+   "Monk / Pierre-Héroux",
+   "Monk / de la Côte-Saint-Paul",
+   "de la Côte-Saint-Paul / Centre Gadbois",
+   "de la Côte-Saint-Paul / Saint-Ambroise",
+   "Notre-Dame / de la Côte-Saint-Paul",
+   "Notre-Dame / Saint-Rémi",
+   "Notre-Dame / De Courcelle",
+   "Square Sir-George-Étienne-Cartier",
+   "Saint-Jacques / Saint-Philippe",
+   "Station Place-Saint-Henri",
+   "Notre-Dame / de la Station",
+   "Notre-Dame / Turgeon",
+   "Notre-Dame / Bérard",
+   "Notre-Dame / Atwater",
+   "Notre-Dame / Charlevoix",
+   "Notre-Dame / Georges-Vanier",
+   "Notre-Dame / des Seigneurs",
+   "Notre-Dame / Guy",
+   "Notre-Dame / de Versailles",
+   "Notre-Dame / de la Montagne",
+   "Notre-Dame / Peel",
+   "Notre-Dame / de l'Inspecteur",
+   "Notre-Dame / Gauvin",
+   "McGill / Saint-Jacques",
+   "Station Square-Victoria-OACI"
+  ],
+  "metroConnections": [
+   {
+    "slug": "angrignon",
+    "name": "Angrignon",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "monk",
+    "name": "Monk",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-saint-henri",
+    "name": "Place-Saint-Henri",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "du-canal",
+    "name": "Du Canal",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "georges-vanier",
+    "name": "Georges-Vanier",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "gare-centrale-exo",
+    "name": "Gare Centrale (Exo)",
+    "lineIds": [
+     "exo3"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "square-victoria-oaci",
+    "name": "Square-Victoria-OACI",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1162
+ },
+ {
+  "route": "10",
+  "name": "De Lorimier",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 32,
+  "stops": [
+   "De Lorimier / Crémazie",
+   "Crémazie / Chabot",
+   "Crémazie / Fabre",
+   "Crémazie / Papineau",
+   "Crémazie / de Bordeaux",
+   "De Lorimier / Jarry",
+   "De Lorimier / Tillemont",
+   "De Lorimier / Villeray",
+   "De Lorimier / Everett",
+   "De Lorimier / Jean-Talon",
+   "De Lorimier / Bélanger",
+   "De Lorimier / Saint-Zotique",
+   "De Lorimier / Beaubien",
+   "De Lorimier / de Bellechasse",
+   "De Lorimier / Rosemont",
+   "De Lorimier / Holt",
+   "De Lorimier / Masson",
+   "De Lorimier / Laurier",
+   "De Lorimier / Saint-Joseph",
+   "De Lorimier / Gilford",
+   "De Lorimier / du Mont-Royal",
+   "De Lorimier / Marie-Anne",
+   "De Lorimier / Rachel",
+   "Rachel / Parthenais",
+   "Parthenais / Gauthier",
+   "Sherbrooke / Fullum",
+   "D'Iberville / de Rouen",
+   "Ontario / Fullum",
+   "Parthenais / Logan",
+   "Parthenais / De Maisonneuve",
+   "De Maisonneuve / De Lorimier",
+   "Station Papineau (Dorion / Sainte-Catherine)"
+  ],
+  "metroConnections": [
+   {
+    "slug": "d-iberville",
+    "name": "D'Iberville",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "frontenac",
+    "name": "Frontenac",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "papineau",
+    "name": "Papineau",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1160
+ },
+ {
+  "route": "110",
+  "name": "Centrale",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 73,
+  "stops": [
+   "28e Avenue / Remembrance",
+   "Remembrance / 32e Avenue",
+   "32e Avenue / Saint-Antoine",
+   "Saint-Antoine / Place d'Accueil",
+   "Saint-Antoine / Holon",
+   "25e Avenue / Provost",
+   "25e Avenue / Sherbrooke",
+   "25e Avenue / Autoroute 20",
+   "Duff Court / 24e Avenue",
+   "Duff Court / Roy",
+   "Esther-Blondin / Duff Court",
+   "Esther-Blondin / Provost",
+   "Provost / 16e Avenue",
+   "Provost / 12e Avenue",
+   "Provost / 10e Avenue",
+   "10e Avenue / Saint-Antoine",
+   "10e Avenue / Victoria",
+   "10e Avenue / Notre-Dame",
+   "Notre-Dame / 6e Avenue",
+   "6e Avenue / Saint-Louis",
+   "6e Avenue / Saint-Joseph",
+   "Saint-Patrick / Lyette",
+   "Saint-Patrick / Lacroix",
+   "Saint-Patrick / Dupras",
+   "Stirling / Saint-Patrick",
+   "Stirling / Beauchamp",
+   "Stirling / Dalmany",
+   "Stirling / Airlie",
+   "Airlie / Riverview",
+   "Airlie / Dupras",
+   "LaSalle / Stirling",
+   "Parc des Saints-Anges",
+   "LaSalle / Bélanger",
+   "LaSalle / Lafleur",
+   "LaSalle / Orchard",
+   "90e Avenue / Centrale",
+   "Centrale / Cavelier-De LaSalle",
+   "Centrale / Duquette",
+   "Centrale / Terrasse Centrale",
+   "75e Avenue / LaSalle",
+   "LaSalle / No 8912",
+   "68e Avenue / LaSalle",
+   "68e Avenue / Centrale",
+   "Centrale / 66e Avenue",
+   "Latour / Centrale",
+   "Beyries / Champlain",
+   "Champlain / No 8700",
+   "Centrale / 63e Avenue",
+   "Centrale / 43e Avenue",
+   "Centrale / 40e Avenue",
+   "Centrale / 35e Avenue",
+   "Centrale / 31e Avenue",
+   "Raymond / Mongeau",
+   "Raymond / Lévis-Sauvé",
+   "George / Gamelin",
+   "George / Gagné",
+   "George / Bishop-Power",
+   "Bishop-Power / Champlain",
+   "Bourdeau / No 7675",
+   "Bourdeau / Thierry",
+   "Lapierre / Hébert",
+   "Lapierre / Leclerc",
+   "Lapierre / Jean-Chevalier",
+   "Lapierre / Jean-Brillon",
+   "Lapierre / Chouinard",
+   "Lapierre / Newman",
+   "Newman / Léger",
+   "Newman / No 7214",
+   "Newman / Senkus",
+   "Newman / Guy-Bouchard",
+   "Newman / Angrignon",
+   "Angrignon / Tours Angrignon",
+   "Station Angrignon"
+  ],
+  "metroConnections": [
+   {
+    "slug": "lachine",
+    "name": "Lachine",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "du-canal-exo",
+    "name": "Du Canal (Exo)",
+    "lineIds": [
+     "exo4"
+    ],
+    "network": "exo"
+   },
+   {
+    "slug": "angrignon",
+    "name": "Angrignon",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1159
+ },
+ {
+  "route": "177",
+  "name": "Thimens",
+  "color": "781B7D",
+  "category": "Fréquente pointe",
+  "freqFr": "Fréquence aux 2 à 12 minutes de 6h30 à 9h30 et de 15h à 18h du lundi au vendredi (dans la direction la plus achalandée)",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 44,
+  "stops": [
+   "Guénette / Bois-Franc",
+   "Guénette / Bois-Franc",
+   "Bois-Franc / Thimens",
+   "Thimens / Cousens",
+   "Thimens / Henri-Bourassa",
+   "Henri-Bourassa / No 8585",
+   "Brabant-Marineau / De Baene",
+   "Brabant-Marineau / Botham",
+   "Cousens / No 4600",
+   "Cousens / Thimens",
+   "Thimens / Bois-Franc",
+   "Thimens / No 5550",
+   "Thimens / Dobrin",
+   "Thimens / No 4900",
+   "Thimens / Poirier",
+   "Thimens / Garand",
+   "Thimens / Pomba",
+   "Thimens / Tees",
+   "Thimens / Bégin",
+   "Thimens / Beaulac",
+   "Thimens / Cavendish",
+   "Bibliothèque du Boisé (Thimens / Todd)",
+   "Thimens / No 2600",
+   "École Saint-Laurent",
+   "Thimens / Varin",
+   "Thimens / Alexis-Nihon",
+   "Thimens / Marcel-Laurin",
+   "Marcel-Laurin / Lucien-Thimens",
+   "Marcel-Laurin / Côte-Vertu",
+   "Côte-Vertu / Leduc",
+   "Côte-Vertu / Cardinal",
+   "Station Côte-Vertu (Côte-Vertu / Décarie)",
+   "Côte-Vertu / Saint-Germain",
+   "Côte-Vertu / Sainte-Croix",
+   "Côte-Vertu / Dutrisac",
+   "Côte-Vertu / Montpellier",
+   "Côte-Vertu / Muir",
+   "Jules-Poitras / Côte-Vertu",
+   "Jules-Poitras / No 1385",
+   "Jules-Poitras / Deguire",
+   "Deguire / Brochu",
+   "Deguire / Bougie",
+   "Thompson / Lawlor",
+   "Thompson / Grimard"
+  ],
+  "metroConnections": [
+   {
+    "slug": "cote-vertu",
+    "name": "Cote-Vertu",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "bois-de-boulogne",
+    "name": "Bois-de-Boulogne",
+    "lineIds": [
+     "exo2"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1155
+ },
+ {
+  "route": "93",
+  "name": "Jean-Talon",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 27,
+  "stops": [
+   "Station Parc (Hutchison / Ogilvy)",
+   "Station Parc (Jean-Talon / Hutchison)",
+   "Jean-Talon / Alexandra",
+   "Jean-Talon / Clark",
+   "Jean-Talon / Saint-Dominique",
+   "Jean-Talon / Drolet",
+   "Station Jean-Talon Sud / De Saint-Vallier",
+   "Station Jean-Talon Est / Saint-Hubert",
+   "Jean-Talon / Christophe-Colomb",
+   "Jean-Talon / De Normanville",
+   "Jean-Talon / De Lanaudière",
+   "Station Fabre (Jean-Talon / Fabre)",
+   "Jean-Talon / Papineau",
+   "Jean-Talon / Chabot",
+   "Jean-Talon / De Lorimier",
+   "Jean-Talon / Louis-Hémon",
+   "Station D'Iberville (Jean-Talon / Louis-Hébert)",
+   "Jean-Talon / D'Iberville",
+   "Jean-Talon / 1re Avenue",
+   "Jean-Talon / 8e Avenue",
+   "Jean-Talon / Saint-Michel",
+   "Jean-Talon / 13e Avenue",
+   "Jean-Talon / 15e Avenue",
+   "Jean-Talon / 17e Avenue",
+   "Jean-Talon / 18e Avenue",
+   "20e Avenue / Jean-Talon",
+   "20e Avenue / Everett"
+  ],
+  "metroConnections": [
+   {
+    "slug": "parc",
+    "name": "Parc",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "de-castelnau",
+    "name": "De Castelnau",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "jean-talon",
+    "name": "Jean-Talon",
+    "lineIds": [
+     "orange",
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "fabre",
+    "name": "Fabre",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "d-iberville",
+    "name": "D'Iberville",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "saint-michel",
+    "name": "Saint-Michel",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1146
+ },
+ {
+  "route": "68",
+  "name": "Pierrefonds",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 50,
+  "stops": [
+   "Terminus REM Anse-à-L'Orme / Terminus REM Anse-à-L",
+   "Institut national de santé publique (Sainte-Marie",
+   "Sainte-Marie / No 19925",
+   "de l'Anse-à-l'Orme / Timberlea-Trail",
+   "Parc-nature de l'Anse-à-l'Orme",
+   "Gouin / Lauzon",
+   "Gouin / Rose-Marie",
+   "Gouin / No 20752",
+   "Gouin / No 20392",
+   "Gouin / du Cap-Saint-Jacques",
+   "Gouin / Pilon",
+   "Gouin / No 19688",
+   "Gouin / De La Morandière",
+   "Gouin / du Palomino",
+   "Gouin / No 18923",
+   "Gouin / No 18465",
+   "du Château-Pierrefonds / Oka",
+   "du Château-Pierrefonds / du Manoir",
+   "du Château-Pierrefonds / de Pierrefonds",
+   "de Pierrefonds / Prével",
+   "de Pierrefonds / des Cageux",
+   "de Pierrefonds / Nanterre",
+   "de Pierrefonds / Louis-Fréchette",
+   "de Pierrefonds / Saint-Charles",
+   "de Pierrefonds / Saint-Charles",
+   "de Pierrefonds / Forbes",
+   "de Pierrefonds / Richelieu",
+   "de Pierrefonds / Sainte-Anne",
+   "de Pierrefonds / No 15760",
+   "de Pierrefonds / Paiement",
+   "de Pierrefonds / Jacques-Bizard",
+   "de Pierrefonds / Saint-Pierre",
+   "de Pierrefonds / Esther-Blondin",
+   "de Pierrefonds / Harry-Worth",
+   "de Pierrefonds / Harry-Worth",
+   "de Pierrefonds / Saint-Jean",
+   "de Pierrefonds / René-Émard",
+   "de Pierrefonds / Richmond",
+   "de Pierrefonds / Aragon",
+   "de Pierrefonds / Belleville",
+   "de Pierrefonds / Fredmir",
+   "de Pierrefonds / Perron",
+   "de Pierrefonds / Westpark",
+   "de Pierrefonds / Saint-Barnabas",
+   "de Pierrefonds / No 11950",
+   "de Pierrefonds / No 11700",
+   "de Pierrefonds / des Sources",
+   "de Pierrefonds / Gouin",
+   "Gouin / 6e Avenue",
+   "Station Pierrefonds-Roxboro"
+  ],
+  "metroConnections": [
+   {
+    "slug": "beaurepaire",
+    "name": "Beaurepaire",
+    "lineIds": [
+     "exo1"
+    ],
+    "network": "exo"
+   }
+  ],
+  "trips": 1146
+ },
+ {
+  "route": "92",
+  "name": "Jean-Talon Ouest",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 36,
+  "stops": [
+   "Station De la Savane (de Sorel / Bougainville)",
+   "Royalmount / Royden",
+   "Royalmount / Devonshire",
+   "Royalmount / Montview",
+   "Ferrier / Montview",
+   "Ferrier / Devonshire",
+   "Devonshire / Paré",
+   "Jean-Talon / Clanranald",
+   "Jean-Talon / Jean-Louis-Lévesque",
+   "Station Namur (Jean-Talon / Décarie)",
+   "Jean-Talon / No 5000",
+   "Jean-Talon / Victoria",
+   "Jean-Talon / de la Savane",
+   "Jean-Talon / Lucerne",
+   "Jean-Talon / de Nancy",
+   "Jean-Talon / de la Côte-des-Neiges",
+   "Jean-Talon / Frobisher",
+   "Jean-Talon / de Dieppe",
+   "Station Canora (Jean-Talon/Wilderton)",
+   "Dresden / Aberdare",
+   "Dresden / Clyde",
+   "Dresden / Rockland",
+   "Graham / Rockland",
+   "Graham / Markham",
+   "Jean-Talon / de l'Acadie",
+   "Jean-Talon / Wiseman",
+   "Jean-Talon / Bloomfield",
+   "Jean-Talon / Querbes",
+   "Station Parc (Jean-Talon / Hutchison)",
+   "Jean-Talon / Alexandra",
+   "Jean-Talon / Clark",
+   "Jean-Talon / Saint-Dominique",
+   "Jean-Talon / Drolet",
+   "Station Jean-Talon Sud / De Saint-Vallier",
+   "De Castelnau / Saint-Hubert",
+   "Station Jean-Talon Nord / Saint-Denis"
+  ],
+  "metroConnections": [
+   {
+    "slug": "de-la-savane",
+    "name": "De la Savane",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "namur",
+    "name": "Namur",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "canora",
+    "name": "Canora",
+    "lineIds": [
+     "rem-a"
+    ],
+    "network": "rem"
+   },
+   {
+    "slug": "acadie",
+    "name": "Acadie",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "parc",
+    "name": "Parc",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "de-castelnau",
+    "name": "De Castelnau",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "jean-talon",
+    "name": "Jean-Talon",
+    "lineIds": [
+     "orange",
+     "blue"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1139
+ },
+ {
+  "route": "38",
+  "name": "De l'Église",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Nord",
+   "Sud"
+  ],
+  "headsigns": [
+   "Nord",
+   "Sud"
+  ],
+  "stopCount": 26,
+  "stops": [
+   "Station LaSalle",
+   "LaSalle / Strathmore",
+   "LaSalle / Hickson",
+   "LaSalle / de l'Église",
+   "de l'Église / Edna",
+   "de l'Église / Gertrude",
+   "de l'Église / de Verdun",
+   "de l'Église / Bannantyne",
+   "de l'Église / Lesage",
+   "de l'Église / Drake",
+   "de l'Église / Angers",
+   "de l'Église / Laurendeau",
+   "de l'Église / Eadie",
+   "de l'Église / Hadley",
+   "de l'Église / No 2244",
+   "Saint-Patrick / Briand",
+   "Monk / de la Côte-Saint-Paul",
+   "Monk / Notre-Dame",
+   "Notre-Dame / Gadbois",
+   "École James-Lyng (Notre-Dame / de Carillon)",
+   "Notre-Dame / de la Côte-Saint-Paul",
+   "Saint-Rémi / Acorn",
+   "Saint-Rémi / Saint-Jacques",
+   "De Courcelle / Saint-Jacques",
+   "Sainte-Catherine / Victoria",
+   "Station Vendôme"
+  ],
+  "metroConnections": [
+   {
+    "slug": "lasalle",
+    "name": "LaSalle",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "de-l-eglise",
+    "name": "De l'Eglise",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "vendome",
+    "name": "Vendome",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1134
+ },
+ {
+  "route": "114",
+  "name": "Angrignon",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Sud",
+   "Nord"
+  ],
+  "headsigns": [
+   "Sud",
+   "Nord"
+  ],
+  "stopCount": 38,
+  "stops": [
+   "Richardson / Saint-Jacques",
+   "Saint-Jacques / Jolicoeur",
+   "Saint-Pierre / Notre-Dame",
+   "Dollard / No 850",
+   "Elmslie / No 8301",
+   "Elmslie / No 7851",
+   "Centre de transport LaSalle (St-Patrick / No 7770)",
+   "Lapierre / Cordner",
+   "Lapierre / Dufresne",
+   "Lapierre / Juliette",
+   "Newman / No 7475",
+   "Newman / Léger",
+   "Newman / No 7214",
+   "Newman / Senkus",
+   "Newman / Guy-Bouchard",
+   "Newman / Angrignon",
+   "Angrignon / Tours Angrignon",
+   "Station Angrignon",
+   "des Trinitaires / Jogues",
+   "des Trinitaires / Dumas",
+   "Champlain / Stephens",
+   "Champlain / No 7070",
+   "Champlain / No 7100",
+   "Champlain / Crawford",
+   "Champlain / Fayolle",
+   "Champlain / Centrale",
+   "Lacharité / Centrale",
+   "Lacharité / Bannon",
+   "Édouard / Alepin",
+   "Édouard / 2e Avenue",
+   "Édouard / 5e Avenue",
+   "Édouard / 8e Avenue",
+   "Bishop-Power / No 229",
+   "Bishop-Power / No 506",
+   "Bishop-Power / George",
+   "Champlain / Bishop-Power",
+   "Champlain / Gagné",
+   "George / Albert-Couture"
+  ],
+  "metroConnections": [
+   {
+    "slug": "angrignon",
+    "name": "Angrignon",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1129
+ },
+ {
+  "route": "185",
+  "name": "Sherbrooke",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Est",
+   "Ouest"
+  ],
+  "headsigns": [
+   "Est",
+   "Ouest"
+  ],
+  "stopCount": 49,
+  "stops": [
+   "Station Frontenac (Frontenac / Ontario)",
+   "Frontenac / de Rouen",
+   "Frontenac / Hochelaga",
+   "Sherbrooke / Gascon",
+   "Sherbrooke / Hogan",
+   "Sherbrooke / De Léry",
+   "Sherbrooke / Moreau",
+   "Sherbrooke / Saint-Germain",
+   "Sherbrooke / Davidson",
+   "Sherbrooke / Aylwin",
+   "Sherbrooke / De Chambly",
+   "Sherbrooke / Victor-Bourgeau",
+   "Sherbrooke / d'Orléans",
+   "Sherbrooke / Pie-IX (coin Sud-Ouest)",
+   "Sherbrooke / Pie-IX (coin Sud-Est)",
+   "Sherbrooke / No 4750",
+   "Sherbrooke / Viau",
+   "Sherbrooke / No 5300",
+   "Sherbrooke / de l'Assomption",
+   "Sherbrooke / No 5600",
+   "Sherbrooke / Dickson",
+   "Sherbrooke / Lacordaire",
+   "Station Cadillac (Sherbrooke / De Cadillac)",
+   "Sherbrooke / No 6082",
+   "Sherbrooke / de Carignan",
+   "Sherbrooke / de Granby",
+   "Station Langelier (Sherbrooke / Langelier)",
+   "Sherbrooke / Desautels",
+   "Sherbrooke / Haig",
+   "Sherbrooke / Émile-Legrand",
+   "Sherbrooke / Radisson",
+   "Station Radisson (Sherbrooke / du Trianon)",
+   "Sherbrooke / Place Versailles",
+   "Sherbrooke / Lepailleur",
+   "Station Honoré-Beaugrand",
+   "Sherbrooke / Liébert",
+   "Sherbrooke / Saint-Donat",
+   "Sherbrooke / Baldwin",
+   "Des Ormeaux / Sherbrooke",
+   "Des Ormeaux / De Teck",
+   "Des Ormeaux / de Marseille",
+   "Des Ormeaux / Sainte-Claire",
+   "Des Ormeaux / Pierre-De Coubertin",
+   "Des Ormeaux / Hochelaga",
+   "Des Ormeaux / Souligny",
+   "Des Ormeaux / Tellier",
+   "Des Ormeaux / Notre-Dame",
+   "Lebrun / Bellerive",
+   "Bellerive / Mercier"
+  ],
+  "metroConnections": [
+   {
+    "slug": "frontenac",
+    "name": "Frontenac",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "joliette",
+    "name": "Joliette",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "pie-ix",
+    "name": "Pie-IX",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "honore-beaugrand",
+    "name": "Honore-Beaugrand",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1119
+ },
+ {
+  "route": "129",
+  "name": "Côte-Sainte-Catherine",
+  "color": "009EE0",
+  "category": "Jour",
+  "freqFr": "Lignes de jour seulement",
+  "directions": [
+   "Nord",
+   "Sud"
+  ],
+  "headsigns": [
+   "Nord",
+   "Sud"
+  ],
+  "stopCount": 41,
+  "stops": [
+   "Saint-Antoine / Gosford",
+   "Notre-Dame / Saint-Gabriel",
+   "Saint-Laurent / Saint-Antoine",
+   "Saint-Laurent / René-Lévesque",
+   "Saint-Laurent / Sainte-Catherine",
+   "Jeanne-Mance / du Président-Kennedy",
+   "Sherbrooke / du Parc",
+   "du Parc / Milton",
+   "du Parc / Prince-Arthur",
+   "du Parc / Léo-Pariseau",
+   "du Parc / des Pins",
+   "Monument Sir-George-Étienne-Cartier",
+   "Côte-Sainte-Catherine / du Mont-Royal",
+   "Côte-Sainte-Catherine / McNider",
+   "Côte-Sainte-Catherine / Saint-Joseph",
+   "Côte-Sainte-Catherine / Laurier",
+   "Côte-Sainte-Catherine / Outremont",
+   "Côte-Sainte-Catherine / Stuart",
+   "Côte-Sainte-Catherine / Les Hautvilliers",
+   "Côte-Sainte-Catherine / Rockland",
+   "de la Côte-Sainte-Catherine / Claude-Champagne",
+   "Côte-Sainte-Catherine / Vincent-D'Indy",
+   "Côte-Sainte-Catherine / Déom",
+   "Côte-Sainte-Catherine / Wilderton",
+   "Côte-Sainte-Catherine / Woodbury",
+   "de la Côte-Sainte-Catherine / de Darlington",
+   "Côte-Sainte-Catherine / Hudson",
+   "de la Côte-Sainte-Catherine / No 3175",
+   "Côte-Sainte-Catherine / Decelles",
+   "de la Côte-Sainte-Catherine / de la Côte-des-Neige",
+   "de la Côte-Sainte-Catherine / No 3755",
+   "Côte-Sainte-Catherine / Légaré",
+   "Côte-Sainte-Catherine / Lavoie",
+   "Station Côte-Sainte-Catherine",
+   "Côte-Sainte-Catherine / Lemieux",
+   "Côte-Sainte-Catherine / de Westbury",
+   "Côte-Sainte-Catherine / Décarie",
+   "Décarie / Dupuis",
+   "Earnscliffe / Dupuis",
+   "Earnscliffe / Isabella",
+   "Clanranald / Isabella"
+  ],
+  "metroConnections": [
+   {
+    "slug": "champ-de-mars",
+    "name": "Champ-de-Mars",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-d-armes",
+    "name": "Place-d'Armes",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "saint-laurent",
+    "name": "Saint-Laurent",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "place-des-arts",
+    "name": "Place-des-Arts",
+    "lineIds": [
+     "green"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "edouard-montpetit",
+    "name": "Edouard-Montpetit",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "universite-de-montreal",
+    "name": "Universite-de-Montreal",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "cote-des-neiges",
+    "name": "Cote-des-Neiges",
+    "lineIds": [
+     "blue"
+    ],
+    "network": "metro"
+   },
+   {
+    "slug": "cote-sainte-catherine",
+    "name": "Cote-Sainte-Catherine",
+    "lineIds": [
+     "orange"
+    ],
+    "network": "metro"
+   }
+  ],
+  "trips": 1106
+ }
+]

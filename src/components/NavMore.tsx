@@ -43,6 +43,7 @@ export default function NavMore({ locale }: NavMoreProps) {
     { href: `/${locale}/compare`, label: t.navCompare },
     { href: `/${locale}/calculator`, label: t.navCalculator },
     { href: `/${locale}/destinations`, label: t.navDestinations },
+    { href: `/${locale}/buses`, label: t.navBuses },
     { href: `/${locale}/accessibility`, label: t.navAccessibility },
     { href: `/${locale}/guide`, label: t.navGuides },
   ]

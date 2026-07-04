@@ -115,6 +115,22 @@ export function generateLineMetadata(line: Line, stationCount: number, locale: '
   }
 }
 
+// Generate bus route page metadata
+export function generateBusMetadata(bus: { route: string; name: string; stopCount: number }, locale: 'en' | 'fr' = 'en') {
+  if (locale === 'fr') {
+    return {
+      title: `Bus ${bus.route} ${bus.name} (STM) : arrêts, horaires et trajet`,
+      description: `Ligne d'autobus ${bus.route} ${bus.name} de la STM à Montréal : liste des ${bus.stopCount} arrêts dans l'ordre, fréquence, correspondances métro et trajet.`,
+      canonical: `/bus/${bus.route}`,
+    }
+  }
+  return {
+    title: `STM Bus ${bus.route} ${bus.name}: Route, Stops & Schedule`,
+    description: `STM bus route ${bus.route} ${bus.name} in Montreal: all ${bus.stopCount} stops in order, frequency, metro and REM connections, and route map.`,
+    canonical: `/bus/${bus.route}`,
+  }
+}
+
 // TransitStation / TrainStation JSON-LD for AI search and rich results
 export function generateStationSchema(station: Station, lines: Line[], locale: 'en' | 'fr' = 'en') {
   const stationName = locale === 'fr' ? (station.nameFr || station.name) : station.name

@@ -22,6 +22,7 @@ const translations = {
     navCompare: 'Compare',
     navCalculator: 'Calculator',
     navDestinations: 'Destinations',
+    navBuses: 'Buses',
     navGuides: 'Guides',
 
     // Home
@@ -265,6 +266,7 @@ const translations = {
     navCompare: 'Comparer',
     navCalculator: 'Calculateur',
     navDestinations: 'Destinations',
+    navBuses: 'Autobus',
     navGuides: 'Guides',
 
     heroTitle1: 'Métro Montréal',

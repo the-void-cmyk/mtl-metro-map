@@ -4,6 +4,7 @@ import stations from "../../data/stations.json"
 import lines from "../../data/lines.json"
 import landmarks from "../../data/landmarks.json"
 import guides from "../../data/guides.json"
+import buses from "../../data/buses.json"
 import type { Station, Line, Landmark } from "@/lib/types"
 
 const allStations = stations as Station[]
@@ -29,6 +30,7 @@ const staticPages = [
   { path: "/map", changeFrequency: "monthly", priority: 0.7 },
   { path: "/fares", changeFrequency: "monthly", priority: 0.7 },
   { path: "/destinations", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/buses", changeFrequency: "monthly", priority: 0.7 },
   { path: "/guide", changeFrequency: "monthly", priority: 0.7 },
   { path: "/trip", changeFrequency: "monthly", priority: 0.6 },
   { path: "/compare", changeFrequency: "monthly", priority: 0.6 },
@@ -81,6 +83,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
       alternates: alternates(`/destination/${d.id}`),
+    })
+  }
+
+  // Bus route pages
+  for (const b of buses as Array<{ route: string }>) {
+    entries.push({
+      url: `${BASE_URL}/en/bus/${b.route}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+      alternates: alternates(`/bus/${b.route}`),
     })
   }
 
