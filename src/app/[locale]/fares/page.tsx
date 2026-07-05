@@ -4,6 +4,7 @@ import { locales } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import { getTranslations } from "@/lib/i18n"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import AffiliateBlock from "@/components/AffiliateBlock"
 
 interface FaresPageProps {
   params: Promise<{ locale: string }>
@@ -235,6 +236,8 @@ export default async function FaresPage({ params }: FaresPageProps) {
               </div>
             </div>
           </Link>
+
+          <AffiliateBlock locale={locale as Locale} placement="fares" />
         </div>
       </div>
     </div>

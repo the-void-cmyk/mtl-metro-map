@@ -9,6 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import SchemaMarkup from "@/components/SchemaMarkup"
 import SearchBar from "@/components/SearchBar"
 import PopularRoutes from "@/components/PopularRoutes"
+import AffiliateLink from "@/components/AffiliateLink"
 import type { Station, Landmark } from "@/lib/types"
 import stations from "../../../../../data/stations.json"
 import stationGuidesData from "../../../../../data/station-guides.json"
@@ -259,14 +260,14 @@ export default async function StationPage({ params }: StationPageProps) {
             <div className="info-card-header">{t.gygToursTitle}</div>
             <div className="info-card-body space-y-3">
               <p className="text-[13px] text-[var(--text-secondary)] leading-relaxed">{t.gygToursDesc}</p>
-              <a
+              <AffiliateLink
                 href="https://www.getyourguide.com/montreal-l195/?partner_id=O4R8HQT&utm_medium=online_publisher"
-                rel="sponsored noopener noreferrer"
-                target="_blank"
+                partner="getyourguide"
+                placement="station"
                 className="block w-full text-center text-[13px] font-semibold px-4 py-2.5 rounded-lg bg-[#FF5533] text-white hover:opacity-90 transition-opacity"
               >
                 {t.gygToursLink}
-              </a>
+              </AffiliateLink>
             </div>
           </div>
           {nearbyDestinations.length > 0 && (

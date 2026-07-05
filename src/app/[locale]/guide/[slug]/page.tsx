@@ -4,6 +4,7 @@ import Link from "next/link"
 import { locales, getTranslations } from "@/lib/i18n"
 import type { Locale } from "@/lib/i18n"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import AffiliateBlock from "@/components/AffiliateBlock"
 import guides from "../../../../../data/guides.json"
 
 interface GuidePageProps {
@@ -133,6 +134,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
             )
           })}
         </div>
+
+        <AffiliateBlock locale={locale as Locale} placement={`guide:${slug}`} className="mt-10" />
 
         {/* Back link */}
         <div className="mt-12 pt-6 border-t border-[var(--border)]">
