@@ -1,4 +1,4 @@
-import Link from "next/link"
+import HoverPrefetchLink from "@/components/HoverPrefetchLink"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getTranslations, isValidLocale, locales } from "@/lib/i18n"
@@ -163,9 +163,9 @@ export default async function HomePage({ params }: HomeProps) {
               <p className="text-[var(--text-muted)] text-sm mt-1.5 mb-5">{t.stationsAcrossLines(metroCount, 4)}</p>
               <div className="flex justify-center gap-2">
                 {allLines.filter(l => l.network === "metro").map(line => (
-                  <Link key={line.id} href={`/${locale}/line/${line.id}`} className="line-badge" style={{ backgroundColor: line.color, color: line.textColor }}>
+                  <HoverPrefetchLink key={line.id} href={`/${locale}/line/${line.id}`} className="line-badge" style={{ backgroundColor: line.color, color: line.textColor }}>
                     {locale === 'fr' ? line.nameFr.replace('Ligne ', '') : line.name.replace(' Line', '')}
-                  </Link>
+                  </HoverPrefetchLink>
                 ))}
               </div>
             </div>
@@ -173,7 +173,7 @@ export default async function HomePage({ params }: HomeProps) {
               <div className="flex justify-center mb-5"><div className="w-3 h-3 rounded-full" style={{ backgroundColor: "var(--rem-line)" }} /></div>
               <h3 className="font-heading font-semibold text-xl tracking-tight">{t.remLabel}</h3>
               <p className="text-[var(--text-muted)] text-sm mt-1.5 mb-5">{t.stationsAutomated(remCount)}</p>
-              <Link href={`/${locale}/line/rem-a`} className="line-badge" style={{ backgroundColor: "var(--rem-line)" }}>REM</Link>
+              <HoverPrefetchLink href={`/${locale}/line/rem-a`} className="line-badge" style={{ backgroundColor: "var(--rem-line)" }}>REM</HoverPrefetchLink>
             </div>
             <div className="network-card">
               <div className="flex justify-center gap-1 mb-5">{[1,2,3,4,5].map(n => (<div key={n} className="w-3 h-3 rounded-full" style={{ backgroundColor: "var(--exo-line)" }} />))}</div>
@@ -181,9 +181,9 @@ export default async function HomePage({ params }: HomeProps) {
               <p className="text-[var(--text-muted)] text-sm mt-1.5 mb-5">{t.stationsTrainLines(exoCount, 5)}</p>
               <div className="flex justify-center gap-2 flex-wrap">
                 {allLines.filter(l => l.network === "exo").map(line => (
-                  <Link key={line.id} href={`/${locale}/line/${line.id}`} className="line-badge" style={{ backgroundColor: "var(--exo-line)", color: "var(--surface)" }}>
+                  <HoverPrefetchLink key={line.id} href={`/${locale}/line/${line.id}`} className="line-badge" style={{ backgroundColor: "var(--exo-line)", color: "var(--surface)" }}>
                     {line.id.replace("exo", locale === 'fr' ? 'Ligne ' : 'Line ')}
-                  </Link>
+                  </HoverPrefetchLink>
                 ))}
               </div>
             </div>

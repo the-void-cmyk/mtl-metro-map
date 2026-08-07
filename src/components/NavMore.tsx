@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useCallback, useRef, useEffect } from "react"
-import Link from "next/link"
+import HoverPrefetchLink from "@/components/HoverPrefetchLink"
 import type { Locale } from "@/lib/i18n"
 import { getTranslations } from "@/lib/i18n"
 
@@ -93,16 +93,16 @@ export default function NavMore({ locale }: NavMoreProps) {
           {/* On mobile: show primary items first */}
           <div className="sm:hidden">
             {primaryItems.map(item => (
-              <Link key={item.href} href={item.href} className={linkClass} onClick={close}>
+              <HoverPrefetchLink key={item.href} href={item.href} className={linkClass} onClick={close}>
                 {item.label}
-              </Link>
+              </HoverPrefetchLink>
             ))}
             <div className="border-t border-[var(--border)] my-1" />
           </div>
           {secondaryItems.map(item => (
-            <Link key={item.href} href={item.href} className={linkClass} onClick={close}>
+            <HoverPrefetchLink key={item.href} href={item.href} className={linkClass} onClick={close}>
               {item.label}
-            </Link>
+            </HoverPrefetchLink>
           ))}
         </div>
       )}
