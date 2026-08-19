@@ -15,13 +15,25 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: MapPageProps): Promise<Metadata> {
   const { locale } = await params
+  const altLocale = locale === 'en' ? 'fr' : 'en'
+  // This page owns the map queries ("carte metro montreal", "montreal metro
+  // map"). It was missing canonical and hreflang entirely, so it competed with
+  // the locale home page for the same terms instead of consolidating them.
   return {
     title: locale === 'fr'
       ? 'Carte et Plan du Métro de Montréal : Lignes et Stations'
-      : 'Montreal Subway Map: Metro Lines, Stations & Zones',
+      : 'Montreal Metro Map: Subway Lines, Stations & Zones',
     description: locale === 'fr'
       ? 'Carte interactive du métro de Montréal : toutes les lignes du métro STM, le REM et les trains de banlieue Exo, avec chaque station, les correspondances et les zones tarifaires.'
       : 'Interactive Montreal metro and subway map. All STM Metro lines, the REM, and Exo commuter trains with every station, transfers, and fare zones.',
+    alternates: {
+      canonical: `/${locale}/map`,
+      languages: {
+        [locale]: `/${locale}/map`,
+        [altLocale]: `/${altLocale}/map`,
+        'x-default': '/en/map',
+      },
+    },
   }
 }
 
@@ -131,7 +143,7 @@ export default async function MapPage({ params }: MapPageProps) {
       />
 
       <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight mt-5 mb-2">
-        {locale === 'fr' ? 'Carte du reseau' : 'Network Map'}
+        {locale === 'fr' ? 'Carte du métro de Montréal' : 'Montreal Metro Map'}
       </h1>
       <p className="text-[var(--text-secondary)] text-[15px] mb-6">
         {locale === 'fr'

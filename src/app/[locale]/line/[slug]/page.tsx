@@ -58,6 +58,11 @@ export default async function LinePage({ params }: LinePageProps) {
   const lineStations = line.stations.map((id) => allStations.find((s) => s.id === id)).filter(Boolean) as Station[]
   const networkLabel = line.network === "metro" ? t.stmLabel : line.network === "rem" ? t.remLabel : t.exoLabel
   const lineName = locale === 'fr' ? line.nameFr : line.name
+  // The REM page is our target for the "rem map" / "carte rem" queries, so the
+  // heading says so. Metro and Exo keep the plain line name.
+  const heading = line.network === 'rem'
+    ? (locale === 'fr' ? `Carte du ${lineName}` : `${lineName} Map`)
+    : lineName
 
   return (
     <div className="max-w-6xl mx-auto px-5 py-6 sm:py-8">
@@ -72,7 +77,7 @@ export default async function LinePage({ params }: LinePageProps) {
       <div className="flex items-center gap-3.5 mt-5 mb-8">
         <div className="w-5 h-5 rounded-full flex-shrink-0" style={{ backgroundColor: line.color }} />
         <div>
-          <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight leading-tight">{lineName}</h1>
+          <h1 className="font-heading text-2xl sm:text-[32px] font-bold tracking-tight leading-tight">{heading}</h1>
           <p className="text-[var(--text-secondary)] text-[15px] mt-0.5">
             {networkLabel} {t.lineWith(lineStations.length)}.
           </p>

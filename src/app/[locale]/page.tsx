@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: HomeProps): Promise<Metadata>
   }
   return {
     title: {
-      absolute: 'Montreal Metro Map: Routes, Stations, Fares | STM, REM, Exo',
+      absolute: 'Montreal Metro: Route Planner, Schedules & Fares | STM, REM, Exo',
     },
     description: "Plan the fastest route across Montreal's transit network. 138 stations covering the STM Metro, REM light rail, and Exo commuter trains. Schedules, fares, route map, and step-by-step directions.",
     alternates: {
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: HomeProps): Promise<Metadata>
       languages: { en: '/en', fr: '/fr', 'x-default': '/en' },
     },
     openGraph: {
-      title: 'Montreal Metro Map: Routes, Stations, Fares',
+      title: 'Montreal Metro: Route Planner, Schedules & Fares',
       description: "Plan the fastest route across Montreal's transit network.",
       locale: 'en_CA',
       type: 'website',

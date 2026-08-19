@@ -101,10 +101,41 @@ export function generateStationMetadata(station: Station, lines: Line[], locale:
 
 // Generate line page metadata
 export function generateLineMetadata(line: Line, stationCount: number, locale: 'en' | 'fr' = 'en') {
+  // The REM is light rail and Exo is commuter rail, neither is the STM Metro.
+  // Titling them "... Montreal Metro" was both wrong and cost us the map queries
+  // ("rem map" ranked a random station page instead of this one).
   if (locale === 'fr') {
+    if (line.network === 'rem') {
+      return {
+        title: `Carte du ${line.nameFr} : les ${stationCount} stations, plan de la ligne et horaires`,
+        description: `Carte du ${line.nameFr}, le train léger de Montréal : les ${stationCount} stations dans l'ordre, plan de la ligne, horaires, tarifs et correspondances avec le métro STM et les trains Exo.`,
+        canonical: `/line/${line.id}`,
+      }
+    }
+    if (line.network === 'exo') {
+      return {
+        title: `Train de banlieue ${line.nameFr} : les ${stationCount} gares, carte et horaires`,
+        description: `Ligne de train de banlieue Exo ${line.nameFr} à Montréal : les ${stationCount} gares dans l'ordre, carte du trajet, horaires et correspondances avec le métro STM et le REM.`,
+        canonical: `/line/${line.id}`,
+      }
+    }
     return {
       title: `${line.nameFr} Métro Montréal : Liste des ${stationCount} Stations dans l'Ordre`,
       description: `${line.nameFr} : liste complète des ${stationCount} stations dans l'ordre, avec carte du trajet, horaires et correspondances. Guide de la ligne du métro de Montréal.`,
+      canonical: `/line/${line.id}`,
+    }
+  }
+  if (line.network === 'rem') {
+    return {
+      title: `${line.name} Map: All ${stationCount} Stations in Order, Schedule & Connections`,
+      description: `${line.name} light rail map for Montreal: all ${stationCount} stations in order, line map, schedules, fares, and connections to the STM Metro and Exo commuter trains.`,
+      canonical: `/line/${line.id}`,
+    }
+  }
+  if (line.network === 'exo') {
+    return {
+      title: `${line.name} Commuter Train: All ${stationCount} Stations, Map & Schedule`,
+      description: `Exo commuter train ${line.name} in Montreal: all ${stationCount} stations in order, route map, schedules, and connections to the STM Metro and the REM.`,
       canonical: `/line/${line.id}`,
     }
   }
